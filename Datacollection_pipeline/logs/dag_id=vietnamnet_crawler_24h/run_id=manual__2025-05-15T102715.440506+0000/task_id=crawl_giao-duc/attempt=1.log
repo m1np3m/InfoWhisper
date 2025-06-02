@@ -1,0 +1,463 @@
+[2025-05-15T10:27:39.120+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-15T10:27:39.174+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-15T10:27:15.440506+00:00 [queued]>
+[2025-05-15T10:27:39.198+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-15T10:27:15.440506+00:00 [queued]>
+[2025-05-15T10:27:39.199+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-15T10:27:39.237+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-05-15 10:27:15.440506+00:00
+[2025-05-15T10:27:39.249+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5348) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-15T10:27:39.254+0000] {standard_task_runner.py:63} INFO - Started process 5461 to run task
+[2025-05-15T10:27:39.255+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'manual__2025-05-15T10:27:15.440506+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpxo8nj6id']
+[2025-05-15T10:27:39.266+0000] {standard_task_runner.py:91} INFO - Job 23: Subtask crawl_giao-duc
+[2025-05-15T10:27:39.399+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-15T10:27:15.440506+00:00 [running]> on host 45f6bdc6b965
+[2025-05-15T10:27:39.709+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-05-15T10:27:15.440506+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-15T10:27:15.440506+00:00'
+[2025-05-15T10:27:39.712+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-15T10:27:40.166+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-15T10:27:40.440+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-15T10:27:41.506+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:27:45.121+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-15T10:27:45.122+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:45.122+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.52s
+[2025-05-15T10:27:45.379+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-15T10:27:45.380+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:45.380+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-15T10:27:45.382+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-15T10:27:45.382+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:45.383+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.78s
+[2025-05-15T10:27:45.743+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-05-15T10:27:47.927+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs mới
+[2025-05-15T10:27:47.927+0000] {crawler.py:225} INFO - Đang crawl 25 bài viết mới từ danh mục giao-duc...
+[2025-05-15T10:27:47.928+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/truong-o-tphcm-gay-soc-vi-nam-top-diem-chuan-cao-nhung-co-ty-le-choi-lop-10-thap-2401045.html
+[2025-05-15T10:27:49.482+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:27:56.190+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/truong-o-tphcm-gay-soc-vi-...cao-nhung-co-ty-le-choi-lop-10-thap-2401045.html  | 
+[2025-05-15T10:27:56.191+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:56.192+0000] {logging_mixin.py:188} INFO -  | ⏱: 6.52s
+[2025-05-15T10:27:56.404+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/truong-o-tphcm-gay-soc-vi-...cao-nhung-co-ty-le-choi-lop-10-thap-2401045.html  | 
+[2025-05-15T10:27:56.405+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:56.405+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-15T10:27:56.407+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/truong-o-tphcm-gay-soc-vi-...cao-nhung-co-ty-le-choi-lop-10-thap-2401045.html  | 
+[2025-05-15T10:27:56.407+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:27:56.408+0000] {logging_mixin.py:188} INFO -  | ⏱: 6.74s
+[2025-05-15T10:27:56.606+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Trường ở TPHCM gây sốc vì nằm top điểm chuẩn cao nhất, có tỷ lệ chọi rất thấp
+[2025-05-15T10:27:57.533+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:27:57.544+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:27:57.746+0000] {crawler.py:232} INFO -     ✓ Trường ở TPHCM gây sốc vì nằm top điểm chuẩn cao nhất, có tỷ...
+
+[2025-05-15T10:27:57.747+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/thi-sinh-khong-chac-do-du-thi-lop-10-vao-truong-co-ty-le-choi-cuc-thap-2401133.html
+[2025-05-15T10:27:58.429+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:03.220+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thi-sinh-khong-chac-do-du-...0-vao-truong-co-ty-le-choi-cuc-thap-2401133.html  | 
+[2025-05-15T10:28:03.221+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:03.222+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.72s
+[2025-05-15T10:28:03.542+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thi-sinh-khong-chac-do-du-...0-vao-truong-co-ty-le-choi-cuc-thap-2401133.html  | 
+[2025-05-15T10:28:03.543+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:03.544+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.32s
+[2025-05-15T10:28:03.545+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thi-sinh-khong-chac-do-du-...0-vao-truong-co-ty-le-choi-cuc-thap-2401133.html  | 
+[2025-05-15T10:28:03.546+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:03.547+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.04s
+[2025-05-15T10:28:03.902+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Thí sinh không chắc đỗ dù thi lớp 10 vào trường có tỷ lệ chọi cực thấp
+[2025-05-15T10:28:03.903+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3270 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:05.063+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:05.067+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:05.657+0000] {crawler.py:232} INFO -     ✓ Thí sinh không chắc đỗ dù thi lớp 10 vào trường có tỷ lệ chọ...
+
+[2025-05-15T10:28:05.667+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/tokio-marine-viet-nam-thuc-day-giao-duc-ky-nang-an-toan-cho-the-he-tre-2401410.html
+[2025-05-15T10:28:07.353+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:11.946+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tokio-marine-viet-nam-thuc...-duc-ky-nang-an-toan-cho-the-he-tre-2401410.html  | 
+[2025-05-15T10:28:11.947+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:11.948+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.41s
+[2025-05-15T10:28:12.170+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tokio-marine-viet-nam-thuc...-duc-ky-nang-an-toan-cho-the-he-tre-2401410.html  | 
+[2025-05-15T10:28:12.170+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:12.171+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:28:12.172+0000] {logging_mixin.py:188} INFO - 0.22
+[2025-05-15T10:28:12.172+0000] {logging_mixin.py:188} INFO - s
+[2025-05-15T10:28:12.174+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tokio-marine-viet-nam-thuc...-duc-ky-nang-an-toan-cho-the-he-tre-2401410.html  | 
+[2025-05-15T10:28:12.174+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:12.175+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.63s
+[2025-05-15T10:28:12.424+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Tokio Marine Việt Nam thúc đẩy giáo dục kỹ năng an toàn cho thế hệ trẻ
+[2025-05-15T10:28:12.425+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3340 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:13.211+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:13.213+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:13.438+0000] {crawler.py:232} INFO -     ✓ Tokio Marine Việt Nam thúc đẩy giáo dục kỹ năng an toàn cho ...
+
+[2025-05-15T10:28:13.439+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/top-20-truong-co-ty-le-choi-lop-10-cao-nhat-tphcm-2401024.html
+[2025-05-15T10:28:14.216+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:18.931+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/top-20-truong-co-ty-le-choi-lop-10-cao-nhat-tphcm-2401024.html                 | 
+[2025-05-15T10:28:18.933+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:18.934+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.59s
+[2025-05-15T10:28:19.237+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/top-20-truong-co-ty-le-choi-lop-10-cao-nhat-tphcm-2401024.html                 | 
+[2025-05-15T10:28:19.239+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:19.240+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-15T10:28:19.243+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/top-20-truong-co-ty-le-choi-lop-10-cao-nhat-tphcm-2401024.html                 | 
+[2025-05-15T10:28:19.244+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:19.244+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.90s
+[2025-05-15T10:28:19.565+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Top 20 trường có tỷ lệ chọi lớp 10 cao nhất TPHCM, cao nhất 1 chọi 4,88
+[2025-05-15T10:28:20.390+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:20.393+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:20.582+0000] {crawler.py:232} INFO -     ✓ Top 20 trường có tỷ lệ chọi lớp 10 cao nhất TPHCM, cao nhất ...
+
+[2025-05-15T10:28:20.583+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/vi-giao-su-nao-co-6-con-ruot-la-gs-pgs-3-con-re-mang-ham-tuong-quan-doi-2401002.html
+[2025-05-15T10:28:21.328+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:25.404+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vi-giao-su-nao-co-6-con-ru...gs-3-con-re-mang-ham-tuong-quan-doi-2401002.html  | 
+[2025-05-15T10:28:25.405+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:25.405+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.95s
+[2025-05-15T10:28:25.626+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vi-giao-su-nao-co-6-con-ru...gs-3-con-re-mang-ham-tuong-quan-doi-2401002.html  | 
+[2025-05-15T10:28:25.627+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:25.628+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:28:25.628+0000] {logging_mixin.py:188} INFO - 0.22
+[2025-05-15T10:28:25.629+0000] {logging_mixin.py:188} INFO - s
+[2025-05-15T10:28:25.630+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vi-giao-su-nao-co-6-con-ru...gs-3-con-re-mang-ham-tuong-quan-doi-2401002.html  | 
+[2025-05-15T10:28:25.630+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:25.631+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.18s
+[2025-05-15T10:28:25.868+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Vị giáo sư nào có 6 con ruột là GS - PGS, 3 con rể mang hàm tướng quân đội?
+[2025-05-15T10:28:25.869+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3031 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:26.648+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:26.650+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:26.808+0000] {crawler.py:232} INFO -     ✓ Vị giáo sư nào có 6 con ruột là GS - PGS, 3 con rể mang hàm ...
+
+[2025-05-15T10:28:26.809+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/truong-dau-tien-danh-gia-tri-tue-cam-xuc-eq-de-tuyen-sinh-dai-hoc-2401489.html
+[2025-05-15T10:28:27.734+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:31.123+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/truong-dau-tien-danh-gia-tri-tue-cam-xuc-eq-de-tuyen-sinh-dai-hoc-2401489.html | 
+[2025-05-15T10:28:31.124+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:31.125+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.31s
+[2025-05-15T10:28:31.348+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/truong-dau-tien-danh-gia-tri-tue-cam-xuc-eq-de-tuyen-sinh-dai-hoc-2401489.html | 
+[2025-05-15T10:28:31.348+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:31.349+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-15T10:28:31.350+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/truong-dau-tien-danh-gia-tri-tue-cam-xuc-eq-de-tuyen-sinh-dai-hoc-2401489.html | 
+[2025-05-15T10:28:31.351+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:31.351+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.54s
+[2025-05-15T10:28:31.596+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Trường đầu tiên đánh giá trí tuệ cảm xúc EQ để tuyển sinh đại học
+[2025-05-15T10:28:32.157+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:32.160+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:32.316+0000] {crawler.py:232} INFO -     ✓ Trường đầu tiên đánh giá trí tuệ cảm xúc EQ để tuyển sinh đạ...
+
+[2025-05-15T10:28:32.317+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/chu-tich-nuoc-luong-cuong-du-va-phat-bieu-tai-le-tuyen-duong-chau-ngoan-bac-ho-2401359.html
+[2025-05-15T10:28:32.819+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:36.083+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chu-tich-nuoc-luong-cuong-...ai-le-tuyen-duong-chau-ngoan-bac-ho-2401359.html  | 
+[2025-05-15T10:28:36.084+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:36.085+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.20s
+[2025-05-15T10:28:36.331+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chu-tich-nuoc-luong-cuong-...ai-le-tuyen-duong-chau-ngoan-bac-ho-2401359.html  | 
+[2025-05-15T10:28:36.331+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:36.332+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-15T10:28:36.333+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chu-tich-nuoc-luong-cuong-...ai-le-tuyen-duong-chau-ngoan-bac-ho-2401359.html  | 
+[2025-05-15T10:28:36.334+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:36.335+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.45s
+[2025-05-15T10:28:36.580+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Chủ tịch nước Lương Cường dự và phát biểu tại Lễ tuyên dương Cháu ngoan Bác Hồ
+[2025-05-15T10:28:36.581+0000] {llm_summary.py:128} INFO - Nội dung quá dài (8212 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:37.404+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:37.406+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:37.568+0000] {crawler.py:232} INFO -     ✓ Chủ tịch nước Lương Cường dự và phát biểu tại Lễ tuyên dương...
+
+[2025-05-15T10:28:37.569+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/luat-giao-duc-dai-hoc-sua-doi-gon-bang-mot-nua-luat-nam-2018-tranh-chong-cheo-2401315.html
+[2025-05-15T10:28:38.072+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:41.197+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/luat-giao-duc-dai-hoc-sua-...-nua-luat-nam-2018-tranh-chong-cheo-2401315.html  | 
+[2025-05-15T10:28:41.198+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:41.199+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.05s
+[2025-05-15T10:28:41.391+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/luat-giao-duc-dai-hoc-sua-...-nua-luat-nam-2018-tranh-chong-cheo-2401315.html  | 
+[2025-05-15T10:28:41.391+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:41.392+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:28:41.393+0000] {logging_mixin.py:188} INFO - 0.19
+[2025-05-15T10:28:41.393+0000] {logging_mixin.py:188} INFO - s
+[2025-05-15T10:28:41.394+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/luat-giao-duc-dai-hoc-sua-...-nua-luat-nam-2018-tranh-chong-cheo-2401315.html  | 
+[2025-05-15T10:28:41.395+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:41.396+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.25s
+[2025-05-15T10:28:41.606+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Luật Giáo dục Đại học sửa đổi 'gọn' bằng một nửa Luật năm 2018, tránh chồng chéo
+[2025-05-15T10:28:41.607+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3958 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:42.259+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:42.261+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:42.425+0000] {crawler.py:232} INFO -     ✓ Luật Giáo dục Đại học sửa đổi 'gọn' bằng một nửa Luật năm 20...
+
+[2025-05-15T10:28:42.426+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/tong-bi-thu-thuc-day-doi-moi-sang-tao-khong-de-hoc-sinh-nao-bi-bo-lai-phia-sau-2401186.html
+[2025-05-15T10:28:43.061+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:46.254+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tong-bi-thu-thuc-day-doi-m...-de-hoc-sinh-nao-bi-bo-lai-phia-sau-2401186.html  | 
+[2025-05-15T10:28:46.255+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:46.256+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.12s
+[2025-05-15T10:28:46.484+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tong-bi-thu-thuc-day-doi-m...-de-hoc-sinh-nao-bi-bo-lai-phia-sau-2401186.html  | 
+[2025-05-15T10:28:46.485+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:46.485+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-15T10:28:46.486+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tong-bi-thu-thuc-day-doi-m...-de-hoc-sinh-nao-bi-bo-lai-phia-sau-2401186.html  | 
+[2025-05-15T10:28:46.487+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:46.488+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.35s
+[2025-05-15T10:28:46.879+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Tổng Bí thư: Thúc đẩy đổi mới sáng tạo, không để học sinh nào bị bỏ lại phía sau
+[2025-05-15T10:28:46.879+0000] {llm_summary.py:128} INFO - Nội dung quá dài (7748 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:47.540+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:47.542+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:47.715+0000] {crawler.py:232} INFO -     ✓ Tổng Bí thư: Thúc đẩy đổi mới sáng tạo, không để học sinh nà...
+
+[2025-05-15T10:28:47.716+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ila-hanh-trinh-30-nam-gop-phan-thay-doi-tuong-lai-hon-1-trieu-hoc-sinh-2400935.html
+[2025-05-15T10:28:48.231+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:51.312+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ila-hanh-trinh-30-nam-gop-...-doi-tuong-lai-hon-1-trieu-hoc-sinh-2400935.html  | 
+[2025-05-15T10:28:51.313+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:51.314+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-15T10:28:51.541+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ila-hanh-trinh-30-nam-gop-...-doi-tuong-lai-hon-1-trieu-hoc-sinh-2400935.html  | 
+[2025-05-15T10:28:51.542+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:51.543+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-15T10:28:51.544+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ila-hanh-trinh-30-nam-gop-...-doi-tuong-lai-hon-1-trieu-hoc-sinh-2400935.html  | 
+[2025-05-15T10:28:51.544+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:51.545+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.25s
+[2025-05-15T10:28:51.792+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: ILA - hành trình 30 năm góp phần thay đổi tương lai hơn 1 triệu học sinh
+[2025-05-15T10:28:51.792+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4750 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:28:52.515+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:52.517+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:52.702+0000] {crawler.py:232} INFO -     ✓ ILA - hành trình 30 năm góp phần thay đổi tương lai hơn 1 tr...
+
+[2025-05-15T10:28:52.703+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bo-gd-dt-cong-bo-lich-thi-tot-nghiep-thpt-nam-2025-chinh-thuc-2383025.html
+[2025-05-15T10:28:53.298+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:56.033+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bo-gd-dt-cong-bo-lich-thi-tot-nghiep-thpt-nam-2025-chinh-thuc-2383025.html     | 
+[2025-05-15T10:28:56.033+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:56.034+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.65s
+[2025-05-15T10:28:56.175+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bo-gd-dt-cong-bo-lich-thi-tot-nghiep-thpt-nam-2025-chinh-thuc-2383025.html     | 
+[2025-05-15T10:28:56.176+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:56.177+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:28:56.178+0000] {logging_mixin.py:188} INFO - 0.14
+[2025-05-15T10:28:56.178+0000] {logging_mixin.py:188} INFO - s
+[2025-05-15T10:28:56.179+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bo-gd-dt-cong-bo-lich-thi-tot-nghiep-thpt-nam-2025-chinh-thuc-2383025.html     | 
+[2025-05-15T10:28:56.180+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:56.180+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.80s
+[2025-05-15T10:28:56.331+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bộ GD-ĐT công bố lịch thi tốt nghiệp THPT năm 2025 chính thức
+[2025-05-15T10:28:57.012+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:28:57.014+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:28:57.176+0000] {crawler.py:232} INFO -     ✓ Bộ GD-ĐT công bố lịch thi tốt nghiệp THPT năm 2025 chính thứ...
+
+[2025-05-15T10:28:57.176+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ai-duoc-su-dung-nhu-the-nao-trong-cham-soc-suc-khoe-2401270.html
+[2025-05-15T10:28:57.682+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:00.584+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ai-duoc-su-dung-nhu-the-nao-trong-cham-soc-suc-khoe-2401270.html               | 
+[2025-05-15T10:29:00.585+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:00.586+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.82s
+[2025-05-15T10:29:00.852+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ai-duoc-su-dung-nhu-the-nao-trong-cham-soc-suc-khoe-2401270.html               | 
+[2025-05-15T10:29:00.852+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:00.853+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-15T10:29:00.854+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ai-duoc-su-dung-nhu-the-nao-trong-cham-soc-suc-khoe-2401270.html               | 
+[2025-05-15T10:29:00.855+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:00.855+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.09s
+[2025-05-15T10:29:01.124+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: AI được sử dụng như thế nào trong chăm sóc sức khỏe?
+[2025-05-15T10:29:01.125+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4323 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:29:01.740+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:01.742+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:01.907+0000] {crawler.py:232} INFO -     ✓ AI được sử dụng như thế nào trong chăm sóc sức khỏe?...
+
+[2025-05-15T10:29:01.908+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/de-xuat-bo-mo-hinh-dai-hoc-quoc-gia-2401208.html
+[2025-05-15T10:29:02.570+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:05.983+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/de-xuat-bo-mo-hinh-dai-hoc-quoc-gia-2401208.html                               | 
+[2025-05-15T10:29:05.984+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:05.985+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.32s
+[2025-05-15T10:29:06.187+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/de-xuat-bo-mo-hinh-dai-hoc-quoc-gia-2401208.html                               | 
+[2025-05-15T10:29:06.187+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:06.188+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:29:06.188+0000] {logging_mixin.py:188} INFO - 0.2
+[2025-05-15T10:29:06.189+0000] {logging_mixin.py:188} INFO - 0s
+[2025-05-15T10:29:06.190+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/de-xuat-bo-mo-hinh-dai-hoc-quoc-gia-2401208.html                               | 
+[2025-05-15T10:29:06.190+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:06.191+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.53s
+[2025-05-15T10:29:06.420+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Đề xuất bỏ mô hình đại học quốc gia
+[2025-05-15T10:29:06.421+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2942 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:29:07.060+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:07.062+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:07.256+0000] {crawler.py:232} INFO -     ✓ Đề xuất bỏ mô hình đại học quốc gia...
+
+[2025-05-15T10:29:07.257+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/38-nganh-dao-tao-bac-dai-hoc-phuc-vu-nhan-luc-nganh-ban-dan-2401365.html
+[2025-05-15T10:29:07.756+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:10.476+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/38-nganh-dao-tao-bac-dai-hoc-phuc-vu-nhan-luc-nganh-ban-dan-2401365.html       | 
+[2025-05-15T10:29:10.477+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:10.477+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.66s
+[2025-05-15T10:29:10.714+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/38-nganh-dao-tao-bac-dai-hoc-phuc-vu-nhan-luc-nganh-ban-dan-2401365.html       | 
+[2025-05-15T10:29:10.715+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:10.716+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-15T10:29:10.717+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/38-nganh-dao-tao-bac-dai-hoc-phuc-vu-nhan-luc-nganh-ban-dan-2401365.html       | 
+[2025-05-15T10:29:10.718+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:10.718+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.90s
+[2025-05-15T10:29:11.125+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: 38 ngành đào tạo bậc đại học phục vụ nhân lực ngành bán dẫn
+[2025-05-15T10:29:11.773+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:11.774+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:11.925+0000] {crawler.py:232} INFO -     ✓ 38 ngành đào tạo bậc đại học phục vụ nhân lực ngành bán dẫn...
+
+[2025-05-15T10:29:11.925+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/hon-12-000-hoc-sinh-o-tphcm-khong-thi-lop-10-2401107.html
+[2025-05-15T10:29:12.479+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:15.823+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hon-12-000-hoc-sinh-o-tphcm-khong-thi-lop-10-2401107.html                      | 
+[2025-05-15T10:29:15.824+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:15.825+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.28s
+[2025-05-15T10:29:15.994+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hon-12-000-hoc-sinh-o-tphcm-khong-thi-lop-10-2401107.html                      | 
+[2025-05-15T10:29:15.995+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:15.996+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-15T10:29:15.997+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hon-12-000-hoc-sinh-o-tphcm-khong-thi-lop-10-2401107.html                      | 
+[2025-05-15T10:29:15.997+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:15.998+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.46s
+[2025-05-15T10:29:16.213+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Hơn 12.000 học sinh ở TPHCM không thi lớp 10
+[2025-05-15T10:29:16.914+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:16.915+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:17.062+0000] {crawler.py:232} INFO -     ✓ Hơn 12.000 học sinh ở TPHCM không thi lớp 10...
+
+[2025-05-15T10:29:17.063+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/de-thi-thu-lop-10-mon-toan-ha-noi-nam-2025-tham-khao-2400724.html
+[2025-05-15T10:29:17.628+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:20.717+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/de-thi-thu-lop-10-mon-toan-ha-noi-nam-2025-tham-khao-2400724.html              | 
+[2025-05-15T10:29:20.718+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:20.718+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-15T10:29:20.880+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/de-thi-thu-lop-10-mon-toan-ha-noi-nam-2025-tham-khao-2400724.html              | 
+[2025-05-15T10:29:20.881+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:20.882+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.16s
+[2025-05-15T10:29:20.884+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/de-thi-thu-lop-10-mon-toan-ha-noi-nam-2025-tham-khao-2400724.html              | 
+[2025-05-15T10:29:20.884+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:20.885+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.19s
+[2025-05-15T10:29:21.052+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Đề thi thử lớp 10 môn Toán của quận Long Biên, Hà Nội năm 2025
+[2025-05-15T10:29:21.941+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:21.944+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:22.119+0000] {crawler.py:232} INFO -     ✓ Đề thi thử lớp 10 môn Toán của quận Long Biên, Hà Nội năm 20...
+
+[2025-05-15T10:29:22.119+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/hoc-sinh-lop-7-o-tphcm-roi-lau-xuong-dat-chan-thuong-dot-song-lung-2401456.html
+[2025-05-15T10:29:22.670+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:26.065+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hoc-sinh-lop-7-o-tphcm-roi...xuong-dat-chan-thuong-dot-song-lung-2401456.html  | 
+[2025-05-15T10:29:26.066+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:26.067+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.31s
+[2025-05-15T10:29:26.282+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hoc-sinh-lop-7-o-tphcm-roi...xuong-dat-chan-thuong-dot-song-lung-2401456.html  | 
+[2025-05-15T10:29:26.283+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:26.284+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-15T10:29:26.285+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hoc-sinh-lop-7-o-tphcm-roi...xuong-dat-chan-thuong-dot-song-lung-2401456.html  | 
+[2025-05-15T10:29:26.286+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:26.287+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.53s
+[2025-05-15T10:29:26.569+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Học sinh lớp 7 ở TPHCM rơi lầu xuống đất, chấn thương đốt sống lưng
+[2025-05-15T10:29:27.164+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:27.166+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:27.331+0000] {crawler.py:232} INFO -     ✓ Học sinh lớp 7 ở TPHCM rơi lầu xuống đất, chấn thương đốt số...
+
+[2025-05-15T10:29:27.332+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/hon-23-500-hoc-sinh-ha-noi-khong-du-thi-lop-10-nam-2025-2401371.html
+[2025-05-15T10:29:27.970+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:31.815+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hon-23-500-hoc-sinh-ha-noi-khong-du-thi-lop-10-nam-2025-2401371.html           | 
+[2025-05-15T10:29:31.816+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:31.817+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.78s
+[2025-05-15T10:29:32.101+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hon-23-500-hoc-sinh-ha-noi-khong-du-thi-lop-10-nam-2025-2401371.html           | 
+[2025-05-15T10:29:32.102+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:32.103+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-15T10:29:32.104+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hon-23-500-hoc-sinh-ha-noi-khong-du-thi-lop-10-nam-2025-2401371.html           | 
+[2025-05-15T10:29:32.105+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:32.106+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.07s
+[2025-05-15T10:29:32.300+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Hơn 23.500 học sinh Hà Nội không dự thi lớp 10 năm 2025
+[2025-05-15T10:29:32.301+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3593 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:29:33.284+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:33.286+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:33.963+0000] {crawler.py:232} INFO -     ✓ Hơn 23.500 học sinh Hà Nội không dự thi lớp 10 năm 2025...
+
+[2025-05-15T10:29:33.964+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/loat-truong-bat-dau-nhan-ho-so-xet-tuyen-hoc-ba-tu-giua-thang-5-2401200.html
+[2025-05-15T10:29:34.592+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:37.616+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loat-truong-bat-dau-nhan-ho-so-xet-tuyen-hoc-ba-tu-giua-thang-5-2401200.html   | 
+[2025-05-15T10:29:37.617+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:37.618+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.94s
+[2025-05-15T10:29:38.027+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loat-truong-bat-dau-nhan-ho-so-xet-tuyen-hoc-ba-tu-giua-thang-5-2401200.html   | 
+[2025-05-15T10:29:38.027+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:38.028+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.41s
+[2025-05-15T10:29:38.029+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loat-truong-bat-dau-nhan-ho-so-xet-tuyen-hoc-ba-tu-giua-thang-5-2401200.html   | 
+[2025-05-15T10:29:38.030+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:38.030+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.36s
+[2025-05-15T10:29:38.282+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Loạt trường bắt đầu nhận hồ sơ xét tuyển học bạ từ giữa tháng 5
+[2025-05-15T10:29:38.283+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3620 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:29:39.028+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:39.030+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:39.682+0000] {crawler.py:232} INFO -     ✓ Loạt trường bắt đầu nhận hồ sơ xét tuyển học bạ từ giữa thán...
+
+[2025-05-15T10:29:39.683+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/top-40-truong-co-ty-le-choi-thi-vao-lop-10-thap-nhat-o-tphcm-nam-2025-2401028.html
+[2025-05-15T10:29:40.250+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:43.198+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/top-40-truong-co-ty-le-cho...o-lop-10-thap-nhat-o-tphcm-nam-2025-2401028.html  | 
+[2025-05-15T10:29:43.199+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:43.199+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.89s
+[2025-05-15T10:29:43.342+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/top-40-truong-co-ty-le-cho...o-lop-10-thap-nhat-o-tphcm-nam-2025-2401028.html  | 
+[2025-05-15T10:29:43.343+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:43.343+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.14s
+[2025-05-15T10:29:43.345+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/top-40-truong-co-ty-le-cho...o-lop-10-thap-nhat-o-tphcm-nam-2025-2401028.html  | 
+[2025-05-15T10:29:43.345+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:43.346+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.04s
+[2025-05-15T10:29:43.517+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: 40 trường có tỷ lệ chọi lớp 10 thấp nhất TPHCM, tuyển 4 chỉ 1 thí sinh đăng ký
+[2025-05-15T10:29:44.149+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:44.151+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:44.344+0000] {crawler.py:232} INFO -     ✓ 40 trường có tỷ lệ chọi lớp 10 thấp nhất TPHCM, tuyển 4 chỉ ...
+
+[2025-05-15T10:29:44.345+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nghi-quyet-va-chi-tieu-xay-truong-cong-o-ha-noi-nhieu-nam-khong-thuc-hien-duoc-2393247.html
+[2025-05-15T10:29:45.002+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:48.216+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nghi-quyet-va-chi-tieu-xay...-noi-nhieu-nam-khong-thuc-hien-duoc-2393247.html  | 
+[2025-05-15T10:29:48.217+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:48.218+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.13s
+[2025-05-15T10:29:48.437+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nghi-quyet-va-chi-tieu-xay...-noi-nhieu-nam-khong-thuc-hien-duoc-2393247.html  | 
+[2025-05-15T10:29:48.437+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:48.438+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-15T10:29:48.440+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nghi-quyet-va-chi-tieu-xay...-noi-nhieu-nam-khong-thuc-hien-duoc-2393247.html  | 
+[2025-05-15T10:29:48.441+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:48.441+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.36s
+[2025-05-15T10:29:48.705+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Học sinh tăng nhưng ít trường công Hà Nội được mở thêm, do đâu?
+[2025-05-15T10:29:48.706+0000] {llm_summary.py:128} INFO - Nội dung quá dài (6225 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:29:49.386+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:49.388+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:49.574+0000] {crawler.py:232} INFO -     ✓ Học sinh tăng nhưng ít trường công Hà Nội được mở thêm, do đ...
+
+[2025-05-15T10:29:49.575+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nu-pho-hieu-truong-o-hue-bi-ky-luat-vi-quan-he-bat-chinh-voi-nguoi-da-co-vo-2401048.html
+[2025-05-15T10:29:50.101+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:53.006+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nu-pho-hieu-truong-o-hue-b...uan-he-bat-chinh-voi-nguoi-da-co-vo-2401048.html  | 
+[2025-05-15T10:29:53.007+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:53.008+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.83s
+[2025-05-15T10:29:53.204+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nu-pho-hieu-truong-o-hue-b...uan-he-bat-chinh-voi-nguoi-da-co-vo-2401048.html  | 
+[2025-05-15T10:29:53.204+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:53.205+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-15T10:29:53.207+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nu-pho-hieu-truong-o-hue-b...uan-he-bat-chinh-voi-nguoi-da-co-vo-2401048.html  | 
+[2025-05-15T10:29:53.207+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:53.208+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.04s
+[2025-05-15T10:29:53.451+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Nữ phó hiệu trưởng ở Huế bị kỷ luật vì quan hệ bất chính với người đã có vợ
+[2025-05-15T10:29:53.988+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:53.990+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:54.141+0000] {crawler.py:232} INFO -     ✓ Nữ phó hiệu trưởng ở Huế bị kỷ luật vì quan hệ bất chính với...
+
+[2025-05-15T10:29:54.142+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/1-choi-12-vao-chuyen-anh-vao-lop-10-truong-pho-thong-nang-khieu-2401473.html
+[2025-05-15T10:29:54.727+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:29:57.697+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/1-choi-12-vao-chuyen-anh-vao-lop-10-truong-pho-thong-nang-khieu-2401473.html   | 
+[2025-05-15T10:29:57.698+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:57.698+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.88s
+[2025-05-15T10:29:57.842+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/1-choi-12-vao-chuyen-anh-vao-lop-10-truong-pho-thong-nang-khieu-2401473.html   | 
+[2025-05-15T10:29:57.843+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:57.843+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.14s
+[2025-05-15T10:29:57.846+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/1-choi-12-vao-chuyen-anh-vao-lop-10-truong-pho-thong-nang-khieu-2401473.html   | 
+[2025-05-15T10:29:57.847+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:29:57.848+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.03s
+[2025-05-15T10:29:58.023+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: 1 chọi 12 vào chuyên Anh lớp 10 Trường Phổ thông Năng khiếu
+[2025-05-15T10:29:58.668+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:29:58.669+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:29:58.855+0000] {crawler.py:232} INFO -     ✓ 1 chọi 12 vào chuyên Anh lớp 10 Trường Phổ thông Năng khiếu...
+
+[2025-05-15T10:29:58.855+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/cung-cong-bo-ty-le-choi-lop-10-tphcm-lam-dieu-khac-biet-voi-ha-noi-2401351.html
+[2025-05-15T10:29:59.435+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:30:02.767+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cung-cong-bo-ty-le-choi-lo...tphcm-lam-dieu-khac-biet-voi-ha-noi-2401351.html  | 
+[2025-05-15T10:30:02.768+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:02.768+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.25s
+[2025-05-15T10:30:03.200+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cung-cong-bo-ty-le-choi-lo...tphcm-lam-dieu-khac-biet-voi-ha-noi-2401351.html  | 
+[2025-05-15T10:30:03.201+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:03.202+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-15T10:30:03.202+0000] {logging_mixin.py:188} INFO - 0.43
+[2025-05-15T10:30:03.203+0000] {logging_mixin.py:188} INFO - s
+[2025-05-15T10:30:03.205+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cung-cong-bo-ty-le-choi-lo...tphcm-lam-dieu-khac-biet-voi-ha-noi-2401351.html  | 
+[2025-05-15T10:30:03.206+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:03.207+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.69s
+[2025-05-15T10:30:03.410+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Cùng công bố tỷ lệ chọi lớp 10, TPHCM làm điều khác biệt với Hà Nội
+[2025-05-15T10:30:03.410+0000] {llm_summary.py:128} INFO - Nội dung quá dài (5688 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:30:04.196+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:30:04.198+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:30:04.371+0000] {crawler.py:232} INFO -     ✓ Cùng công bố tỷ lệ chọi lớp 10, TPHCM làm điều khác biệt với...
+
+[2025-05-15T10:30:04.371+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/45-truong-thpt-cong-lap-o-ha-noi-co-ty-le-choi-thi-lop-10-cang-hon-nam-ngoai-2401030.html
+[2025-05-15T10:30:04.904+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:30:08.335+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/45-truong-thpt-cong-lap-o-...-choi-thi-lop-10-cang-hon-nam-ngoai-2401030.html  | 
+[2025-05-15T10:30:08.336+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:08.337+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.36s
+[2025-05-15T10:30:08.528+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/45-truong-thpt-cong-lap-o-...-choi-thi-lop-10-cang-hon-nam-ngoai-2401030.html  | 
+[2025-05-15T10:30:08.528+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:08.529+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-15T10:30:08.531+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/45-truong-thpt-cong-lap-o-...-choi-thi-lop-10-cang-hon-nam-ngoai-2401030.html  | 
+[2025-05-15T10:30:08.532+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:30:08.533+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.55s
+[2025-05-15T10:30:08.733+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: 45 trường THPT công lập ở Hà Nội có tỷ lệ chọi thi lớp 10 'căng' hơn năm ngoái
+[2025-05-15T10:30:08.734+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3583 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-15T10:30:09.548+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-15T10:30:09.551+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-15T10:30:09.763+0000] {crawler.py:232} INFO -     ✓ 45 trường THPT công lập ở Hà Nội có tỷ lệ chọi thi lớp 10 'c...
+
+[2025-05-15T10:30:09.764+0000] {crawler.py:235} INFO - ⏱️  Tổng thời gian crawl: 149.32 giây
+[2025-05-15T10:30:10.013+0000] {crawler.py:255} INFO - Đã lưu 25 bài viết vào collection 'giao-duc'
+[2025-05-15T10:30:10.078+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-15T10:30:10.079+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-15T10:30:10.091+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=manual__2025-05-15T10:27:15.440506+00:00, execution_date=20250515T102715, start_date=20250515T102739, end_date=20250515T103010
+[2025-05-15T10:30:10.167+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-15T10:30:10.203+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-15T10:30:10.206+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

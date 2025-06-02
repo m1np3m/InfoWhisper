@@ -1,0 +1,1 @@
+[2025-05-03T15:55:27.883+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: vietnamnet_multi_category_crawler.crawl_doi-song scheduled__2025-05-02T00:00:00+00:00 [queued]> finished (success) although the task says it's queued. (Info: None) Was the task killed externally?

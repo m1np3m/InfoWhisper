@@ -1,0 +1,74 @@
+[2025-05-03T19:02:05.642+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T19:02:05.661+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri manual__2025-05-03T18:56:51.958397+00:00 [queued]>
+[2025-05-03T19:02:05.670+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri manual__2025-05-03T18:56:51.958397+00:00 [queued]>
+[2025-05-03T19:02:05.670+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-05-03T19:02:05.683+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-03 18:56:51.958397+00:00
+[2025-05-03T19:02:05.688+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=576) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T19:02:05.690+0000] {standard_task_runner.py:63} INFO - Started process 579 to run task
+[2025-05-03T19:02:05.691+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_with_summary', 'crawl_chinh-tri', 'manual__2025-05-03T18:56:51.958397+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpy5z89t1a']
+[2025-05-03T19:02:05.693+0000] {standard_task_runner.py:91} INFO - Job 43: Subtask crawl_chinh-tri
+[2025-05-03T19:02:05.733+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri manual__2025-05-03T18:56:51.958397+00:00 [running]> on host 04f66d21c0f0
+[2025-05-03T19:02:05.806+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_with_summary' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-03T18:56:51.958397+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-03T18:56:51.958397+00:00'
+[2025-05-03T19:02:05.808+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T19:02:06.058+0000] {crawler.py:61} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-03T19:02:06.189+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-03T19:02:06.892+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T19:02:10.979+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-03T19:02:10.980+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T19:02:10.981+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.03s
+[2025-05-03T19:02:11.276+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-03T19:02:11.277+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T19:02:11.278+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-03T19:02:11.279+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-03T19:02:11.279+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T19:02:11.280+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.32s
+[2025-05-03T19:02:11.640+0000] {crawler.py:87} INFO - Tìm thấy 77 link bài viết
+[2025-05-03T19:02:11.798+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T19:02:11.799+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 41, in crawl_category
+    asyncio.run(_crawl_category(category_url, max_articles, enable_summarizer))
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 52, in _crawl_category
+    await crawler.crawl_all_articles()
+  File "/opt/airflow/dags/crawler.py", line 225, in crawl_all_articles
+    filtered_links = self.filter_existing_urls(article_links)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/crawler.py", line 92, in filter_existing_urls
+    if not self.db:
+           ^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/synchronous/database.py", line 342, in __bool__
+    raise NotImplementedError(
+NotImplementedError: Database objects do not implement truth value testing or bool(). Please compare with None instead: database is not None
+[2025-05-03T19:02:11.811+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=vietnamnet_crawler_with_summary, task_id=crawl_chinh-tri, run_id=manual__2025-05-03T18:56:51.958397+00:00, execution_date=20250503T185651, start_date=20250503T190205, end_date=20250503T190211
+[2025-05-03T19:02:11.824+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 43 for task crawl_chinh-tri (Database objects do not implement truth value testing or bool(). Please compare with None instead: database is not None; 579)
+[2025-05-03T19:02:11.846+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-03T19:02:11.869+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T19:02:11.875+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,49 @@
+[2025-05-16T12:47:54.587+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T12:47:54.613+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-16T12:00:00+00:00 [queued]>
+[2025-05-16T12:47:54.623+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-16T12:00:00+00:00 [queued]>
+[2025-05-16T12:47:54.623+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T12:47:54.637+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-16 12:00:00+00:00
+[2025-05-16T12:47:54.643+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=254) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T12:47:54.645+0000] {standard_task_runner.py:63} INFO - Started process 338 to run task
+[2025-05-16T12:47:54.645+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_chinh-tri', 'scheduled__2025-05-16T12:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpugx3b9r2']
+[2025-05-16T12:47:54.647+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask crawl_chinh-tri
+[2025-05-16T12:47:54.700+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-16T12:00:00+00:00 [running]> on host 60d771d880eb
+[2025-05-16T12:47:54.810+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-16T12:00:00+00:00'
+[2025-05-16T12:47:54.812+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T12:47:55.005+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T12:47:55.956+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T12:47:59.586+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-16T12:47:59.586+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:47:59.587+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.52s
+[2025-05-16T12:47:59.848+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-16T12:47:59.849+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:47:59.849+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-16T12:47:59.852+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-16T12:47:59.853+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:47:59.854+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.79s
+[2025-05-16T12:47:59.980+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục chinh-tri
+[2025-05-16T12:48:00.650+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-16T12:48:00.651+0000] {crawler.py:232} INFO - Đang crawl 1 bài viết mới từ danh mục chinh-tri...
+[2025-05-16T12:48:00.651+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/70-nam-chuyen-quan-ra-bac-cang-quy-nhon-thanh-di-tich-lich-su-quoc-gia-2401833.html
+[2025-05-16T12:48:01.814+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T12:48:06.470+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/70-nam-chuyen-quan-ra-bac-...nhon-thanh-di-tich-lich-su-quoc-gia-2401833.html  | 
+[2025-05-16T12:48:06.471+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:48:06.472+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.52s
+[2025-05-16T12:48:06.776+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/70-nam-chuyen-quan-ra-bac-...nhon-thanh-di-tich-lich-su-quoc-gia-2401833.html  | 
+[2025-05-16T12:48:06.776+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:48:06.777+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-16T12:48:06.778+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/70-nam-chuyen-quan-ra-bac-...nhon-thanh-di-tich-lich-su-quoc-gia-2401833.html  | 
+[2025-05-16T12:48:06.779+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T12:48:06.780+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.83s
+[2025-05-16T12:48:07.414+0000] {crawler.py:239} INFO -     ✓ 70 năm chuyển quân ra Bắc: Đài kỷ niệm cảng Quy Nhơn thành d...
+
+[2025-05-16T12:48:07.415+0000] {crawler.py:242} INFO - ⏱️  Tổng thời gian crawl: 12.41 giây
+[2025-05-16T12:48:07.483+0000] {crawler.py:274} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.chinh-tri index: _id_ dup key: { _id: "2401833" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401833'}, 'op': {'title': '70 năm chuyển quân ra Bắc: Đài kỷ niệm cảng Quy Nhơn thành di tích lịch sử quốc gia', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-16T18:05:16.000 +07:00', 'views': None, 'tags': [], 'description': 'Chiều nay (16/5), tỉnh Bình Định long trọng tổ chức lễ dâng hoa tại Đài kỷ niệm cảng Quy Nhơn, nơi từng là địa điểm lịch sử gắn liền với 300 ngày chuyển quân tập kết.\n', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/16/70-nam-chuyen-quan-ra-bac-dai-ky-niem-cang-quy-nhon-thanh-di-tich-lich-su-quoc-gia-87379.jpg?width=0&s=D7YlDlsfJNwjGYEXOKSfoQ', 'content': 'Hà Nam\n\nĐây là hoạt động nhân kỷ niệm 70 năm hoàn thành việc chuyển quân tập kết ra Bắc của cán bộ, chiến sĩ, đồng bào và học sinh miền Nam tại Quy Nhơn (16/5/1955 - 16/5/2025).\n\nTham dự buổi lễ có ủy viên Bộ Chính trị, Bí thư Trung ương Đảng, Trưởng Ban Tuyên giáo và Dân vận Trung ương Nguyễn Trọng Nghĩa; Phó Chủ tịch nước Võ Thị Ánh Xuân; Bộ trưởng Bộ Dân tộc và Tôn giáo Đào Ngọc Dung cùng lãnh đạo các ban, bộ, ngành Trung ương và địa phương, đại biểu Ban liên lạc học sinh miền Nam tập kết ra Bắc…\n\nCác đại biểu thành kính dâng hoa kỷ niệm sự kiện lịch sử của 70 năm trước tại địa điểm chuyển quân tập kết ra miền Bắc, góp phần vào công cuộc đấu tranh giải phóng dân tộc.\n\nSau chiến thắng lịch sử Điện Biên Phủ ngày 7/5/1954, quân và dân Việt Nam buộc thực dân Pháp ngồi vào bàn đàm phán, ký kết Hiệp định Genève nhằm lập lại hòa bình ở Việt Nam, Lào và Campuchia.\n\nTheo Hiệp định, Việt Nam tạm thời bị chia cắt thành 2 miền, lấy vĩ tuyến 17 làm ranh giới quân sự. Miền Bắc hoàn toàn giải phóng, miền Nam do quân đội Liên hiệp Pháp và chính quyền Sài Gòn quản lý, chờ tổng tuyển cử thống nhất đất nước sau 2 năm.\n\nHiệp định cũng quy định việc tập kết, chuyển quân và bàn giao khu vực diễn ra trong vòng 300 ngày kể từ ngày ký. Tại Trung bộ, tỉnh Bình Định được chọn làm khu vực tập kết cho lực lượng vũ trang và chính trị thuộc Liên khu 5, với cảng Quy Nhơn là điểm tập kết chính.\n\nViệc chuyển quân 300 ngày tại Bình Định không chỉ mang ý nghĩa chiến lược mà còn là biểu tượng của ý chí, lòng tin và tinh thần hy sinh vì đại nghĩa thống nhất Tổ quốc. Đây cũng là bước chuẩn bị quan trọng để đảng bộ, chính quyền và nhân dân Bình Định bước vào giai đoạn đấu tranh mới.\n\nNăm 2004, Tỉnh ủy Bình Định chủ trương xây dựng biểu tượng di tích tại địa điểm chuyển quân tập kết ra Bắc ở cảng Quy Nhơn.\n\nNgày 24/12/2007, UBND tỉnh Bình Định xếp hạng nơi đây là di tích cấp tỉnh và cho xây dựng Đài kỷ niệm mang chủ đề “Ra đi để bảo vệ Tổ quốc”.\n\nNgày 15/5 năm nay, Bộ trưởng Văn hóa, Thể thao và Du lịch ký quyết định xếp hạng cảng Quy Nhơn - điểm tập kết 300 ngày ra Bắc là di tích lịch sử cấp quốc gia, ghi nhận giá trị to lớn của địa điểm này trong hành trình đấu tranh giành độc lập, thống nhất đất nước.', 'url': 'https://vietnamnet.vn/70-nam-chuyen-quan-ra-bac-cang-quy-nhon-thanh-di-tich-lich-su-quoc-gia-2401833.html', 'category': 'chinh-tri', 'crawled_at': '2025-05-16T12:48:07.196976', '_id': '2401833'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T12:48:07.550+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T12:48:07.552+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T12:48:07.566+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_chinh-tri, run_id=scheduled__2025-05-16T12:00:00+00:00, execution_date=20250516T120000, start_date=20250516T124754, end_date=20250516T124807
+[2025-05-16T12:48:07.623+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T12:48:07.680+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T12:48:07.684+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

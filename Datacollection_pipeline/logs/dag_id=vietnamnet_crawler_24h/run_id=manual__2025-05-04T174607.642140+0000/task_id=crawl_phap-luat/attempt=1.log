@@ -1,0 +1,451 @@
+[2025-05-04T17:47:02.017+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-04T17:47:02.047+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-04T17:46:07.642140+00:00 [queued]>
+[2025-05-04T17:47:02.057+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-04T17:46:07.642140+00:00 [queued]>
+[2025-05-04T17:47:02.058+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-04T17:47:02.074+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_phap-luat> on 2025-05-04 17:46:07.642140+00:00
+[2025-05-04T17:47:02.082+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=918) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-04T17:47:02.084+0000] {standard_task_runner.py:63} INFO - Started process 919 to run task
+[2025-05-04T17:47:02.086+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_phap-luat', 'manual__2025-05-04T17:46:07.642140+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpfibba4iq']
+[2025-05-04T17:47:02.089+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask crawl_phap-luat
+[2025-05-04T17:47:02.150+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-04T17:46:07.642140+00:00 [running]> on host 9f13ced5b14d
+[2025-05-04T17:47:02.283+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_phap-luat' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T17:46:07.642140+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T17:46:07.642140+00:00'
+[2025-05-04T17:47:02.285+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-04T17:47:02.508+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-04T17:47:02.665+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-04T17:47:03.313+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:06.194+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-04T17:47:06.195+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:06.195+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.82s
+[2025-05-04T17:47:06.386+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-04T17:47:06.386+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:06.387+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-04T17:47:06.388+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-04T17:47:06.389+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:06.390+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.01s
+[2025-05-04T17:47:06.658+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục phap-luat
+[2025-05-04T17:47:11.884+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs mới
+[2025-05-04T17:47:11.884+0000] {crawler.py:225} INFO - Đang crawl 25 bài viết mới từ danh mục phap-luat...
+[2025-05-04T17:47:11.885+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/xac-minh-tai-xe-ban-tai-dung-gay-bong-chay-danh-nguoi-o-thai-binh-2396787.html
+[2025-05-04T17:47:12.492+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:15.982+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/xac-minh-tai-xe-ban-tai-dung-gay-bong-chay-danh-nguoi-o-thai-binh-2396787.html | 
+[2025-05-04T17:47:15.983+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:15.984+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.44s
+[2025-05-04T17:47:16.204+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/xac-minh-tai-xe-ban-tai-dung-gay-bong-chay-danh-nguoi-o-thai-binh-2396787.html | 
+[2025-05-04T17:47:16.205+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:16.206+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-04T17:47:16.207+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/xac-minh-tai-xe-ban-tai-dung-gay-bong-chay-danh-nguoi-o-thai-binh-2396787.html | 
+[2025-05-04T17:47:16.208+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:16.208+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.66s
+[2025-05-04T17:47:16.453+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Xác minh tài xế xe bán tải dùng gậy bóng chày đánh người ở Thái Bình
+[2025-05-04T17:47:17.144+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:17.153+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:17.339+0000] {crawler.py:232} INFO -     ✓ Xác minh tài xế xe bán tải dùng gậy bóng chày đánh người ở T...
+
+[2025-05-04T17:47:17.340+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/3-nguoi-trong-gia-dinh-tu-vong-tai-can-ho-o-nha-trang-2396977.html
+[2025-05-04T17:47:17.904+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:21.222+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/3-nguoi-trong-gia-dinh-tu-vong-tai-can-ho-o-nha-trang-2396977.html             | 
+[2025-05-04T17:47:21.223+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:21.224+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.24s
+[2025-05-04T17:47:21.449+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/3-nguoi-trong-gia-dinh-tu-vong-tai-can-ho-o-nha-trang-2396977.html             | 
+[2025-05-04T17:47:21.450+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:21.450+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-04T17:47:21.451+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/3-nguoi-trong-gia-dinh-tu-vong-tai-can-ho-o-nha-trang-2396977.html             | 
+[2025-05-04T17:47:21.452+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:21.453+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.47s
+[2025-05-04T17:47:21.702+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: 3 người trong gia đình tử vong tại căn hộ ở Nha Trang
+[2025-05-04T17:47:22.243+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:22.244+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:22.412+0000] {crawler.py:232} INFO -     ✓ 3 người trong gia đình tử vong tại căn hộ ở Nha Trang...
+
+[2025-05-04T17:47:22.412+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/thu-doan-cua-ong-trum-ban-thuoc-ho-tro-sinh-ly-gia-thu-loi-20-ty-dong-2396735.html
+[2025-05-04T17:47:23.046+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:26.536+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thu-doan-cua-ong-trum-ban-...-tro-sinh-ly-gia-thu-loi-20-ty-dong-2396735.html  | 
+[2025-05-04T17:47:26.537+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:26.538+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.40s
+[2025-05-04T17:47:26.800+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thu-doan-cua-ong-trum-ban-...-tro-sinh-ly-gia-thu-loi-20-ty-dong-2396735.html  | 
+[2025-05-04T17:47:26.801+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:26.802+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-04T17:47:26.803+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thu-doan-cua-ong-trum-ban-...-tro-sinh-ly-gia-thu-loi-20-ty-dong-2396735.html  | 
+[2025-05-04T17:47:26.804+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:26.804+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.67s
+[2025-05-04T17:47:27.107+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Thủ đoạn của 'ông trùm' bán thuốc hỗ trợ sinh lý giả, thu lợi 20 tỷ đồng
+[2025-05-04T17:47:27.107+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2585 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:47:27.794+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:27.796+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:27.981+0000] {crawler.py:232} INFO -     ✓ Thủ đoạn của 'ông trùm' bán thuốc hỗ trợ sinh lý giả, thu lợ...
+
+[2025-05-04T17:47:27.982+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-khan-cap-tai-xe-xe-ban-tai-dung-gay-bong-chay-danh-nguoi-o-thai-binh-2397022.html
+[2025-05-04T17:47:28.524+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:31.404+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-khan-cap-tai-xe-xe-ban...ay-bong-chay-danh-nguoi-o-thai-binh-2397022.html  | 
+[2025-05-04T17:47:31.404+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:31.405+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.81s
+[2025-05-04T17:47:31.613+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-khan-cap-tai-xe-xe-ban...ay-bong-chay-danh-nguoi-o-thai-binh-2397022.html  | 
+[2025-05-04T17:47:31.614+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:31.615+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-04T17:47:31.616+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-khan-cap-tai-xe-xe-ban...ay-bong-chay-danh-nguoi-o-thai-binh-2397022.html  | 
+[2025-05-04T17:47:31.616+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:31.617+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-04T17:47:32.059+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt khẩn cấp tài xế xe bán tải dùng gậy bóng chày đánh người
+[2025-05-04T17:47:32.706+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:32.708+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:32.877+0000] {crawler.py:232} INFO -     ✓ Bắt khẩn cấp tài xế xe bán tải dùng gậy bóng chày đánh người...
+
+[2025-05-04T17:47:32.877+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nam-2025-o-to-vuot-den-do-bi-phat-bao-nhieu-tien-2396803.html
+[2025-05-04T17:47:33.612+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:37.571+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nam-2025-o-to-vuot-den-do-bi-phat-bao-nhieu-tien-2396803.html                  | 
+[2025-05-04T17:47:37.572+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:37.572+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.84s
+[2025-05-04T17:47:37.801+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nam-2025-o-to-vuot-den-do-bi-phat-bao-nhieu-tien-2396803.html                  | 
+[2025-05-04T17:47:37.801+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:37.802+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-04T17:47:37.803+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nam-2025-o-to-vuot-den-do-bi-phat-bao-nhieu-tien-2396803.html                  | 
+[2025-05-04T17:47:37.804+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:37.804+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.07s
+[2025-05-04T17:47:38.053+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Năm 2025, ô tô vượt đèn đỏ bị phạt bao nhiêu tiền?
+[2025-05-04T17:47:38.805+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:38.807+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:38.955+0000] {crawler.py:232} INFO -     ✓ Năm 2025, ô tô vượt đèn đỏ bị phạt bao nhiêu tiền?...
+
+[2025-05-04T17:47:38.956+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-nghi-pham-sat-hai-nu-chu-quan-ca-phe-o-tien-giang-2397591.html
+[2025-05-04T17:47:39.475+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:42.956+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-nghi-pham-sat-hai-nu-chu-quan-ca-phe-o-tien-giang-2397591.html             | 
+[2025-05-04T17:47:42.957+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:42.957+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.41s
+[2025-05-04T17:47:43.313+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-nghi-pham-sat-hai-nu-chu-quan-ca-phe-o-tien-giang-2397591.html             | 
+[2025-05-04T17:47:43.314+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:43.314+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.35s
+[2025-05-04T17:47:43.316+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-nghi-pham-sat-hai-nu-chu-quan-ca-phe-o-tien-giang-2397591.html             | 
+[2025-05-04T17:47:43.316+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:43.317+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.77s
+[2025-05-04T17:47:43.594+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt nghi phạm sát hại nữ chủ quán cà phê ở Tiền Giang
+[2025-05-04T17:47:44.121+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:44.123+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:44.711+0000] {crawler.py:232} INFO -     ✓ Bắt nghi phạm sát hại nữ chủ quán cà phê ở Tiền Giang...
+
+[2025-05-04T17:47:44.712+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nhan-khien-nghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html
+[2025-05-04T17:47:45.452+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:48.524+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T17:47:48.524+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:48.525+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.99s
+[2025-05-04T17:47:48.731+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T17:47:48.732+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:48.733+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-04T17:47:48.734+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T17:47:48.734+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:48.734+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.20s
+[2025-05-04T17:47:48.969+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Lời khai tiết lộ nguyên nhân nghi phạm sát hại nữ chủ quán cà phê
+[2025-05-04T17:47:49.525+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:49.527+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:50.230+0000] {crawler.py:232} INFO -     ✓ Lời khai tiết lộ nguyên nhân nghi phạm sát hại nữ chủ quán c...
+
+[2025-05-04T17:47:50.230+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bo-cong-an-canh-bao-boc-tran-thu-doan-thao-tung-tam-ly-cua-bon-toi-pham-2397170.html
+[2025-05-04T17:47:50.817+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:53.883+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bo-cong-an-canh-bao-boc-tr...n-thao-tung-tam-ly-cua-bon-toi-pham-2397170.html  | 
+[2025-05-04T17:47:53.884+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:53.885+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.95s
+[2025-05-04T17:47:54.100+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bo-cong-an-canh-bao-boc-tr...n-thao-tung-tam-ly-cua-bon-toi-pham-2397170.html  | 
+[2025-05-04T17:47:54.101+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:54.102+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-04T17:47:54.103+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bo-cong-an-canh-bao-boc-tr...n-thao-tung-tam-ly-cua-bon-toi-pham-2397170.html  | 
+[2025-05-04T17:47:54.104+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:54.104+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.17s
+[2025-05-04T17:47:54.494+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bộ Công an cảnh báo, ‘bóc trần’ thủ đoạn thao túng tâm lý của tội phạm công nghệ
+[2025-05-04T17:47:54.495+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3748 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:47:55.075+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:47:55.077+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:47:55.249+0000] {crawler.py:232} INFO -     ✓ Bộ Công an cảnh báo, ‘bóc trần’ thủ đoạn thao túng tâm lý củ...
+
+[2025-05-04T17:47:55.249+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-tai-xe-xe-dau-keo-va-cham-xe-may-2-nguoi-chet-tren-quoc-lo-51-2396850.html
+[2025-05-04T17:47:55.828+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:47:59.218+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-tai-xe-xe-dau-keo-va-cham-xe-may-2-nguoi-chet-tren-quoc-lo-51-2396850.html | 
+[2025-05-04T17:47:59.219+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:59.219+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.30s
+[2025-05-04T17:47:59.446+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-tai-xe-xe-dau-keo-va-cham-xe-may-2-nguoi-chet-tren-quoc-lo-51-2396850.html | 
+[2025-05-04T17:47:59.447+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:59.448+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-04T17:47:59.450+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-tai-xe-xe-dau-keo-va-cham-xe-may-2-nguoi-chet-tren-quoc-lo-51-2396850.html | 
+[2025-05-04T17:47:59.450+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:47:59.451+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.53s
+[2025-05-04T17:47:59.722+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt tài xế xe đầu kéo gây tai nạn làm 2 người tử vong trên quốc lộ 51
+[2025-05-04T17:48:00.388+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:00.392+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:00.546+0000] {crawler.py:232} INFO -     ✓ Bắt tài xế xe đầu kéo gây tai nạn làm 2 người tử vong trên q...
+
+[2025-05-04T17:48:00.547+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/canh-sat-mat-phuc-bat-7-nguoi-mang-sung-vao-rung-2397437.html
+[2025-05-04T17:48:01.058+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:04.009+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/canh-sat-mat-phuc-bat-7-nguoi-mang-sung-vao-rung-2397437.html                  | 
+[2025-05-04T17:48:04.010+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:04.011+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.89s
+[2025-05-04T17:48:04.294+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/canh-sat-mat-phuc-bat-7-nguoi-mang-sung-vao-rung-2397437.html                  | 
+[2025-05-04T17:48:04.295+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:04.296+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-04T17:48:04.297+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/canh-sat-mat-phuc-bat-7-nguoi-mang-sung-vao-rung-2397437.html                  | 
+[2025-05-04T17:48:04.297+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:04.298+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.18s
+[2025-05-04T17:48:04.626+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Cảnh sát mật phục bắt giữ 7 người mang súng vào rừng
+[2025-05-04T17:48:05.232+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:05.234+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:05.431+0000] {crawler.py:232} INFO -     ✓ Cảnh sát mật phục bắt giữ 7 người mang súng vào rừng...
+
+[2025-05-04T17:48:05.432+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/sap-xet-xu-vu-an-le-tung-van-2397191.html
+[2025-05-04T17:48:06.030+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:09.777+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/sap-xet-xu-vu-an-le-tung-van-2397191.html                                      | 
+[2025-05-04T17:48:09.778+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:09.779+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.65s
+[2025-05-04T17:48:10.023+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/sap-xet-xu-vu-an-le-tung-van-2397191.html                                      | 
+[2025-05-04T17:48:10.023+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:10.024+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-04T17:48:10.025+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/sap-xet-xu-vu-an-le-tung-van-2397191.html                                      | 
+[2025-05-04T17:48:10.026+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:10.027+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.90s
+[2025-05-04T17:48:10.313+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Sắp xét xử vụ án Lê Tùng Vân
+[2025-05-04T17:48:11.047+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:11.049+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:11.260+0000] {crawler.py:232} INFO -     ✓ Sắp xét xử vụ án Lê Tùng Vân...
+
+[2025-05-04T17:48:11.260+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nhan-vat-dac-biet-bi-truy-to-trong-vu-an-tap-doan-phuc-son-2396488.html
+[2025-05-04T17:48:12.014+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:16.004+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nhan-vat-dac-biet-bi-truy-to-trong-vu-an-tap-doan-phuc-son-2396488.html        | 
+[2025-05-04T17:48:16.005+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:16.006+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.89s
+[2025-05-04T17:48:16.240+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nhan-vat-dac-biet-bi-truy-to-trong-vu-an-tap-doan-phuc-son-2396488.html        | 
+[2025-05-04T17:48:16.240+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:16.241+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-04T17:48:16.243+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nhan-vat-dac-biet-bi-truy-to-trong-vu-an-tap-doan-phuc-son-2396488.html        | 
+[2025-05-04T17:48:16.243+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:16.244+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.13s
+[2025-05-04T17:48:16.702+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: ‘Nhân vật đặc biệt’ bị truy tố trong vụ án Tập đoàn Phúc Sơn
+[2025-05-04T17:48:16.703+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2638 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:48:17.623+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:17.625+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:17.790+0000] {crawler.py:232} INFO -     ✓ ‘Nhân vật đặc biệt’ bị truy tố trong vụ án Tập đoàn Phúc Sơn...
+
+[2025-05-04T17:48:17.791+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html
+[2025-05-04T17:48:18.380+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:21.305+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-04T17:48:21.306+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:21.307+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.85s
+[2025-05-04T17:48:21.490+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-04T17:48:21.491+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:21.491+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-04T17:48:21.492+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-04T17:48:21.493+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:21.494+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.04s
+[2025-05-04T17:48:21.707+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Phát hiện đối tượng bị Interpol truy nã đỏ tại Vĩnh Phúc
+[2025-05-04T17:48:22.341+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:22.342+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:22.547+0000] {crawler.py:232} INFO -     ✓ Phát hiện đối tượng bị Interpol truy nã đỏ tại Vĩnh Phúc...
+
+[2025-05-04T17:48:22.547+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-giu-ke-uong-ruou-say-di-xe-vao-duong-cam-xo-day-canh-sat-2396970.html
+[2025-05-04T17:48:23.191+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:26.549+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-giu-ke-uong-ruou-say-di-xe-vao-duong-cam-xo-day-canh-sat-2396970.html      | 
+[2025-05-04T17:48:26.550+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:26.551+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.27s
+[2025-05-04T17:48:26.743+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-giu-ke-uong-ruou-say-di-xe-vao-duong-cam-xo-day-canh-sat-2396970.html      | 
+[2025-05-04T17:48:26.744+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:26.744+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-04T17:48:26.745+0000] {logging_mixin.py:188} INFO - 0.19
+[2025-05-04T17:48:26.746+0000] {logging_mixin.py:188} INFO - s
+[2025-05-04T17:48:26.747+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-giu-ke-uong-ruou-say-di-xe-vao-duong-cam-xo-day-canh-sat-2396970.html      | 
+[2025-05-04T17:48:26.748+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:26.748+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.47s
+[2025-05-04T17:48:26.958+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt giữ kẻ uống rượu say đi xe vào đường cấm, xô đẩy cảnh sát
+[2025-05-04T17:48:27.609+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:27.610+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:27.777+0000] {crawler.py:232} INFO -     ✓ Bắt giữ kẻ uống rượu say đi xe vào đường cấm, xô đẩy cảnh sá...
+
+[2025-05-04T17:48:27.777+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ba-hoang-thi-thuy-lan-va-nhung-lan-nhan-tien-tu-hau-phao-2396434.html
+[2025-05-04T17:48:28.381+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:32.096+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ba-hoang-thi-thuy-lan-va-nhung-lan-nhan-tien-tu-hau-phao-2396434.html          | 
+[2025-05-04T17:48:32.097+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:32.098+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.64s
+[2025-05-04T17:48:32.403+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ba-hoang-thi-thuy-lan-va-nhung-lan-nhan-tien-tu-hau-phao-2396434.html          | 
+[2025-05-04T17:48:32.404+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:32.405+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-04T17:48:32.406+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ba-hoang-thi-thuy-lan-va-nhung-lan-nhan-tien-tu-hau-phao-2396434.html          | 
+[2025-05-04T17:48:32.407+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:32.408+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.95s
+[2025-05-04T17:48:32.712+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bà Hoàng Thị Thúy Lan và những lần nhận tiền từ Hậu ‘Pháo’
+[2025-05-04T17:48:32.713+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2973 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:48:33.621+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:33.623+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:33.810+0000] {crawler.py:232} INFO -     ✓ Bà Hoàng Thị Thúy Lan và những lần nhận tiền từ Hậu ‘Pháo’...
+
+[2025-05-04T17:48:33.810+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/mot-pho-truong-phong-tham-o-tien-ty-de-danh-bac-2397498.html
+[2025-05-04T17:48:34.400+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:37.586+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/mot-pho-truong-phong-tham-o-tien-ty-de-danh-bac-2397498.html                   | 
+[2025-05-04T17:48:37.587+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:37.588+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.10s
+[2025-05-04T17:48:37.775+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/mot-pho-truong-phong-tham-o-tien-ty-de-danh-bac-2397498.html                   | 
+[2025-05-04T17:48:37.776+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:37.776+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-04T17:48:37.777+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/mot-pho-truong-phong-tham-o-tien-ty-de-danh-bac-2397498.html                   | 
+[2025-05-04T17:48:37.778+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:37.778+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.29s
+[2025-05-04T17:48:38.153+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Một phó trưởng phòng tham ô tiền tỷ để đánh bạc
+[2025-05-04T17:48:38.722+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:38.724+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:38.886+0000] {crawler.py:232} INFO -     ✓ Một phó trưởng phòng tham ô tiền tỷ để đánh bạc...
+
+[2025-05-04T17:48:38.887+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/cha-me-sang-ten-so-do-som-cho-con-va-nguy-co-trang-tay-luc-ve-gia-2394690.html
+[2025-05-04T17:48:39.459+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:42.378+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cha-me-sang-ten-so-do-som-cho-con-va-nguy-co-trang-tay-luc-ve-gia-2394690.html | 
+[2025-05-04T17:48:42.379+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:42.379+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.85s
+[2025-05-04T17:48:42.654+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cha-me-sang-ten-so-do-som-cho-con-va-nguy-co-trang-tay-luc-ve-gia-2394690.html | 
+[2025-05-04T17:48:42.664+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:42.665+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.27s
+[2025-05-04T17:48:42.667+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cha-me-sang-ten-so-do-som-cho-con-va-nguy-co-trang-tay-luc-ve-gia-2394690.html | 
+[2025-05-04T17:48:42.668+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:42.668+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.14s
+[2025-05-04T17:48:42.913+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Cha mẹ sang tên sổ đỏ sớm cho con và nguy cơ 'trắng tay' lúc về già
+[2025-05-04T17:48:42.914+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2935 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:48:43.547+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:43.548+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:43.742+0000] {crawler.py:232} INFO -     ✓ Cha mẹ sang tên sổ đỏ sớm cho con và nguy cơ 'trắng tay' lúc...
+
+[2025-05-04T17:48:43.743+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html
+[2025-05-04T17:48:44.448+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:47.673+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-04T17:48:47.674+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:47.675+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.12s
+[2025-05-04T17:48:47.888+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-04T17:48:47.889+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:47.890+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-04T17:48:47.891+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-04T17:48:47.892+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:47.892+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.34s
+[2025-05-04T17:48:48.121+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt đối tượng dùng dao đâm em rể tử vong ở Thái Bình
+[2025-05-04T17:48:48.639+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:48.641+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:48.814+0000] {crawler.py:232} INFO -     ✓ Bắt đối tượng dùng dao đâm em rể tử vong ở Thái Bình...
+
+[2025-05-04T17:48:48.815+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/cu-lat-keo-cua-nguoi-cha-khien-con-trai-phan-uat-muon-song-chet-tai-toa-2396561.html
+[2025-05-04T17:48:49.435+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:52.624+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cu-lat-keo-cua-nguoi-cha-k...rai-phan-uat-muon-song-chet-tai-toa-2396561.html  | 
+[2025-05-04T17:48:52.624+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:52.625+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.09s
+[2025-05-04T17:48:52.895+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cu-lat-keo-cua-nguoi-cha-k...rai-phan-uat-muon-song-chet-tai-toa-2396561.html  | 
+[2025-05-04T17:48:52.897+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:52.897+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.27s
+[2025-05-04T17:48:52.899+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cu-lat-keo-cua-nguoi-cha-k...rai-phan-uat-muon-song-chet-tai-toa-2396561.html  | 
+[2025-05-04T17:48:52.899+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:52.900+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.37s
+[2025-05-04T17:48:53.116+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Cú lật kèo của người cha khiến con trai phẫn uất muốn 'sống chết' tại tòa
+[2025-05-04T17:48:53.117+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3651 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:48:53.730+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:53.734+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:53.922+0000] {crawler.py:232} INFO -     ✓ Cú lật kèo của người cha khiến con trai phẫn uất muốn 'sống ...
+
+[2025-05-04T17:48:53.923+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-giu-con-trai-17-tuoi-nghi-sat-hai-me-ruot-o-thanh-hoa-2396567.html
+[2025-05-04T17:48:54.524+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:48:57.779+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-giu-con-trai-17-tuoi-nghi-sat-hai-me-ruot-o-thanh-hoa-2396567.html         | 
+[2025-05-04T17:48:57.780+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:57.781+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.17s
+[2025-05-04T17:48:58.060+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-giu-con-trai-17-tuoi-nghi-sat-hai-me-ruot-o-thanh-hoa-2396567.html         | 
+[2025-05-04T17:48:58.061+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:58.062+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-04T17:48:58.063+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-giu-con-trai-17-tuoi-nghi-sat-hai-me-ruot-o-thanh-hoa-2396567.html         | 
+[2025-05-04T17:48:58.064+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:48:58.064+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.46s
+[2025-05-04T17:48:58.306+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt giữ con trai 17 tuổi nghi sát hại mẹ ruột ở Thanh Hóa
+[2025-05-04T17:48:58.867+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:48:58.868+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:48:59.050+0000] {crawler.py:232} INFO -     ✓ Bắt giữ con trai 17 tuổi nghi sát hại mẹ ruột ở Thanh Hóa...
+
+[2025-05-04T17:48:59.050+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nguoi-phu-nu-dung-chieu-doc-de-chiem-doat-hon-5-ty-cua-349-bi-hai-o-can-tho-2396755.html
+[2025-05-04T17:48:59.765+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:49:03.293+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguoi-phu-nu-dung-chieu-do...t-hon-5-ty-cua-349-bi-hai-o-can-tho-2396755.html  | 
+[2025-05-04T17:49:03.294+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:03.295+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.45s
+[2025-05-04T17:49:03.484+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguoi-phu-nu-dung-chieu-do...t-hon-5-ty-cua-349-bi-hai-o-can-tho-2396755.html  | 
+[2025-05-04T17:49:03.484+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:03.485+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-04T17:49:03.486+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguoi-phu-nu-dung-chieu-do...t-hon-5-ty-cua-349-bi-hai-o-can-tho-2396755.html  | 
+[2025-05-04T17:49:03.487+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:03.487+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.64s
+[2025-05-04T17:49:03.729+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Người phụ nữ dùng 'chiêu độc’ để chiếm đoạt tiền tỷ của hàng trăm bị hại
+[2025-05-04T17:49:04.617+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:49:04.623+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:49:04.831+0000] {crawler.py:232} INFO -     ✓ Người phụ nữ dùng 'chiêu độc’ để chiếm đoạt tiền tỷ của hàng...
+
+[2025-05-04T17:49:04.832+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/cha-me-ly-hon-va-so-phan-bi-thuong-cua-nhung-dua-tre-2396356.html
+[2025-05-04T17:49:05.315+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:49:08.035+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cha-me-ly-hon-va-so-phan-bi-thuong-cua-nhung-dua-tre-2396356.html              | 
+[2025-05-04T17:49:08.036+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:08.037+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.66s
+[2025-05-04T17:49:08.239+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cha-me-ly-hon-va-so-phan-bi-thuong-cua-nhung-dua-tre-2396356.html              | 
+[2025-05-04T17:49:08.239+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:08.240+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-04T17:49:08.241+0000] {logging_mixin.py:188} INFO - 0.2
+[2025-05-04T17:49:08.242+0000] {logging_mixin.py:188} INFO - 0s
+[2025-05-04T17:49:08.244+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cha-me-ly-hon-va-so-phan-bi-thuong-cua-nhung-dua-tre-2396356.html              | 
+[2025-05-04T17:49:08.244+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:08.245+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.87s
+[2025-05-04T17:49:08.480+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Cha mẹ ly hôn và số phận bi thương của những đứa trẻ
+[2025-05-04T17:49:08.480+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4999 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:49:11.398+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:49:11.400+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:49:11.579+0000] {crawler.py:232} INFO -     ✓ Cha mẹ ly hôn và số phận bi thương của những đứa trẻ...
+
+[2025-05-04T17:49:11.581+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-giu-khan-cap-nam-phu-huynh-tum-toc-danh-vao-dau-co-giao-2396581.html
+[2025-05-04T17:49:12.135+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:49:14.942+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-giu-khan-cap-nam-phu-huynh-tum-toc-danh-vao-dau-co-giao-2396581.html       | 
+[2025-05-04T17:49:14.942+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:14.943+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.77s
+[2025-05-04T17:49:15.165+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-giu-khan-cap-nam-phu-huynh-tum-toc-danh-vao-dau-co-giao-2396581.html       | 
+[2025-05-04T17:49:15.171+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:15.172+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-04T17:49:15.172+0000] {logging_mixin.py:188} INFO - 0.22
+[2025-05-04T17:49:15.173+0000] {logging_mixin.py:188} INFO - s
+[2025-05-04T17:49:15.175+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-giu-khan-cap-nam-phu-huynh-tum-toc-danh-vao-dau-co-giao-2396581.html       | 
+[2025-05-04T17:49:15.180+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:15.181+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.00s
+[2025-05-04T17:49:15.452+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt giữ khẩn cấp nam phụ huynh xông vào trường, đánh cô giáo túi bụi
+[2025-05-04T17:49:16.023+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:49:16.024+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:49:16.192+0000] {crawler.py:232} INFO -     ✓ Bắt giữ khẩn cấp nam phụ huynh xông vào trường, đánh cô giáo...
+
+[2025-05-04T17:49:16.192+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/vu-no-sung-o-vinh-long-khoi-to-vu-an-hinh-su-giet-nguoi-2397137.html
+[2025-05-04T17:49:16.789+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:49:20.197+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vu-no-sung-o-vinh-long-khoi-to-vu-an-hinh-su-giet-nguoi-2397137.html           | 
+[2025-05-04T17:49:20.198+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:20.199+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.32s
+[2025-05-04T17:49:20.432+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vu-no-sung-o-vinh-long-khoi-to-vu-an-hinh-su-giet-nguoi-2397137.html           | 
+[2025-05-04T17:49:20.433+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:20.434+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-04T17:49:20.436+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vu-no-sung-o-vinh-long-khoi-to-vu-an-hinh-su-giet-nguoi-2397137.html           | 
+[2025-05-04T17:49:20.437+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:20.437+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.56s
+[2025-05-04T17:49:20.709+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Vụ nổ súng ở Vĩnh Long: Khởi tố vụ án hình sự 'Giết người'
+[2025-05-04T17:49:20.710+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3704 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-04T17:49:21.286+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:49:21.288+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:49:21.452+0000] {crawler.py:232} INFO -     ✓ Vụ nổ súng ở Vĩnh Long: Khởi tố vụ án hình sự 'Giết người'...
+
+[2025-05-04T17:49:21.452+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/bat-khan-cap-huan-luyen-vien-mon-da-cau-chiem-doat-tien-cua-van-dong-vien-2396564.html
+[2025-05-04T17:49:22.006+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T17:49:25.274+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-khan-cap-huan-luyen-vi...u-chiem-doat-tien-cua-van-dong-vien-2396564.html  | 
+[2025-05-04T17:49:25.274+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:25.275+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.19s
+[2025-05-04T17:49:25.602+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-khan-cap-huan-luyen-vi...u-chiem-doat-tien-cua-van-dong-vien-2396564.html  | 
+[2025-05-04T17:49:25.603+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:25.604+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.33s
+[2025-05-04T17:49:25.605+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-khan-cap-huan-luyen-vi...u-chiem-doat-tien-cua-van-dong-vien-2396564.html  | 
+[2025-05-04T17:49:25.606+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T17:49:25.607+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.52s
+[2025-05-04T17:49:25.809+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Bắt khẩn cấp HLV nhiều năm chiếm đoạt tiền của vận động viên
+[2025-05-04T17:49:26.372+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T17:49:26.374+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T17:49:26.534+0000] {crawler.py:232} INFO -     ✓ Bắt khẩn cấp HLV nhiều năm chiếm đoạt tiền của vận động viên...
+
+[2025-05-04T17:49:26.534+0000] {crawler.py:235} INFO - ⏱️  Tổng thời gian crawl: 143.87 giây
+[2025-05-04T17:49:26.753+0000] {crawler.py:255} INFO - Đã lưu 25 bài viết vào collection 'phap-luat'
+[2025-05-04T17:49:26.818+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-04T17:49:26.819+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-04T17:49:26.827+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_phap-luat, run_id=manual__2025-05-04T17:46:07.642140+00:00, execution_date=20250504T174607, start_date=20250504T174702, end_date=20250504T174926
+[2025-05-04T17:49:26.914+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-04T17:49:26.930+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-04T17:49:26.933+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

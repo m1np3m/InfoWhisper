@@ -1,0 +1,43 @@
+[2025-05-03T15:39:39.413+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:39:39.457+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh manual__2025-05-03T15:39:36.031223+00:00 [queued]>
+[2025-05-03T15:39:39.470+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh manual__2025-05-03T15:39:36.031223+00:00 [queued]>
+[2025-05-03T15:39:39.471+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:39:39.500+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-03 15:39:36.031223+00:00
+[2025-05-03T15:39:39.511+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=169) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:39:39.516+0000] {standard_task_runner.py:63} INFO - Started process 177 to run task
+[2025-05-03T15:39:39.515+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'manual__2025-05-03T15:39:36.031223+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpxjj58gni']
+[2025-05-03T15:39:39.530+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask crawl_kinh-doanh
+[2025-05-03T15:39:39.647+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh manual__2025-05-03T15:39:36.031223+00:00 [running]> on host 4b7373746518
+[2025-05-03T15:39:39.847+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-03T15:39:36.031223+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-03T15:39:36.031223+00:00'
+[2025-05-03T15:39:39.850+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:39:41.862+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:39:52.347+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:52.360+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:52.361+0000] {logging_mixin.py:188} INFO -  | ⏱: 10.22s
+[2025-05-03T15:39:53.662+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:53.677+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:53.679+0000] {logging_mixin.py:188} INFO -  | ⏱: 1.29s
+[2025-05-03T15:39:53.681+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:53.684+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:53.686+0000] {logging_mixin.py:188} INFO -  | ⏱: 11.56s
+[2025-05-03T15:39:54.109+0000] {logging_mixin.py:188} INFO - Tìm thấy 49 link bài viết
+[2025-05-03T15:39:54.501+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T15:39:54.502+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chia-se-nhung-dieu-truoc-nay-chua-tung-cong-khai-2394612.html
+[2025-05-03T15:39:56.148+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:40:10.079+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:10.089+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:10.112+0000] {logging_mixin.py:188} INFO -  | ⏱: 13.68s
+[2025-05-03T15:40:11.320+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:11.321+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:11.334+0000] {logging_mixin.py:188} INFO -  | ⏱: 1.19s
+[2025-05-03T15:40:11.350+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:11.353+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:11.360+0000] {logging_mixin.py:188} INFO -  | ⏱: 14.99s
+[2025-05-03T15:40:14.317+0000] {logging_mixin.py:188} INFO -     ✓ Tỷ phú Phạm Nhật Vượng chia sẻ những điều trước nay chưa từn...
+[2025-05-03T15:40:14.318+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/nu-dai-gia-giao-duc-nguyen-thi-ut-em-voi-vong-xoay-3-200-ty-tu-tui-phu-huynh-2397121.html
+[2025-05-03T15:40:15.949+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:40:24.590+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nu-dai-gia-giao-duc-nguyen...vong-xoay-3-200-ty-tu-tui-phu-huynh-2397121.html  | 
+[2025-05-03T15:40:24.592+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:24.593+0000] {logging_mixin.py:188} INFO -  | ⏱: 8.32s

@@ -1,0 +1,358 @@
+[2025-06-02T14:12:11.385+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-02T14:12:11.409+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-06-02T13:30:00+00:00 [queued]>
+[2025-06-02T14:12:11.416+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-06-02T13:30:00+00:00 [queued]>
+[2025-06-02T14:12:11.417+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-02T14:12:11.431+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-06-02 13:30:00+00:00
+[2025-06-02T14:12:11.436+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=344) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-02T14:12:11.438+0000] {standard_task_runner.py:63} INFO - Started process 345 to run task
+[2025-06-02T14:12:11.438+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'scheduled__2025-06-02T13:30:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmps5nry1af']
+[2025-06-02T14:12:11.441+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask crawl_cong-nghe
+[2025-06-02T14:12:11.490+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-06-02T13:30:00+00:00 [running]> on host 1c99532c5ee4
+[2025-06-02T14:12:11.570+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-06-02T13:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-02T13:30:00+00:00'
+[2025-06-02T14:12:11.572+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-02T14:12:12.095+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-06-02T14:12:13.595+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:16.986+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 3.32s
+[2025-06-02T14:12:17.272+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 0.28s
+[2025-06-02T14:12:17.275+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 3.61s
+[2025-06-02T14:12:17.375+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-06-02T14:12:17.975+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-06-02T14:12:17.976+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục cong-nghe...
+[2025-06-02T14:12:17.977+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tin-hieu-la-nghi-nguoi-ngoai-hanh-tinh-dang-co-lien-lac-voi-trai-dat-2406882.html
+[2025-06-02T14:12:18.777+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:22.501+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tin-hieu-la-nghi-nguoi-ngo...-tinh-dang-co-lien-lac-voi-tr
+ai-dat-2406882.html  | ✓ | ⏱: 3.62s
+[2025-06-02T14:12:22.795+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tin-hieu-la-nghi-nguoi-ngo...-tinh-dang-co-lien-lac-voi-tr
+ai-dat-2406882.html  | ✓ | ⏱: 0.29s
+[2025-06-02T14:12:22.797+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tin-hieu-la-nghi-nguoi-ngo...-tinh-dang-co-lien-lac-voi-tr
+ai-dat-2406882.html  | ✓ | ⏱: 3.92s
+[2025-06-02T14:12:23.319+0000] {crawler.py:262} INFO -     ✓ Tín hiệu lạ nghi người ngoài hành tinh đang cố liên lạc với ...
+
+[2025-06-02T14:12:23.320+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hoc-sinh-da-nang-vo-dich-olympic-tri-tue-nhan-tao-toan-quoc-2025-2407261.html
+[2025-06-02T14:12:24.091+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:27.805+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hoc-sinh-da-nang-vo-dich-olympic-tri-tue-nhan-tao-toan-quo
+c-2025-2407261.html  | ✓ | ⏱: 3.55s
+[2025-06-02T14:12:28.034+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hoc-sinh-da-nang-vo-dich-olympic-tri-tue-nhan-tao-toan-quo
+c-2025-2407261.html  | ✓ | ⏱: 0.23s
+[2025-06-02T14:12:28.036+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hoc-sinh-da-nang-vo-dich-olympic-tri-tue-nhan-tao-toan-quo
+c-2025-2407261.html  | ✓ | ⏱: 3.78s
+[2025-06-02T14:12:28.427+0000] {crawler.py:262} INFO -     ✓ Học sinh Đà Nẵng vô địch Olympic trí tuệ nhân tạo toàn quốc ...
+
+[2025-06-02T14:12:28.428+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thuc-hu-thong-tin-mot-nuoc-mien-phi-chatgpt-plus-cho-toan-dan-2407202.html
+[2025-06-02T14:12:28.995+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:31.999+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/thuc-hu-thong-tin-mot-nuoc-mien-phi-chatgpt-plus-cho-toan-
+dan-2407202.html     | ✓ | ⏱: 2.94s
+[2025-06-02T14:12:32.209+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/thuc-hu-thong-tin-mot-nuoc-mien-phi-chatgpt-plus-cho-toan-
+dan-2407202.html     | ✓ | ⏱: 0.21s
+[2025-06-02T14:12:32.210+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/thuc-hu-thong-tin-mot-nuoc-mien-phi-chatgpt-plus-cho-toan-
+dan-2407202.html     | ✓ | ⏱: 3.15s
+[2025-06-02T14:12:32.592+0000] {crawler.py:262} INFO -     ✓ Thực hư thông tin ‘một nước miễn phí ChatGPT Plus cho toàn d...
+
+[2025-06-02T14:12:32.593+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/lam-sao-de-ai-ho-tro-thay-vi-can-tro-su-phat-trien-xa-hoi-cua-tre-em-2406901.html
+[2025-06-02T14:12:33.154+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:36.260+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/lam-sao-de-ai-ho-tro-thay-...tro-su-phat-trien-xa-hoi-cua-
+tre-em-2406901.html  | ✓ | ⏱: 3.12s
+[2025-06-02T14:12:36.485+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/lam-sao-de-ai-ho-tro-thay-...tro-su-phat-trien-xa-hoi-cua-
+tre-em-2406901.html  | ✓ | ⏱: 0.22s
+[2025-06-02T14:12:36.488+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/lam-sao-de-ai-ho-tro-thay-...tro-su-phat-trien-xa-hoi-cua-
+tre-em-2406901.html  | ✓ | ⏱: 3.35s
+[2025-06-02T14:12:37.159+0000] {crawler.py:262} INFO -     ✓ Làm sao để AI hỗ trợ thay vì cản trợ sự phát triển xã hội củ...
+
+[2025-06-02T14:12:37.159+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tu-95-bi-uav-ukraine-danh-thang-sao-huyet-vu-khi-chien-luoc-nga-lo-tu-huyet-2407113.html
+[2025-06-02T14:12:37.705+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:41.582+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tu-95-bi-uav-ukraine-danh-...t-vu-khi-chien-luoc-nga-lo-tu
+-huyet-2407113.html  | ✓ | ⏱: 3.79s
+[2025-06-02T14:12:41.857+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tu-95-bi-uav-ukraine-danh-...t-vu-khi-chien-luoc-nga-lo-tu
+-huyet-2407113.html  | ✓ | ⏱: 0.27s
+[2025-06-02T14:12:41.860+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tu-95-bi-uav-ukraine-danh-...t-vu-khi-chien-luoc-nga-lo-tu
+-huyet-2407113.html  | ✓ | ⏱: 4.07s
+[2025-06-02T14:12:42.325+0000] {crawler.py:262} INFO -     ✓ Tu-95 bị UAV Ukraine đánh thẳng sào huyệt, vũ khí chiến lược...
+
+[2025-06-02T14:12:42.326+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/bao-dia-tu-nghiem-trong-tien-ve-trai-dat-co-hoi-chiem-nguong-cuc-quang-cuc-dep-2407353.html
+[2025-06-02T14:12:42.860+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:47.116+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/bao-dia-tu-nghiem-trong-ti...-hoi-chiem-nguong-cuc-quang-c
+uc-dep-2407353.html  | ✓ | ⏱: 4.16s
+[2025-06-02T14:12:47.448+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/bao-dia-tu-nghiem-trong-ti...-hoi-chiem-nguong-cuc-quang-c
+uc-dep-2407353.html  | ✓ | ⏱: 0.33s
+[2025-06-02T14:12:47.452+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/bao-dia-tu-nghiem-trong-ti...-hoi-chiem-nguong-cuc-quang-c
+uc-dep-2407353.html  | ✓ | ⏱: 4.49s
+[2025-06-02T14:12:48.020+0000] {crawler.py:262} INFO -     ✓ Bão địa từ nghiêm trọng tiến về Trái đất, cơ hội chiêm ngưỡn...
+
+[2025-06-02T14:12:48.021+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thang-9-se-dong-cac-tai-khoan-ngan-hang-chet-de-chong-lua-dao-gian-lan-2407382.html
+[2025-06-02T14:12:48.709+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:52.709+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/thang-9-se-dong-cac-tai-kh...hang-chet-de-chong-lua-dao-gi
+an-lan-2407382.html  | ✓ | ⏱: 3.85s
+[2025-06-02T14:12:53.003+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/thang-9-se-dong-cac-tai-kh...hang-chet-de-chong-lua-dao-gi
+an-lan-2407382.html  | ✓ | ⏱: 0.29s
+[2025-06-02T14:12:53.006+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/thang-9-se-dong-cac-tai-kh...hang-chet-de-chong-lua-dao-gi
+an-lan-2407382.html  | ✓ | ⏱: 4.14s
+[2025-06-02T14:12:53.538+0000] {crawler.py:262} INFO -     ✓ Tháng 9 sẽ đóng các tài khoản ngân hàng “chết” để chống lừa ...
+
+[2025-06-02T14:12:53.538+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chung-tay-go-diem-nghen-ha-tang-cho-startup-ai-viet-2407344.html
+[2025-06-02T14:12:54.510+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:12:58.588+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chung-tay-go-diem-nghen-ha-tang-cho-startup-ai-viet-240734
+4.html               | ✓ | ⏱: 3.96s
+[2025-06-02T14:12:58.995+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chung-tay-go-diem-nghen-ha-tang-cho-startup-ai-viet-240734
+4.html               | ✓ | ⏱: 0.40s
+[2025-06-02T14:12:58.997+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chung-tay-go-diem-nghen-ha-tang-cho-startup-ai-viet-240734
+4.html               | ✓ | ⏱: 4.37s
+[2025-06-02T14:12:59.874+0000] {crawler.py:262} INFO -     ✓ Chung tay gỡ điểm nghẽn hạ tầng cho startup AI Việt...
+
+[2025-06-02T14:12:59.881+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/1-1-trieu-nguoi-dung-su-dung-dich-tin-nhan-tren-zalo-moi-thang-2407253.html
+[2025-06-02T14:13:00.703+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:05.103+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/1-1-trieu-nguoi-dung-su-dung-dich-tin-nhan-tren-zalo-moi-t
+hang-2407253.html    | ✓ | ⏱: 4.41s
+[2025-06-02T14:13:05.519+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/1-1-trieu-nguoi-dung-su-dung-dich-tin-nhan-tren-zalo-moi-t
+hang-2407253.html    | ✓ | ⏱: 0.41s
+[2025-06-02T14:13:05.522+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/1-1-trieu-nguoi-dung-su-dung-dich-tin-nhan-tren-zalo-moi-t
+hang-2407253.html    | ✓ | ⏱: 4.83s
+[2025-06-02T14:13:06.126+0000] {crawler.py:262} INFO -     ✓ 1,1 triệu người dùng sử dụng dịch vụ tin nhắn trên Zalo mỗi ...
+
+[2025-06-02T14:13:06.127+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/trung-quoc-ra-mat-ai-nhin-xuyen-thau-dau-dan-hat-nhan-khien-my-de-chung-2406547.html
+[2025-06-02T14:13:06.961+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:11.223+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/trung-quoc-ra-mat-ai-nhin-...-dau-dan-hat-nhan-khien-my-de
+-chung-2406547.html  | ✓ | ⏱: 4.10s
+[2025-06-02T14:13:11.392+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/trung-quoc-ra-mat-ai-nhin-...-dau-dan-hat-nhan-khien-my-de
+-chung-2406547.html  | ✓ | ⏱: 0.17s
+[2025-06-02T14:13:11.395+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/trung-quoc-ra-mat-ai-nhin-...-dau-dan-hat-nhan-khien-my-de
+-chung-2406547.html  | ✓ | ⏱: 4.28s
+[2025-06-02T14:13:11.798+0000] {crawler.py:262} INFO -     ✓ Trung Quốc ra mắt AI 'nhìn xuyên thấu' đầu đạn hạt nhân khiế...
+
+[2025-06-02T14:13:11.798+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tuoi-53-cua-elon-musk-sinh-14-nguoi-con-voi-4-phu-nu-khac-nhau-2407048.html
+[2025-06-02T14:13:12.491+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:16.499+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tuoi-53-cua-elon-musk-sinh-14-nguoi-con-voi-4-phu-nu-khac-
+nhau-2407048.html    | ✓ | ⏱: 3.93s
+[2025-06-02T14:13:16.813+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tuoi-53-cua-elon-musk-sinh-14-nguoi-con-voi-4-phu-nu-khac-
+nhau-2407048.html    | ✓ | ⏱: 0.31s
+[2025-06-02T14:13:16.815+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tuoi-53-cua-elon-musk-sinh-14-nguoi-con-voi-4-phu-nu-khac-
+nhau-2407048.html    | ✓ | ⏱: 4.24s
+[2025-06-02T14:13:17.405+0000] {crawler.py:262} INFO -     ✓ Tuổi 53 của Elon Musk: Sinh 14 người con với 4 phụ nữ khác n...
+
+[2025-06-02T14:13:17.405+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/noi-dau-them-dai-voi-apple-va-iphone-2407176.html
+[2025-06-02T14:13:18.093+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:21.709+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/noi-dau-them-dai-voi-apple-va-iphone-2407176.html         
+| ✓ | ⏱: 3.52s
+[2025-06-02T14:13:21.975+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/noi-dau-them-dai-voi-apple-va-iphone-2407176.html         
+| ✓ | ⏱: 0.26s
+[2025-06-02T14:13:21.977+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/noi-dau-them-dai-voi-apple-va-iphone-2407176.html         
+| ✓ | ⏱: 3.79s
+[2025-06-02T14:13:22.595+0000] {crawler.py:262} INFO -     ✓ ‘Nỗi đau thêm dài’ với Apple và iPhone...
+
+[2025-06-02T14:13:22.595+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thu-tuong-pham-minh-chinh-du-khoi-cong-to-hop-khong-gian-sang-tao-cmc-tai-ha-noi-2407096.html
+[2025-06-02T14:13:23.242+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:27.384+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/thu-tuong-pham-minh-chinh-...-khong-gian-sang-tao-cmc-tai-
+ha-noi-2407096.html  | ✓ | ⏱: 4.06s
+[2025-06-02T14:13:27.709+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/thu-tuong-pham-minh-chinh-...-khong-gian-sang-tao-cmc-tai-
+ha-noi-2407096.html  | ✓ | ⏱: 0.32s
+[2025-06-02T14:13:27.712+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/thu-tuong-pham-minh-chinh-...-khong-gian-sang-tao-cmc-tai-
+ha-noi-2407096.html  | ✓ | ⏱: 4.39s
+[2025-06-02T14:13:28.264+0000] {crawler.py:262} INFO -     ✓ Thủ tướng Phạm Minh Chính dự khởi công Tổ hợp Không gian sán...
+
+[2025-06-02T14:13:28.265+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/them-1-co-quan-bao-chi-cua-viet-nam-vua-bi-tan-cong-mang-2407249.html
+[2025-06-02T14:13:29.063+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:33.316+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/them-1-co-quan-bao-chi-cua-viet-nam-vua-bi-tan-cong-mang-2
+407249.html          | ✓ | ⏱: 4.16s
+[2025-06-02T14:13:33.535+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/them-1-co-quan-bao-chi-cua-viet-nam-vua-bi-tan-cong-mang-2
+407249.html          | ✓ | ⏱: 0.33s
+[2025-06-02T14:13:33.538+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/them-1-co-quan-bao-chi-cua-viet-nam-vua-bi-tan-cong-mang-2
+407249.html          | ✓ | ⏱: 4.50s
+[2025-06-02T14:13:34.610+0000] {crawler.py:262} INFO -     ✓ Thêm 1 cơ quan báo chí của Việt Nam bị tấn công mạng...
+
+[2025-06-02T14:13:34.611+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ai-tam-mau-thi-truong-viec-lam-nguoi-lao-dong-can-lam-gi-de-song-sot-2407292.html
+[2025-06-02T14:13:35.332+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:39.062+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ai-tam-mau-thi-truong-viec...uoi-lao-dong-can-lam-gi-de-so
+ng-sot-2407292.html  | ✓ | ⏱: 3.65s
+[2025-06-02T14:13:39.297+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ai-tam-mau-thi-truong-viec...uoi-lao-dong-can-lam-gi-de-so
+ng-sot-2407292.html  | ✓ | ⏱: 0.23s
+[2025-06-02T14:13:39.300+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ai-tam-mau-thi-truong-viec...uoi-lao-dong-can-lam-gi-de-so
+ng-sot-2407292.html  | ✓ | ⏱: 3.89s
+[2025-06-02T14:13:40.137+0000] {crawler.py:262} INFO -     ✓ AI ‘khuấy đảo’ thị trường việc làm, người lao động cần làm g...
+
+[2025-06-02T14:13:40.138+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/elon-musk-den-nha-trang-voi-mot-ben-mat-tim-bam-nhung-khong-phai-bi-vo-danh-2406853.html
+[2025-06-02T14:13:40.760+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:44.821+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/elon-musk-den-nha-trang-vo...tim-bam-nhung-khong-phai-bi-v
+o-danh-2406853.html  | ✓ | ⏱: 3.99s
+[2025-06-02T14:13:45.358+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/elon-musk-den-nha-trang-vo...tim-bam-nhung-khong-phai-bi-v
+o-danh-2406853.html  | ✓ | ⏱: 0.53s
+[2025-06-02T14:13:45.361+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/elon-musk-den-nha-trang-vo...tim-bam-nhung-khong-phai-bi-v
+o-danh-2406853.html  | ✓ | ⏱: 4.53s
+[2025-06-02T14:13:45.935+0000] {crawler.py:262} INFO -     ✓ Elon Musk đến Nhà Trắng với một bên mắt tím bầm, ai là thủ p...
+
+[2025-06-02T14:13:45.937+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/go-cac-nut-that-chinh-sach-de-tao-dong-luc-cho-doanh-nghiep-lam-chu-cong-nghe-2407101.html
+[2025-06-02T14:13:46.685+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:50.573+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/go-cac-nut-that-chinh-sach...-cho-doanh-nghiep-lam-chu-con
+g-nghe-2407101.html  | ✓ | ⏱: 3.75s
+[2025-06-02T14:13:50.856+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/go-cac-nut-that-chinh-sach...-cho-doanh-nghiep-lam-chu-con
+g-nghe-2407101.html  | ✓ | ⏱: 0.28s
+[2025-06-02T14:13:50.858+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/go-cac-nut-that-chinh-sach...-cho-doanh-nghiep-lam-chu-con
+g-nghe-2407101.html  | ✓ | ⏱: 4.04s
+[2025-06-02T14:13:51.307+0000] {crawler.py:262} INFO -     ✓ Gỡ các ‘nút thắt’ chính sách để tạo động lực cho doanh nghiệ...
+
+[2025-06-02T14:13:51.308+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thanh-toan-khong-tien-mat-thuc-day-kinh-te-so-2407285.html
+[2025-06-02T14:13:52.022+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:13:56.538+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/thanh-toan-khong-tien-mat-thuc-day-kinh-te-so-2407285.html
+| ✓ | ⏱: 4.43s
+[2025-06-02T14:13:56.882+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/thanh-toan-khong-tien-mat-thuc-day-kinh-te-so-2407285.html
+| ✓ | ⏱: 0.34s
+[2025-06-02T14:13:56.885+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/thanh-toan-khong-tien-mat-thuc-day-kinh-te-so-2407285.html
+| ✓ | ⏱: 4.78s
+[2025-06-02T14:13:57.421+0000] {crawler.py:262} INFO -     ✓ Thanh toán không tiền mặt thúc đẩy kinh tế số...
+
+[2025-06-02T14:13:57.422+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ngay-quoc-te-thieu-nhi-nghi-ve-cach-chung-ta-bao-ve-tre-em-truoc-ai-2406956.html
+[2025-06-02T14:13:58.199+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:02.108+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ngay-quoc-te-thieu-nhi-ngh...ach-chung-ta-bao-ve-tre-em-tr
+uoc-ai-2406956.html  | ✓ | ⏱: 3.83s
+[2025-06-02T14:14:02.387+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ngay-quoc-te-thieu-nhi-ngh...ach-chung-ta-bao-ve-tre-em-tr
+uoc-ai-2406956.html  | ✓ | ⏱: 0.28s
+[2025-06-02T14:14:02.390+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ngay-quoc-te-thieu-nhi-ngh...ach-chung-ta-bao-ve-tre-em-tr
+uoc-ai-2406956.html  | ✓ | ⏱: 4.11s
+[2025-06-02T14:14:02.946+0000] {crawler.py:262} INFO -     ✓ Ngày quốc tế thiếu nhi: Nghĩ về cách chúng ta bảo vệ trẻ em ...
+
+[2025-06-02T14:14:02.947+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vi-dien-tu-chinh-thuc-tro-thanh-phuong-tien-thanh-toan-tu-1-7-2407356.html
+[2025-06-02T14:14:03.839+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:08.773+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/vi-dien-tu-chinh-thuc-tro-thanh-phuong-tien-thanh-toan-tu-
+1-7-2407356.html     | ✓ | ⏱: 4.78s
+[2025-06-02T14:14:09.328+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/vi-dien-tu-chinh-thuc-tro-thanh-phuong-tien-thanh-toan-tu-
+1-7-2407356.html     | ✓ | ⏱: 0.55s
+[2025-06-02T14:14:09.331+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/vi-dien-tu-chinh-thuc-tro-thanh-phuong-tien-thanh-toan-tu-
+1-7-2407356.html     | ✓ | ⏱: 5.33s
+[2025-06-02T14:14:09.966+0000] {crawler.py:262} INFO -     ✓ Ví điện tử chính thức trở thành phương tiện thanh toán từ 1/...
+
+[2025-06-02T14:14:09.967+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/rui-ro-mua-ve-concert-cho-den-nhan-ma-code-on-dinh-cho-ngoi-moi-biet-bi-lua-2406562.html
+[2025-06-02T14:14:10.751+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:14.253+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/rui-ro-mua-ve-concert-cho-...de-on-dinh-cho-ngoi-moi-biet-
+bi-lua-2406562.html  | ✓ | ⏱: 3.41s
+[2025-06-02T14:14:14.498+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/rui-ro-mua-ve-concert-cho-...de-on-dinh-cho-ngoi-moi-biet-
+bi-lua-2406562.html  | ✓ | ⏱: 0.24s
+[2025-06-02T14:14:14.500+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/rui-ro-mua-ve-concert-cho-...de-on-dinh-cho-ngoi-moi-biet-
+bi-lua-2406562.html  | ✓ | ⏱: 3.66s
+[2025-06-02T14:14:14.907+0000] {crawler.py:262} INFO -     ✓ Chi đống tiền mua vé concert chợ đen online, ổn định chỗ ngồ...
+
+[2025-06-02T14:14:14.908+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vneconomy-ra-mat-nen-tang-so-marcom-ai-platform-cho-cac-co-quan-bao-chi-2407305.html
+[2025-06-02T14:14:15.452+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:18.657+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/vneconomy-ra-mat-nen-tang-...ai-platform-cho-cac-co-quan-b
+ao-chi-2407305.html  | ✓ | ⏱: 3.12s
+[2025-06-02T14:14:18.910+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/vneconomy-ra-mat-nen-tang-...ai-platform-cho-cac-co-quan-b
+ao-chi-2407305.html  | ✓ | ⏱: 0.25s
+[2025-06-02T14:14:18.912+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/vneconomy-ra-mat-nen-tang-...ai-platform-cho-cac-co-quan-b
+ao-chi-2407305.html  | ✓ | ⏱: 3.37s
+[2025-06-02T14:14:19.351+0000] {crawler.py:262} INFO -     ✓ VnEconomy ra mắt nền tảng số Marcom-AI Platform cho các cơ q...
+
+[2025-06-02T14:14:19.352+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/huawei-don-luc-xay-chuoi-cung-ung-ban-dan-de-khong-con-bi-phuong-tay-de-doa-2406851.html
+[2025-06-02T14:14:19.911+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:23.393+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/huawei-don-luc-xay-chuoi-c...n-de-khong-con-bi-phuong-tay-
+de-doa-2406851.html  | ✓ | ⏱: 3.42s
+[2025-06-02T14:14:23.630+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/huawei-don-luc-xay-chuoi-c...n-de-khong-con-bi-phuong-tay-
+de-doa-2406851.html  | ✓ | ⏱: 0.23s
+[2025-06-02T14:14:23.632+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/huawei-don-luc-xay-chuoi-c...n-de-khong-con-bi-phuong-tay-
+de-doa-2406851.html  | ✓ | ⏱: 3.66s
+[2025-06-02T14:14:24.064+0000] {crawler.py:262} INFO -     ✓ Huawei dồn lực xây chuỗi cung ứng bán dẫn để không còn bị ph...
+
+[2025-06-02T14:14:24.065+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/moi-dieu-can-biet-ve-veo-3-cong-cu-ai-tao-video-gay-sot-hien-nay-2407162.html
+[2025-06-02T14:14:24.671+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:28.529+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/moi-dieu-can-biet-ve-veo-3-cong-cu-ai-tao-video-gay-sot-hi
+en-nay-2407162.html  | ✓ | ⏱: 3.79s
+[2025-06-02T14:14:28.987+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/moi-dieu-can-biet-ve-veo-3-cong-cu-ai-tao-video-gay-sot-hi
+en-nay-2407162.html  | ✓ | ⏱: 0.45s
+[2025-06-02T14:14:28.989+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/moi-dieu-can-biet-ve-veo-3-cong-cu-ai-tao-video-gay-sot-hi
+en-nay-2407162.html  | ✓ | ⏱: 4.25s
+[2025-06-02T14:14:29.421+0000] {crawler.py:262} INFO -     ✓ Mọi điều cần biết về Veo 3, công cụ AI tạo video gây sốt hiệ...
+
+[2025-06-02T14:14:29.422+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/sap-co-trai-he-ai-danh-cho-hoc-sinh-pho-thong-trong-ca-nuoc-2407308.html
+[2025-06-02T14:14:30.020+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:14:33.506+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/sap-co-trai-he-ai-danh-cho-hoc-sinh-pho-thong-trong-ca-nuo
+c-2407308.html       | ✓ | ⏱: 3.52s
+[2025-06-02T14:14:33.766+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/sap-co-trai-he-ai-danh-cho-hoc-sinh-pho-thong-trong-ca-nuo
+c-2407308.html       | ✓ | ⏱: 0.26s
+[2025-06-02T14:14:33.768+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/sap-co-trai-he-ai-danh-cho-hoc-sinh-pho-thong-trong-ca-nuo
+c-2407308.html       | ✓ | ⏱: 3.78s
+[2025-06-02T14:14:34.299+0000] {crawler.py:262} INFO -     ✓ Sắp có trại hè AI dành cho học sinh trong cả nước...
+
+[2025-06-02T14:14:34.299+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 142.20 giây
+[2025-06-02T14:14:34.570+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'cong-nghe'
+[2025-06-02T14:14:34.623+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-02T14:14:34.624+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-02T14:14:34.635+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=scheduled__2025-06-02T13:30:00+00:00, execution_date=20250602T133000, start_date=20250602T141211, end_date=20250602T141434
+[2025-06-02T14:14:34.674+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-02T14:14:34.700+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-02T14:14:34.702+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

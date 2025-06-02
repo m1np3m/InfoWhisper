@@ -1,0 +1,96 @@
+[2025-05-03T15:15:44.422+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:15:44.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_thoi-su manual__2025-05-03T15:15:13.250242+00:00 [queued]>
+[2025-05-03T15:15:44.452+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_thoi-su manual__2025-05-03T15:15:13.250242+00:00 [queued]>
+[2025-05-03T15:15:44.453+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:15:44.467+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_thoi-su> on 2025-05-03 15:15:13.250242+00:00
+[2025-05-03T15:15:44.472+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1031) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:15:44.474+0000] {standard_task_runner.py:63} INFO - Started process 1032 to run task
+[2025-05-03T15:15:44.474+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_thoi-su', 'manual__2025-05-03T15:15:13.250242+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp0iftbtwy']
+[2025-05-03T15:15:44.477+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask crawl_thoi-su
+[2025-05-03T15:15:44.531+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_thoi-su manual__2025-05-03T15:15:13.250242+00:00 [running]> on host fdbcedb99356
+[2025-05-03T15:15:44.620+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_thoi-su' AIRFLOW_CTX_EXECUTION_DATE='2025-05-03T15:15:13.250242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-03T15:15:13.250242+00:00'
+[2025-05-03T15:15:44.622+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:15:45.277+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:15:48.008+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thoi-su                                                                        | 
+[2025-05-03T15:15:48.009+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:48.010+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.67s
+[2025-05-03T15:15:48.229+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thoi-su                                                                        | 
+[2025-05-03T15:15:48.229+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:48.230+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-03T15:15:48.231+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thoi-su                                                                        | 
+[2025-05-03T15:15:48.232+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:48.232+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.89s
+[2025-05-03T15:15:48.323+0000] {logging_mixin.py:188} INFO - Tìm thấy 48 link bài viết
+[2025-05-03T15:15:48.536+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục thoi-su...
+[2025-05-03T15:15:48.537+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/bien-nguoi-do-ve-cong-vien-thong-nhat-xem-phao-hoa-mung-thong-nhat-dat-nuoc-2395819.html
+[2025-05-03T15:15:49.065+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:15:52.399+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bien-nguoi-do-ve-cong-vien...m-phao-hoa-mung-thong-nhat-dat-nuoc-2395819.html  | 
+[2025-05-03T15:15:52.400+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:52.401+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.28s
+[2025-05-03T15:15:52.533+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bien-nguoi-do-ve-cong-vien...m-phao-hoa-mung-thong-nhat-dat-nuoc-2395819.html  | 
+[2025-05-03T15:15:52.534+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:52.534+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.13s
+[2025-05-03T15:15:52.535+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bien-nguoi-do-ve-cong-vien...m-phao-hoa-mung-thong-nhat-dat-nuoc-2395819.html  | 
+[2025-05-03T15:15:52.536+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:52.537+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.41s
+[2025-05-03T15:15:52.879+0000] {logging_mixin.py:188} INFO -     ✓ 'Biển người' đổ về công viên Thống Nhất xem pháo hoa kỷ niệm...
+[2025-05-03T15:15:52.879+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/khoanh-khac-tiem-kich-su-30mk2-tha-bay-nhiet-ruc-ro-tren-bau-troi-tphcm-2396923.html
+[2025-05-03T15:15:53.526+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:15:57.343+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khoanh-khac-tiem-kich-su-3...ay-nhiet-ruc-ro-tren-bau-troi-tphcm-2396923.html  | 
+[2025-05-03T15:15:57.344+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:57.344+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.74s
+[2025-05-03T15:15:57.502+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khoanh-khac-tiem-kich-su-3...ay-nhiet-ruc-ro-tren-bau-troi-tphcm-2396923.html  | 
+[2025-05-03T15:15:57.503+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:57.503+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.16s
+[2025-05-03T15:15:57.504+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khoanh-khac-tiem-kich-su-3...ay-nhiet-ruc-ro-tren-bau-troi-tphcm-2396923.html  | 
+[2025-05-03T15:15:57.510+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:15:57.511+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.91s
+[2025-05-03T15:15:58.047+0000] {logging_mixin.py:188} INFO -     ✓ Khoảnh khắc tiêm kích Su-30MK2 thả bẫy nhiệt rực rỡ trên bầu...
+[2025-05-03T15:15:58.048+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html
+[2025-05-03T15:15:58.565+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:16:01.564+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-03T15:16:01.564+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:01.565+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.91s
+[2025-05-03T15:16:01.742+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-03T15:16:01.742+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:01.743+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-03T15:16:01.744+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/phat-hien-doi-tuong-bi-interpol-truy-na-do-tai-vinh-phuc-2397308.html          | 
+[2025-05-03T15:16:01.745+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:01.745+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.09s
+[2025-05-03T15:16:02.168+0000] {logging_mixin.py:188} INFO -     ✓ Phát hiện đối tượng bị Interpol truy nã đỏ tại Vĩnh Phúc...
+[2025-05-03T15:16:02.169+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html
+[2025-05-03T15:16:02.685+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:16:05.276+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-03T15:16:05.277+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:05.277+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.53s
+[2025-05-03T15:16:05.472+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-03T15:16:05.473+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:05.473+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-03T15:16:05.474+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bat-doi-tuong-dung-dao-dam-nguoi-nha-tu-vong-o-thai-binh-2397283.html          | 
+[2025-05-03T15:16:05.475+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:05.475+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.73s
+[2025-05-03T15:16:05.833+0000] {logging_mixin.py:188} INFO -     ✓ Bắt đối tượng dùng dao đâm em rể tử vong ở Thái Bình...
+[2025-05-03T15:16:05.834+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/viet-nam-len-tieng-truoc-hoat-dong-cua-trung-quoc-philippines-o-truong-sa-2397311.html
+[2025-05-03T15:16:06.356+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:16:09.088+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/viet-nam-len-tieng-truoc-h...-trung-quoc-philippines-o-truong-sa-2397311.html  | 
+[2025-05-03T15:16:09.089+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:09.090+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.67s
+[2025-05-03T15:16:09.292+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/viet-nam-len-tieng-truoc-h...-trung-quoc-philippines-o-truong-sa-2397311.html  | 
+[2025-05-03T15:16:09.292+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:09.293+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T15:16:09.293+0000] {logging_mixin.py:188} INFO - 0.2
+[2025-05-03T15:16:09.294+0000] {logging_mixin.py:188} INFO - 0s
+[2025-05-03T15:16:09.295+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/viet-nam-len-tieng-truoc-h...-trung-quoc-philippines-o-truong-sa-2397311.html  | 
+[2025-05-03T15:16:09.295+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:16:09.296+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.87s
+[2025-05-03T15:16:09.675+0000] {logging_mixin.py:188} INFO -     ✓ Việt Nam lên tiếng trước hoạt động của Trung Quốc, Philippin...
+[2025-05-03T15:16:09.675+0000] {logging_mixin.py:188} INFO - ⏱️  Tổng thời gian crawl: 25.04 giây
+[2025-05-03T15:16:10.600+0000] {logging_mixin.py:188} INFO - Đã lưu 5 bài viết vào collection 'thoi-su'
+[2025-05-03T15:16:10.665+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T15:16:10.668+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T15:16:10.676+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_thoi-su, run_id=manual__2025-05-03T15:15:13.250242+00:00, execution_date=20250503T151513, start_date=20250503T151544, end_date=20250503T151610
+[2025-05-03T15:16:10.699+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T15:16:10.718+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T15:16:10.721+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

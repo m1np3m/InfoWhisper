@@ -1,0 +1,32 @@
+[2025-05-18T14:00:29.011+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T14:00:29.034+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T13:30:00+00:00 [queued]>
+[2025-05-18T14:00:29.042+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T13:30:00+00:00 [queued]>
+[2025-05-18T14:00:29.042+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T14:00:29.056+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_phap-luat> on 2025-05-18 13:30:00+00:00
+[2025-05-18T14:00:29.061+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=11406) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T14:00:29.063+0000] {standard_task_runner.py:63} INFO - Started process 11407 to run task
+[2025-05-18T14:00:29.063+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_phap-luat', 'scheduled__2025-05-18T13:30:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmphqqutiax']
+[2025-05-18T14:00:29.066+0000] {standard_task_runner.py:91} INFO - Job 37: Subtask crawl_phap-luat
+[2025-05-18T14:00:29.107+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T13:30:00+00:00 [running]> on host a383b65f89e1
+[2025-05-18T14:00:29.192+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_phap-luat' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T13:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T13:30:00+00:00'
+[2025-05-18T14:00:29.193+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T14:00:29.359+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T14:00:29.970+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T14:00:32.244+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 2.22s
+[2025-05-18T14:00:32.477+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 0.23s
+[2025-05-18T14:00:32.480+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 2.45s
+[2025-05-18T14:00:32.710+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục phap-luat
+[2025-05-18T14:00:33.388+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs sau xử lý live
+[2025-05-18T14:00:33.388+0000] {crawler.py:252} INFO - Không có bài viết mới nào trong danh mục phap-luat cần crawl.
+[2025-05-18T14:00:33.464+0000] {crawler.py:294} INFO - Không có bài viết để lưu vào collection 'phap-luat'
+[2025-05-18T14:00:33.535+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T14:00:33.536+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T14:00:33.543+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_phap-luat, run_id=scheduled__2025-05-18T13:30:00+00:00, execution_date=20250518T133000, start_date=20250518T140029, end_date=20250518T140033
+[2025-05-18T14:00:33.615+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T14:00:33.630+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T14:00:33.633+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

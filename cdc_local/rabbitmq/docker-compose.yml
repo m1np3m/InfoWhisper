@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - /d/Airflow/cdc_local/rabbitmq/logs:/var/log/rabbitmq
+      - /d/Airflow/cdc_local/rabbitmq/data:/var/lib/rabbitmq
+      - /d/Airflow/cdc_local/rabbitmq/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+    environment:
+      - RABBITMQ_DEFAULT_USER=VinhThuan
+      - RABBITMQ_DEFAULT_PASS=VinhThuan

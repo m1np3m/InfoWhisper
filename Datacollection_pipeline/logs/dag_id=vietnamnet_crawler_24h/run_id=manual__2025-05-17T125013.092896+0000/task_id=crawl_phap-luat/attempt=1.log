@@ -1,0 +1,64 @@
+[2025-05-17T12:54:56.551+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-17T12:54:56.596+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-17T12:50:13.092896+00:00 [queued]>
+[2025-05-17T12:54:56.617+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-17T12:50:13.092896+00:00 [queued]>
+[2025-05-17T12:54:56.619+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-17T12:54:56.699+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_phap-luat> on 2025-05-17 12:50:13.092896+00:00
+[2025-05-17T12:54:56.709+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=22135) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-17T12:54:56.712+0000] {standard_task_runner.py:63} INFO - Started process 22147 to run task
+[2025-05-17T12:54:56.713+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_phap-luat', 'manual__2025-05-17T12:50:13.092896+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpjw05lim4']
+[2025-05-17T12:54:56.718+0000] {standard_task_runner.py:91} INFO - Job 172: Subtask crawl_phap-luat
+[2025-05-17T12:54:56.830+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat manual__2025-05-17T12:50:13.092896+00:00 [running]> on host 60d771d880eb
+[2025-05-17T12:54:57.123+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_phap-luat' AIRFLOW_CTX_EXECUTION_DATE='2025-05-17T12:50:13.092896+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-17T12:50:13.092896+00:00'
+[2025-05-17T12:54:57.126+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-17T12:54:57.668+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-17T12:54:58.879+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T12:55:03.494+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-17T12:55:03.497+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:03.500+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.49s
+[2025-05-17T12:55:04.025+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-17T12:55:04.027+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:04.028+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.52s
+[2025-05-17T12:55:04.032+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-17T12:55:04.033+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:04.034+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.02s
+[2025-05-17T12:55:04.658+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục phap-luat
+[2025-05-17T12:55:05.416+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 2 URLs sau xử lý live
+[2025-05-17T12:55:05.417+0000] {crawler.py:255} INFO - Đang crawl 2 bài viết mới từ danh mục phap-luat...
+[2025-05-17T12:55:05.417+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vu-an-thuan-an-hon-134-ty-thu-giu-phong-toa-xu-ly-tien-chenh-lech-the-nao-2401779.html
+[2025-05-17T12:55:06.220+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T12:55:11.176+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vu-an-thuan-an-hon-134-ty-...g-toa-xu-ly-tien-chenh-lech-the-nao-2401779.html  | 
+[2025-05-17T12:55:11.177+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:11.178+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.89s
+[2025-05-17T12:55:11.468+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vu-an-thuan-an-hon-134-ty-...g-toa-xu-ly-tien-chenh-lech-the-nao-2401779.html  | 
+[2025-05-17T12:55:11.469+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:11.469+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-17T12:55:11.471+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vu-an-thuan-an-hon-134-ty-...g-toa-xu-ly-tien-chenh-lech-the-nao-2401779.html  | 
+[2025-05-17T12:55:11.471+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:11.472+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.19s
+[2025-05-17T12:55:12.199+0000] {crawler.py:262} INFO -     ✓ Vụ án Thuận An: Hơn 134 tỷ thu giữ, phong tỏa, xử lý tiền ch...
+
+[2025-05-17T12:55:12.201+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/khoi-to-4-bac-sy-1-can-bo-cong-an-vi-chay-chung-chi-hanh-nghe-2402062.html
+[2025-05-17T12:55:13.431+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T12:55:18.940+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khoi-to-4-bac-sy-1-can-bo-cong-an-vi-chay-chung-chi-hanh-nghe-2402062.html     | 
+[2025-05-17T12:55:18.941+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:18.941+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.35s
+[2025-05-17T12:55:19.213+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khoi-to-4-bac-sy-1-can-bo-cong-an-vi-chay-chung-chi-hanh-nghe-2402062.html     | 
+[2025-05-17T12:55:19.214+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:19.215+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T12:55:19.215+0000] {logging_mixin.py:188} INFO - 0.27
+[2025-05-17T12:55:19.216+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T12:55:19.217+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khoi-to-4-bac-sy-1-can-bo-cong-an-vi-chay-chung-chi-hanh-nghe-2402062.html     | 
+[2025-05-17T12:55:19.218+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T12:55:19.219+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.62s
+[2025-05-17T12:55:20.343+0000] {crawler.py:262} INFO -     ✓ Khởi tố 4 bác sĩ vì 'chạy' chứng chỉ hành nghề...
+
+[2025-05-17T12:55:20.345+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 22.67 giây
+[2025-05-17T12:55:20.466+0000] {crawler.py:292} INFO - Đã lưu 2 bài viết vào collection 'phap-luat'
+[2025-05-17T12:55:20.530+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-17T12:55:20.548+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T12:55:20.560+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_phap-luat, run_id=manual__2025-05-17T12:50:13.092896+00:00, execution_date=20250517T125013, start_date=20250517T125456, end_date=20250517T125520
+[2025-05-17T12:55:20.623+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T12:55:20.648+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T12:55:20.659+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

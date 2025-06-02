@@ -1,0 +1,51 @@
+[2025-05-16T11:00:13.674+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T11:00:13.716+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T10:59:10.407806+00:00 [queued]>
+[2025-05-16T11:00:13.734+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T10:59:10.407806+00:00 [queued]>
+[2025-05-16T11:00:13.735+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T11:00:13.770+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-16 10:59:10.407806+00:00
+[2025-05-16T11:00:13.782+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4464) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T11:00:13.785+0000] {standard_task_runner.py:63} INFO - Started process 4575 to run task
+[2025-05-16T11:00:13.787+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'manual__2025-05-16T10:59:10.407806+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpr3dpl7an']
+[2025-05-16T11:00:13.802+0000] {standard_task_runner.py:91} INFO - Job 40: Subtask crawl_doi-song
+[2025-05-16T11:00:13.961+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T10:59:10.407806+00:00 [running]> on host 71b827885e5f
+[2025-05-16T11:00:14.192+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T10:59:10.407806+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T10:59:10.407806+00:00'
+[2025-05-16T11:00:14.194+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T11:00:14.572+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T11:00:15.852+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:00:20.084+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T11:00:20.085+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:20.086+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.11s
+[2025-05-16T11:00:20.445+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T11:00:20.445+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:20.446+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.36s
+[2025-05-16T11:00:20.448+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T11:00:20.448+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:20.449+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.47s
+[2025-05-16T11:00:21.205+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-16T11:00:21.946+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-16T11:00:21.948+0000] {crawler.py:232} INFO - Đang crawl 1 bài viết mới từ danh mục doi-song...
+[2025-05-16T11:00:21.951+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html
+[2025-05-16T11:00:23.371+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:00:28.433+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html    | 
+[2025-05-16T11:00:28.437+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:28.441+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.77s
+[2025-05-16T11:00:28.713+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html    | 
+[2025-05-16T11:00:28.714+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:28.715+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T11:00:28.715+0000] {logging_mixin.py:188} INFO - 0.27
+[2025-05-16T11:00:28.716+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T11:00:28.717+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html    | 
+[2025-05-16T11:00:28.718+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:00:28.718+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.06s
+[2025-05-16T11:00:29.177+0000] {crawler.py:239} INFO -     ✓ Nhặt được tiền trên phố, ông lão 75 tuổi chờ cả ngày để trả ...
+
+[2025-05-16T11:00:29.180+0000] {crawler.py:242} INFO - ⏱️  Tổng thời gian crawl: 14.61 giây
+[2025-05-16T11:00:29.249+0000] {crawler.py:274} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.doi-song index: _id_ dup key: { _id: "2401792" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401792'}, 'op': {'title': 'Nhặt được tiền trên phố, ông lão 75 tuổi chờ cả ngày để trả lại', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-16T16:30:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Ông lão 75 tuổi đã nhặt được nhiều tờ tiền với mệnh giá khác nhau khi đi đổ rác. Ông đã kiểm tra video an ninh và tìm kiếm người đánh rơi tiền.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/16/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-80338.jpg?width=0&s=S4HFOk0JmCwG-c4B92Z0wg', 'content': 'Hoàng Dung\n\nHeng Fock Suan (75 tuổi) chủ một cửa hàng, đã phát hiện nhiều tờ tiền rơi trên đường khi ông đi đổ rác.Ông cho biết: "Khi vừa bước ra cửa đi đổ rác, tôi thấy rất nhiều tiền mặt rơi trên đường, với nhiều mệnh giá khác nhau".\n\nÔng nhặt từng tờ, sau đó đếm lại và xác định tổng số tiền là 980 RM (gần 6 triệu đồng),MSNđưa tin hôm 15/5.\n\nSuốt cả ngày hôm đó, ông Heng kiên nhẫn chờ đợi người chủ thực sự của số tiền quay lại tìm, nhưng không có ai xuất hiện.\n\nGiữ vững nguyên tắc sống đó là cái gì không thuộc về mình thì không lấy, ông nhờ con trai kiểm tra lại camera an ninh để tìm manh mối. Nếu không thể xác định được chủ nhân, ông sẵn sàng giao số tiền cho cảnh sát.\n\nSau đó, nhờ đoạn video trích xuất từ camera, ông Heng đã xác định được người làm rơi tiền là anh Wan Shahrul Sulaiman (46 tuổi) chủ một cửa hàng kinh doanh trong khu vực. Không chần chừ, ông Heng đích thân tìm đến cửa hàng của anh Wan để xác nhận sự việc.\n\n"Tôi hỏi anh ấy có làm rơi tiền không, rồi sau đó cho anh xem đoạn video ghi lại cảnh số tiền rơi từ túi quần của anh", ông Heng kể lại.\n\nAnh Wan không khỏi bất ngờ khi nhìn thấy đoạn video. Anh không hề hay biết số tiền đã rơi ra lúc anh đi trên đường, hướng về chỗ ô tô đang đỗ.\n\n"Khi đến gần xe, tôi nhận ra là mất tiền. Tôi đã tìm quanh đó và cả trong xe nhưng không thấy gì. Tôi nghĩ là đã mất luôn rồi", anh nói.\n\nNhận lại số tiền bị mất trong tay người lạ, anh Wan vô cùng xúc động. Anh không chỉ cảm ơn ông Heng, mà còn hết lời ca ngợi hành động đáng quý: "Chúng ta đang sống trong một xã hội đa sắc tộc, nơi sự đoàn kết và lòng tin là điều cốt lõi. Sự trung thực của chú Heng đã vượt qua mọi ranh giới sắc tộc. Tôi thực sự biết ơn và rất cảm phục hành động của ông".', 'url': 'https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html', 'category': 'doi-song', 'crawled_at': '2025-05-16T11:00:28.996841', '_id': '2401792'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T11:00:29.313+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T11:00:29.314+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T11:00:29.326+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=manual__2025-05-16T10:59:10.407806+00:00, execution_date=20250516T105910, start_date=20250516T110013, end_date=20250516T110029
+[2025-05-16T11:00:29.375+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T11:00:29.396+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T11:00:29.399+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

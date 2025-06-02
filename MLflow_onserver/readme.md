@@ -1,0 +1,1 @@
+Dùng để build image link với postgressql trên cloud để cả nhóm dễ theo dõi nhau
