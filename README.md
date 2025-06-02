@@ -21,9 +21,9 @@
 |  MLflow theo dõi metrics    | [mlflow-server-aiteamabc.onrender.com](https://mlflow-server-aiteamabc.onrender.com/) |
 
 đăng nhập cho dashboard:
-tk: demo
-mk: demo
-Lưu ý tài khoản được cấp chỉ có thể xem
+- tk: demo
+- mk: demo
+- Lưu ý tài khoản được cấp chỉ có thể xem
 ---
 
 ##  Bảo mật
