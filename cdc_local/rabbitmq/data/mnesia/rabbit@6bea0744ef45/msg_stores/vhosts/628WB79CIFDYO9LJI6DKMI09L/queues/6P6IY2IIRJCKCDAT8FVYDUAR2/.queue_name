@@ -1,0 +1,3 @@
+VHOST: /
+QUEUE: worker1@DESKTOP-HJO08H3.celery.pidbox
+INDEX: v2
