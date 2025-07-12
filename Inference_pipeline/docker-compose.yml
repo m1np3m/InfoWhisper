@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  streamlit_ui:
+    build:
+      context: ./Streamlit_ver
+    container_name: streamlit_ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Streamlit_ver:/app
+    restart: unless-stopped
+
+  news_backend:
+    build:
+      context: ./News_web
+    container_name: news_backend
+    ports:
+      - "8502:8501"  
+    volumes:
+      - ./News_web:/app
+    restart: unless-stopped
+
+  error_handling_ui:
+    build:
+      context: ./Error_handling_UI
+    container_name: error_handling_ui
+    ports:
+      - "8503:8501"
+    volumes:
+      - ./Error_handling_UI:/app
+    restart: unless-stopped

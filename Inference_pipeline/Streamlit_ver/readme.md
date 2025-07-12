@@ -1,0 +1,1 @@
+Tạo venv -> pip install requirements.txt -> streamlit run UI.py

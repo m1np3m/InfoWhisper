@@ -1,0 +1,7 @@
+streamlit
+pymongo
+python-dotenv
+pytz
+python-dateutil
+pandas
+streamlit_markmap
