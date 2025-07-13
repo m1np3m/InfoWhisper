@@ -97,6 +97,3 @@ Each module includes its own `requirements.txt` and `Dockerfile`. Core dependenc
 
 Environment variables are defined per module using `.env` files. Make sure to configure them appropriately before running each component.
 
-## License
-
-This project is currently under development. Licensing information will be updated in a future release.
