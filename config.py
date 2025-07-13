@@ -25,7 +25,7 @@ class Config:
     # Qdrant Configuration
     QDRANT_URL = "https://9ddcf734-0817-4421-bf16-333e56ed4a9b.eu-central-1-0.aws.cloud.qdrant.io:6333"
     QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-    QDRANT_COLLECTION_NAME = "content_embedding"
+    QDRANT_COLLECTION_NAME = "content_embedding_with_url"
     
     # OpenAI Configuration
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

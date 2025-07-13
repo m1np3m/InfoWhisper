@@ -34,14 +34,15 @@ def extract_source_data():
     
     # Extract data
     docs = collection.find()
-    titles, abstracts, contents, publish_dates = [], [], [], []
+    titles, abstracts, contents, publish_dates, urls = [], [], [], [], []
     
     for doc in docs:
         titles.append(doc["title"])
         abstracts.append(doc["abstract"])
         contents.append(doc["content"])
         publish_dates.append(doc["published"])
-    
+        urls.append(doc["url"])
+
     logger.info(f"Extracted {len(titles)} documents from source")
     return titles, abstracts, contents, publish_dates
 
@@ -77,7 +78,7 @@ def process_content(contents):
     
     return summaries, keywords
 
-def save_processed_data(titles, abstracts, contents, summaries, keywords, publish_dates):
+def save_processed_data(contents, summaries, keywords, publish_dates, urls):
     """
     Save processed data to JSON file and target MongoDB.
     
@@ -88,14 +89,13 @@ def save_processed_data(titles, abstracts, contents, summaries, keywords, publis
     
     # Prepare data structure
     data = []
-    for t, a, c, s, k, p in zip(titles, abstracts, contents, summaries, keywords, publish_dates):
+    for  c, s, p, k, u in zip(contents, summaries, publish_dates, keywords, urls):
         data.append({
-            "title": t,
-            "abstract": a,
             "content": c,
             "summary": s,
+            "published": p,
             "keywords": k,
-            "published": p
+            "url": u
         })
     
     # Save to JSON file
@@ -166,15 +166,18 @@ def generate_insights(embeddings):
         )
         
         # Extract content and dates
-        contents, dates = [], []
+        contents, dates, urls = [], [], []
         for result in results:
             contents.append(result.payload["page_content"])
             dates.append(result.payload["metadata"]["date"])
-        
+            urls.append(result.payload["metadata"]["url"])
+
         # Sort by date
-        zipped = sorted(zip(dates, contents), key=lambda x: x[0])
-        formatted_content = "\n\n".join([f"Date: {d}\nContent: {c}" for d, c in zipped])
-        
+        zipped = sorted(zip(dates, urls, contents), key=lambda x: x[0])
+        formatted_content = "\n\n".join(
+            [f"Date: {date}\nContent: {content}\nUrl: {url}" for date, url, content in zipped]
+        )
+
         # Generate insights
         insight = analyzer.analyze(formatted_content, keyword)
         vi_insight = translator.translate(insight)
@@ -186,7 +189,8 @@ def generate_insights(embeddings):
             "content": contents,
             "date": dates,
             "en_insight": insight,
-            "vi_insight": vi_insight
+            "vi_insight": vi_insight,
+            "url": urls,
         }
         
         # Save to MongoDB

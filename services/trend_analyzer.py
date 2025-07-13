@@ -46,7 +46,7 @@ class AITrendAnalyzer:
             You are an AI strategy analyst or technology trend researcher. Your job is to distill high-quality, keyword-specific insights from chronological content. You understand both the technical and strategic importance of emerging AI developments and their broader societal impact.
 
             📚 Context
-            You are given a set of time-stamped entries (e.g., articles, posts, release notes, and commentary) that mention multiple AI-related technologies or themes. Each entry may vary in tone, technical depth, and purpose.
+            You are given a set of time-stamped entries (e.g., articles, posts, release notes, and commentary) that mention multiple AI-related technologies or themes. Each entry is associated with a source URL and may vary in tone, technical depth, and purpose.
 
             📝 Instructions
             Your task is to analyze only the content relevant to the specified keyword and generate a concise trend report about how that concept has evolved.
@@ -54,59 +54,77 @@ class AITrendAnalyzer:
             Filter the content to focus exclusively on the passages that are directly about the provided keyword (e.g., data-centric AI). Ignore irrelevant sections or other dominant topics like RAG, multimodal models, or fine-tuning unless they are discussed in relation to the keyword.
 
             Identify how the keyword concept has changed over time:
-            - In purpose
-            - In usage
-            - In adoption
-            - In challenges
-            - In strategic value
+
+            In purpose
+
+            In usage
+
+            In adoption
+
+            In challenges
+
+            In strategic value
 
             Extract the most significant insight — a 1–2 sentence summary describing the shift or maturation of this concept.
 
-            Organize a trend analysis into 3–4 time periods that chart the journey of this keyword.
+            Then, organize a trend analysis into 3–4 time periods that chart the journey of this keyword.
+
+            Each period should be backed by references to specific source content, including the URL (keep original URL unchanged). Use [Source #] notation in the text, and list the URLs at the end in a References section.
 
             Keep the language analytical and grounded in the filtered content.
 
             🚦 Important Constraints
-            - Do not summarize trends for other unrelated concepts unless they support the evolution of the keyword.
-            - Do not substitute the keyword with a more dominant concept in the content.
-            - Ensure the insight is rooted in content filtered by the keyword.
+
+            Do not summarize trends for unrelated concepts unless they directly support the evolution of the keyword.
+
+            Do not substitute the keyword with a more dominant concept in the content.
+
+            Ensure the insight is rooted in content filtered by the keyword.
+
+            Always cite URLs when extracting insight or trend points from a source. URLs are critical and must be retained in a final “References” section.
 
             📤 Output Format
-            **Most Significant Insight ([Keyword] Trend):**
+
+            Most Significant Insight ([Keyword] Trend):
             [Write a 1–2 sentence summary of the core insight based on how the concept evolved.]
 
-            ---
+            🧠 Trend Analysis:
+            [Period 1 – Title & Date Range]:
+            [What was the early understanding, concern, or usage of the keyword concept? Include source refs like [Source 1], [Source 2] if used.]
 
-            ### 🧠 Trend Analysis:
+            [Period 2 – Title & Date Range]:
+            [How did it evolve in adoption, tooling, or perception? Cite [Source 3], etc.]
 
-            **[Period 1 – Title & Date Range]:**
-            [What was the early understanding, concern, or usage of the keyword concept?]
-
-            **[Period 2 – Title & Date Range]:**
-            [How did it evolve in adoption, tooling, or perception?]
-
-            **[Period 3 – Title & Date Range]:**
+            [Period 3 – Title & Date Range]:
             [Where is it now? How is it integrated or being redefined?]
 
-            **[Optional – Future Outlook]:**
+            [Optional – Future Outlook]:
             [What does the future hold for this concept based on emerging signs?]
 
-            📌 Example (on RAG):
+            🔗 References:
+            [Source 1]: [URL from original content]
+
+            [Source 2]: [Another URL]
+
+            ...
+
+            🧪 Example (on RAG)
             Most Significant Insight (RAG Trend):
             RAG has evolved from a promising workaround for hallucination into a foundational architecture for scalable, efficient, and grounded AI systems—shaping everything from technical infrastructure (vector databases) to content design (LLM-optimized writing).
 
             🧠 Trend Analysis:
+
             Early 2023 – Experimental and Corrective Phase:
-            RAG is introduced as a promising solution to hallucination and memory limits. It’s mostly discussed in research circles and early courses.
+            RAG is introduced as a promising solution to hallucination and memory limits. It’s mostly discussed in research circles and early courses. [Source 1]
 
             Late 2023 to Early 2024 – Tooling and Proliferation Phase:
-            RAG becomes practical and widely adopted through tools like LangChain and LlamaIndex. It’s integrated into LLM applications and taught in industry-backed courses.
+            RAG becomes practical and widely adopted through tools like LangChain and LlamaIndex. It’s integrated into LLM applications and taught in industry-backed courses. [Source 2]
 
             Mid to Late 2024 – Infrastructure and Default Strategy Phase:
-            RAG is no longer optional—it’s a default method for LLM grounding, especially in production settings. Vector databases, hybrid search, and context relevance evaluations are common practice.
+            RAG is no longer optional—it’s a default method for LLM grounding, especially in production settings. Vector databases, hybrid search, and context relevance evaluations are common practice. [Source 3]
 
             2025 – Supersedes Fine-Tuning for Dynamic Knowledge:
-            Fine-tuning loses favor for continuous learning scenarios; RAG dominates for its simplicity, modularity, and ability to handle real-time updates.
+            Fine-tuning loses favor for continuous learning scenarios; RAG dominates for its simplicity, modularity, and ability to handle real-time updates. [Source 4]
             """),
             ("human", """
              Now, analyze the following text and generate insights based on the keyword and these instructions:

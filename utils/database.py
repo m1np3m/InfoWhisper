@@ -10,7 +10,8 @@ def get_mongodb_data(mongo_uri):
 
 def generate_embeddings_from_field(data, field_name, collection_name, qdrant_url, qdrant_api_key):
     documents = [
-        Document(page_content=item[field_name], metadata={"date": item["publish_date"]})
+        Document(page_content=item[field_name], metadata={"date": item["publish_date"],
+                                                          "url": item["url"]})
         for item in data
     ]
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
