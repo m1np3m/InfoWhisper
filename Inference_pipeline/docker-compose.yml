@@ -3,12 +3,12 @@ version: '3.8'
 services:
   streamlit_ui:
     build:
-      context: ./Streamlit_ver
+      context: ./Chatbot
     container_name: streamlit_ui
     ports:
       - "8501:8501"
     volumes:
-      - ./Streamlit_ver:/app
+      - ./Chatbot:/app
     restart: unless-stopped
 
   news_backend:
