@@ -8,7 +8,7 @@ import os
 from dateutil import parser
 from datetime import datetime
 from streamlit_markmap import markmap
-
+import html
 load_dotenv()
 
 # Cấu hình trang
@@ -406,6 +406,17 @@ def init_connection():
     except Exception as e:
         st.error(f"Không thể kết nối MongoDB: {e}")
         return None
+    
+@st.cache_resource
+def init_connection_mongo2():
+    try:
+        mongo_uri_2 = os.getenv("MONGODB_URI_INSIGHT")
+        client2 = pymongo.MongoClient(mongo_uri_2)
+        return client2
+    except Exception as e:
+        st.error(f"Không thể kết nối MongoDB 2: {e}")
+        return None
+
 
 # Hàm lấy danh sách collections
 @st.cache_data(ttl=600)  # Cache 10 phút
@@ -627,29 +638,28 @@ def display_insights_tab(client, collections):
     else:
         st.success(f"✅ Tìm thấy {insights_found}/{len(collections)} insights")
 
-def display_hotkeyword_insights(client, db_name="Insight_from_hotkeyword"):
+def display_hotkeyword_insights(client, db_name="Insight"):
     st.markdown("## 🧠 Tổng hợp Insight từ các từ khoá nổi bật")
 
     try:
         db = client[db_name]
-        topics = db.list_collection_names()
+        topic_collections = db.list_collection_names()
 
-        if not topics:
-            st.warning("⚠️ Không có topic nào trong database Insight_from_hotkeyword.")
+        if not topic_collections:
+            st.warning("⚠️ Không có collection nào trong database Insight.")
             return
 
-        # Chỉ xử lý topic đầu tiên
-        topic = topics[0]
-        collection = db[topic]
+        for topic_name in sorted(topic_collections):
+            col = db[topic_name]
+            
+            # Tìm document mới nhất theo generated_date
+            latest_doc = col.find_one(sort=[("generated_date", -1)])
+            if not latest_doc:
+                continue
 
-        keyword_docs = list(collection.find({}).sort("keyword"))
-
-        if not keyword_docs:
-            st.info("Không có từ khoá nào.")
-            return
-
-        for doc in keyword_docs:
-            keyword = doc.get("keyword", "❓ Unknown")
+            keyword = latest_doc.get("keyword", "❓ Unknown")
+            vi_insight = latest_doc.get("vi_insight", "_Không có nội dung._")
+            escaped_vi_insight = html.escape(vi_insight).replace("\n", "<br>")
 
             st.markdown(f"""
                 <div class="insight-container">
@@ -657,22 +667,25 @@ def display_hotkeyword_insights(client, db_name="Insight_from_hotkeyword"):
                         🔑 {keyword}
                     </div>
                     <div style="line-height: 1.6; font-size: 1rem; margin-bottom: 1rem;">
-                        {doc.get("vi_insight", "_Không có nội dung._")}
+                        {escaped_vi_insight}
                     </div>
+                </div>
             """, unsafe_allow_html=True)
 
-            if "markmap" in doc:
-                # Không bọc container, và giữ layout đơn giản
+
+            
+
+            if "markmap" in latest_doc:
                 with st.popover("🧠 Xem Mindmap", use_container_width=True):
                     st.markdown("#### 🧭 Mindmap minh hoạ:")
-                    markmap(doc["markmap"], height=1000)
-
+                    markmap(latest_doc["markmap"], height=1000)
 
             st.markdown("</div>", unsafe_allow_html=True)
 
-
     except Exception as e:
         st.error(f"Lỗi khi hiển thị insights: {e}")
+
+
 
 
 # Hàm hiển thị collection content với search
@@ -803,7 +816,7 @@ def main():
     
     
     # Tạo tabs với tên rút gọn để hiển thị đẹp hơn
-    tab_names = ["Insights","Hot"] + [f"📰 {coll[:15]}{'...' if len(coll) > 15 else ''}" for coll in available_collections]
+    tab_names = ["Insights","Hot Keywords"] + [f"📰 {coll[:15]}{'...' if len(coll) > 15 else ''}" for coll in available_collections]
     tabs = st.tabs(tab_names)
     
     # Tab Insights
@@ -811,7 +824,9 @@ def main():
         display_insights_tab(client, available_collections)
 
     with tabs[1]:
-        display_hotkeyword_insights(client) 
+        client2 = init_connection_mongo2()
+        if client2:
+            display_hotkeyword_insights(client2, db_name="Insight")
     
     # Tabs cho từng collection
     for i, collection_name in enumerate(available_collections):
