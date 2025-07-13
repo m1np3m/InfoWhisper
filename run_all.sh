@@ -19,6 +19,11 @@ python3 Inference_pipeline/News_web/News.py &
 echo "Running Streamlit UI..."
 python3 Inference_pipeline/Streamlit_ver/UI.py &
 
+# Feature pipeline
+echo "Starting Feature Pipeline..."
+docker-compose -f feature_pipeline/docker-compose.yml up -d
+check_success "Feature Pipeline"
+
 # Langfuse
 echo "Starting Langfuse..."
 docker-compose -f langfuse-main/docker-compose.yml up -d
