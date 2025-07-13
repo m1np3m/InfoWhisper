@@ -1,0 +1,9 @@
+QDRANT_API_KEY = 
+MONGODB_URI_1=mongodb+srv://ntphat:<PASSWORD>@cluster0.nnj8aja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_PASSWORD_1=
+MONGODB_URI_2=mongodb+srv://lamphuc:<PASSWORD>@cluster0.8wrznoy.mongodb.net/
+MONGODB_PASSWORD_2=
+GEMINI_API_KEY= 
+GEMINI_API_KEY_2=
+GEMINI_API_KEY_3 =
+OPENAI_API_KEY = 
