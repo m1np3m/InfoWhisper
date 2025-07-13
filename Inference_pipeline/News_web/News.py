@@ -815,11 +815,9 @@ def main():
             """, height=520)
     
     
-    # Tạo tabs với tên rút gọn để hiển thị đẹp hơn
-    tab_names = ["Insights","Hot Keywords"] + [f"📰 {coll[:15]}{'...' if len(coll) > 15 else ''}" for coll in available_collections]
+    tab_names = [" Monthly Insights","Trending Insights"] + [f"📰 {coll[:15]}{'...' if len(coll) > 15 else ''}" for coll in available_collections]
     tabs = st.tabs(tab_names)
     
-    # Tab Insights
     with tabs[0]:
         display_insights_tab(client, available_collections)
 
