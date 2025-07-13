@@ -1,6 +1,7 @@
 import json
 import logging
 import pymongo
+from datetime import datetime 
 from qdrant_client import QdrantClient
 from pymongo import MongoClient
 
@@ -188,9 +189,10 @@ def generate_insights(embeddings):
             "keyword": keyword,
             "content": contents,
             "date": dates,
+            "url": urls,
             "en_insight": insight,
             "vi_insight": vi_insight,
-            "url": urls,
+            "generated_date": datetime.now().isoformat(),
         }
         
         # Save to MongoDB
