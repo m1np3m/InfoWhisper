@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 import asyncio
 import os
 from dotenv import load_dotenv
-from deeplearning_ai.crawler_deeplai import DeepLearningAICrawler
-from deeplearning_ai.Insight_each_article import InsightSummarizer
+from deeplearning_ai.crawler_summary.crawler_deeplai import DeepLearningAICrawler
+from deeplearning_ai.Insight_each_article.Insight_each_article import InsightSummarizer
 import logging
 from langfuse import get_client
 from langfuse.langchain import CallbackHandler
