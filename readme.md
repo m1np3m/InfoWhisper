@@ -7,6 +7,7 @@
 ```
 InfoWhisper/
 ├── CDC/                        # Change Data Capture with MongoDB and RabbitMQ
+├── Database-VectorDatabase/   # Database
 ├── Datacollection_pipeline/   # Data ingestion using Apache Airflow
 ├── feature_pipeline/          # Feature engineering via Celery workers
 ├── Inference_pipeline/        # News inference and UI modules
@@ -45,30 +46,33 @@ make langfuse        # Start Langfuse observability stack
 - Sends change events to RabbitMQ
 - Main file: `src/Mongo_CDC.py`
 
-### 2. `Datacollection_pipeline/`
+### 2. `Database-VectorDatabase/`
+- MongoDB and Qdrants
+
+### 3. `Datacollection_pipeline/`
 - DAGs powered by Apache Airflow to crawl and schedule news scraping tasks
 - Sample DAGs include:
   - `deepai_crawler_10min`
 
-### 3. `feature_pipeline/`
+### 4. `feature_pipeline/`
 - Asynchronous Celery pipeline to extract features from raw text
 - Includes chunking, embedding generation, and storage
 
-### 4. `Inference_pipeline/`
+### 5. `Inference_pipeline/`
 - Multiple frontend options for viewing processed news:
   - `Streamlit_ver/`: LLM-powered summarization and display
   - `News_web/`: Standard web interface
   - `Error_handling_UI/`: Custom UI for failure/retry handling
 
-### 5. `MLflow/`
+### 6. `MLflow/`
 - Local and remote tracking setup for training runs
 - View experiment metrics, parameters, and artifacts
 
-### 6. `langfuse-main/`
+### 7. `langfuse-main/`
 - Real-time tracing and analysis of LLM requests
 - Includes dashboards, workers, and backend services
 
-### 7. `notebook/`
+### 8. `notebook/`
 - Includes RAG (Retrieval-Augmented Generation) experiments
 - Summary evaluation using FactScore and QA-based metrics
 
