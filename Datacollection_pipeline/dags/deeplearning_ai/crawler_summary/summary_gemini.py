@@ -49,7 +49,7 @@ class ArticleSummarizer:
     def __init__(self, model_name="gemini-2.0-flash-lite",lf = None, handler = None):
         self.lf=lf
         self.handler=handler
-        self.api_key =  "AIzaSyBRbKDFBqZCUnVnxOPChjCTFAgAy63Paj8"
+        self.api_key =  ""
         if not self.api_key:
             raise ValueError("GOOGLE_API_KEY không tìm thấy trong .env")
         # Initialize LLM with our custom handler
