@@ -1,0 +1,13 @@
+pymongo
+pandas
+numpy
+matplotlib
+python-dotenv
+requests
+langchain-core
+langchain-google-genai
+langchain-huggingface
+langchain-openai
+langchain-qdrant
+qdrant-client
+nest_asyncio
