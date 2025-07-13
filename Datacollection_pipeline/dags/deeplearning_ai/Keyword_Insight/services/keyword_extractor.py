@@ -4,7 +4,7 @@ import time
 import logging
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
-from utils.api_manager import APIKeyManager
+from deeplearning_ai.Keyword_Insight.utils.api_manager import APIKeyManager
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
