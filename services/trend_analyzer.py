@@ -51,57 +51,66 @@ class AITrendAnalyzer:
             📝 Instructions
             Your task is to analyze only the content relevant to the specified keyword and generate a concise trend report about how that concept has evolved.
 
-            Filter the content to focus exclusively on the passages that are directly about the provided keyword (e.g., data-centric AI). Ignore irrelevant sections or other dominant topics like RAG, multimodal models, or fine-tuning unless they are discussed in relation to the keyword.
+            Filter the content to focus exclusively on passages directly related to the specified keyword (e.g., data-centric AI).
 
-            Identify how the keyword concept has changed over time:
+            Ignore unrelated concepts like RAG, multimodal models, or fine-tuning unless discussed in direct relation to the keyword.
 
-            In purpose
+            Your report should address how the keyword has evolved over time in terms of:
 
-            In usage
+            Purpose
 
-            In adoption
+            Usage
 
-            In challenges
+            Adoption
 
-            In strategic value
+            Challenges
 
-            Extract the most significant insight — a 1–2 sentence summary describing the shift or maturation of this concept.
+            Strategic value
 
-            Then, organize a trend analysis into 3–4 time periods that chart the journey of this keyword.
+            Extract the most significant insight — a 1–2 sentence summary describing the overall shift or maturation of the keyword.
 
-            Each period should be backed by references to specific source content, including the URL (keep original URL unchanged). Use [Source #] notation in the text, and list the URLs at the end in a References section.
+            Then, organize a trend analysis into 3–4 time periods that describe its journey over time.
 
-            Keep the language analytical and grounded in the filtered content.
+            📌 Source Referencing Rules (NEW – Strict Source Ordering):
+
+            ✅ Use [Source #] notation in the trend body.
+            ✅ Always cite when insights are derived from source content.
+            ✅ Number sources in the order they first appear in the report — starting from [Source 1], [Source 2], etc.
+            ✅ If a URL appears multiple times, reuse the same source number.
+            ✅ At the end of the report, list the original URLs under a 🔗 References: section, matching the source numbers used.
 
             🚦 Important Constraints
 
-            Do not summarize trends for unrelated concepts unless they directly support the evolution of the keyword.
+            Do not summarize unrelated trends unless directly tied to the keyword’s evolution.
 
-            Do not substitute the keyword with a more dominant concept in the content.
+            Do not substitute the keyword with a more dominant concept in the data.
 
-            Ensure the insight is rooted in content filtered by the keyword.
+            Ensure the insight is rooted strictly in keyword-relevant content.
 
-            Always cite URLs when extracting insight or trend points from a source. URLs are critical and must be retained in a final “References” section.
+            Retain all URLs used, unchanged, in the final References section.
+
+            Ensure source numbers in the body follow strict order of appearance.
 
             📤 Output Format
 
             Most Significant Insight ([Keyword] Trend):
-            [Write a 1–2 sentence summary of the core insight based on how the concept evolved.]
+            [1–2 sentence summary of the core insight based on the keyword’s evolution.]
 
             🧠 Trend Analysis:
             [Period 1 – Title & Date Range]:
-            [What was the early understanding, concern, or usage of the keyword concept? Include source refs like [Source 1], [Source 2] if used.]
+            [Describe early usage, concerns, or understanding of the keyword. Cite sources as [Source 1], [Source 2], etc.]
 
             [Period 2 – Title & Date Range]:
-            [How did it evolve in adoption, tooling, or perception? Cite [Source 3], etc.]
+            [Describe development in adoption, tooling, or perception. Continue using new source numbers as they appear.]
 
             [Period 3 – Title & Date Range]:
-            [Where is it now? How is it integrated or being redefined?]
+            [Explain the current state or integration of the keyword.]
 
             [Optional – Future Outlook]:
-            [What does the future hold for this concept based on emerging signs?]
+            [Speculate on future directions based on content.]
 
             🔗 References:
+            [List each source in order of first mention as below:]
             [Source 1]: [URL from original content]
 
             [Source 2]: [Another URL]
@@ -125,6 +134,11 @@ class AITrendAnalyzer:
 
             2025 – Supersedes Fine-Tuning for Dynamic Knowledge:
             Fine-tuning loses favor for continuous learning scenarios; RAG dominates for its simplicity, modularity, and ability to handle real-time updates. [Source 4]
+
+            🔗 References:
+            [Source 1]: https://example.com/research-rag
+            [Source 2]: https://example.com/langchain-tools
+            [Source 3]: https://example.com/rag-infrastructure
             """),
             ("human", """
              Now, analyze the following text and generate insights based on the keyword and these instructions:
