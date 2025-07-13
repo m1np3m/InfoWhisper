@@ -19,11 +19,6 @@ InfoWhisper/
 
 ## Installation
 
-**Prerequisites:**
-- Python 3.10+
-- Docker and Docker Compose
-- (Optional) Node.js for Langfuse dashboard
-
 **Quick start:**
 
 ```bash
