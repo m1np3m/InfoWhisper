@@ -1,0 +1,1011 @@
+2025-05-11 20:21:36,579 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:21:44,859 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-05-11 20:26:19,635 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:26:27,864 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-05-11 20:39:57,564 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:40:05,856 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-05-11 20:41:18,768 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:41:27,015 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-05-11 20:42:53,125 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:43:01,387 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-05-11 20:44:29,776 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:44:30,679 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 20:44:31,512 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 20:44:31,907 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 20:44:31,923 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-11 20:44:31,923 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 20:48:55,532 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 20:48:55,566 - CeleryWorker - INFO - Đã khởi tạo BGEM3 model thành công.
+2025-05-11 20:56:38,663 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:56:39,554 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 20:56:40,360 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 20:56:40,389 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 20:56:40,389 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 20:57:54,911 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 20:57:54,957 - CeleryWorker - INFO - Đã khởi tạo BGEM3 model thành công.
+2025-05-11 20:58:30,269 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 20:58:31,137 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 20:58:31,906 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 20:58:31,912 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 20:58:31,912 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 20:59:34,598 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 20:59:34,635 - CeleryWorker - INFO - Đã khởi tạo BGEM3 model thành công.
+2025-05-11 21:00:13,024 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:13,027 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:13,034 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:13,042 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:13,043 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:13,144 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 21:00:15,423 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 21:00:16,743 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 21:00:16,834 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 21:00:16,834 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 21:00:16,834 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 21:00:16,834 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 21:00:16,834 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 21:00:16,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,836 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,836 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:00:16,838 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 21:01:32,739 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:39,406 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:48,467 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:56,251 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:56,250 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:56,252 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:56,268 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 21:01:56,284 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:05:26,282 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:05:27,155 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:05:28,085 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:05:28,100 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:05:28,100 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:11:21,122 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:11:21,164 - CeleryWorker - INFO - Đã khởi tạo BGEM3 model thành công.
+2025-05-11 22:12:00,336 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,338 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,339 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,340 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,341 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,344 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:00,354 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:12:01,300 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,300 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,300 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,300 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,309 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,309 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:01,309 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:12:02,221 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:12:02,266 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:12:02,290 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:12:02,293 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,296 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:12:02,296 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,297 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,297 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,297 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,297 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,300 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,300 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,300 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,300 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,300 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:12:02,301 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,301 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,301 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,301 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:02,303 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:12:05,203 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:12:05,205 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:31,982 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:32,425 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:33,047 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:37,752 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:37,763 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:13:37,758 - CeleryWorker - ERROR - Lỗi khởi tạo BGEM3 model: Unable to load weights from pytorch checkpoint file for 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin' at 'C:\Users\admin/.cache\torch\sentence_transformers\BAAI_bge-m3\pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.
+2025-05-11 22:17:49,615 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:17:50,580 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:17:51,505 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:17:51,509 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:17:51,511 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:26:49,035 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:26:49,846 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:26:50,554 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:26:50,560 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:26:50,561 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-05-11 22:30:25,522 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:30:26,297 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:30:26,993 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:30:27,485 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:30:27,488 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-11 22:30:27,490 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:31:45,431 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:31:45,431 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:09,798 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:09,802 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:09,806 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:09,807 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:09,809 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:09,825 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:32:10,624 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:10,624 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:10,634 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:10,636 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:10,655 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:10,666 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,266 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,328 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,348 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,560 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,571 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:11,577 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:11,577 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:11,577 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:11,585 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:11,779 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,003 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,185 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,242 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,242 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:12,242 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:12,356 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,365 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,587 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,587 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:12,595 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:12,609 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:12,612 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:12,612 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:13,711 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:14,010 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:14,026 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:14,026 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:14,087 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:32:14,388 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:14,388 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:14,388 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:14,767 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:32:14,775 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:32:14,778 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:32:17,533 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:17,534 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:17,534 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:17,534 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:17,545 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:17,581 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:17,583 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:17,581 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:17,594 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:18,443 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:18,443 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:18,443 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:18,443 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:32:18,444 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:32:18,444 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:42:05,069 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:42:05,979 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:42:06,731 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:42:06,994 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:42:07,010 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:42:07,010 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:42:08,124 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:42:08,124 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:42:16,861 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:42:16,899 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:42:17,965 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:42:17,965 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:42:18,796 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:42:18,804 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:42:19,088 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:42:19,088 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:42:19,094 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:42:19,095 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:42:19,097 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:42:19,097 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:42:20,069 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:42:20,070 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:42:20,074 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:42:20,074 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 22:42:30,631 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 22:42:31,486 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 22:42:32,291 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 22:42:32,592 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 22:42:32,608 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 22:42:32,608 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 22:42:33,320 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 22:42:33,327 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 23:40:32,276 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 23:40:33,482 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 23:40:34,166 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 23:40:34,402 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 23:40:34,415 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 23:40:34,415 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 23:40:35,564 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 23:40:35,564 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-11 23:47:49,742 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-11 23:47:50,545 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-11 23:47:51,224 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-11 23:47:51,454 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-11 23:47:51,473 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-11 23:47:51,474 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 23:47:53,803 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-11 23:47:53,803 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 00:31:12,156 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 00:31:12,907 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 00:31:13,616 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 00:31:13,854 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 00:31:13,888 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 00:31:13,888 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 00:31:15,129 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 00:31:15,129 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 00:44:50,864 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 00:44:51,645 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 00:44:52,371 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 00:44:52,621 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 00:44:52,631 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 00:44:52,632 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 00:44:54,153 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 00:44:54,153 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 00:46:44,666 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 00:46:45,633 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 00:46:46,323 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 00:46:46,550 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 00:46:46,557 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 00:46:46,557 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 00:46:47,576 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 00:46:47,577 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 01:12:43,525 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 01:12:44,481 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 01:12:45,173 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 01:12:45,399 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 01:12:45,417 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 01:12:45,418 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 01:12:46,660 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 01:12:46,661 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 01:15:11,515 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 01:15:12,363 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 01:15:13,051 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 01:15:13,284 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 01:15:13,333 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 01:15:13,334 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 01:15:14,474 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 01:15:14,474 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-12 01:19:02,720 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-12 01:19:03,519 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-12 01:19:04,219 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-12 01:19:04,439 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-12 01:19:04,457 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-12 01:19:04,458 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-12 01:19:05,483 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-12 01:19:05,483 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 15:42:28,626 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 15:42:29,472 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 15:42:30,185 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 15:42:30,425 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 15:42:30,433 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 15:42:30,433 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 15:42:31,447 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 15:42:31,447 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 15:51:21,844 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 15:51:22,705 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 15:51:23,398 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 15:51:23,625 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 15:51:23,676 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 15:51:23,677 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 15:51:24,673 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 15:51:24,674 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:39:05,543 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:39:06,520 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:39:07,213 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:39:07,440 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:39:07,445 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:39:07,446 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:39:08,240 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:39:08,240 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:42:06,011 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:42:06,764 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:42:07,448 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:42:07,678 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:42:07,684 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:42:07,685 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:42:08,138 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:42:08,138 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:46:34,828 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:46:35,611 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:46:36,291 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:46:36,518 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:46:36,524 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:46:36,526 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:46:36,975 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:46:36,975 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:03,453 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:04,214 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:04,930 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:05,156 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:05,161 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:05,161 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:05,721 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:05,721 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:25,493 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:25,494 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:25,495 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:25,495 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:25,510 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:25,563 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:26,266 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,271 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,279 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,290 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,290 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,290 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,303 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,939 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,962 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,963 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,977 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,984 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,990 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:26,991 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,163 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,187 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,191 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,203 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,211 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,212 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,215 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:27,478 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,478 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,478 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,479 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,479 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,479 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,479 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,479 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,479 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:27,479 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:27,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:31,517 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,523 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,523 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,524 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,524 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,525 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,525 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,526 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,525 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:31,527 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,527 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,528 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,531 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:31,552 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:44,197 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,197 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,198 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,198 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,200 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,205 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:44,954 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:44,962 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:44,971 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:44,972 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:44,974 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,654 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,656 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,656 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,657 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,661 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,880 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,883 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,884 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,884 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:45,884 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,885 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,885 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,885 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,886 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:45,886 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:45,888 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,888 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:45,888 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,888 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,889 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:45,889 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:45,889 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:45,890 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:49,437 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,438 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:49,438 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,440 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,440 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,440 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:49,442 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,443 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:49,443 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:49,443 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:49,464 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:50:49,467 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:50:58,099 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:58,099 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:50:58,833 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:58,834 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:50:59,508 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:59,517 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:50:59,734 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:59,736 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:59,736 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:50:59,745 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:50:59,748 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:50:59,748 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:51:01,773 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:51:02,007 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:51:02,007 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:51:02,021 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:51:02,021 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:51:02,475 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:51:03,164 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:51:03,388 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:51:03,390 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:51:03,390 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:51:03,861 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:51:03,861 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:51:08,999 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:51:09,960 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:51:10,634 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:51:10,864 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:51:10,867 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:51:10,867 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:51:11,328 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:51:11,328 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:53:20,435 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:53:21,200 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:53:21,907 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:53:22,144 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:53:22,146 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:53:22,146 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:53:22,846 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:53:22,846 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:55:40,064 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:55:40,900 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:55:41,592 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:55:41,821 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:55:41,824 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:55:41,824 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:55:42,501 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:55:42,502 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 16:56:03,027 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 16:56:03,729 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 16:56:04,398 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 16:56:04,621 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 16:56:04,622 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 16:56:04,623 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:56:05,221 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 16:56:05,221 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:03:49,780 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:03:50,607 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:03:51,307 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:03:51,544 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:03:51,555 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:03:51,555 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:03:52,302 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:03:52,303 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:09,284 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,288 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,298 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,333 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,339 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,389 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:09,467 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:04:10,021 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,024 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,024 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,043 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,057 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,069 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,102 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,195 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,698 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,701 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,702 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,728 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,750 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,751 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,775 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:10,871 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,011 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,011 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,011 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,013 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,013 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,018 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,098 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:04:11,456 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,456 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,456 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,456 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,456 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,457 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:11,458 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:04:17,628 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,628 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,630 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,630 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,630 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,630 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,630 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,656 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,658 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,678 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-15 17:04:17,680 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,685 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:04:17,699 - CeleryWorker - INFO - Đã khởi tạo model embedding all-MiniLM-L6-v2 thành công.
+2025-05-15 17:05:25,397 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:05:26,193 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:05:26,887 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:05:27,115 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:05:27,119 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:05:27,120 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 17:09:00,367 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:01,119 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:01,820 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:02,045 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:02,058 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:21,231 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,247 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,260 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,330 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,338 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,440 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,442 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:21,495 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:22,004 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,004 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,004 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,058 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,058 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,147 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,153 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,227 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,685 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,733 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,745 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,835 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,910 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,910 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,912 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,916 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:22,916 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:22,917 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:22,919 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,958 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,960 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:22,969 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:22,970 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:23,058 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:23,063 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:23,063 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:23,149 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:23,154 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:33,468 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,470 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,519 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,522 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,555 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,570 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:33,617 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:34,204 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,204 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,240 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,241 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,276 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,284 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,319 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,880 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,886 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,915 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,922 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,947 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,953 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:34,994 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,111 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,113 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,115 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,117 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,139 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,143 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,149 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,152 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,174 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,183 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,185 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,226 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:35,241 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:35,241 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:41,666 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:41,704 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:41,951 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:09:42,396 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:42,418 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:42,672 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,076 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,108 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,302 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,305 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:43,332 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,335 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:09:43,354 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,579 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:09:43,582 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:15:18,158 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:15:18,940 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:15:19,638 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:15:19,868 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:15:19,874 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:15:24,883 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:15:25,598 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:15:26,271 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:15:26,501 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:15:26,503 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:15:31,483 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:15:32,200 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:15:32,900 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:15:33,126 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:15:33,131 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 17:17:19,464 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 17:17:20,235 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 17:17:20,915 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 17:17:21,143 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 17:17:21,149 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 18:47:05,897 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 18:47:06,800 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 18:47:07,525 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 18:47:07,763 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 18:47:07,770 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-15 19:15:06,492 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-15 19:15:07,239 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-15 19:15:07,912 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-15 19:15:08,138 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-15 19:15:08,143 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 00:37:59,148 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 00:37:59,955 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 00:38:00,854 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 00:38:01,133 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 00:38:01,149 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 15:26:32,416 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 15:26:33,214 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 15:26:33,901 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 15:26:34,150 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 15:26:34,194 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 15:41:56,545 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 15:41:57,322 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 15:41:58,023 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 15:41:58,266 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 15:41:58,274 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 15:57:38,332 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 15:57:39,098 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 15:57:39,800 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 15:57:40,290 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 15:57:40,292 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-16 16:03:04,748 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 16:03:05,465 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 16:03:06,138 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 16:03:06,607 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 16:03:06,608 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-16 10:52:04,909 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 10:52:05,024 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: [Errno 111] Connection refused
+2025-05-16 10:56:40,703 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 10:56:41,496 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 10:56:42,129 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 10:56:42,361 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 10:56:42,363 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 18:48:55,547 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 18:48:56,789 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 18:48:57,480 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 18:48:57,714 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 18:48:57,716 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 18:50:44,080 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 18:50:45,273 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 18:50:45,960 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 18:50:46,187 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 18:50:46,189 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 18:56:11,929 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 18:56:13,085 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 18:56:13,774 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 18:56:13,999 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 18:56:14,001 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 19:47:22,901 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 19:47:24,065 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 19:47:24,762 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 19:47:25,004 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 19:47:25,009 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 19:50:52,630 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 19:50:53,830 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 19:50:54,530 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 19:50:54,758 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 19:50:54,761 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-16 20:27:36,370 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 20:27:37,528 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 20:27:38,245 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 20:27:38,250 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: Unknown arguments: ['payload_schema']
+2025-05-16 20:31:14,905 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 20:31:16,034 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 20:31:16,709 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 20:31:16,711 - CeleryWorker - ERROR - Lỗi kết nối Qdrant: Unknown arguments: ['payload_schema']
+2025-05-16 20:34:58,158 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 20:34:59,293 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 20:34:59,979 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 20:35:00,459 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 20:35:00,461 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-16 20:46:58,750 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-16 20:46:59,848 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-16 20:47:00,532 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-16 20:47:00,993 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-16 20:47:00,994 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-16 20:47:01,281 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-16 20:47:01,283 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 00:08:17,835 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 00:08:19,246 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 00:08:19,933 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 00:08:20,167 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 00:08:20,170 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-17 00:08:20,425 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 00:08:20,427 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 00:23:25,413 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 00:23:26,533 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 00:23:27,228 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 00:23:27,452 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 00:23:27,454 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-17 00:23:27,705 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 00:23:27,706 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 19:32:49,808 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 19:32:50,988 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 19:32:51,668 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 19:32:52,155 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 19:32:52,157 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-17 19:32:52,449 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:32:52,744 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:32:52,745 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 19:34:45,879 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 19:34:47,008 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 19:34:47,689 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 19:34:47,917 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 19:34:47,923 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-17 19:34:48,178 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:34:48,434 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:34:48,434 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 19:37:37,600 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 19:37:38,921 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 19:37:39,601 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 19:37:39,832 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 19:37:39,836 - CeleryWorker - WARNING - Kích thước vector hiện tại (384) khác với kích thước yêu cầu (1024)!
+2025-05-17 19:37:39,836 - CeleryWorker - WARNING - Bạn có thể cần tạo một collection mới với kích thước vector phù hợp.
+2025-05-17 19:37:39,837 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-17 19:37:40,111 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:37:40,363 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:37:40,365 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-17 19:38:32,941 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-17 19:38:34,069 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-17 19:38:34,763 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-17 19:38:35,242 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-17 19:38:35,244 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-17 19:38:35,537 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:38:35,825 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-17 19:38:35,825 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 03:13:37,997 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 03:13:39,090 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 03:13:39,802 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 03:13:40,271 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 03:13:40,272 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-18 03:13:40,560 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:13:40,848 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:13:40,849 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 03:16:28,806 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 03:16:29,929 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 03:16:30,634 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 03:16:30,868 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 03:16:30,884 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 03:16:31,143 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:16:31,407 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:16:31,408 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 03:22:34,228 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 03:22:35,479 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 03:22:36,158 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 03:22:36,422 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 03:22:36,424 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 03:22:36,679 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:22:36,933 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:22:36,934 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 03:31:28,182 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 03:31:29,419 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 03:31:30,087 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 03:31:30,312 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 03:31:30,314 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 03:31:30,571 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:31:30,824 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:31:30,825 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 03:35:29,564 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 03:35:30,677 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 03:35:31,363 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 03:35:31,588 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 03:35:31,590 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 03:35:31,854 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:35:32,109 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 03:35:32,110 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 04:00:26,461 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 04:00:28,032 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 04:00:28,705 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 04:00:28,930 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 04:00:28,932 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 04:00:29,187 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:00:29,451 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:00:29,452 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 04:03:52,684 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 04:03:53,778 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 04:03:54,452 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 04:03:54,676 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 04:03:54,678 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 04:03:54,940 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:03:55,195 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:03:55,197 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 04:09:36,260 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 04:09:37,349 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 04:09:38,028 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 04:09:38,492 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 04:09:38,494 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-18 04:09:38,781 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:09:39,069 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 04:09:39,070 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 08:16:49,625 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 08:16:50,825 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 08:16:51,502 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 08:16:51,769 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 08:16:51,772 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 08:16:52,017 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:16:52,277 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:16:52,278 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 08:52:41,254 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 08:52:42,427 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 08:52:43,120 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 08:52:43,351 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 08:52:43,353 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 08:52:43,609 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:52:43,869 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:52:43,869 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 08:54:33,187 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 08:54:34,347 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 08:54:35,033 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 08:54:35,264 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 08:54:35,267 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 08:54:35,528 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:54:35,782 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 08:54:35,785 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 14:03:38,832 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 14:03:39,891 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 14:03:40,592 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 14:03:40,819 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 14:03:40,826 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 14:03:41,084 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:03:41,342 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:03:41,343 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 14:28:33,068 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 14:28:34,489 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 14:28:35,180 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 14:28:35,652 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 14:28:35,654 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-18 14:28:35,937 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:28:36,223 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:28:36,224 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 14:35:32,446 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 14:35:33,545 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 14:35:34,240 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 14:35:34,465 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 14:35:34,468 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 14:35:34,729 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:35:34,995 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:35:34,996 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 14:41:50,921 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 14:41:52,328 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 14:41:53,027 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 14:41:53,251 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 14:41:53,255 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 14:41:53,508 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:41:53,764 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:41:53,768 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 14:43:42,142 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 14:43:43,249 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 14:43:43,928 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 14:43:44,151 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 14:43:44,154 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 14:43:44,405 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:43:44,663 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 14:43:44,664 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 16:55:54,079 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 16:55:55,460 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 16:55:56,140 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 16:55:56,365 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 16:55:56,367 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-18 16:55:56,618 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 16:55:56,877 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 16:55:56,878 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-18 17:18:33,206 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-18 17:18:34,351 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-18 17:18:35,055 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-18 17:18:35,530 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-18 17:18:35,532 - CeleryWorker - INFO - Đã tạo collection news_embeddings trong Qdrant.
+2025-05-18 17:18:35,817 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 17:18:36,110 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 17:18:36,402 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-18 17:18:36,402 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-19 05:19:46,213 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-19 05:19:47,360 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-19 05:19:48,037 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-19 05:19:48,264 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-19 05:19:48,266 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-19 05:19:48,522 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 05:19:48,777 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 05:19:49,035 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 05:19:49,035 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-05-19 13:18:09,741 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-05-19 13:18:10,784 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-19 13:18:11,381 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-05-19 13:18:11,596 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-05-19 13:18:11,601 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-05-19 13:18:11,829 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 13:18:12,055 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 13:18:12,281 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-05-19 13:18:12,281 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-06-02 19:59:43,300 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-06-02 19:59:44,403 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-06-02 19:59:45,076 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-06-02 19:59:45,299 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-06-02 19:59:45,303 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-06-02 19:59:45,557 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 19:59:45,812 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 19:59:46,066 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 19:59:46,067 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-06-02 20:59:57,214 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-06-02 20:59:58,425 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-06-02 20:59:59,114 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-06-02 20:59:59,340 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings "HTTP/1.1 200 OK"
+2025-06-02 20:59:59,344 - CeleryWorker - INFO - Collection news_embeddings đã tồn tại trong Qdrant.
+2025-06-02 20:59:59,597 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 20:59:59,862 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 21:00:00,122 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-02 21:00:00,123 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-06-09 13:36:56,990 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-06-09 13:36:58,194 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-06-09 13:36:58,855 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-06-09 13:36:59,090 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings "HTTP/1.1 200 OK"
+2025-06-09 13:36:59,109 - CeleryWorker - INFO - Collection deeplearning_ai_news_embeddings đã tồn tại trong Qdrant.
+2025-06-09 13:36:59,355 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-09 13:36:59,615 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-09 13:36:59,858 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-06-09 13:36:59,859 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
+2025-07-13 00:11:35,733 - CeleryWorker - INFO - Kết nối MongoDB thành công.
+2025-07-13 00:11:36,567 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-07-13 00:11:37,198 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-07-13 00:11:37,411 - httpx - INFO - HTTP Request: GET https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings "HTTP/1.1 200 OK"
+2025-07-13 00:11:37,413 - CeleryWorker - INFO - Collection deeplearning_ai_news_embeddings đã tồn tại trong Qdrant.
+2025-07-13 00:11:37,651 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-07-13 00:11:37,890 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-07-13 00:11:38,128 - httpx - INFO - HTTP Request: PUT https://b1feb801-0793-4632-b52c-2189a910bee0.us-west-2-0.aws.cloud.qdrant.io:6333/collections/deeplearning_ai_news_embeddings/index?wait=true "HTTP/1.1 200 OK"
+2025-07-13 00:11:38,129 - CeleryWorker - INFO - Đã tạo index cho document_id trong Qdrant.
