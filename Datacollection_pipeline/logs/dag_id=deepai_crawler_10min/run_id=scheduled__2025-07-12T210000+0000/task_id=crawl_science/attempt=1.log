@@ -1,0 +1,86 @@
+[2025-07-12T21:12:18.477+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-12T21:12:18.536+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T21:00:00+00:00 [queued]>
+[2025-07-12T21:12:18.580+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T21:00:00+00:00 [queued]>
+[2025-07-12T21:12:18.583+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-12T21:12:18.651+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_science> on 2025-07-12 21:00:00+00:00
+[2025-07-12T21:12:18.677+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4886) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-12T21:12:18.683+0000] {standard_task_runner.py:63} INFO - Started process 4893 to run task
+[2025-07-12T21:12:18.693+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_science', 'scheduled__2025-07-12T21:00:00+00:00', '--job-id', '1575', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp1mxs3hpo']
+[2025-07-12T21:12:18.705+0000] {standard_task_runner.py:91} INFO - Job 1575: Subtask crawl_science
+[2025-07-12T21:12:18.843+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:18.889+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T21:00:00+00:00 [running]> on host 0eb58692feb3
+[2025-07-12T21:12:19.317+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_science' AIRFLOW_CTX_EXECUTION_DATE='2025-07-12T21:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-12T21:00:00+00:00'
+[2025-07-12T21:12:19.321+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-12T21:12:19.366+0000] {dags.py:178} INFO - Bắt đầu crawl category: science
+[2025-07-12T21:12:19.709+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-12T21:12:19.842+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-12T21:12:19.844+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-12T21:12:19.845+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-12T21:12:19.846+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:19.947+0000] {log.py:232} WARNING - 2025-07-12 21:12:19,946 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T21:12:19.946+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T21:12:19.969+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-12T21:12:20.848+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:21.849+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:22.467+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-12T21:12:22.469+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/science/
+[2025-07-12T21:12:22.471+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-12T21:12:22.851+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:23.853+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:24.855+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:25.857+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:26.858+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:27.859+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:28.860+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:28.888+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 6.41s
+[2025-07-12T21:12:29.016+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 0.12s
+[2025-07-12T21:12:29.019+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 6.55s
+[2025-07-12T21:12:29.020+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-12T21:12:29.079+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-07-12T21:12:29.080+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-12T21:12:29.081+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/a-neural-network-shows-remarkable-accuracy-in-forecasting-risk-of-pancreatic-cancer/
+[2025-07-12T21:12:29.082+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/a-roadmap-explores-how-ai-can-detect-and-mitigate-greenhouse-gases/
+[2025-07-12T21:12:29.082+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/agentic-workflow-generates-novel-scientific-research-papers/
+[2025-07-12T21:12:29.083+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/ai-and-data-center-boom-challenges-big-techs-emissions-targets/
+[2025-07-12T21:12:29.083+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/ai-co-scientist-an-agent-that-generates-research-hypotheses-aiding-drug-discovery/
+[2025-07-12T21:12:29.084+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-07-12T21:12:29.861+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:30.862+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:31.863+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:32.864+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:33.865+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:34.866+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:35.867+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:36.867+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:37.851+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:38.852+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:39.853+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:40.854+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:41.855+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:42.857+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:43.858+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:44.859+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:45.859+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:46.860+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:47.861+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:48.862+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:49.863+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:50.863+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:51.864+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:52.865+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:52.981+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-07-12T21:12:52.982+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục science cần crawl.
+[2025-07-12T21:12:52.982+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'science'
+[2025-07-12T21:12:53.037+0000] {dags.py:183} INFO - Hoàn thành crawl category: science
+[2025-07-12T21:12:53.038+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-12T21:12:53.038+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-12T21:12:53.049+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_science, run_id=scheduled__2025-07-12T21:00:00+00:00, execution_date=20250712T210000, start_date=20250712T211218, end_date=20250712T211253
+[2025-07-12T21:12:53.757+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-12T21:12:53.788+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-12T21:12:53.866+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:12:54.052+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

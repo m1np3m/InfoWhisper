@@ -1,0 +1,358 @@
+[2025-05-18T07:54:14.556+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:54:14.602+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T07:54:14.618+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T07:54:14.618+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:54:14.644+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-18 07:00:00+00:00
+[2025-05-18T07:54:14.655+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=15206) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:54:14.657+0000] {standard_task_runner.py:63} INFO - Started process 15284 to run task
+[2025-05-18T07:54:14.657+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-18T07:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpcdd3jvnt']
+[2025-05-18T07:54:14.661+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask crawl_the-gioi
+[2025-05-18T07:54:14.734+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T07:00:00+00:00 [running]> on host 396ee2b23973
+[2025-05-18T07:54:14.895+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T07:00:00+00:00'
+[2025-05-18T07:54:14.897+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:54:15.355+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:54:16.657+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:23.362+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 6.58s
+[2025-05-18T07:54:24.119+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 0.74s
+[2025-05-18T07:54:24.124+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 7.34s
+[2025-05-18T07:54:24.370+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-18T07:54:25.303+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-05-18T07:54:25.305+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục the-gioi...
+[2025-05-18T07:54:25.307+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ukraine-cho-doi-cuoc-gap-giua-tong-thong-putin-va-tong-thong-zelensky-2401994.html
+[2025-05-18T07:54:27.503+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:31.714+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ukraine-cho-doi-cuoc-gap-g...-thong-putin-va-tong-thong-ze
+lensky-2401994.html  | ✓ | ⏱: 4.10s
+[2025-05-18T07:54:32.097+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ukraine-cho-doi-cuoc-gap-g...-thong-putin-va-tong-thong-ze
+lensky-2401994.html  | ✓ | ⏱: 0.38s
+[2025-05-18T07:54:32.100+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ukraine-cho-doi-cuoc-gap-g...-thong-putin-va-tong-thong-ze
+lensky-2401994.html  | ✓ | ⏱: 4.48s
+[2025-05-18T07:54:32.649+0000] {crawler.py:262} INFO -     ✓ Ukraine chờ đợi cuộc gặp giữa Tổng thống Putin và Tổng thống...
+
+[2025-05-18T07:54:32.650+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cai-tien-moi-cua-ukraine-khien-uav-gia-tang-muc-do-nguy-hiem-voi-quan-doi-nga-2401292.html
+[2025-05-18T07:54:33.773+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:40.867+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/cai-tien-moi-cua-ukraine-k...g-muc-do-nguy-hiem-voi-quan-d
+oi-nga-2401292.html  | ✓ | ⏱: 6.96s
+[2025-05-18T07:54:41.541+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/cai-tien-moi-cua-ukraine-k...g-muc-do-nguy-hiem-voi-quan-d
+oi-nga-2401292.html  | ✓ | ⏱: 0.66s
+[2025-05-18T07:54:41.547+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/cai-tien-moi-cua-ukraine-k...g-muc-do-nguy-hiem-voi-quan-d
+oi-nga-2401292.html  | ✓ | ⏱: 7.64s
+[2025-05-18T07:54:42.604+0000] {crawler.py:262} INFO -     ✓ Cải tiến mới của Ukraine khiến UAV gia tăng mức độ nguy hiểm...
+
+[2025-05-18T07:54:42.605+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tong-thong-my-trump-noi-san-sang-toi-trung-quoc-gap-ong-tap-can-binh-2402211.html
+[2025-05-18T07:54:43.739+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:47.514+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tong-thong-my-trump-noi-sa...toi-trung-quoc-gap-ong-tap-ca
+n-binh-2402211.html  | ✓ | ⏱: 3.69s
+[2025-05-18T07:54:47.818+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tong-thong-my-trump-noi-sa...toi-trung-quoc-gap-ong-tap-ca
+n-binh-2402211.html  | ✓ | ⏱: 0.30s
+[2025-05-18T07:54:47.821+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tong-thong-my-trump-noi-sa...toi-trung-quoc-gap-ong-tap-ca
+n-binh-2402211.html  | ✓ | ⏱: 4.00s
+[2025-05-18T07:54:48.364+0000] {crawler.py:262} INFO -     ✓ Tổng thống Mỹ Trump nói sẵn sàng tới Trung Quốc gặp ông Tập ...
+
+[2025-05-18T07:54:48.365+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/dam-phan-nga-ukraine-ket-thuc-ma-khong-dat-duoc-tien-trien-2401907.html
+[2025-05-18T07:54:49.134+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:53.623+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/dam-phan-nga-ukraine-ket-thuc-ma-khong-dat-duoc-tien-trien
+-2401907.html        | ✓ | ⏱: 4.36s
+[2025-05-18T07:54:54.118+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/dam-phan-nga-ukraine-ket-thuc-ma-khong-dat-duoc-tien-trien
+-2401907.html        | ✓ | ⏱: 0.49s
+[2025-05-18T07:54:54.123+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/dam-phan-nga-ukraine-ket-thuc-ma-khong-dat-duoc-tien-trien
+-2401907.html        | ✓ | ⏱: 4.86s
+[2025-05-18T07:54:55.325+0000] {crawler.py:262} INFO -     ✓ Đàm phán Nga - Ukraine kết thúc mà không đạt được tiến triển...
+
+[2025-05-18T07:54:55.327+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/quan-doi-duc-doi-mat-voi-muc-tieu-phi-thuc-te-tu-nato-2402312.html
+[2025-05-18T07:54:57.065+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:02.262+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/quan-doi-duc-doi-mat-voi-muc-tieu-phi-thuc-te-tu-nato-2402
+312.html             | ✓ | ⏱: 4.96s
+[2025-05-18T07:55:02.701+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/quan-doi-duc-doi-mat-voi-muc-tieu-phi-thuc-te-tu-nato-2402
+312.html             | ✓ | ⏱: 0.43s
+[2025-05-18T07:55:02.704+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/quan-doi-duc-doi-mat-voi-muc-tieu-phi-thuc-te-tu-nato-2402
+312.html             | ✓ | ⏱: 5.41s
+[2025-05-18T07:55:03.433+0000] {crawler.py:262} INFO -     ✓ Quân đội Đức đối mặt với mục tiêu ‘phi thực tế’ từ NATO...
+
+[2025-05-18T07:55:03.438+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hang-tram-nghin-nguoi-du-le-nham-chuc-cua-giao-hoang-leo-xiv-2402282.html
+[2025-05-18T07:55:04.731+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:11.928+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hang-tram-nghin-nguoi-du-le-nham-chuc-cua-giao-hoang-leo-x
+iv-2402282.html      | ✓ | ⏱: 7.03s
+[2025-05-18T07:55:12.583+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hang-tram-nghin-nguoi-du-le-nham-chuc-cua-giao-hoang-leo-x
+iv-2402282.html      | ✓ | ⏱: 0.65s
+[2025-05-18T07:55:12.588+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hang-tram-nghin-nguoi-du-le-nham-chuc-cua-giao-hoang-leo-x
+iv-2402282.html      | ✓ | ⏱: 7.70s
+[2025-05-18T07:55:13.525+0000] {crawler.py:262} INFO -     ✓ Hàng trăm nghìn người dự lễ nhậm chức của tân Giáo hoàng Leo...
+
+[2025-05-18T07:55:13.526+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-2402249.html
+[2025-05-18T07:55:14.839+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:19.712+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 4.68s
+[2025-05-18T07:55:19.983+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 0.27s
+[2025-05-18T07:55:19.985+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 4.95s
+[2025-05-18T07:55:20.567+0000] {crawler.py:262} INFO -     ✓ Ông Trump công bố thời gian điện đàm với Tổng thống Putin, l...
+
+[2025-05-18T07:55:20.568+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/canh-hang-chuc-loc-xoay-can-quet-khap-nuoc-my-gan-30-nguoi-thiet-mang-2402339.html
+[2025-05-18T07:55:21.395+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:27.316+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/canh-hang-chuc-loc-xoay-ca...hap-nuoc-my-gan-30-nguoi-thie
+t-mang-2402339.html  | ✓ | ⏱: 5.81s
+[2025-05-18T07:55:27.679+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/canh-hang-chuc-loc-xoay-ca...hap-nuoc-my-gan-30-nguoi-thie
+t-mang-2402339.html  | ✓ | ⏱: 0.36s
+[2025-05-18T07:55:27.685+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/canh-hang-chuc-loc-xoay-ca...hap-nuoc-my-gan-30-nguoi-thie
+t-mang-2402339.html  | ✓ | ⏱: 6.18s
+[2025-05-18T07:55:28.446+0000] {crawler.py:262} INFO -     ✓ Cảnh hàng chục lốc xoáy càn quét khắp nước Mỹ, gần 30 người ...
+
+[2025-05-18T07:55:28.447+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/dien-kremlin-noi-ve-kha-nang-dam-phan-truc-tiep-putin-zelensky-2402179.html
+[2025-05-18T07:55:30.001+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:37.021+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/dien-kremlin-noi-ve-kha-nang-dam-phan-truc-tiep-putin-zele
+nsky-2402179.html    | ✓ | ⏱: 6.77s
+[2025-05-18T07:55:37.286+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/dien-kremlin-noi-ve-kha-nang-dam-phan-truc-tiep-putin-zele
+nsky-2402179.html    | ✓ | ⏱: 0.26s
+[2025-05-18T07:55:37.288+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/dien-kremlin-noi-ve-kha-nang-dam-phan-truc-tiep-putin-zele
+nsky-2402179.html    | ✓ | ⏱: 7.04s
+[2025-05-18T07:55:38.143+0000] {crawler.py:262} INFO -     ✓ Điện Kremlin nói về khả năng đàm phán trực tiếp Putin - Zele...
+
+[2025-05-18T07:55:38.144+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/doi-canh-sat-chuyen-canh-cao-nguoi-di-bo-voi-vang-huyt-sao-giua-duong-2401478.html
+[2025-05-18T07:55:39.030+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:45.579+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/doi-canh-sat-chuyen-canh-c...-di-bo-voi-vang-huyt-sao-giua
+-duong-2401478.html  | ✓ | ⏱: 6.39s
+[2025-05-18T07:55:45.793+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/doi-canh-sat-chuyen-canh-c...-di-bo-voi-vang-huyt-sao-giua
+-duong-2401478.html  | ✓ | ⏱: 0.21s
+[2025-05-18T07:55:45.795+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/doi-canh-sat-chuyen-canh-c...-di-bo-voi-vang-huyt-sao-giua
+-duong-2401478.html  | ✓ | ⏱: 6.61s
+[2025-05-18T07:55:46.652+0000] {crawler.py:262} INFO -     ✓ Đội cảnh sát chuyên cảnh cáo người đi bộ vội vàng, huýt sáo ...
+
+[2025-05-18T07:55:46.653+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-pham-nguy-hiem-tron-thoat-khoi-nha-tu-o-my-2402252.html
+[2025-05-18T07:55:48.306+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:55:56.571+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-t
+u-o-my-2402252.html  | ✓ | ⏱: 8.00s
+[2025-05-18T07:55:56.700+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-t
+u-o-my-2402252.html  | ✓ | ⏱: 0.13s
+[2025-05-18T07:55:56.701+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-t
+u-o-my-2402252.html  | ✓ | ⏱: 8.13s
+[2025-05-18T07:55:57.018+0000] {crawler.py:262} INFO -     ✓ Vượt ngục như phim: 10 tội phạm nguy hiểm trốn thoát khỏi nh...
+
+[2025-05-18T07:55:57.019+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tong-thong-trump-cao-buoc-cuu-giam-doc-fbi-keu-goi-am-sat-ong-2402134.html
+[2025-05-18T07:55:57.953+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:04.586+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tong-thong-trump-cao-buoc-cuu-giam-doc-fbi-keu-goi-am-sat-
+ong-2402134.html     | ✓ | ⏱: 6.49s
+[2025-05-18T07:56:05.031+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tong-thong-trump-cao-buoc-cuu-giam-doc-fbi-keu-goi-am-sat-
+ong-2402134.html     | ✓ | ⏱: 0.44s
+[2025-05-18T07:56:05.035+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tong-thong-trump-cao-buoc-cuu-giam-doc-fbi-keu-goi-am-sat-
+ong-2402134.html     | ✓ | ⏱: 6.94s
+[2025-05-18T07:56:05.698+0000] {crawler.py:262} INFO -     ✓ Tổng thống Trump cáo buộc cựu giám đốc FBI kêu gọi ám sát ôn...
+
+[2025-05-18T07:56:05.699+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ukraine-cong-bo-ton-that-cua-nga-dung-uav-pha-kho-dan-o-crum-2402159.html
+[2025-05-18T07:56:06.966+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:16.399+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ukraine-cong-bo-ton-that-cua-nga-dung-uav-pha-kho-dan-o-cr
+um-2402159.html      | ✓ | ⏱: 9.20s
+[2025-05-18T07:56:16.769+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ukraine-cong-bo-ton-that-cua-nga-dung-uav-pha-kho-dan-o-cr
+um-2402159.html      | ✓ | ⏱: 0.37s
+[2025-05-18T07:56:16.772+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ukraine-cong-bo-ton-that-cua-nga-dung-uav-pha-kho-dan-o-cr
+um-2402159.html      | ✓ | ⏱: 9.57s
+[2025-05-18T07:56:17.310+0000] {crawler.py:262} INFO -     ✓ Ukraine công bố tổn thất của Nga, dùng UAV phá kho đạn ở Crư...
+
+[2025-05-18T07:56:17.311+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-doa-phat-nang-nga-neu-khong-dat-thoa-thuan-hoa-binh-voi-ukraine-2402035.html
+[2025-05-18T07:56:18.421+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:22.731+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-trump-doa-phat-nang-ng...dat-thoa-thuan-hoa-binh-voi-u
+kraine-2402035.html  | ✓ | ⏱: 4.11s
+[2025-05-18T07:56:23.242+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-trump-doa-phat-nang-ng...dat-thoa-thuan-hoa-binh-voi-u
+kraine-2402035.html  | ✓ | ⏱: 0.51s
+[2025-05-18T07:56:23.245+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-trump-doa-phat-nang-ng...dat-thoa-thuan-hoa-binh-voi-u
+kraine-2402035.html  | ✓ | ⏱: 4.63s
+[2025-05-18T07:56:24.133+0000] {crawler.py:262} INFO -     ✓ Ông Trump dọa phạt nặng Nga nếu không đạt thỏa thuận hòa bìn...
+
+[2025-05-18T07:56:24.134+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-dung-dam-phan-chuan-bi-cong-bo-muc-thue-moi-voi-cac-doi-tac-2401991.html
+[2025-05-18T07:56:25.346+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:32.617+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-trump-dung-dam-phan-ch...ong-bo-muc-thue-moi-voi-cac-d
+oi-tac-2401991.html  | ✓ | ⏱: 7.11s
+[2025-05-18T07:56:33.121+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-trump-dung-dam-phan-ch...ong-bo-muc-thue-moi-voi-cac-d
+oi-tac-2401991.html  | ✓ | ⏱: 0.50s
+[2025-05-18T07:56:33.126+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-trump-dung-dam-phan-ch...ong-bo-muc-thue-moi-voi-cac-d
+oi-tac-2401991.html  | ✓ | ⏱: 7.62s
+[2025-05-18T07:56:34.022+0000] {crawler.py:262} INFO -     ✓ Ông Trump dừng đàm phán, chuẩn bị công bố mức thuế mới với c...
+
+[2025-05-18T07:56:34.024+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-medvedev-neu-yeu-to-lam-chech-huong-dam-phan-nga-ukraine-2402305.html
+[2025-05-18T07:56:35.681+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:41.293+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-medvedev-neu-yeu-to-lam-chech-huong-dam-phan-nga-ukrai
+ne-2402305.html      | ✓ | ⏱: 5.42s
+[2025-05-18T07:56:41.589+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-medvedev-neu-yeu-to-lam-chech-huong-dam-phan-nga-ukrai
+ne-2402305.html      | ✓ | ⏱: 0.29s
+[2025-05-18T07:56:41.593+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-medvedev-neu-yeu-to-lam-chech-huong-dam-phan-nga-ukrai
+ne-2402305.html      | ✓ | ⏱: 5.72s
+[2025-05-18T07:56:42.045+0000] {crawler.py:262} INFO -     ✓ Ông Medvedev nêu yếu tố làm chệch hướng đàm phán Nga – Ukrai...
+
+[2025-05-18T07:56:42.045+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-nato-2402275.html
+[2025-05-18T07:56:42.680+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:56:48.749+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-na
+to-2402275.html      | ✓ | ⏱: 5.90s
+[2025-05-18T07:56:49.400+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-na
+to-2402275.html      | ✓ | ⏱: 0.65s
+[2025-05-18T07:56:49.404+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-na
+to-2402275.html      | ✓ | ⏱: 6.56s
+[2025-05-18T07:56:50.133+0000] {crawler.py:262} INFO -     ✓ Mỹ ấn định thời gian bàn việc rút quân khỏi châu Âu với NATO...
+
+[2025-05-18T07:56:50.134+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/my-phu-nhan-co-ke-hoach-di-doi-vinh-vien-1-trieu-nguoi-palestine-toi-libya-2402276.html
+[2025-05-18T07:56:51.811+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:01.923+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/my-phu-nhan-co-ke-hoach-di...n-1-trieu-nguoi-palestine-toi
+-libya-2402276.html  | ✓ | ⏱: 9.90s
+[2025-05-18T07:57:02.824+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/my-phu-nhan-co-ke-hoach-di...n-1-trieu-nguoi-palestine-toi
+-libya-2402276.html  | ✓ | ⏱: 0.87s
+[2025-05-18T07:57:02.845+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/my-phu-nhan-co-ke-hoach-di...n-1-trieu-nguoi-palestine-toi
+-libya-2402276.html  | ✓ | ⏱: 10.82s
+[2025-05-18T07:57:04.488+0000] {crawler.py:262} INFO -     ✓ Mỹ phủ nhận có kế hoạch di dời vĩnh viễn 1 triệu người Pales...
+
+[2025-05-18T07:57:04.490+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nhieu-nuoc-eu-khong-hai-long-ve-thoa-thuan-thuong-mai-giua-my-va-anh-2402063.html
+[2025-05-18T07:57:05.891+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:14.602+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nhieu-nuoc-eu-khong-hai-lo...hoa-thuan-thuong-mai-giua-my-
+va-anh-2402063.html  | ✓ | ⏱: 8.53s
+[2025-05-18T07:57:15.464+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nhieu-nuoc-eu-khong-hai-lo...hoa-thuan-thuong-mai-giua-my-
+va-anh-2402063.html  | ✓ | ⏱: 0.85s
+[2025-05-18T07:57:15.470+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nhieu-nuoc-eu-khong-hai-lo...hoa-thuan-thuong-mai-giua-my-
+va-anh-2402063.html  | ✓ | ⏱: 9.40s
+[2025-05-18T07:57:18.819+0000] {crawler.py:262} INFO -     ✓ EU lên án thỏa thuận thương mại Mỹ - Anh...
+
+[2025-05-18T07:57:18.820+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/phuong-tien-chien-dau-dan-thay-the-xe-tang-nga-tren-tien-tuyen-ukraine-2400163.html
+[2025-05-18T07:57:19.996+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:28.024+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/phuong-tien-chien-dau-dan-...xe-tang-nga-tren-tien-tuyen-u
+kraine-2400163.html  | ✓ | ⏱: 7.82s
+[2025-05-18T07:57:28.501+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/phuong-tien-chien-dau-dan-...xe-tang-nga-tren-tien-tuyen-u
+kraine-2400163.html  | ✓ | ⏱: 0.47s
+[2025-05-18T07:57:28.504+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/phuong-tien-chien-dau-dan-...xe-tang-nga-tren-tien-tuyen-u
+kraine-2400163.html  | ✓ | ⏱: 8.30s
+[2025-05-18T07:57:28.901+0000] {crawler.py:262} INFO -     ✓ Phương tiện chiến đấu dần thay thế xe tăng Nga trên tiền tuy...
+
+[2025-05-18T07:57:28.901+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/video-tau-hai-quan-mexico-dam-vao-cau-o-my-nhieu-nguoi-bi-thuong-2402333.html
+[2025-05-18T07:57:29.605+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:36.350+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/video-tau-hai-quan-mexico-dam-vao-cau-o-my-nhieu-nguoi-bi-
+thuong-2402333.html  | ✓ | ⏱: 6.65s
+[2025-05-18T07:57:36.852+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/video-tau-hai-quan-mexico-dam-vao-cau-o-my-nhieu-nguoi-bi-
+thuong-2402333.html  | ✓ | ⏱: 0.50s
+[2025-05-18T07:57:36.856+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/video-tau-hai-quan-mexico-dam-vao-cau-o-my-nhieu-nguoi-bi-
+thuong-2402333.html  | ✓ | ⏱: 7.16s
+[2025-05-18T07:57:37.530+0000] {crawler.py:262} INFO -     ✓ Tàu hải quân Mexico đâm vào cầu ở Mỹ, nhiều người bị thương...
+
+[2025-05-18T07:57:37.531+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-than-phien-viec-my-phung-phi-hang-ty-usd-vien-tro-cho-ukraine-2402203.html
+[2025-05-18T07:57:38.607+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:46.483+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-trump-than-phien-viec-...hi-hang-ty-usd-vien-tro-cho-u
+kraine-2402203.html  | ✓ | ⏱: 7.73s
+[2025-05-18T07:57:47.055+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-trump-than-phien-viec-...hi-hang-ty-usd-vien-tro-cho-u
+kraine-2402203.html  | ✓ | ⏱: 0.57s
+[2025-05-18T07:57:47.059+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-trump-than-phien-viec-...hi-hang-ty-usd-vien-tro-cho-u
+kraine-2402203.html  | ✓ | ⏱: 8.30s
+[2025-05-18T07:57:48.359+0000] {crawler.py:262} INFO -     ✓ Ông Trump than phiền việc Mỹ phung phí hàng tỷ USD viện trợ ...
+
+[2025-05-18T07:57:48.360+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/video-ukraine-vo-hieu-hoa-nhieu-xe-tang-xe-thiet-giap-cua-nga-2401780.html
+[2025-05-18T07:57:49.742+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:57:54.517+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/video-ukraine-vo-hieu-hoa-nhieu-xe-tang-xe-thiet-giap-cua-
+nga-2401780.html     | ✓ | ⏱: 4.67s
+[2025-05-18T07:57:54.947+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/video-ukraine-vo-hieu-hoa-nhieu-xe-tang-xe-thiet-giap-cua-
+nga-2401780.html     | ✓ | ⏱: 0.42s
+[2025-05-18T07:57:54.951+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/video-ukraine-vo-hieu-hoa-nhieu-xe-tang-xe-thiet-giap-cua-
+nga-2401780.html     | ✓ | ⏱: 5.11s
+[2025-05-18T07:57:55.529+0000] {crawler.py:262} INFO -     ✓ Video Ukraine vô hiệu hóa nhiều xe tăng, xe thiết giáp của N...
+
+[2025-05-18T07:57:55.530+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/video-phao-binh-nga-doi-ten-lua-vao-vi-tri-quan-ukraine-o-mat-tran-chasiv-yar-2401651.html
+[2025-05-18T07:57:56.961+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:58:05.486+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/video-phao-binh-nga-doi-te...-quan-ukraine-o-mat-tran-chas
+iv-yar-2401651.html  | ✓ | ⏱: 8.38s
+[2025-05-18T07:58:06.365+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/video-phao-binh-nga-doi-te...-quan-ukraine-o-mat-tran-chas
+iv-yar-2401651.html  | ✓ | ⏱: 0.87s
+[2025-05-18T07:58:06.370+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/video-phao-binh-nga-doi-te...-quan-ukraine-o-mat-tran-chas
+iv-yar-2401651.html  | ✓ | ⏱: 9.27s
+[2025-05-18T07:58:07.925+0000] {crawler.py:262} INFO -     ✓ Video pháo binh Nga dội tên lửa vào vị trí quân Ukraine ở mặ...
+
+[2025-05-18T07:58:07.927+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/video-truc-thang-ca-sau-cua-nga-bi-pha-huy-tren-lanh-tho-ukraine-2402324.html
+[2025-05-18T07:58:10.458+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:58:20.927+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/video-truc-thang-ca-sau-cua-nga-bi-pha-huy-tren-lanh-tho-u
+kraine-2402324.html  | ✓ | ⏱: 10.15s
+[2025-05-18T07:58:21.291+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/video-truc-thang-ca-sau-cua-nga-bi-pha-huy-tren-lanh-tho-u
+kraine-2402324.html  | ✓ | ⏱: 0.36s
+[2025-05-18T07:58:21.293+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/video-truc-thang-ca-sau-cua-nga-bi-pha-huy-tren-lanh-tho-u
+kraine-2402324.html  | ✓ | ⏱: 10.52s
+[2025-05-18T07:58:21.710+0000] {crawler.py:262} INFO -     ✓ Video trực thăng 'Cá sấu' của Nga bị phá hủy trên lãnh thổ U...
+
+[2025-05-18T07:58:21.711+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 246.35 giây
+[2025-05-18T07:58:21.982+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'the-gioi'
+[2025-05-18T07:58:22.045+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T07:58:22.047+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:58:22.063+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-18T07:00:00+00:00, execution_date=20250518T070000, start_date=20250518T075414, end_date=20250518T075822
+[2025-05-18T07:58:22.145+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T07:58:22.182+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T07:58:22.184+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,355 @@
+[2025-05-18T07:50:30.668+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:50:30.727+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T07:50:30.748+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T07:50:30.749+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:50:30.783+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-05-18 07:00:00+00:00
+[2025-05-18T07:50:30.797+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=8051) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:50:30.799+0000] {standard_task_runner.py:63} INFO - Started process 8052 to run task
+[2025-05-18T07:50:30.801+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'scheduled__2025-05-18T07:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpn1hurj5j']
+[2025-05-18T07:50:30.808+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask crawl_giao-duc
+[2025-05-18T07:50:30.895+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-18T07:00:00+00:00 [running]> on host 396ee2b23973
+[2025-05-18T07:50:31.066+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T07:00:00+00:00'
+[2025-05-18T07:50:31.069+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:50:31.804+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:50:33.226+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:50:36.134+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 2.82s
+[2025-05-18T07:50:36.346+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 0.21s
+[2025-05-18T07:50:36.348+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 3.03s
+[2025-05-18T07:50:36.436+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-05-18T07:50:37.089+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-05-18T07:50:37.090+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục giao-duc...
+[2025-05-18T07:50:37.090+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chu-tich-ho-chi-minh-da-lam-nhung-nghe-gi-trong-hanh-trinh-tim-duong-cuu-nuoc-2401852.html
+[2025-05-18T07:50:37.892+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:50:42.288+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chu-tich-ho-chi-minh-da-la...trong-hanh-trinh-tim-duong-cu
+u-nuoc-2401852.html  | ✓ | ⏱: 4.32s
+[2025-05-18T07:50:42.882+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chu-tich-ho-chi-minh-da-la...trong-hanh-trinh-tim-duong-cu
+u-nuoc-2401852.html  | ✓ | ⏱: 0.59s
+[2025-05-18T07:50:42.886+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chu-tich-ho-chi-minh-da-la...trong-hanh-trinh-tim-duong-cu
+u-nuoc-2401852.html  | ✓ | ⏱: 4.93s
+[2025-05-18T07:50:43.543+0000] {crawler.py:262} INFO -     ✓ Chủ tịch Hồ Chí Minh đã làm những nghề gì trong hành trình t...
+
+[2025-05-18T07:50:43.545+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguyen-giam-doc-so-y-te-lam-chu-tich-hoi-dong-giao-su-dh-y-khoa-pham-ngoc-thach-2401677.html
+[2025-05-18T07:50:45.125+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:50:51.091+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc
+-thach-2401677.html  | ✓ | ⏱: 5.71s
+[2025-05-18T07:50:51.343+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc
+-thach-2401677.html  | ✓ | ⏱: 0.25s
+[2025-05-18T07:50:51.346+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc
+-thach-2401677.html  | ✓ | ⏱: 5.96s
+[2025-05-18T07:50:51.814+0000] {crawler.py:262} INFO -     ✓ Nguyên Giám đốc Sở Y tế làm Chủ tịch Hội đồng giáo sư ĐH Y k...
+
+[2025-05-18T07:50:51.815+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/gianh-tam-ve-du-hoc-hoc-sinh-va-phu-huynh-chua-the-tho-phao-2402284.html
+[2025-05-18T07:50:52.545+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:50:56.128+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/gianh-tam-ve-du-hoc-hoc-sinh-va-phu-huynh-chua-the-tho-pha
+o-2402284.html       | ✓ | ⏱: 3.48s
+[2025-05-18T07:50:56.424+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/gianh-tam-ve-du-hoc-hoc-sinh-va-phu-huynh-chua-the-tho-pha
+o-2402284.html       | ✓ | ⏱: 0.29s
+[2025-05-18T07:50:56.426+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/gianh-tam-ve-du-hoc-hoc-sinh-va-phu-huynh-chua-the-tho-pha
+o-2402284.html       | ✓ | ⏱: 3.78s
+[2025-05-18T07:50:57.046+0000] {crawler.py:262} INFO -     ✓ Giành tấm vé du học, học sinh và phụ huynh chưa thể 'thở phà...
+
+[2025-05-18T07:50:57.048+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu-o-tphcm-bat-ngo-bien-mat-phu-huynh-hoang-mang-2401724.html
+[2025-05-18T07:50:58.190+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:03.546+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoan
+g-mang-2401724.html  | ✓ | ⏱: 5.22s
+[2025-05-18T07:51:04.373+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoan
+g-mang-2401724.html  | ✓ | ⏱: 0.81s
+[2025-05-18T07:51:04.378+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoan
+g-mang-2401724.html  | ✓ | ⏱: 6.07s
+[2025-05-18T07:51:08.614+0000] {crawler.py:262} INFO -     ✓ Giám đốc trung tâm Anh ngữ ở TPHCM bất ngờ biến mất, phụ huy...
+
+[2025-05-18T07:51:08.616+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-trung-binh-bo-gd-dt-noi-truong-nghe-tu-xem-lai-minh-2401817.html
+[2025-05-18T07:51:10.682+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:14.796+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-la
+i-minh-2401817.html  | ✓ | ⏱: 3.96s
+[2025-05-18T07:51:15.085+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-la
+i-minh-2401817.html  | ✓ | ⏱: 0.28s
+[2025-05-18T07:51:15.087+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-la
+i-minh-2401817.html  | ✓ | ⏱: 4.25s
+[2025-05-18T07:51:15.620+0000] {crawler.py:262} INFO -     ✓ Trường nghề trách ĐH hút cả học sinh trung bình, Bộ GD-ĐT nó...
+
+[2025-05-18T07:51:15.621+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sinh-lop-10-chia-se-cach-giu-binh-tinh-trong-phong-thi-2399539.html
+[2025-05-18T07:51:16.718+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:21.819+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-pho
+ng-thi-2399539.html  | ✓ | ⏱: 4.94s
+[2025-05-18T07:51:22.353+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-pho
+ng-thi-2399539.html  | ✓ | ⏱: 0.53s
+[2025-05-18T07:51:22.358+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-pho
+ng-thi-2399539.html  | ✓ | ⏱: 5.48s
+[2025-05-18T07:51:23.040+0000] {crawler.py:262} INFO -     ✓ Thủ khoa thi vào lớp 10 tiết lộ bí quyết giúp thí sinh bình ...
+
+[2025-05-18T07:51:23.042+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ca-si-nghe-si-san-sang-dong-hanh-khi-hoc-sinh-hoc-2-buoi-ngay-2401114.html
+[2025-05-18T07:51:24.748+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:31.596+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ca-si-nghe-si-san-sang-dong-hanh-khi-hoc-sinh-hoc-2-buoi-n
+gay-2401114.html     | ✓ | ⏱: 6.59s
+[2025-05-18T07:51:31.982+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ca-si-nghe-si-san-sang-dong-hanh-khi-hoc-sinh-hoc-2-buoi-n
+gay-2401114.html     | ✓ | ⏱: 0.38s
+[2025-05-18T07:51:31.986+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ca-si-nghe-si-san-sang-dong-hanh-khi-hoc-sinh-hoc-2-buoi-n
+gay-2401114.html     | ✓ | ⏱: 6.98s
+[2025-05-18T07:51:32.807+0000] {crawler.py:262} INFO -     ✓ Học 2 buổi/ngày: Ca sĩ, nghệ sĩ sẵn sàng đồng hành cùng dạy ...
+
+[2025-05-18T07:51:32.808+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.html
+[2025-05-18T07:51:34.006+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:38.985+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.h
+tml                  | ✓ | ⏱: 4.88s
+[2025-05-18T07:51:39.487+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.h
+tml                  | ✓ | ⏱: 0.50s
+[2025-05-18T07:51:39.489+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.h
+tml                  | ✓ | ⏱: 5.38s
+[2025-05-18T07:51:40.275+0000] {crawler.py:262} INFO -     ✓ Dự kiến bỏ quy định chia hạng chức danh nhà giáo...
+
+[2025-05-18T07:51:40.275+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hon-17-000-thi-sinh-du-ky-thi-danh-gia-nang-luc-spt-de-them-cua-vao-dai-hoc-2402125.html
+[2025-05-18T07:51:41.755+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:47.859+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hon-17-000-thi-sinh-du-ky-...ang-luc-spt-de-them-cua-vao-d
+ai-hoc-2402125.html  | ✓ | ⏱: 5.82s
+[2025-05-18T07:51:48.569+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hon-17-000-thi-sinh-du-ky-...ang-luc-spt-de-them-cua-vao-d
+ai-hoc-2402125.html  | ✓ | ⏱: 0.71s
+[2025-05-18T07:51:48.572+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hon-17-000-thi-sinh-du-ky-...ang-luc-spt-de-them-cua-vao-d
+ai-hoc-2402125.html  | ✓ | ⏱: 6.54s
+[2025-05-18T07:51:49.160+0000] {crawler.py:262} INFO -     ✓ Hơn 17.000 thí sinh dự kỳ thi Đánh giá năng lực SPT để thêm ...
+
+[2025-05-18T07:51:49.161+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/truong-dh-nguyen-trai-to-chuc-chuong-trinh-tri-an-cac-chung-nhan-lich-su-2402139.html
+[2025-05-18T07:51:49.992+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:51:54.794+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/truong-dh-nguyen-trai-to-c...trinh-tri-an-cac-chung-nhan-l
+ich-su-2402139.html  | ✓ | ⏱: 4.71s
+[2025-05-18T07:51:55.149+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/truong-dh-nguyen-trai-to-c...trinh-tri-an-cac-chung-nhan-l
+ich-su-2402139.html  | ✓ | ⏱: 0.35s
+[2025-05-18T07:51:55.152+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/truong-dh-nguyen-trai-to-c...trinh-tri-an-cac-chung-nhan-l
+ich-su-2402139.html  | ✓ | ⏱: 5.07s
+[2025-05-18T07:51:55.766+0000] {crawler.py:262} INFO -     ✓ Trường ĐH Nguyễn Trãi tổ chức chương trình tri ân các chứng ...
+
+[2025-05-18T07:51:55.767+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nam-sinh-bi-danh-hoi-dong-ngay-tai-truong-den-muc-gay-xuong-suon-2402097.html
+[2025-05-18T07:51:56.984+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:04.232+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nam-sinh-bi-danh-hoi-dong-ngay-tai-truong-den-muc-gay-xuon
+g-suon-2402097.html  | ✓ | ⏱: 6.97s
+[2025-05-18T07:52:04.751+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nam-sinh-bi-danh-hoi-dong-ngay-tai-truong-den-muc-gay-xuon
+g-suon-2402097.html  | ✓ | ⏱: 0.52s
+[2025-05-18T07:52:04.754+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nam-sinh-bi-danh-hoi-dong-ngay-tai-truong-den-muc-gay-xuon
+g-suon-2402097.html  | ✓ | ⏱: 7.50s
+[2025-05-18T07:52:05.353+0000] {crawler.py:262} INFO -     ✓ Nam sinh bị đánh hội đồng ngay tại trường đến mức gãy xương ...
+
+[2025-05-18T07:52:05.354+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tranh-luan-hoi-dong-truong-ton-tai-o-muc-hinh-thuc-can-hoat-dong-thuc-chat-hon-2401360.html
+[2025-05-18T07:52:06.090+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:09.991+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-ch
+at-hon-2401360.html  | ✓ | ⏱: 3.80s
+[2025-05-18T07:52:10.379+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-ch
+at-hon-2401360.html  | ✓ | ⏱: 0.38s
+[2025-05-18T07:52:10.382+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-ch
+at-hon-2401360.html  | ✓ | ⏱: 4.19s
+[2025-05-18T07:52:10.965+0000] {crawler.py:262} INFO -     ✓ Tranh luận hội đồng trường tồn tại ở mức hình thức, cần hoạt...
+
+[2025-05-18T07:52:10.966+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/37-tien-si-tot-nghiep-o-nuoc-ngoai-muon-ve-viet-nam-day-hoc-2402280.html
+[2025-05-18T07:52:12.035+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:18.302+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/37-tien-si-tot-nghiep-o-nuoc-ngoai-muon-ve-viet-nam-day-ho
+c-2402280.html       | ✓ | ⏱: 6.15s
+[2025-05-18T07:52:19.481+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/37-tien-si-tot-nghiep-o-nuoc-ngoai-muon-ve-viet-nam-day-ho
+c-2402280.html       | ✓ | ⏱: 1.17s
+[2025-05-18T07:52:19.485+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/37-tien-si-tot-nghiep-o-nuoc-ngoai-muon-ve-viet-nam-day-ho
+c-2402280.html       | ✓ | ⏱: 7.34s
+[2025-05-18T07:52:20.280+0000] {crawler.py:262} INFO -     ✓ 37 tiến sĩ tốt nghiệp ở nước ngoài muốn về Việt Nam dạy học...
+
+[2025-05-18T07:52:20.281+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html
+[2025-05-18T07:52:21.778+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:29.359+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html  
+| ✓ | ⏱: 7.41s
+[2025-05-18T07:52:30.470+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html  
+| ✓ | ⏱: 1.10s
+[2025-05-18T07:52:30.480+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html  
+| ✓ | ⏱: 8.53s
+[2025-05-18T07:52:31.261+0000] {crawler.py:262} INFO -     ✓ Quốc gia nào có toàn triệu phú?...
+
+[2025-05-18T07:52:31.263+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nhieu-tin-vui-lien-tiep-den-voi-giao-vien-luong-cua-nha-giao-duoc-xep-cao-nhat-2401987.html
+[2025-05-18T07:52:32.781+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:40.915+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nhieu-tin-vui-lien-tiep-de...uong-cua-nha-giao-duoc-xep-ca
+o-nhat-2401987.html  | ✓ | ⏱: 7.76s
+[2025-05-18T07:52:41.634+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nhieu-tin-vui-lien-tiep-de...uong-cua-nha-giao-duoc-xep-ca
+o-nhat-2401987.html  | ✓ | ⏱: 0.71s
+[2025-05-18T07:52:41.637+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nhieu-tin-vui-lien-tiep-de...uong-cua-nha-giao-duoc-xep-ca
+o-nhat-2401987.html  | ✓ | ⏱: 8.49s
+[2025-05-18T07:52:42.495+0000] {crawler.py:262} INFO -     ✓ Nhiều tin vui liên tiếp đến với giáo viên, lương của nhà giá...
+
+[2025-05-18T07:52:42.496+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-cung-nhom-nghe-hot-nhat-o-to-cong-nghe-thong-tin-2401718.html
+[2025-05-18T07:52:43.995+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:48.650+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-tho
+ng-tin-2401718.html  | ✓ | ⏱: 4.42s
+[2025-05-18T07:52:49.000+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-tho
+ng-tin-2401718.html  | ✓ | ⏱: 0.35s
+[2025-05-18T07:52:49.004+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-tho
+ng-tin-2401718.html  | ✓ | ⏱: 4.77s
+[2025-05-18T07:52:49.442+0000] {crawler.py:262} INFO -     ✓ Hơn 1 triệu học sinh chọn cùng nhóm nghề, hot nhất ô tô, côn...
+
+[2025-05-18T07:52:49.443+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-thu-lop-10-mon-tieng-anh-ha-noi-nam-2025-tham-khao-2402175.html
+[2025-05-18T07:52:50.164+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:52:56.175+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-thu-lop-10-mon-tieng-anh-ha-noi-nam-2025-tham-khao-
+2402175.html         | ✓ | ⏱: 5.88s
+[2025-05-18T07:52:56.883+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-thu-lop-10-mon-tieng-anh-ha-noi-nam-2025-tham-khao-
+2402175.html         | ✓ | ⏱: 0.69s
+[2025-05-18T07:52:56.888+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-thu-lop-10-mon-tieng-anh-ha-noi-nam-2025-tham-khao-
+2402175.html         | ✓ | ⏱: 6.60s
+[2025-05-18T07:52:58.148+0000] {crawler.py:262} INFO -     ✓ Đề thi thử lớp 10 môn Tiếng Anh của huyện Thanh Trì, Hà Nội ...
+
+[2025-05-18T07:52:58.149+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/bo-truong-gd-dt-day-hoc-lanh-manh-la-phai-chan-viec-ep-hoc-sinh-hoc-them-2401805.html
+[2025-05-18T07:52:59.566+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:07.799+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/bo-truong-gd-dt-day-hoc-la...phai-chan-viec-ep-hoc-sinh-ho
+c-them-2401805.html  | ✓ | ⏱: 8.04s
+[2025-05-18T07:53:08.255+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/bo-truong-gd-dt-day-hoc-la...phai-chan-viec-ep-hoc-sinh-ho
+c-them-2401805.html  | ✓ | ⏱: 0.45s
+[2025-05-18T07:53:08.258+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/bo-truong-gd-dt-day-hoc-la...phai-chan-viec-ep-hoc-sinh-ho
+c-them-2401805.html  | ✓ | ⏱: 8.50s
+[2025-05-18T07:53:08.844+0000] {crawler.py:262} INFO -     ✓ Bộ trưởng GD-ĐT: Dạy học lành mạnh là phải chặn việc ép học ...
+
+[2025-05-18T07:53:08.845+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan-1-5-trieu-bai-thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html
+[2025-05-18T07:53:09.623+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:14.434+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-gia
+i-nhat-2401594.html  | ✓ | ⏱: 4.72s
+[2025-05-18T07:53:14.796+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-gia
+i-nhat-2401594.html  | ✓ | ⏱: 0.36s
+[2025-05-18T07:53:14.800+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-gia
+i-nhat-2401594.html  | ✓ | ⏱: 5.09s
+[2025-05-18T07:53:15.415+0000] {crawler.py:262} INFO -     ✓ Cuộc thi viết thư UPU nhận 1,5 triệu bài thi, nữ sinh Đà Nẵn...
+
+[2025-05-18T07:53:15.416+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chia-se-cay-dang-cua-nu-sinh-vien-o-ha-noi-bi-lua-lien-hoan-mat-gan-1-ty-dong-2402106.html
+[2025-05-18T07:53:16.355+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:24.114+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chia-se-cay-dang-cua-nu-si...-bi-lua-lien-hoan-mat-gan-1-t
+y-dong-2402106.html  | ✓ | ⏱: 7.64s
+[2025-05-18T07:53:24.913+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chia-se-cay-dang-cua-nu-si...-bi-lua-lien-hoan-mat-gan-1-t
+y-dong-2402106.html  | ✓ | ⏱: 0.77s
+[2025-05-18T07:53:24.919+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chia-se-cay-dang-cua-nu-si...-bi-lua-lien-hoan-mat-gan-1-t
+y-dong-2402106.html  | ✓ | ⏱: 8.45s
+[2025-05-18T07:53:25.947+0000] {crawler.py:262} INFO -     ✓ Chia sẻ cay đắng của nữ sinh viên ở Hà Nội bị lừa liên hoàn ...
+
+[2025-05-18T07:53:25.948+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html
+[2025-05-18T07:53:27.304+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:31.927+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 4.40s
+[2025-05-18T07:53:32.134+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 0.20s
+[2025-05-18T07:53:32.136+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 4.61s
+[2025-05-18T07:53:32.667+0000] {crawler.py:262} INFO -     ✓ Thành phố đông học sinh thứ 2 cả nước tuyển sinh và thi vào ...
+
+[2025-05-18T07:53:32.668+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-doc-bien-mat-om-hang-ty-dong-cua-phu-huynh-2401858.html
+[2025-05-18T07:53:33.455+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:37.842+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu
+-huynh-2401858.html  | ✓ | ⏱: 4.28s
+[2025-05-18T07:53:38.401+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu
+-huynh-2401858.html  | ✓ | ⏱: 0.56s
+[2025-05-18T07:53:38.405+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu
+-huynh-2401858.html  | ✓ | ⏱: 4.85s
+[2025-05-18T07:53:39.574+0000] {crawler.py:262} INFO -     ✓ Trung tâm Anh ngữ có giám đốc biến mất 'ôm' hàng tỷ đồng của...
+
+[2025-05-18T07:53:39.575+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-van-tham-khao-2401282.html
+[2025-05-18T07:53:40.976+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:53:49.765+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-van-tham-khao-2401
+282.html             | ✓ | ⏱: 8.53s
+[2025-05-18T07:53:50.568+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-van-tham-khao-2401
+282.html             | ✓ | ⏱: 0.77s
+[2025-05-18T07:53:50.590+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-van-tham-khao-2401
+282.html             | ✓ | ⏱: 9.36s
+[2025-05-18T07:53:51.865+0000] {crawler.py:262} INFO -     ✓ Đề thi thử tốt nghiệp THPT môn Văn năm 2025 của Hà Nội...
+
+[2025-05-18T07:53:51.866+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/viet-nam-lap-thanh-tich-lich-su-tai-hoi-thi-khoa-hoc-ky-thuat-quoc-te-2025-2402024.html
+[2025-05-18T07:53:53.729+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:00.890+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/viet-nam-lap-thanh-tich-li...-thi-khoa-hoc-ky-thuat-quoc-t
+e-2025-2402024.html  | ✓ | ⏱: 7.00s
+[2025-05-18T07:54:01.394+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/viet-nam-lap-thanh-tich-li...-thi-khoa-hoc-ky-thuat-quoc-t
+e-2025-2402024.html  | ✓ | ⏱: 0.50s
+[2025-05-18T07:54:01.401+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/viet-nam-lap-thanh-tich-li...-thi-khoa-hoc-ky-thuat-quoc-t
+e-2025-2402024.html  | ✓ | ⏱: 7.51s
+[2025-05-18T07:54:02.270+0000] {crawler.py:262} INFO -     ✓ Việt Nam lập thành tích lịch sử tại Hội thi Khoa học kỹ thuậ...
+
+[2025-05-18T07:54:02.272+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2025-2402327.html
+[2025-05-18T07:54:03.892+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:54:09.152+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 5.10s
+[2025-05-18T07:54:09.643+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 0.48s
+[2025-05-18T07:54:09.648+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 5.60s
+[2025-05-18T07:54:10.387+0000] {crawler.py:262} INFO -     ✓ Danh sách 852 học sinh được tuyên dương tiêu biểu, xuất sắc ...
+
+[2025-05-18T07:54:10.388+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 218.58 giây
+[2025-05-18T07:54:10.726+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'giao-duc'
+[2025-05-18T07:54:10.792+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T07:54:10.793+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:54:10.804+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=scheduled__2025-05-18T07:00:00+00:00, execution_date=20250518T070000, start_date=20250518T075030, end_date=20250518T075410
+[2025-05-18T07:54:10.859+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T07:54:10.903+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T07:54:10.906+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

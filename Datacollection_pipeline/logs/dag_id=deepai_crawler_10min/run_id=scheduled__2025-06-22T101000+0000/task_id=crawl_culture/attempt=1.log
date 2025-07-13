@@ -1,0 +1,45 @@
+[2025-06-22T10:20:29.653+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T10:20:29.672+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T10:10:00+00:00 [queued]>
+[2025-06-22T10:20:29.683+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T10:10:00+00:00 [queued]>
+[2025-06-22T10:20:29.684+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T10:20:29.703+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_culture> on 2025-06-22 10:10:00+00:00
+[2025-06-22T10:20:29.718+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4633) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T10:20:29.721+0000] {standard_task_runner.py:63} INFO - Started process 4671 to run task
+[2025-06-22T10:20:29.722+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_culture', 'scheduled__2025-06-22T10:10:00+00:00', '--job-id', '372', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpfmy1kw3r']
+[2025-06-22T10:20:29.725+0000] {standard_task_runner.py:91} INFO - Job 372: Subtask crawl_culture
+[2025-06-22T10:20:29.780+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T10:10:00+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T10:20:29.887+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_culture' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T10:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T10:10:00+00:00'
+[2025-06-22T10:20:29.889+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T10:20:29.905+0000] {dags.py:172} INFO - Bắt đầu crawl category: culture
+[2025-06-22T10:20:30.054+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T10:20:30.086+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T10:20:31.020+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T10:20:31.021+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/culture/
+[2025-06-22T10:20:31.022+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T10:20:35.569+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 4.54s
+[2025-06-22T10:20:35.694+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 0.12s
+[2025-06-22T10:20:35.696+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 4.67s
+[2025-06-22T10:20:35.697+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T10:20:35.735+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T10:20:35.736+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T10:20:35.736+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-that-unites-us/
+[2025-06-22T10:20:35.737+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/all-about-the-hollywood-actors-and-studios-deal-on-generative-ai-usage-in-films-and-tv/
+[2025-06-22T10:20:35.737+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/amazon-echo-uses-generative-ai-to-create-bedtime-stories/
+[2025-06-22T10:20:35.738+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/bridge-to-explainable-ai/
+[2025-06-22T10:20:35.738+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/chatgpt-accepts-voice-image-input-output/
+[2025-06-22T10:20:35.739+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T10:20:36.310+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T10:20:36.311+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục culture cần crawl.
+[2025-06-22T10:20:36.311+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'culture'
+[2025-06-22T10:20:36.370+0000] {dags.py:177} INFO - Hoàn thành crawl category: culture
+[2025-06-22T10:20:36.371+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T10:20:36.372+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T10:20:36.380+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_culture, run_id=scheduled__2025-06-22T10:10:00+00:00, execution_date=20250622T101000, start_date=20250622T102029, end_date=20250622T102036
+[2025-06-22T10:20:36.425+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T10:20:36.457+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T10:20:36.460+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,201 @@
+[2025-05-05T06:44:17.079+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T06:44:17.112+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:44:17.126+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:44:17.127+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T06:44:17.153+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-05 06:00:00+00:00
+[2025-05-05T06:44:17.165+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4383) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T06:44:17.169+0000] {standard_task_runner.py:63} INFO - Started process 4386 to run task
+[2025-05-05T06:44:17.169+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-05T06:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpdnf5iyhe']
+[2025-05-05T06:44:17.174+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask crawl_the-gioi
+[2025-05-05T06:44:17.245+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [running]> on host ae9b30221da5
+[2025-05-05T06:44:17.363+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-05T06:00:00+00:00'
+[2025-05-05T06:44:17.365+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T06:44:17.600+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-05T06:44:17.768+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-05T06:44:18.531+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:23.713+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:44:23.714+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:23.715+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.09s
+[2025-05-05T06:44:23.921+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:44:23.922+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:23.923+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-05T06:44:23.925+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:44:23.925+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:23.926+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.30s
+[2025-05-05T06:44:24.180+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-05T06:44:25.943+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 8 URLs mới
+[2025-05-05T06:44:25.944+0000] {crawler.py:225} INFO - Đang crawl 8 bài viết mới từ danh mục the-gioi...
+[2025-05-05T06:44:25.944+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/tong-thong-putin-len-tieng-ve-nguoi-ke-nhiem-tiem-nang-2397711.html
+[2025-05-05T06:44:26.543+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:30.045+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tong-thong-putin-len-tieng-ve-nguoi-ke-nhiem-tiem-nang-2397711.html            | 
+[2025-05-05T06:44:30.046+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:30.047+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.36s
+[2025-05-05T06:44:30.344+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tong-thong-putin-len-tieng-ve-nguoi-ke-nhiem-tiem-nang-2397711.html            | 
+[2025-05-05T06:44:30.345+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:30.345+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-05T06:44:30.347+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tong-thong-putin-len-tieng-ve-nguoi-ke-nhiem-tiem-nang-2397711.html            | 
+[2025-05-05T06:44:30.347+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:30.348+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.67s
+[2025-05-05T06:44:30.601+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Tổng thống Putin lên tiếng về người kế nhiệm tiềm năng
+[2025-05-05T06:44:31.276+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:44:31.284+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:44:31.417+0000] {crawler.py:232} INFO -     ✓ Tổng thống Putin lên tiếng về người kế nhiệm tiềm năng...
+
+[2025-05-05T06:44:31.418+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-bac-bo-dung-vu-luc-ep-canada-sap-nhap-khang-dinh-my-can-greenland-2397678.html
+[2025-05-05T06:44:31.985+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:35.759+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-bac-bo-dung-vu-l...ap-nhap-khang-dinh-my-can-greenland-2397678.html  | 
+[2025-05-05T06:44:35.760+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:35.761+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.70s
+[2025-05-05T06:44:36.115+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-bac-bo-dung-vu-l...ap-nhap-khang-dinh-my-can-greenland-2397678.html  | 
+[2025-05-05T06:44:36.115+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:36.116+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.35s
+[2025-05-05T06:44:36.117+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-bac-bo-dung-vu-l...ap-nhap-khang-dinh-my-can-greenland-2397678.html  | 
+[2025-05-05T06:44:36.118+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:36.118+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.06s
+[2025-05-05T06:44:36.373+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Ông Trump từ chối dùng vũ lực ép Canada sáp nhập, khẳng định Mỹ cần Greenland
+[2025-05-05T06:44:37.004+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:44:37.006+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:44:37.860+0000] {crawler.py:232} INFO -     ✓ Ông Trump từ chối dùng vũ lực ép Canada sáp nhập, khẳng định...
+
+[2025-05-05T06:44:37.860+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ong-zelensky-noi-nga-khieu-khich-ong-trump-chia-se-ve-dam-phan-ukraine-nga-2397639.html
+[2025-05-05T06:44:38.411+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:42.466+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-zelensky-noi-nga-khieu...ump-chia-se-ve-dam-phan-ukraine-nga-2397639.html  | 
+[2025-05-05T06:44:42.467+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:42.468+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.97s
+[2025-05-05T06:44:42.731+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-zelensky-noi-nga-khieu...ump-chia-se-ve-dam-phan-ukraine-nga-2397639.html  | 
+[2025-05-05T06:44:42.732+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:42.732+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-05T06:44:42.733+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-zelensky-noi-nga-khieu...ump-chia-se-ve-dam-phan-ukraine-nga-2397639.html  | 
+[2025-05-05T06:44:42.768+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:42.769+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.24s
+[2025-05-05T06:44:43.047+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Ông Zelensky nói Nga ‘khiêu khích’, ông Trump chia sẻ về đàm phán Ukraine - Nga
+[2025-05-05T06:44:43.732+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:44:43.734+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:44:45.542+0000] {crawler.py:232} INFO -     ✓ Ông Zelensky nói Nga ‘khiêu khích’, ông Trump chia sẻ về đàm...
+
+[2025-05-05T06:44:45.542+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/nguoi-dan-nga-no-nuc-xuong-pho-xem-duyet-binh-ngam-xe-tang-huyen-thoai-2397723.html
+[2025-05-05T06:44:46.061+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:50.918+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguoi-dan-nga-no-nuc-xuong...duyet-binh-ngam-xe-tang-huyen-thoai-2397723.html  | 
+[2025-05-05T06:44:50.919+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:50.919+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.80s
+[2025-05-05T06:44:51.090+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguoi-dan-nga-no-nuc-xuong...duyet-binh-ngam-xe-tang-huyen-thoai-2397723.html  | 
+[2025-05-05T06:44:51.091+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:51.091+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-05T06:44:51.092+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguoi-dan-nga-no-nuc-xuong...duyet-binh-ngam-xe-tang-huyen-thoai-2397723.html  | 
+[2025-05-05T06:44:51.093+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:51.093+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.97s
+[2025-05-05T06:44:51.267+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Người dân Nga nô nức xuống phố xem duyệt binh, ngắm xe tăng huyền thoại
+[2025-05-05T06:44:52.556+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:44:52.557+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:44:52.684+0000] {crawler.py:232} INFO -     ✓ Người dân Nga nô nức xuống phố xem duyệt binh, ngắm xe tăng ...
+
+[2025-05-05T06:44:52.685+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/video-nga-dung-bom-fab-3000-tan-cong-xuong-dong-tau-ukraine-o-kherson-2397545.html
+[2025-05-05T06:44:53.332+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:44:57.937+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/video-nga-dung-bom-fab-300...ng-xuong-dong-tau-ukraine-o-kherson-2397545.html  | 
+[2025-05-05T06:44:57.938+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:57.938+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.51s
+[2025-05-05T06:44:58.447+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/video-nga-dung-bom-fab-300...ng-xuong-dong-tau-ukraine-o-kherson-2397545.html  | 
+[2025-05-05T06:44:58.447+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:58.448+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.51s
+[2025-05-05T06:44:58.450+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/video-nga-dung-bom-fab-300...ng-xuong-dong-tau-ukraine-o-kherson-2397545.html  | 
+[2025-05-05T06:44:58.450+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:44:58.451+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.03s
+[2025-05-05T06:44:58.780+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Video Nga dùng bom FAB-3000 tấn công xưởng đóng tàu Ukraine ở Kherson
+[2025-05-05T06:44:59.367+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:44:59.369+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:44:59.531+0000] {crawler.py:232} INFO -     ✓ Video Nga dùng bom FAB-3000 tấn công xưởng đóng tàu Ukraine ...
+
+[2025-05-05T06:44:59.532+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-khong-tranh-cu-nhiem-ky-ba-neu-ten-mot-so-ung-vien-cho-dang-cong-hoa-2397638.html
+[2025-05-05T06:45:00.192+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:45:03.936+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-khong-tranh-cu-n...n-mot-so-ung-vien-cho-dang-cong-hoa-2397638.html  | 
+[2025-05-05T06:45:03.937+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:03.938+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.66s
+[2025-05-05T06:45:04.308+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-khong-tranh-cu-n...n-mot-so-ung-vien-cho-dang-cong-hoa-2397638.html  | 
+[2025-05-05T06:45:04.309+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:04.310+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.37s
+[2025-05-05T06:45:04.311+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-khong-tranh-cu-n...n-mot-so-ung-vien-cho-dang-cong-hoa-2397638.html  | 
+[2025-05-05T06:45:04.312+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:04.312+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.04s
+[2025-05-05T06:45:04.685+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Ông Trump không tranh cử nhiệm kỳ ba, nêu tên một số ứng viên cho đảng Cộng hòa
+[2025-05-05T06:45:05.394+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:45:05.396+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:45:05.533+0000] {crawler.py:232} INFO -     ✓ Ông Trump không tranh cử nhiệm kỳ ba, nêu tên một số ứng viê...
+
+[2025-05-05T06:45:05.534+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-ra-lenh-tai-mo-cua-nha-tu-khet-tieng-alcatraz-2397740.html
+[2025-05-05T06:45:06.160+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:45:09.964+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-ra-lenh-tai-mo-cua-nha-tu-khet-tieng-alcatraz-2397740.html           | 
+[2025-05-05T06:45:09.968+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:09.968+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.72s
+[2025-05-05T06:45:10.271+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-ra-lenh-tai-mo-cua-nha-tu-khet-tieng-alcatraz-2397740.html           | 
+[2025-05-05T06:45:10.272+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:10.273+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-05T06:45:10.275+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-ra-lenh-tai-mo-cua-nha-tu-khet-tieng-alcatraz-2397740.html           | 
+[2025-05-05T06:45:10.275+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:10.276+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.03s
+[2025-05-05T06:45:10.696+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Ông Trump ra lệnh tái mở cửa nhà tù khét tiếng Alcatraz
+[2025-05-05T06:45:11.366+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:45:11.369+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:45:11.520+0000] {crawler.py:232} INFO -     ✓ Ông Trump ra lệnh tái mở cửa nhà tù khét tiếng Alcatraz...
+
+[2025-05-05T06:45:11.521+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/hinh-anh-quan-nhan-nga-dien-tap-cho-le-duyet-binh-ngay-chien-thang-2397704.html
+[2025-05-05T06:45:12.131+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:45:16.057+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hinh-anh-quan-nhan-nga-die...-cho-le-duyet-binh-ngay-chien-thang-2397704.html  | 
+[2025-05-05T06:45:16.058+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:16.061+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.86s
+[2025-05-05T06:45:16.440+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hinh-anh-quan-nhan-nga-die...-cho-le-duyet-binh-ngay-chien-thang-2397704.html  | 
+[2025-05-05T06:45:16.441+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:16.442+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.38s
+[2025-05-05T06:45:16.443+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hinh-anh-quan-nhan-nga-die...-cho-le-duyet-binh-ngay-chien-thang-2397704.html  | 
+[2025-05-05T06:45:16.444+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:45:16.445+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.25s
+[2025-05-05T06:45:16.824+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Hình ảnh quân nhân Nga diễn tập cho lễ duyệt binh Ngày Chiến thắng
+[2025-05-05T06:45:17.345+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:45:17.347+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:45:17.504+0000] {crawler.py:232} INFO -     ✓ Hình ảnh quân nhân Nga diễn tập cho lễ duyệt binh Ngày Chiến...
+
+[2025-05-05T06:45:17.505+0000] {crawler.py:235} INFO - ⏱️  Tổng thời gian crawl: 59.74 giây
+[2025-05-05T06:45:17.564+0000] {crawler.py:255} INFO - Đã lưu 8 bài viết vào collection 'the-gioi'
+[2025-05-05T06:45:17.610+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-05T06:45:17.611+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T06:45:17.622+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-05T06:00:00+00:00, execution_date=20250505T060000, start_date=20250505T064417, end_date=20250505T064517
+[2025-05-05T06:45:17.660+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T06:45:17.698+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T06:45:17.706+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-05T06:52:46.640+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T06:52:46.661+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:52:46.670+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:52:46.671+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T06:52:46.684+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-05 06:00:00+00:00
+[2025-05-05T06:52:46.690+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3067) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T06:52:46.692+0000] {standard_task_runner.py:63} INFO - Started process 3070 to run task
+[2025-05-05T06:52:46.693+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-05T06:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpr0k46qg9']
+[2025-05-05T06:52:46.695+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask crawl_the-gioi
+[2025-05-05T06:52:46.741+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-05T06:00:00+00:00 [running]> on host bf996dce4e49
+[2025-05-05T06:52:46.824+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-05T06:00:00+00:00'
+[2025-05-05T06:52:46.826+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T06:52:47.004+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-05T06:52:47.162+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-05T06:52:47.907+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:52:51.636+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:52:51.637+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:52:51.638+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.64s
+[2025-05-05T06:52:51.853+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:52:51.854+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:52:51.854+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-05T06:52:51.856+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-05T06:52:51.856+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:52:51.857+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.86s
+[2025-05-05T06:52:52.114+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-05T06:52:53.765+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs mới
+[2025-05-05T06:52:53.766+0000] {crawler.py:222} INFO - Không có bài viết mới nào trong danh mục the-gioi cần crawl.
+[2025-05-05T06:52:53.767+0000] {crawler.py:257} INFO - Không có bài viết để lưu vào collection 'the-gioi'
+[2025-05-05T06:52:53.814+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-05T06:52:53.814+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T06:52:53.822+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-05T06:00:00+00:00, execution_date=20250505T060000, start_date=20250505T065246, end_date=20250505T065253
+[2025-05-05T06:52:53.850+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T06:52:53.872+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T06:52:53.874+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

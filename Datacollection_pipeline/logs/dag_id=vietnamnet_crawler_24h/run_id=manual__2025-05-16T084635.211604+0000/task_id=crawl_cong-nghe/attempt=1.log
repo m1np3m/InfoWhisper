@@ -1,0 +1,240 @@
+[2025-05-16T08:52:50.563+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T08:52:50.586+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T08:46:35.211604+00:00 [queued]>
+[2025-05-16T08:52:50.595+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T08:46:35.211604+00:00 [queued]>
+[2025-05-16T08:52:50.595+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T08:52:50.610+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-16 08:46:35.211604+00:00
+[2025-05-16T08:52:50.618+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=8595) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T08:52:50.620+0000] {standard_task_runner.py:63} INFO - Started process 8624 to run task
+[2025-05-16T08:52:50.619+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'manual__2025-05-16T08:46:35.211604+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpz6d_3drb']
+[2025-05-16T08:52:50.622+0000] {standard_task_runner.py:91} INFO - Job 34: Subtask crawl_cong-nghe
+[2025-05-16T08:52:50.668+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T08:46:35.211604+00:00 [running]> on host 3e0aeda9ad24
+[2025-05-16T08:52:50.763+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T08:46:35.211604+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T08:46:35.211604+00:00'
+[2025-05-16T08:52:50.765+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T08:52:51.029+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T08:52:51.162+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-16T08:52:51.839+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:52:55.446+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T08:52:55.447+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:52:55.448+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.57s
+[2025-05-16T08:52:55.986+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T08:52:55.987+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:52:55.988+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.54s
+[2025-05-16T08:52:55.990+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T08:52:55.990+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:52:55.991+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.11s
+[2025-05-16T08:52:56.127+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-05-16T08:52:58.278+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 12 URLs mới
+[2025-05-16T08:52:58.279+0000] {crawler.py:234} INFO - Đang crawl 12 bài viết mới từ danh mục cong-nghe...
+[2025-05-16T08:52:58.279+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html
+[2025-05-16T08:52:59.082+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:03.187+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T08:53:03.187+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:03.188+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.00s
+[2025-05-16T08:53:03.438+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T08:53:03.438+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:03.439+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.25s
+[2025-05-16T08:53:03.440+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T08:53:03.441+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:03.442+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.26s
+[2025-05-16T08:53:03.683+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Thêm một hãng điện thoại Trung Quốc có thể khiến Mỹ lo lắng
+[2025-05-16T08:53:04.381+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:04.389+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:04.598+0000] {crawler.py:241} INFO -     ✓ Thêm một hãng điện thoại Trung Quốc có thể khiến Mỹ lo lắng...
+
+[2025-05-16T08:53:04.598+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-thay-doi-tu-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html
+[2025-05-16T08:53:05.198+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:08.985+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T08:53:08.986+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:08.987+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.71s
+[2025-05-16T08:53:09.220+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T08:53:09.221+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:09.222+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-16T08:53:09.223+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T08:53:09.224+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:09.224+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.95s
+[2025-05-16T08:53:09.501+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cục Sở hữu trí tuệ hãy thay đổi tư duy, cách làm để khởi tạo trang mới
+[2025-05-16T08:53:09.502+0000] {llm_summary.py:128} INFO - Nội dung quá dài (7694 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:10.353+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:10.355+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:10.529+0000] {crawler.py:241} INFO -     ✓ Cục Sở hữu trí tuệ hãy thay đổi tư duy, cách làm để khởi tạo...
+
+[2025-05-16T08:53:10.530+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-se-theo-mo-hinh-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html
+[2025-05-16T08:53:11.219+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:15.268+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T08:53:15.269+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:15.270+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.97s
+[2025-05-16T08:53:15.525+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T08:53:15.526+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:15.527+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.25s
+[2025-05-16T08:53:15.528+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T08:53:15.529+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:15.529+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.23s
+[2025-05-16T08:53:15.817+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Khu Công nghệ cao Hòa Lạc sẽ theo mô hình thành phố khoa học và công nghệ mở
+[2025-05-16T08:53:15.818+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3889 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:16.642+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:16.644+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:16.845+0000] {crawler.py:241} INFO -     ✓ Khu Công nghệ cao Hòa Lạc sẽ theo mô hình thành phố khoa học...
+
+[2025-05-16T08:53:16.846+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos-khung-co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html
+[2025-05-16T08:53:17.590+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:21.512+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T08:53:21.513+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:21.514+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.82s
+[2025-05-16T08:53:22.054+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T08:53:22.055+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:22.056+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.54s
+[2025-05-16T08:53:22.057+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T08:53:22.058+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:22.058+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.36s
+[2025-05-16T08:53:22.373+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Sức mạnh tên lửa BrahMos: Công nghệ vũ khí Nga - Ấn có đang bị thổi phồng?
+[2025-05-16T08:53:22.374+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4848 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:23.145+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:23.147+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:23.266+0000] {crawler.py:241} INFO -     ✓ Sức mạnh tên lửa BrahMos: Công nghệ vũ khí Nga - Ấn có đang ...
+
+[2025-05-16T08:53:23.267+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html
+[2025-05-16T08:53:24.005+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:27.507+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T08:53:27.508+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:27.509+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.41s
+[2025-05-16T08:53:27.754+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T08:53:27.754+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:27.755+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-16T08:53:27.756+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T08:53:27.757+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:27.757+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.66s
+[2025-05-16T08:53:28.090+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Huế đưa vào hoạt động 136 điểm đại lý dịch vụ công trực tuyến
+[2025-05-16T08:53:28.091+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4156 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:28.692+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:28.694+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:28.846+0000] {crawler.py:241} INFO -     ✓ Huế đưa vào hoạt động 136 điểm đại lý dịch vụ công trực tuyế...
+
+[2025-05-16T08:53:28.846+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html
+[2025-05-16T08:53:29.623+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:32.975+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T08:53:32.976+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:32.977+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.26s
+[2025-05-16T08:53:33.242+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T08:53:33.243+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:33.244+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-16T08:53:33.245+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T08:53:33.245+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:33.246+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.53s
+[2025-05-16T08:53:33.487+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Lối thoát duy nhất của Apple dưới thời ông Donald Trump?
+[2025-05-16T08:53:33.488+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3896 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:34.101+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:34.102+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:34.270+0000] {crawler.py:241} INFO -     ✓ Lối thoát duy nhất của Apple dưới thời ông Donald Trump?...
+
+[2025-05-16T08:53:34.271+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/uav-fpv-vu-khi-gia-re-thanh-ke-san-moi-dang-gom-2401713.html
+[2025-05-16T08:53:34.822+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:38.099+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/uav-fpv-vu-khi-gia-re-thanh-ke-san-moi-dang-gom-2401713.html                   | 
+[2025-05-16T08:53:38.100+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:38.101+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.22s
+[2025-05-16T08:53:38.329+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/uav-fpv-vu-khi-gia-re-thanh-ke-san-moi-dang-gom-2401713.html                   | 
+[2025-05-16T08:53:38.330+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:38.330+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-16T08:53:38.331+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/uav-fpv-vu-khi-gia-re-thanh-ke-san-moi-dang-gom-2401713.html                   | 
+[2025-05-16T08:53:38.332+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:38.332+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.45s
+[2025-05-16T08:53:38.578+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: UAV Nga ‘xé xác’ xe tăng Leopard Ukraine: Công nghệ giá rẻ thành ‘kẻ săn mồi’ đáng gờm
+[2025-05-16T08:53:38.579+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3950 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:39.268+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:39.272+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:39.429+0000] {crawler.py:241} INFO -     ✓ UAV Nga ‘xé xác’ xe tăng Leopard Ukraine: Công nghệ giá rẻ t...
+
+[2025-05-16T08:53:39.429+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html
+[2025-05-16T08:53:39.980+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:43.120+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T08:53:43.121+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:43.121+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.07s
+[2025-05-16T08:53:43.333+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T08:53:43.334+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:43.335+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-16T08:53:43.336+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T08:53:43.336+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:43.337+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.28s
+[2025-05-16T08:53:43.726+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Ngày Khoa học và Công nghệ sẽ tôn vinh những người làm khoa học
+[2025-05-16T08:53:43.727+0000] {llm_summary.py:128} INFO - Nội dung quá dài (5431 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:44.492+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:44.493+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:44.687+0000] {crawler.py:241} INFO -     ✓ Ngày Khoa học và Công nghệ sẽ tôn vinh những người làm khoa ...
+
+[2025-05-16T08:53:44.687+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html
+[2025-05-16T08:53:45.199+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:48.496+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T08:53:48.497+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:48.497+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.24s
+[2025-05-16T08:53:48.741+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T08:53:48.742+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:48.743+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-16T08:53:48.744+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T08:53:48.745+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:48.746+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.49s
+[2025-05-16T08:53:49.002+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: CMC Telecom sẽ xuất hiện tại sự kiện bảo mật lớn nhất Việt Nam
+[2025-05-16T08:53:49.003+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3876 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:49.730+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:49.732+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:49.892+0000] {crawler.py:241} INFO -     ✓ CMC Telecom sẽ xuất hiện tại sự kiện bảo mật lớn nhất Việt N...
+
+[2025-05-16T08:53:49.893+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html
+[2025-05-16T08:53:50.681+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:53.591+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T08:53:53.592+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:53.592+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.85s
+[2025-05-16T08:53:53.801+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T08:53:53.802+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:53.803+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-16T08:53:53.804+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T08:53:53.805+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:53.806+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.06s
+[2025-05-16T08:53:54.028+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: iPhone 16 Pro giảm giá sốc hơn 9 triệu đồng tại Trung Quốc
+[2025-05-16T08:53:54.028+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3819 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:54.799+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:54.801+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:54.971+0000] {crawler.py:241} INFO -     ✓ iPhone 16 Pro giảm giá sốc hơn 9 triệu đồng tại Trung Quốc...
+
+[2025-05-16T08:53:54.971+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html
+[2025-05-16T08:53:55.466+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:53:58.005+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T08:53:58.006+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:58.007+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.46s
+[2025-05-16T08:53:58.201+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T08:53:58.202+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:58.202+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-16T08:53:58.203+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T08:53:58.204+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:53:58.205+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.66s
+[2025-05-16T08:53:58.420+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Lockin X9 - khóa cửa vân tay thông minh, dễ sử dụng
+[2025-05-16T08:53:58.421+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3338 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:53:59.087+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:53:59.089+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:53:59.239+0000] {crawler.py:241} INFO -     ✓ Lockin X9 - khóa cửa vân tay thông minh, dễ sử dụng...
+
+[2025-05-16T08:53:59.240+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-nghe-vn-ngay-hoi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html
+[2025-05-16T08:53:59.764+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:54:03.018+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T08:54:03.019+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:54:03.019+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.19s
+[2025-05-16T08:54:03.401+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T08:54:03.402+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:54:03.403+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.38s
+[2025-05-16T08:54:03.404+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T08:54:03.404+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:54:03.405+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.58s
+[2025-05-16T08:54:03.640+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Ngày hội Khoa học và Công nghệ: Ngày hội của trí tuệ, đổi mới và khát vọng
+[2025-05-16T08:54:03.640+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4414 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:54:04.345+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:54:04.348+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:54:05.065+0000] {crawler.py:241} INFO -     ✓ Ngày hội Khoa học và Công nghệ: Ngày hội của trí tuệ, đổi mớ...
+
+[2025-05-16T08:54:05.065+0000] {crawler.py:244} INFO - ⏱️  Tổng thời gian crawl: 73.90 giây
+[2025-05-16T08:54:05.285+0000] {crawler.py:276} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 1, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.cong-nghe index: _id_ dup key: { _id: "2401416" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401416'}, 'op': {'title': 'Cục Sở hữu trí tuệ hãy thay đổi tư duy, cách làm để khởi tạo trang mới', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-15T19:15:01.000 +07:00', 'views': None, 'tags': [], 'description': 'Thay đổi tư duy, đổi mới cách làm, tập trung thúc đẩy phát triển tài sản trí tuệ, chuyển đổi số toàn diện là những yêu cầu của Bộ trưởng Nguyễn Mạnh Hùng với Cục Sở hữu trí tuệ.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/15/cuc-so-huu-tri-tue-hay-thay-doi-tu-duy-cach-lam-de-khoi-tao-trang-moi-93004.jpg?width=0&s=o6ZynAdMI-jMISyL5LxW5A', 'content': 'Khởi tạo chu kỳ phát triển mới\n\nChiều 14/5, Bộ trưởng Bộ KH&CN Nguyễn Mạnh Hùng chủ trì buổi làm việc với tập thể cán bộ, công chức của Cục Sở hữu trí tuệ để hoạch định ra đường hướng phát triển thời gian tới. Cùng dự có các Thứ trưởng Bộ KH&CN Hoàng Minh, Lê Xuân Định và lãnh đạo cấp trưởng một số cơ quan, đơn vị trong Bộ.\n\nKhẳng định vai trò của sở hữu trí tuệ (SHTT) với sự phát triển của ngành và đất nước, Bộ trưởng Nguyễn Mạnh Hùng ví 5 mảng chính của Bộ KH&CN như 5 ngón tay trên 1 bàn tay, trong đó SHTT quan trọng không kém khoa học, công nghệ (KHCN), đổi mới sáng tạo (ĐMST), chuyển đổi số (CĐS) hay tiêu chuẩn đo lường chất lượng.\n\nCũng nhưtiêu chuẩn đo lường chất lượng, SHTT phải thúc đẩy KHCN, ĐMST trên “mảnh đất” CĐS. KHCN, ĐMST muốn phát triển bền vững phải thu hút được đầu tư, có kinh phí cho nghiên cứu, thương mại hóa được kết quả nghiên cứu; SHTT chính là cơ sở để thương mại hóa và thu hút đầu tư cho KHCN.\n\nDẫn quy luật“Một quốc gia phát triển thì 80% tài sản của quốc gia đó là tài sản vô hình, tài sản trí tuệ”được các tác giả Arnold Kling, Nick Schulz nêu ra trong cuốn sách “Từ đói nghèo đến thịnh vượng”, Bộ trưởng Nguyễn Mạnh Hùng chỉ rõ, đội ngũ làm SHTT sẽ là một lực lượng chính góp phần vào sự thịnh vượng của Việt Nam, thông qua việc thúc đẩy phát triển tài sản trí tuệ quốc gia.\n\nNhắc lại thời kỳ đầu của Cục SHTT chỉ với 27 người và điều kiện hạn hẹp, người đứng đầu ngành KH&CN mong muốn đội ngũ làm SHTT hiện tại lấy tinh thần của 43 năm trước để có giấc mơ lớn; tập trung đổi mới nghề của mình, làm sao để tài sản hóa, thị trường hóa các kết quả nghiên cứu, hình thành được thị trường KHCN Việt Nam, từ đó đưa KHCN và kinh tế xã hội đất nước phát triển.\n\nBộ trưởng Nguyễn Mạnh Hùng cũng chỉ rõ: Để phát triển bền vững, theo chu kỳ 10 năm, mỗi tổ chức đều cần có đường hướng mới, sự phát triển mới, có một triết lý mới, hay khởi tạo một cái gì đó mới. Vì thế, trong thập kỷ thứ 5, Cục SHTT buộc phải thay đổi tư duy, đổi mới cách làm, tập trung vào nhiệm vụ thúc đẩy phát triển tài sản vô hình, tài sản trí tuệ dựa trên việc biến các kết quả nghiên cứu, sáng tạo thành tài sản.\n\nĐể dẫn dắt hoạt động của ngành, lĩnh vực và Cục SHTT, việc hoàn thiện hành lang pháp lý là nhiệm vụ quan trọng. Luật SHTT 2005 đã được sửa đổi vào các năm 2009, 2019 và 2022; còn Chiến lược SHTT ra đời từ năm 2019. Trong khi đó, đất nước đã thay đổi nhiều so với thời điểm luật và chiến lược được ban hành.\n\nDo vậy, để đáp ứng tình hình mới, yêu cầu mới, bối cảnh mới và sứ mệnh mới của hoạt động SHTT nói riêng và KHCN nói chung, Bộ trưởng Nguyễn Mạnh Hùng đã giao Thứ trưởng Hoàng Minh chỉ đạo đề xuất sửa luật SHTT và điều chỉnh chiến lược SHTT trong năm nay.\n\nCục SHTT được yêu cầu phải nhanh chóng xây dựng kế hoạch hành động để định hướng lại hoạt động của đơn vị trong chặng đường sắp tới. Kế hoạch cần bao quát đủ những việc cần làm cũng như cách triển khai để lĩnh vực SHTT thực sự thúc đẩy KHCN nước nhà phát triển.\n\nNgười đứng đầu ngành KH&CN cũng chỉ đạo Cục SHTT sử dụng bộ công cụ phân tích SHTT quốc tế để hỗ trợ phân tích dữ liệu nhằm tìm ra đường hướng phát triển lĩnh vực, cung cấp tri thức cho các doanh nghiệp công nghệ và tổ chức nghiên cứu Việt Nam.\n\n“Không có trí tuệ toàn cầu, sẽ không có phát triển Việt Nam, nhất là phát triển 2 con số. Năng lực nghiên cứu của Việt Nam hiện ở mức hạn chế, do đó chúng ta không có cớ gì mà không sử dụng nghiên cứu khoa học, trí tuệ toàn cầu”, Bộ trưởng Nguyễn Mạnh Hùng nhấn mạnh.\n\nLưu ý hệ sinh thái SHTT Việt Nam không được tách khỏi hệ sinh thái KHCN, ĐMST và CĐS quốc gia, người đứng đầu ngành KH&CN giao Thứ trưởng Hoàng Minh chủ trì việc định nghĩa hệ sinh thái SHTT; đồng thời nhanh chóng chỉ đạo xây dựng bộ chỉ số đo lường tài sản trí tuệ trong quý II/2025 bởi lẽ“Không có bộ chỉ số thì không đánh giá được hoạt động của ngành, lĩnh vực để thúc đẩy phát triển”.\n\nChuyển đổi số toàn diện hoạt động SHTT\n\nTrao đổi với tập thể cán bộ, nhân viên Cục SHTT, Bộ trưởng Nguyễn Mạnh Hùng nhận xét: Những nước mạnh về KHCN, ĐMST thì đều mạnh về SHTT; và điểm ra cách thúc đẩy phát triển SHTT của một số quốc gia mà Việt Nam có thể học, như Mỹ đẩy mạnh thương mại hóa các nghiên cứu bằng ngân sách nhà nước; Hàn Quốc có hệ thống bảo hộ sáng chế mạnh, đồng thời quan tâm giáo dục về đổi mới sáng tạo; trong khi đó SHTT của Israel cũng phát triển rất mạnh, dựa chủ yếu trên cơ chế chia lợi nhuận từ bằng sáng chế.\n\nTừ phân tích các vấn đề tồn tại cho thấy SHTT Việt Nam hiện còn yếu, Bộ trưởng Nguyễn Mạnh Hùng cũng chỉ đạo Cục SHTT triển khai hàng loạt việc như: Dành từ 5 - 10% kinh phí thường xuyên để tuyên truyền, đào tạo nhằm nâng cao nhận thức xã hội về SHTT; sửa thể chế để đảm bảo tính răn đe các đối tượng vi phạm quyền SHTT; quan tâm đào tạo nhân lực SHTT; chuyển đổi số toàn diện hoạt động SHTT; tăng cường thực thi SHTT trên môi trường số; hỗ trợ doanh nghiệp khai thác và thương mại hóa tài sản trí tuệ...\n\n“Việc đầu tiên cần tập trung là phổ cập nhận thức. Phải luôn coi việc nâng cao nhận thức về SHTT của người dân, doanh nghiệp và toàn xã hội là cái gốc. Không có nhận thức đúng thì không có những cái tiếp theo”, Bộ trưởng Nguyễn Mạnh Hùng nhấn mạnh.\n\nTại buổi làm việc, báo cáo tình hình hoạt động của Cục SHTT, Cục trưởng Lưu Hoàng Long thông tin: Việc xử lý dứt điểm khối lượng lớn đơn tồn đọng và đến hạn năm nay là một nhiệm vụ trọng tâm của đơn vị trong năm 2025.\xa0Để kết thúc xử lý các đơn tồn và đơn đến hạn xử lý năm 2025, thời gian tới, Cục SHTT cần kết thúc xử lý khoảng 208.000 đơn, tăng 46% so với năm 2024.\n\nLắng nghe chia sẻ của lãnh đạo Cục SHTT về những thách thức trong việc giải quyết khối lượng công việc lớn, nhất là tình trạng tồn từ giai đoạn trước, người đứng đầu ngành KH&CN cho rằng "việc nhiều, phải làm trong thời gian ngắn thì phải có cách làm mới", và gợi ý cách để đơn vị tăng gấp 4, 5 lần đội ngũ nhân lực.\n\nĐó là, mỗi nhân sự của Cục SHTT cần có 1trợ lý ảo hỗ trợ công việc, đầu tư công cụ số tốt để giúp tăng năng suất lao động; xã hội hóa, thuê ngoài với một số việc; phân cấp cho đội ngũ ở TPHCM, Đà Nẵng...“Tăng người bằng công nghệ là cách tốt nhất!”, Bộ trưởng Nguyễn Mạnh Hùng chỉ rõ.\n\nNgười đứng đầu ngành KH&CN cũng lưu ý Cục SHTT cần thấy được cái hay của giai đoạn đơn vị đang phải dồn lực, làm việc không kể ngày đêm nhằm xử lý tình trạng đơn tồn đọng, như: Hiểu được giá trị của sự đoàn kết, sự cần thiết phải đưa công nghệ vào để giảm tải, giúp cho đội ngũ nhân sự thạo nghề hơn, và đây cũng là cơ hội để phát hiện người tài.\n\nMột lần nữa khẳng định chuyển đổi số là cách tốt nhất để giảm tải cho người lao động, Bộ trưởng Nguyễn Mạnh Hùng cho biết: Đề tài nghiên cứu KHCN trong nội bộ Bộ KH&CN năm nay tập trung vào phát triển các công cụ làm việc để tăng năng suất lao động cho đơn vị. Lãnh đạo Cục SHTT có thể nhận 1 đề tài làm công cụ hỗ trợ công việc của đơn vị mình.\n\nDành nhiều thời gian của buổi làm việc để trao đổi, giải đáp thắc mắc của người lao động Cục SHTT, người đứng đầu ngành KH&CN cũng nhắc lãnh đạo đơn vị quan tâm đào tạo để người lao động nắm vững các khái niệm cơ bản của nghề SHTT; làm chuyển đổi số thì quan trọng nhất là biết mình muốn gì và phải nói rõ được những điều mình muốn một cách trực quan; chuyển đổi số đòi hỏi các quy trình phải được thiết kế lại để phù hợp môi trường số. Ngoài ra, Cục SHTT cũng nên chọn đối tác công nghệ xuất sắc để đồng hành lâu dài với đơn vị trong hành trình chuyển đổi số.\n\nBày tỏ mong muốn thời gian tới Cục SHTT sẽ đổi mới, tổ chức lại các công việc chuyên môn cũng môi trường làm việc, Bộ trưởng Nguyễn Mạnh Hùng nhắn nhủ:“Cơ quan là một gia đình lớn, vì thế nên tư duy tổ chức cơ quan như với gia đình, và thông gia đình nhỏ và gia đình lớn với nhau. Khi đó, công việc sẽ trôi chảy hơn”.', 'bullet_summary': 'Dưới đây là bản tóm tắt bài viết "Khởi tạo chu kỳ phát triển mới" theo yêu cầu:\n\n* Bộ trưởng KH&CN Nguyễn Mạnh Hùng khẳng định vai trò quan trọng của sở hữu trí tuệ (SHTT) trong phát triển ngành và đất nước, ngang tầm với khoa học công nghệ, đổi mới sáng tạo, chuyển đổi số và tiêu chuẩn đo lường chất lượng.\n* SHTT đóng vai trò then chốt trong việc thúc đẩy thương mại hóa và thu hút đầu tư cho nghiên cứu khoa học, giúp phát triển bền vững KHCN và kinh tế.\n* Bộ trưởng Nguyễn Mạnh Hùng kêu gọi đội ngũ làm SHTT lấy tinh thần đổi mới, biến kết quả nghiên cứu thành tài sản, hình thành thị trường KHCN Việt Nam.\n* Cục SHTT được yêu cầu thay đổi tư duy, đổi mới cách làm, tập trung vào nhiệm vụ thúc đẩy phát triển tài sản trí tuệ dựa trên việc biến các kết quả nghiên cứu, sáng tạo thành tài sản.\n* Việc hoàn thiện hành lang pháp lý, đặc biệt là luật SHTT và Chiến lược SHTT, được xem là nhiệm vụ quan trọng để đáp ứng tình hình mới và bối cảnh phát triển đất nước. \n\n\n', 'url': 'https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-thay-doi-tu-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html', 'category': 'cong-nghe', 'crawled_at': '2025-05-16T08:53:10.356044', '_id': '2401416'}}, {'index': 10, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.cong-nghe index: _id_ dup key: { _id: "2401508" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401508'}, 'op': {'title': 'Lockin X9 - khóa cửa vân tay thông minh, dễ sử dụng', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-15T19:00:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Khóa cửa thông minh Lockin X9 có giao diện tiếng Việt hoàn toàn, được trang bị vân tay AI, cho phép mở khóa dưới 0,5 giây.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/15/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-86974.jpg?width=0&s=ZLbh_0zIfdBBKybIX4r5Ug', 'content': 'Khóa cửa vân tay tiếng Việt thân thiện, dễ dàng sử dụng\n\nĐiểm vượt trội của Lockin X9 là việc hỗ trợ giao diện tiếng Việt 100% trên cả thân khóa và ứng dụng quản lý Xiaomi Home. Điều này giúp mọi thành viên trong gia đình, từ người lớn tuổi đến trẻ nhỏ, đều có thể dễ dàng: Cài đặt và thiết lập khóa; Thêm/xóa dấu vân tay, mật khẩu; Tùy chỉnh các tính năng theo ý muốn; Hiểu rõ các thông báo và cảnh báo từ khóa.\n\nVân tay AI tự học, chạm nhẹ là mở\n\nĐiểm nhấn công nghệ cốt lõi của Lockin X9 là hệ thống nhận dạng vân tayAItự học tiên tiến, kết hợp cùng cảm biến bán dẫn thế hệ mới. Công nghệ này không chỉ giúp mở khóa nhanh chóng mà còn giúp tăng tốc độ nhận diện - mở khóa chỉ trong vòng chưa đến 0,5 giây với độ chính xác đáng cao.\n\nTheo giới thiệu của nhà sản xuất, với AI tự học, mỗi thao tác mở cửa của người dùng đều giúp Lockin X9 "học" và ghi nhớ thêm các đặc điểm vân tay, liên tục làm phong phú cơ sở dữ liệu. Nhờ đó, khóa sẽ nhận diện chính xác hơn, ngay cả với những trường hợp khó như vân tay mờ của người già, vân tay chưa rõ ràng của trẻ em, hoặc khi tay hơi ẩm.\n\nAn ninh đa lớp, bảo vệ toàn diện cho tổ ấm\n\nLockin X9 được trang bị một hệ thống an ninh đa lớp, đảm bảo sự bảo vệ toàn diện cho ngôi nhà:\n\nĐa dạng phương thức mở khóa: Ngoài vân tay, người dùng có thể linh hoạt lựa chọn giữa mật khẩu cá nhân (hỗ trợ mật khẩu ảo chống nhìn trộm lên đến 20 ký tự), mật khẩu dùng một lần tiện lợi, thẻ NFC (tùy chọn), điều khiển qua Bluetooth trên ứng dụng Mi Home, và chìa khóa cơ dự phòng truyền thống.\n\nChip bảo mật cấp độ tài chính: Mọi dữ liệu nhạy cảm như vân tay, mật khẩu được mã hóa và lưu trữ cục bộ trên chip chuyên dụng, ngăn chặn truy cập trái phép từ bên ngoài.\n\nChống "Tesla Coil": Lockin X9 được thiết kế với lớp bảo vệ điện từ đặc biệt, giúp vô hiệu hóa các cuộc tấn công bằng thiết bị phá khóa bằng xung điện (thường được gọi là "hộp đen nhỏ").\n\nHệ thống cảnh báo thông minh: Khóa sẽ tự động gửi cảnh báo qua ứng dụng Mi Home khi phát hiện các tình huống bất thường như cửa chưa đóng chặt, nhập sai mật khẩu/vân tay nhiều lần, khóa bị cạy phá, pin yếu, hoặc đặc biệt là cảnh báo vân tay cưỡng ép (Duress Alarm) - một tính năng an toàn quan trọng giúp người dùng bí mật báo động trong tình huống nguy hiểm.\n\nThiết kế sang trọng và kết nối thông minh\n\nKhông chỉ mạnh mẽ về công nghệ, Lockin X9 còn gây ấn tượng với thiết kế hiện đại, tinh tế. Lớp vỏ hợp kim nhôm cao cấp màu Đen Sao Đêm (Starry Night Black) mang đến vẻ ngoài sang trọng, dễ dàng hòa hợp với mọi phong cách nội thất. Mặt khóa được xử lý chống trầy xước và chống bám vân tay, giữ cho sản phẩm luôn như mới.\n\nĐặc biệt, Lockin X9 còn hỗ trợ kết nối với hệ sinh thái nhà thông minh Xiaomi thông qua Xiaomi HyperOS Connect. Điều này cho phép người dùng dễ dàng tạo các ngữ cảnh tự động hóa tiện lợi, như mở cửa đèn sáng, về nhà máy lạnh tự bật, mang đến một cuộc sống tiện nghi và kết nối hơn.\n\nVới thời lượng pin lên đến 12 tháng và chế độ Passthrough (thông qua) tiện lợi, Lockin X9 hứa hẹn là một trợ thủ đắc lực cho cuộc sống hiện đại.\n\nVới sự kết hợp hoàn hảo giữa công nghệ tiên tiến và sự thấu hiểu người dùng, Lockin X9 không chỉ là một thiết bị khóa cửa mà còn là lời cam kết của thương hiệu vì một cuộc sống an toàn, tiện nghi và thông minh hơn cho mỗi gia đình.\n\nXem thêm các mẫu khóa Lockin chính hãng tại: http://lockinvn.com\n\nNgọc Minh', 'bullet_summary': 'Dưới đây là bản tóm tắt bài viết "Khóa cửa vân tay tiếng Việt thân thiện, dễ dàng sử dụng" theo yêu cầu:\n\n* Lockin X9 là khóa cửa vân tay có giao diện tiếng Việt 100% trên cả thân khóa và ứng dụng Xiaomi Home, giúp mọi người dễ dàng sử dụng.\n* Khóa sử dụng hệ thống nhận dạng vân tay AI tự học tiên tiến với cảm biến bán dẫn thế hệ mới, mở khóa nhanh chóng (chưa đến 0,5 giây) và chính xác.\n* Lockin X9 được trang bị nhiều phương thức mở khóa như vân tay, mật khẩu, thẻ NFC, Bluetooth và chìa khóa cơ, đồng thời có chip bảo mật cao cấp.\n* Khóa có hệ thống chống tấn công điện từ ("Tesla Coil") và cảnh báo thông minh tự động gửi thông báo đến ứng dụng Mi Home về các tình huống bất thường.\n* Lockin X9 có thiết kế hiện đại, sang trọng với lớp vỏ hợp kim nhôm màu Đen Sao Đêm.\n\n\n\n', 'url': 'https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html', 'category': 'cong-nghe', 'crawled_at': '2025-05-16T08:53:59.089979', '_id': '2401508'}}], 'writeConcernErrors': [], 'nInserted': 10, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T08:54:05.349+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T08:54:05.349+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T08:54:05.357+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=manual__2025-05-16T08:46:35.211604+00:00, execution_date=20250516T084635, start_date=20250516T085250, end_date=20250516T085405
+[2025-05-16T08:54:05.411+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T08:54:05.432+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T08:54:05.453+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

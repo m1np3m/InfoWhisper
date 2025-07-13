@@ -1,0 +1,138 @@
+[2025-05-16T08:59:18.415+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T08:59:18.443+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T08:46:35.211604+00:00 [queued]>
+[2025-05-16T08:59:18.454+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T08:46:35.211604+00:00 [queued]>
+[2025-05-16T08:59:18.454+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T08:59:18.471+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-16 08:46:35.211604+00:00
+[2025-05-16T08:59:18.478+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=16229) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T08:59:18.480+0000] {standard_task_runner.py:63} INFO - Started process 16285 to run task
+[2025-05-16T08:59:18.481+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'manual__2025-05-16T08:46:35.211604+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpqj0hmb91']
+[2025-05-16T08:59:18.483+0000] {standard_task_runner.py:91} INFO - Job 40: Subtask crawl_doi-song
+[2025-05-16T08:59:18.534+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T08:46:35.211604+00:00 [running]> on host 3e0aeda9ad24
+[2025-05-16T08:59:18.655+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T08:46:35.211604+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T08:46:35.211604+00:00'
+[2025-05-16T08:59:18.657+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T08:59:18.955+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T08:59:19.238+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-16T08:59:20.091+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:24.085+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T08:59:24.087+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:24.088+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.93s
+[2025-05-16T08:59:24.506+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T08:59:24.507+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:24.508+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.41s
+[2025-05-16T08:59:24.509+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T08:59:24.514+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:24.515+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.35s
+[2025-05-16T08:59:24.939+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-16T08:59:27.135+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 6 URLs mới
+[2025-05-16T08:59:27.136+0000] {crawler.py:234} INFO - Đang crawl 6 bài viết mới từ danh mục doi-song...
+[2025-05-16T08:59:27.137+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-trong-vuon-hoa-hong-ruc-ro-mong-tim-lai-nu-cuoi-cua-me-2401311.html
+[2025-05-16T08:59:27.900+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:31.714+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-cua-me-2401311.html  | 
+[2025-05-16T08:59:31.715+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:31.715+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.71s
+[2025-05-16T08:59:31.921+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-cua-me-2401311.html  | 
+[2025-05-16T08:59:31.921+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:31.922+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-16T08:59:31.923+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-cua-me-2401311.html  | 
+[2025-05-16T08:59:31.923+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:31.924+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.92s
+[2025-05-16T08:59:32.148+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Người phụ nữ Việt ở Mỹ trồng vườn hoa hồng rực rỡ, mong tìm lại nụ cười của mẹ
+[2025-05-16T08:59:32.148+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4473 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:33.107+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:33.113+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:33.266+0000] {crawler.py:241} INFO -     ✓ Người phụ nữ Việt ở Mỹ trồng vườn hoa hồng rực rỡ, mong tìm ...
+
+[2025-05-16T08:59:33.267+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-trong-mot-thang-duoc-me-cham-nhu-tre-so-sinh-2399388.html
+[2025-05-16T08:59:34.016+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:37.533+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-so-sinh-2399388.html  | 
+[2025-05-16T08:59:37.534+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:37.534+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.40s
+[2025-05-16T08:59:37.740+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-so-sinh-2399388.html  | 
+[2025-05-16T08:59:37.741+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:37.742+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-16T08:59:37.743+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-so-sinh-2399388.html  | 
+[2025-05-16T08:59:37.743+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:37.744+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.61s
+[2025-05-16T08:59:37.978+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cô gái Phú Thọ mất tứ chi trong một tháng, được mẹ chăm như trẻ sơ sinh
+[2025-05-16T08:59:37.979+0000] {llm_summary.py:128} INFO - Nội dung quá dài (5079 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:38.947+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:38.949+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:39.130+0000] {crawler.py:241} INFO -     ✓ Cô gái Phú Thọ mất tứ chi trong một tháng, được mẹ chăm như ...
+
+[2025-05-16T08:59:39.130+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2401434.html
+[2025-05-16T08:59:39.850+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:43.573+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2401434.html          | 
+[2025-05-16T08:59:43.573+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:43.574+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.62s
+[2025-05-16T08:59:43.819+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2401434.html          | 
+[2025-05-16T08:59:43.820+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:43.820+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-16T08:59:43.821+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2401434.html          | 
+[2025-05-16T08:59:43.822+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:43.822+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.87s
+[2025-05-16T08:59:44.087+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Biệt phủ được xây dựng suốt 12 năm bị yêu cầu phá dỡ gấp
+[2025-05-16T08:59:44.885+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:44.887+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:45.058+0000] {crawler.py:241} INFO -     ✓ Biệt phủ được xây dựng suốt 12 năm bị yêu cầu phá dỡ gấp...
+
+[2025-05-16T08:59:45.061+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-u70-gay-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html
+[2025-05-16T08:59:45.721+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:49.117+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html  | 
+[2025-05-16T08:59:49.118+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:49.119+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.30s
+[2025-05-16T08:59:49.435+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html  | 
+[2025-05-16T08:59:49.436+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:49.437+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.32s
+[2025-05-16T08:59:49.439+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html  | 
+[2025-05-16T08:59:49.439+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:49.440+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.62s
+[2025-05-16T08:59:49.915+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Chàng trai 28 tuổi lấy vợ U70 gây bão dư luận 6 năm trước giờ ra sao?
+[2025-05-16T08:59:49.915+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4225 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:50.628+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:50.630+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:50.792+0000] {crawler.py:241} INFO -     ✓ Chàng trai 28 tuổi lấy vợ U70 gây bão dư luận 6 năm trước gi...
+
+[2025-05-16T08:59:50.792+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/canh-kho-tin-trong-nghia-trang-o-hung-yen-buoi-chieu-he-gay-sot-mang-2401657.html
+[2025-05-16T08:59:51.764+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:54.823+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-sot-mang-2401657.html  | 
+[2025-05-16T08:59:54.824+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:54.825+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.97s
+[2025-05-16T08:59:55.087+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-sot-mang-2401657.html  | 
+[2025-05-16T08:59:55.088+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:55.089+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-16T08:59:55.090+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-sot-mang-2401657.html  | 
+[2025-05-16T08:59:55.091+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:55.091+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.24s
+[2025-05-16T08:59:55.416+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cảnh khó tin trong nghĩa trang ở Hưng Yên buổi chiều hè gây sốt mạng
+[2025-05-16T08:59:55.417+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2672 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:56.001+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:56.004+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:56.183+0000] {crawler.py:241} INFO -     ✓ Cảnh khó tin trong nghĩa trang ở Hưng Yên buổi chiều hè gây ...
+
+[2025-05-16T08:59:56.183+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360-do-dang-gay-sot-cua-nguoi-dan-ong-o-dak-lak-2401417.html
+[2025-05-16T08:59:57.220+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:00:01.748+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-dak-lak-2401417.html  | 
+[2025-05-16T09:00:01.749+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:01.749+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.40s
+[2025-05-16T09:00:02.082+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-dak-lak-2401417.html  | 
+[2025-05-16T09:00:02.084+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:02.085+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.33s
+[2025-05-16T09:00:02.087+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-dak-lak-2401417.html  | 
+[2025-05-16T09:00:02.088+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:02.089+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.74s
+[2025-05-16T09:00:02.425+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cận cảnh ngôi nhà xoay 360 độ đang gây sốt của người đàn ông ở Đắk Lắk
+[2025-05-16T09:00:02.426+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3831 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:00:03.348+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:00:03.349+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:00:03.477+0000] {crawler.py:241} INFO -     ✓ Cận cảnh ngôi nhà xoay 360 độ đang gây sốt của người đàn ông...
+
+[2025-05-16T09:00:03.478+0000] {crawler.py:244} INFO - ⏱️  Tổng thời gian crawl: 44.24 giây
+[2025-05-16T09:00:03.625+0000] {crawler.py:276} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 3, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.doi-song index: _id_ dup key: { _id: "2401421" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401421'}, 'op': {'title': 'Chàng trai 28 tuổi lấy vợ U70 gây bão dư luận 6 năm trước giờ ra sao?', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-15T19:06:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Nhiều năm trước, sau nhiều lần thất bại trong tình yêu, chàng trai trẻ 28 tuổi chấp nhận lấy người phụ nữ 65 tuổi từng khiến dư luận xôn xao.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/15/chang-trai-28-tuoi-lay-vo-u70-gay-bao-du-luan-6-nam-truoc-gio-ra-sao-86982.jpg?width=0&s=7NcepDpMDp9Xcvdg4y-9Ow', 'content': 'Như Ý\n\nLý do cặp đôi này thu hút sự chú ý không chỉ bởi sự chênh lệch tuổi tác mà còn bởi sự kiên trì quyết tâm theo đuổi tình yêu, bất chấp những lời bàn tán từ xã hội của chàng trai trẻ.\n\nChu Tử, đến từ Hà Nam, Trung Quốc, vốn là một công nhân, không có nhiều tiền nhưng lại rất chăm chỉ. Anh luôn mơ ước có một cuộc sống ổn định và có một người phụ nữ tin tưởng để yêu thương.\n\nTiền lương công nhân của anh chỉ đủ để lo sinh hoạt, không mua được nhà, xe. Vì vậy, anh bị gia đình người con gái mà anh yêu thương phản đối, vì họ cho rằng Chu Tử không có đủ tiền để lo cho con gái họ.\n\nSau đó một thời gian, anh gặp một người phụ nữ đã ly hôn, hơn anh 10 tuổi. Nhà gái muốn cưới luôn nhưng Chu Tử muốn đợi thêm một thời gian để anh tích cóp nhiều tiền hơn. Vì vậy, hai bên đã chia tay.\n\nSau khi chia tay 2 mối tình, Chu Tử vô cùng đau khổ. Cuộc đời anh là những ngày tháng đầy biến cố và chính những biến cố này đã giúp anh gặp bà Cần, người phụ nữ hơn anh 37 tuổi, thông tin từ163.\n\nCuộc gặp gỡ bất ngờ\n\nChu Tử gặp bà Cần trong một tình huống đầy bất ngờ. Sau những cú sốc lớn về chuyện tình cảm lại cộng thêm chuyện bị công ty sa thải, anh có ý định tự tử nhưng may mắn đã được bà Cần cứu giúp.\n\nBà liên tục khuyên nhủ anh còn trẻ, phải cố gắng, không được từ bỏ cuộc sống. Những câu nói của bà giúp anh từ bỏ ý định kết liễu cuộc đời mình.\n\nSau đó, Chu Tử thường xuyên đến thăm bà Cần và kể cho bà nghe về nhân tình thế thái. Bà Cần dùng kinh nghiệm sống phong phú của mình để xoa dịu trái tim bị tổn thương của chàng trai 28 tuổi.\n\nDần dần, Chu Tử phát hiện mình có tình cảm với người phụ nữ bằng tuổi mẹ mình.\n\nChính anh cũng không giải thích được cảm giác là gì khi ở gần bà Cần. Có lẽ sau những tổn thương tình cảm, việc một người phụ nữ giúp anh chữa lành vết thương đã khiến trái tim anh rung động.\n\nKhi được Chu Tử bày tỏ tình cảm, bà Cần cảm thấy rất ngạc nhiên bởi vì bà luôn coi Chu Tử là cháu trai.\n\nBà chưa bao giờ nghĩ đến chuyện tình cảm nam nữ và không dám tin chàng trai 28 tuổi lại yêu một phụ nữ già nua, chồng mất, có con riêng và nhiều hơn 37 tuổi. Song, sự kiên trì của Chu Tử đã khiến bà Cần cảm động.\n\nDù vậy sự khác biệt về tuổi tác khiến cả hai đối mặt với không ít khó khăn. Đặc biệt là sự phản đối mạnh mẽ từ gia đình và xã hội. Các thành viên trong gia đình của Chu Tử không chấp nhận mối quan hệ này.\n\nDù vậy, Chu Tử không bỏ cuộc. Anh kiên trì theo đuổi tình yêu đến cùng. Chu Tử khẳng định rằng anh không quan tâm đến những gì xã hội nghĩ về tình yêu của mình. Anh chỉ cần một cuộc sống hạnh phúc và yên bình bên bà Cần.\n\nVề phần bà Cần, để trông mình hợp hơn với Chu Tử, bà đã nhuộm tóc cho trẻ. Năm 2019, cả hai tổ chức đám cưới.\n\nBà Cần cảm thấy việc không thể sinh con nối dõi tông đường cho Chu Tử là lỗi của mình. Vì vậy, bà đã nghĩ đến chuyện làm thụ tinh trong ống nghiệm để sinh con.\n\nBác sĩ nói với bà, quá trình thụ tinh trong ống nghiệm vô cùng đau đớn và khó khăn. Và việc sinh con đối với một người phụ nữ 65 tuổi nguy hiểm vô cùng nhưng bà Cần vẫn chấp nhận.\n\nTuy nhiên, Chu Tử không đồng ý. Anh tin rằng việc mình ở bên bà Cần không phải vì mục đích có con nối dõi tông đường. Điều anh cần là chỗ dựa tinh thần và tình yêu của hai người dành cho nhau.\n\n"Tôi không quan tâm đến vẻ ngoài hay tuổi tác của cô ấy. Điều quan trọng là cô ấy luôn ở bên tôi, cho tôi tình yêu thương và sự che chở. Chúng tôi sẽ cùng nhau vượt qua mọi thử thách trong cuộc sống", anh nói.\n\nSau thời gian dài kiên trì và nỗ lực, cuối cùng họ đã nhận được sự chấp nhận của gia đình và sống một cuộc sống bình yên bên nhau.\n\nCuộc sống hiện tại\n\nKể từ khi họ đến với nhau, cộng đồng mạng vẫn không ngừng bàn tán. Hầu hết mọi người đều thấy điều này thật buồn cười, tin rằng đây là mối quan hệ không chân thành, đến với nhau chỉ vì một mục đích nào đó.\n\nNhưng cả hai đều bỏ qua lời đàm tiếu bên ngoài và chỉ quan tâm họ sống thế nào, đang hạnh phúc là đủ.\n\nHiện tại, hai người đang sống một cuộc sống bình thường và đơn giản. Ban ngày, Chu Tử và vợ kiếm tiền bằng cách làm đồ thủ công ở nhà. Buổi tối rảnh rỗi, hai người lên mạng phát sóng trực tiếp và chia sẻ về cuộc sống của họ.\n\nMặc dù xã hội vẫn còn những lời đàm tiếu nhưng tình yêu của họ vẫn vững bền, là minh chứng cho sự kiên trì và lòng hy sinh.', 'bullet_summary': 'Dưới đây là bản tóm tắt bài viết "Như Ý" theo yêu cầu:\n\n* Chu Tử, một công nhân trẻ ở Trung Quốc, đã trải qua hai mối tình tan vỡ vì lý do về tài chính.\n* Anh gặp bà Cần, một người phụ nữ hơn anh 37 tuổi, sau khi bị công ty sa thải và có ý định tự tử. \n* Bà Cần đã cứu giúp và trở thành người an ủi Chu Tử, giúp anh vượt qua giai đoạn khó khăn.\n* Dần dần, Chu Tử phát triển tình cảm với bà Cần, bày tỏ tình ý, nhưng bà Cần ban đầu choáng váng và ngạc nhiên.\n* Mối quan hệ của họ đối mặt với nhiều khó khăn, nhất là sự phản đối từ gia đình và xã hội vì sự chênh lệch tuổi tác lớn. \n\n\n', 'url': 'https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-u70-gay-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html', 'category': 'doi-song', 'crawled_at': '2025-05-16T08:59:50.631389', '_id': '2401421'}}], 'writeConcernErrors': [], 'nInserted': 5, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T09:00:03.688+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T09:00:03.688+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T09:00:03.700+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=manual__2025-05-16T08:46:35.211604+00:00, execution_date=20250516T084635, start_date=20250516T085918, end_date=20250516T090003
+[2025-05-16T09:00:03.763+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T09:00:03.781+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T09:00:03.784+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

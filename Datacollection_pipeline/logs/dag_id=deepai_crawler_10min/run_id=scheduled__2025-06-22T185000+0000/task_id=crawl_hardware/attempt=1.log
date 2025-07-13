@@ -1,0 +1,51 @@
+[2025-06-22T19:00:08.331+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T19:00:08.348+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-22T18:50:00+00:00 [queued]>
+[2025-06-22T19:00:08.358+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-22T18:50:00+00:00 [queued]>
+[2025-06-22T19:00:08.359+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T19:00:08.375+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 18:50:00+00:00
+[2025-06-22T19:00:08.388+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=6113) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T19:00:08.390+0000] {standard_task_runner.py:63} INFO - Started process 6149 to run task
+[2025-06-22T19:00:08.391+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'scheduled__2025-06-22T18:50:00+00:00', '--job-id', '1077', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpqijxr1ws']
+[2025-06-22T19:00:08.395+0000] {standard_task_runner.py:91} INFO - Job 1077: Subtask crawl_hardware
+[2025-06-22T19:00:08.452+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-22T18:50:00+00:00 [running]> on host 1b87ed59931b
+[2025-06-22T19:00:08.609+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T18:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T18:50:00+00:00'
+[2025-06-22T19:00:08.610+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T19:00:08.628+0000] {dags.py:183} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T19:00:08.888+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T19:00:08.916+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T19:00:09.042+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:09.806+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T19:00:09.807+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T19:00:09.807+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T19:00:10.043+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:11.044+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:12.045+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:13.046+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:13.927+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T19:00:13.948+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.26s
+[2025-06-22T19:00:14.057+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.10s
+[2025-06-22T19:00:14.089+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.40s
+[2025-06-22T19:00:14.090+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T19:00:14.129+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T19:00:14.130+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T19:00:14.131+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T19:00:14.132+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T19:00:14.132+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T19:00:14.133+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T19:00:14.133+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T19:00:14.134+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T19:00:14.641+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T19:00:14.642+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục hardware cần crawl.
+[2025-06-22T19:00:14.643+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'hardware'
+[2025-06-22T19:00:14.689+0000] {dags.py:188} INFO - Hoàn thành crawl category: hardware
+[2025-06-22T19:00:14.689+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T19:00:14.690+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T19:00:14.697+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-06-22T18:50:00+00:00, execution_date=20250622T185000, start_date=20250622T190008, end_date=20250622T190014
+[2025-06-22T19:00:14.751+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T19:00:14.774+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T19:00:14.776+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

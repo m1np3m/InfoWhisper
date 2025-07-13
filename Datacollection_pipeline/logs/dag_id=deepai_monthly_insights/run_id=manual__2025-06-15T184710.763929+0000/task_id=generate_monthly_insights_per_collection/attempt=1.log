@@ -1,0 +1,33 @@
+[2025-06-15T18:47:14.967+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-15T18:47:14.985+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:47:10.763929+00:00 [queued]>
+[2025-06-15T18:47:14.994+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:47:10.763929+00:00 [queued]>
+[2025-06-15T18:47:14.995+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-15T18:47:15.010+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): generate_monthly_insights_per_collection> on 2025-06-15 18:47:10.763929+00:00
+[2025-06-15T18:47:15.018+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=145) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-15T18:47:15.022+0000] {standard_task_runner.py:63} INFO - Started process 147 to run task
+[2025-06-15T18:47:15.023+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_monthly_insights', 'generate_monthly_insights_per_collection', 'manual__2025-06-15T18:47:10.763929+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpz_n134ny']
+[2025-06-15T18:47:15.026+0000] {standard_task_runner.py:91} INFO - Job 53: Subtask generate_monthly_insights_per_collection
+[2025-06-15T18:47:15.073+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:47:10.763929+00:00 [running]> on host d8dffa52d0ec
+[2025-06-15T18:47:15.170+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_monthly_insights' AIRFLOW_CTX_TASK_ID='generate_monthly_insights_per_collection' AIRFLOW_CTX_EXECUTION_DATE='2025-06-15T18:47:10.763929+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-15T18:47:10.763929+00:00'
+[2025-06-15T18:47:15.172+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-15T18:47:15.195+0000] {dags.py:199} INFO - Bắt đầu tạo insights cho từng category từ dữ liệu tháng qua
+[2025-06-15T18:47:15.498+0000] {dags.py:213} INFO - Tạo insights riêng cho từng category và lưu vào database...
+[2025-06-15T18:47:47.145+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'hardware' (ID: 2025-06)
+[2025-06-15T18:47:47.204+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'culture' (ID: 2025-06)
+[2025-06-15T18:47:47.266+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'science' (ID: 2025-06)
+[2025-06-15T18:47:47.328+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'business' (ID: 2025-06)
+[2025-06-15T18:47:47.385+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'ml-research' (ID: 2025-06)
+[2025-06-15T18:47:47.442+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'data-points' (ID: 2025-06)
+[2025-06-15T18:47:47.443+0000] {logging_mixin.py:188} INFO - 
+📊 Tổng kết: Đã lưu thành công 6/6 insights vào database 'deeplearning_ai_insight'
+[2025-06-15T18:47:47.444+0000] {dags.py:221} INFO - Đã tạo và lưu thành công 6 insights vào database 'deeplearning_ai_insight'
+[2025-06-15T18:47:47.826+0000] {dags.py:225} INFO - Thống kê Insight Database: 6 insights trong 6 collections
+[2025-06-15T18:47:47.827+0000] {dags.py:230} INFO - Hoàn thành tạo insights tháng
+[2025-06-15T18:47:47.828+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-15T18:47:47.830+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-15T18:47:47.843+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_monthly_insights, task_id=generate_monthly_insights_per_collection, run_id=manual__2025-06-15T18:47:10.763929+00:00, execution_date=20250615T184710, start_date=20250615T184714, end_date=20250615T184747
+[2025-06-15T18:47:47.872+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-15T18:47:47.890+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-15T18:47:47.894+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

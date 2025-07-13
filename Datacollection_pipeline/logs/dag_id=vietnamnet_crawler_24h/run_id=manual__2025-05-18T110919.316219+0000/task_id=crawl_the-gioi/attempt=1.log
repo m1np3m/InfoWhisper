@@ -1,0 +1,45 @@
+[2025-05-18T11:09:53.594+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T11:09:53.618+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi manual__2025-05-18T11:09:19.316219+00:00 [queued]>
+[2025-05-18T11:09:53.628+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi manual__2025-05-18T11:09:19.316219+00:00 [queued]>
+[2025-05-18T11:09:53.628+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T11:09:53.642+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-18 11:09:19.316219+00:00
+[2025-05-18T11:09:53.650+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=33128) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T11:09:53.653+0000] {standard_task_runner.py:63} INFO - Started process 33129 to run task
+[2025-05-18T11:09:53.652+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'manual__2025-05-18T11:09:19.316219+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpspknomuo']
+[2025-05-18T11:09:53.656+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask crawl_the-gioi
+[2025-05-18T11:09:53.698+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi manual__2025-05-18T11:09:19.316219+00:00 [running]> on host cc92a118fd3e
+[2025-05-18T11:09:53.782+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T11:09:19.316219+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-18T11:09:19.316219+00:00'
+[2025-05-18T11:09:53.783+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T11:09:53.954+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T11:09:54.503+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T11:09:57.020+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 2.46s
+[2025-05-18T11:09:57.212+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 0.19s
+[2025-05-18T11:09:57.215+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 2.66s
+[2025-05-18T11:09:57.449+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-18T11:09:58.026+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs sau xử lý live
+[2025-05-18T11:09:58.028+0000] {crawler.py:255} INFO - Đang crawl 1 bài viết mới từ danh mục the-gioi...
+[2025-05-18T11:09:58.030+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nga-phong-so-luong-ky-luc-uav-vao-ukraine-ke-tu-dau-xung-dot-2402363.html
+[2025-05-18T11:09:58.519+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T11:10:02.820+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nga-phong-so-luong-ky-luc-uav-vao-ukraine-ke-tu-dau-xung-d
+ot-2402363.html      | ✓ | ⏱: 4.24s
+[2025-05-18T11:10:03.275+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nga-phong-so-luong-ky-luc-uav-vao-ukraine-ke-tu-dau-xung-d
+ot-2402363.html      | ✓ | ⏱: 0.45s
+[2025-05-18T11:10:03.281+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nga-phong-so-luong-ky-luc-uav-vao-ukraine-ke-tu-dau-xung-d
+ot-2402363.html      | ✓ | ⏱: 4.71s
+[2025-05-18T11:10:03.859+0000] {crawler.py:262} INFO -     ✓ Nga phóng số lượng kỷ lục UAV vào Ukraine kể từ đầu xung đột...
+
+[2025-05-18T11:10:03.860+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 9.91 giây
+[2025-05-18T11:10:04.000+0000] {crawler.py:292} INFO - Đã lưu 1 bài viết vào collection 'the-gioi'
+[2025-05-18T11:10:04.066+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T11:10:04.069+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T11:10:04.091+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=manual__2025-05-18T11:09:19.316219+00:00, execution_date=20250518T110919, start_date=20250518T110953, end_date=20250518T111004
+[2025-05-18T11:10:04.215+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T11:10:04.247+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

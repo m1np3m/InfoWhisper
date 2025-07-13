@@ -1,0 +1,235 @@
+[2025-05-16T09:09:25.567+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T09:09:25.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T09:03:13.247588+00:00 [queued]>
+[2025-05-16T09:09:25.645+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T09:03:13.247588+00:00 [queued]>
+[2025-05-16T09:09:25.646+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T09:09:25.676+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-16 09:03:13.247588+00:00
+[2025-05-16T09:09:25.685+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=38066) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T09:09:25.687+0000] {standard_task_runner.py:63} INFO - Started process 38167 to run task
+[2025-05-16T09:09:25.688+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'manual__2025-05-16T09:03:13.247588+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpz9eg3gzu']
+[2025-05-16T09:09:25.693+0000] {standard_task_runner.py:91} INFO - Job 55: Subtask crawl_cong-nghe
+[2025-05-16T09:09:25.767+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T09:03:13.247588+00:00 [running]> on host 3e0aeda9ad24
+[2025-05-16T09:09:25.946+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T09:03:13.247588+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T09:03:13.247588+00:00'
+[2025-05-16T09:09:25.949+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T09:09:26.398+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T09:09:26.800+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-16T09:09:27.843+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:09:30.706+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T09:09:30.707+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:30.708+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.75s
+[2025-05-16T09:09:30.877+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T09:09:30.878+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:30.879+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-16T09:09:30.880+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T09:09:30.880+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:30.881+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.93s
+[2025-05-16T09:09:31.127+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-05-16T09:09:33.263+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 12 URLs mới
+[2025-05-16T09:09:33.264+0000] {crawler.py:234} INFO - Đang crawl 12 bài viết mới từ danh mục cong-nghe...
+[2025-05-16T09:09:33.264+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html
+[2025-05-16T09:09:34.058+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:09:37.743+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T09:09:37.745+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:37.747+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.59s
+[2025-05-16T09:09:38.148+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T09:09:38.149+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:38.150+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.40s
+[2025-05-16T09:09:38.152+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-16T09:09:38.153+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:38.154+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.00s
+[2025-05-16T09:09:38.590+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Thêm một hãng điện thoại Trung Quốc có thể khiến Mỹ lo lắng
+[2025-05-16T09:09:38.932+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:09:38.933+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+[2025-05-16T09:09:44.581+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:09:44.589+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:09:45.221+0000] {crawler.py:241} INFO -     ✓ Thêm một hãng điện thoại Trung Quốc có thể khiến Mỹ lo lắng...
+
+[2025-05-16T09:09:45.221+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-nghe-vn-ngay-hoi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html
+[2025-05-16T09:09:45.780+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:09:49.745+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T09:09:49.746+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:49.747+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.90s
+[2025-05-16T09:09:50.098+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T09:09:50.099+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:50.100+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T09:09:50.100+0000] {logging_mixin.py:188} INFO - 0.35
+[2025-05-16T09:09:50.101+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T09:09:50.102+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-16T09:09:50.103+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:09:50.103+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.26s
+[2025-05-16T09:09:50.432+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Ngày hội Khoa học và Công nghệ: Ngày hội của trí tuệ, đổi mới và khát vọng
+[2025-05-16T09:09:50.433+0000] {llm_summary.py:128} INFO - Nội dung quá dài (6361 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:09:50.736+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:09:50.737+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+[2025-05-16T09:09:58.430+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:09:58.433+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:09:58.622+0000] {crawler.py:241} INFO -     ✓ Ngày hội Khoa học và Công nghệ: Ngày hội của trí tuệ, đổi mớ...
+
+[2025-05-16T09:09:58.622+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-thay-doi-tu-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html
+[2025-05-16T09:09:59.334+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:02.442+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T09:10:02.443+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:02.443+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.03s
+[2025-05-16T09:10:02.685+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T09:10:02.685+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:02.686+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T09:10:02.687+0000] {logging_mixin.py:188} INFO - 0.24
+[2025-05-16T09:10:02.687+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T09:10:02.688+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cuc-so-huu-tri-tue-hay-tha...-duy-cach-lam-de-khoi-tao-trang-moi-2401416.html  | 
+[2025-05-16T09:10:02.689+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:02.689+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.28s
+[2025-05-16T09:10:02.933+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cục Sở hữu trí tuệ hãy thay đổi tư duy, cách làm để khởi tạo trang mới
+[2025-05-16T09:10:02.934+0000] {llm_summary.py:128} INFO - Nội dung quá dài (7694 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:03.132+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:10:03.134+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+[2025-05-16T09:10:05.338+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:10:05.339+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+[2025-05-16T09:10:10.102+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:10.104+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:10.280+0000] {crawler.py:241} INFO -     ✓ Cục Sở hữu trí tuệ hãy thay đổi tư duy, cách làm để khởi tạo...
+
+[2025-05-16T09:10:10.281+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-se-theo-mo-hinh-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html
+[2025-05-16T09:10:10.984+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:16.061+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T09:10:16.062+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:16.063+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.00s
+[2025-05-16T09:10:16.641+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T09:10:16.642+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:16.643+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.58s
+[2025-05-16T09:10:16.646+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-16T09:10:16.648+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:16.650+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.58s
+[2025-05-16T09:10:17.939+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Khu Công nghệ cao Hòa Lạc sẽ theo mô hình thành phố khoa học và công nghệ mở
+[2025-05-16T09:10:17.940+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3889 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:18.901+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:18.911+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:19.353+0000] {crawler.py:241} INFO -     ✓ Khu Công nghệ cao Hòa Lạc sẽ theo mô hình thành phố khoa học...
+
+[2025-05-16T09:10:19.354+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos-khung-co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html
+[2025-05-16T09:10:20.977+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:26.152+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T09:10:26.153+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:26.153+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.06s
+[2025-05-16T09:10:26.745+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T09:10:26.746+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:26.747+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.59s
+[2025-05-16T09:10:26.753+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-16T09:10:26.754+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:26.755+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.66s
+[2025-05-16T09:10:27.292+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Sức mạnh tên lửa BrahMos: Công nghệ vũ khí Nga - Ấn có đang bị thổi phồng?
+[2025-05-16T09:10:27.293+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4848 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:28.262+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:28.266+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:28.577+0000] {crawler.py:241} INFO -     ✓ Sức mạnh tên lửa BrahMos: Công nghệ vũ khí Nga - Ấn có đang ...
+
+[2025-05-16T09:10:28.578+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html
+[2025-05-16T09:10:29.813+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:34.463+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T09:10:34.464+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:34.465+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.49s
+[2025-05-16T09:10:34.785+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T09:10:34.786+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:34.788+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.32s
+[2025-05-16T09:10:34.790+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-16T09:10:34.795+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:34.796+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.82s
+[2025-05-16T09:10:35.224+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Huế đưa vào hoạt động 136 điểm đại lý dịch vụ công trực tuyến
+[2025-05-16T09:10:35.225+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4156 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:36.025+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:36.026+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:36.198+0000] {crawler.py:241} INFO -     ✓ Huế đưa vào hoạt động 136 điểm đại lý dịch vụ công trực tuyế...
+
+[2025-05-16T09:10:36.199+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html
+[2025-05-16T09:10:36.966+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:41.114+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T09:10:41.115+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:41.116+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.03s
+[2025-05-16T09:10:41.383+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T09:10:41.384+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:41.384+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.27s
+[2025-05-16T09:10:41.386+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-16T09:10:41.387+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:41.387+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.30s
+[2025-05-16T09:10:41.699+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Lối thoát duy nhất của Apple dưới thời ông Donald Trump?
+[2025-05-16T09:10:41.700+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3896 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:42.013+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:10:42.014+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+[2025-05-16T09:10:44.621+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:44.623+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:44.828+0000] {crawler.py:241} INFO -     ✓ Lối thoát duy nhất của Apple dưới thời ông Donald Trump?...
+
+[2025-05-16T09:10:44.829+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html
+[2025-05-16T09:10:46.117+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:50.249+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T09:10:50.250+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:50.254+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.02s
+[2025-05-16T09:10:50.542+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T09:10:50.542+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:50.543+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-16T09:10:50.544+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-16T09:10:50.545+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:50.545+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.31s
+[2025-05-16T09:10:50.995+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Ngày Khoa học và Công nghệ sẽ tôn vinh những người làm khoa học
+[2025-05-16T09:10:50.996+0000] {llm_summary.py:128} INFO - Nội dung quá dài (5431 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:10:51.284+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[2025-05-16T09:10:51.284+0000] {_base_client.py:1055} INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+[2025-05-16T09:10:53.969+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:10:53.973+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:10:54.203+0000] {crawler.py:241} INFO -     ✓ Ngày Khoa học và Công nghệ sẽ tôn vinh những người làm khoa ...
+
+[2025-05-16T09:10:54.204+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html
+[2025-05-16T09:10:55.103+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:10:59.530+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T09:10:59.531+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:59.531+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.28s
+[2025-05-16T09:10:59.812+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T09:10:59.813+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:59.813+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-16T09:10:59.815+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-16T09:10:59.815+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:10:59.816+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.57s
+[2025-05-16T09:11:00.121+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: CMC Telecom sẽ xuất hiện tại sự kiện bảo mật lớn nhất Việt Nam
+[2025-05-16T09:11:00.122+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3876 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:11:01.394+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:11:01.398+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:11:01.618+0000] {crawler.py:241} INFO -     ✓ CMC Telecom sẽ xuất hiện tại sự kiện bảo mật lớn nhất Việt N...
+
+[2025-05-16T09:11:01.619+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html
+[2025-05-16T09:11:02.610+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:11:06.937+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T09:11:06.938+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:06.938+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.19s
+[2025-05-16T09:11:07.225+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T09:11:07.226+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:07.226+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-16T09:11:07.228+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-16T09:11:07.229+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:07.229+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.48s
+[2025-05-16T09:11:07.590+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: iPhone 16 Pro giảm giá sốc hơn 9 triệu đồng tại Trung Quốc
+[2025-05-16T09:11:07.591+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3819 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:11:08.563+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:11:08.565+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:11:08.732+0000] {crawler.py:241} INFO -     ✓ iPhone 16 Pro giảm giá sốc hơn 9 triệu đồng tại Trung Quốc...
+
+[2025-05-16T09:11:08.734+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html
+[2025-05-16T09:11:09.748+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:11:14.482+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T09:11:14.485+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:14.486+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.54s
+[2025-05-16T09:11:14.910+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T09:11:14.911+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:14.912+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T09:11:14.912+0000] {logging_mixin.py:188} INFO - 0.42
+[2025-05-16T09:11:14.913+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T09:11:14.915+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/lockin-x9-khoa-cua-van-tay-thong-minh-de-su-dung-2401508.html                  | 
+[2025-05-16T09:11:14.915+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:11:14.916+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.97s
+[2025-05-16T09:11:15.341+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Lockin X9 - khóa cửa vân tay thông minh, dễ sử dụng
+[2025-05-16T09:11:15.342+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3338 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:11:16.149+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:11:16.152+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:11:16.376+0000] {crawler.py:241} INFO -     ✓ Lockin X9 - khóa cửa vân tay thông minh, dễ sử dụng...
+
+[2025-05-16T09:11:16.377+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/uav-nga-xe-xac-xe-tang-leopard-vu-khi-gia-re-thanh-ke-san-moi-dang-gom-2401713.html
+[2025-05-16T09:11:17.402+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2

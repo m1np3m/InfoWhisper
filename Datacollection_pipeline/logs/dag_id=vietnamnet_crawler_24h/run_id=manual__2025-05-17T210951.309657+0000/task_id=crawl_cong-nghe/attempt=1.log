@@ -1,0 +1,371 @@
+[2025-05-17T21:10:19.789+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-17T21:10:19.816+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-17T21:09:51.309657+00:00 [queued]>
+[2025-05-17T21:10:19.827+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-17T21:09:51.309657+00:00 [queued]>
+[2025-05-17T21:10:19.827+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-17T21:10:19.843+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-17 21:09:51.309657+00:00
+[2025-05-17T21:10:19.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=17814) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-17T21:10:19.850+0000] {standard_task_runner.py:63} INFO - Started process 17822 to run task
+[2025-05-17T21:10:19.851+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'manual__2025-05-17T21:09:51.309657+00:00', '--job-id', '232', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpu9f6gd5y']
+[2025-05-17T21:10:19.853+0000] {standard_task_runner.py:91} INFO - Job 232: Subtask crawl_cong-nghe
+[2025-05-17T21:10:19.896+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-17T21:09:51.309657+00:00 [running]> on host 60d771d880eb
+[2025-05-17T21:10:19.995+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-17T21:09:51.309657+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-17T21:09:51.309657+00:00'
+[2025-05-17T21:10:19.996+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-17T21:10:20.063+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-17T21:10:20.725+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:23.662+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-17T21:10:23.663+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:23.663+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.85s
+[2025-05-17T21:10:23.829+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-17T21:10:23.829+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:23.830+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.16s
+[2025-05-17T21:10:23.831+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-17T21:10:23.832+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:23.832+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-17T21:10:24.065+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-05-17T21:10:24.682+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-05-17T21:10:24.683+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục cong-nghe...
+[2025-05-17T21:10:24.684+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/giai-ma-trend-cai-bong-meo-bi-an-dang-day-song-mang-xa-hoi-2402141.html
+[2025-05-17T21:10:25.193+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:29.004+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/giai-ma-trend-cai-bong-meo-bi-an-dang-day-song-mang-xa-hoi-2402141.html        | 
+[2025-05-17T21:10:29.005+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:29.005+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.73s
+[2025-05-17T21:10:29.292+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/giai-ma-trend-cai-bong-meo-bi-an-dang-day-song-mang-xa-hoi-2402141.html        | 
+[2025-05-17T21:10:29.293+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:29.294+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-17T21:10:29.296+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/giai-ma-trend-cai-bong-meo-bi-an-dang-day-song-mang-xa-hoi-2402141.html        | 
+[2025-05-17T21:10:29.297+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:29.297+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.02s
+[2025-05-17T21:10:29.732+0000] {crawler.py:262} INFO -     ✓ Giải mã trend 'cái bóng mèo bí ẩn' đang dậy sóng mạng xã hội...
+
+[2025-05-17T21:10:29.733+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/da-den-luc-thua-nhan-google-facebook-va-iphone-co-the-khong-ton-tai-mai-mai-2401839.html
+[2025-05-17T21:10:30.304+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:33.908+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/da-den-luc-thua-nhan-googl...iphone-co-the-khong-ton-tai-mai-mai-2401839.html  | 
+[2025-05-17T21:10:33.909+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:33.910+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.53s
+[2025-05-17T21:10:34.151+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/da-den-luc-thua-nhan-googl...iphone-co-the-khong-ton-tai-mai-mai-2401839.html  | 
+[2025-05-17T21:10:34.151+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:34.152+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T21:10:34.153+0000] {logging_mixin.py:188} INFO - 0.24
+[2025-05-17T21:10:34.153+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T21:10:34.154+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/da-den-luc-thua-nhan-googl...iphone-co-the-khong-ton-tai-mai-mai-2401839.html  | 
+[2025-05-17T21:10:34.155+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:34.156+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.78s
+[2025-05-17T21:10:34.631+0000] {crawler.py:262} INFO -     ✓ Đã đến lúc thừa nhận Google, Facebook và iPhone có thể không...
+
+[2025-05-17T21:10:34.632+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-sang-lap-pi-network-da-xuat-hien-nhung-gia-pi-van-tiep-tuc-giam-manh-2402124.html
+[2025-05-17T21:10:35.388+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:38.595+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguoi-sang-lap-pi-network-...nhung-gia-pi-van-tiep-tuc-giam-manh-2402124.html  | 
+[2025-05-17T21:10:38.596+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:38.597+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.12s
+[2025-05-17T21:10:38.827+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguoi-sang-lap-pi-network-...nhung-gia-pi-van-tiep-tuc-giam-manh-2402124.html  | 
+[2025-05-17T21:10:38.828+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:38.829+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-17T21:10:38.830+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguoi-sang-lap-pi-network-...nhung-gia-pi-van-tiep-tuc-giam-manh-2402124.html  | 
+[2025-05-17T21:10:38.830+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:38.831+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.35s
+[2025-05-17T21:10:39.236+0000] {crawler.py:262} INFO -     ✓ Người sáng lập Pi Network đã xuất hiện, nhưng giá Pi vẫn tiế...
+
+[2025-05-17T21:10:39.236+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-ra-toi-hau-thu-cho-ceo-apple-huawei-hung-don-trung-phat-moi-2401925.html
+[2025-05-17T21:10:39.836+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:42.655+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-ra-toi-hau-thu-c...pple-huawei-hung-don-trung-phat-moi-2401925.html  | 
+[2025-05-17T21:10:42.656+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:42.656+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.75s
+[2025-05-17T21:10:42.836+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-ra-toi-hau-thu-c...pple-huawei-hung-don-trung-phat-moi-2401925.html  | 
+[2025-05-17T21:10:42.837+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:42.837+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-17T21:10:42.839+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-ra-toi-hau-thu-c...pple-huawei-hung-don-trung-phat-moi-2401925.html  | 
+[2025-05-17T21:10:42.839+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:42.840+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.93s
+[2025-05-17T21:10:43.342+0000] {crawler.py:262} INFO -     ✓ Ông Trump ra 'tối hậu thư' cho CEO Apple, Huawei hứng đòn tr...
+
+[2025-05-17T21:10:43.343+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/pho-thu-tuong-de-xuat-tang-cuong-hop-tac-cong-nghe-chien-luoc-voi-ao-2401957.html
+[2025-05-17T21:10:43.914+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:47.071+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/pho-thu-tuong-de-xuat-tang...hop-tac-cong-nghe-chien-luoc-voi-ao-2401957.html  | 
+[2025-05-17T21:10:47.072+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:47.073+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.10s
+[2025-05-17T21:10:47.264+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/pho-thu-tuong-de-xuat-tang...hop-tac-cong-nghe-chien-luoc-voi-ao-2401957.html  | 
+[2025-05-17T21:10:47.265+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:47.265+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T21:10:47.266+0000] {logging_mixin.py:188} INFO - 0.19
+[2025-05-17T21:10:47.266+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T21:10:47.267+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/pho-thu-tuong-de-xuat-tang...hop-tac-cong-nghe-chien-luoc-voi-ao-2401957.html  | 
+[2025-05-17T21:10:47.268+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:47.268+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.29s
+[2025-05-17T21:10:47.648+0000] {crawler.py:262} INFO -     ✓ Phó Thủ tướng đề xuất 4 hướng hợp tác trọng tâm Việt Nam - Á...
+
+[2025-05-17T21:10:47.648+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/uav-nga-huy-diet-xe-tang-leopard-vu-khi-gia-re-thay-doi-cuoc-choi-2401713.html
+[2025-05-17T21:10:48.274+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:51.784+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/uav-nga-huy-diet-xe-tang-leopard-vu-khi-gia-re-thay-doi-cuoc-choi-2401713.html | 
+[2025-05-17T21:10:51.785+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:51.786+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.58s
+[2025-05-17T21:10:52.067+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/uav-nga-huy-diet-xe-tang-leopard-vu-khi-gia-re-thay-doi-cuoc-choi-2401713.html | 
+[2025-05-17T21:10:52.068+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:52.068+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-17T21:10:52.069+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/uav-nga-huy-diet-xe-tang-leopard-vu-khi-gia-re-thay-doi-cuoc-choi-2401713.html | 
+[2025-05-17T21:10:52.070+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:52.071+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.87s
+[2025-05-17T21:10:52.566+0000] {crawler.py:262} INFO -     ✓ UAV Nga ‘hủy diệt’ xe tăng Leopard Ukraine: Công nghệ giá rẻ...
+
+[2025-05-17T21:10:52.567+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html
+[2025-05-17T21:10:53.249+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:10:56.759+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-17T21:10:56.760+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:56.761+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.43s
+[2025-05-17T21:10:56.961+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-17T21:10:56.962+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:56.963+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-17T21:10:56.964+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loi-thoat-duy-nhat-cua-apple-duoi-thoi-ong-donald-trump-2401637.html           | 
+[2025-05-17T21:10:56.965+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:10:56.965+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.64s
+[2025-05-17T21:10:57.347+0000] {crawler.py:262} INFO -     ✓ Lối thoát duy nhất của Apple dưới thời ông Donald Trump?...
+
+[2025-05-17T21:10:57.348+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/fpt-bat-tay-dai-gia-cong-nghe-thai-lan-thuc-day-chuyen-doi-so-nganh-ngan-hang-2402053.html
+[2025-05-17T21:10:57.979+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:00.909+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/fpt-bat-tay-dai-gia-cong-n...c-day-chuyen-doi-so-nganh-ngan-hang-2402053.html  | 
+[2025-05-17T21:11:00.910+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:00.911+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.87s
+[2025-05-17T21:11:01.155+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/fpt-bat-tay-dai-gia-cong-n...c-day-chuyen-doi-so-nganh-ngan-hang-2402053.html  | 
+[2025-05-17T21:11:01.156+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:01.157+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-17T21:11:01.158+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/fpt-bat-tay-dai-gia-cong-n...c-day-chuyen-doi-so-nganh-ngan-hang-2402053.html  | 
+[2025-05-17T21:11:01.158+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:01.159+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.12s
+[2025-05-17T21:11:01.619+0000] {crawler.py:262} INFO -     ✓ FPT bắt tay 'đại gia' công nghệ Thái Lan thúc đẩy chuyển đổi...
+
+[2025-05-17T21:11:01.619+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html
+[2025-05-17T21:11:02.400+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:05.364+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-17T21:11:05.365+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:05.366+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.89s
+[2025-05-17T21:11:05.589+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-17T21:11:05.590+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:05.591+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-17T21:11:05.592+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cmc-telecom-se-xuat-hien-tai-su-kien-bao-mat-lon-nhat-viet-nam-2401672.html    | 
+[2025-05-17T21:11:05.592+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:05.593+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.12s
+[2025-05-17T21:11:05.986+0000] {crawler.py:262} INFO -     ✓ CMC Telecom sẽ xuất hiện tại sự kiện bảo mật lớn nhất Việt N...
+
+[2025-05-17T21:11:05.987+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html
+[2025-05-17T21:11:06.590+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:09.866+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-17T21:11:09.867+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:09.868+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.21s
+[2025-05-17T21:11:10.134+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-17T21:11:10.135+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:10.136+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-17T21:11:10.137+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/iphone-16-pro-giam-gia-soc-hon-9-trieu-dong-tai-trung-quoc-2401636.html        | 
+[2025-05-17T21:11:10.138+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:10.138+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.48s
+[2025-05-17T21:11:10.557+0000] {crawler.py:262} INFO -     ✓ iPhone 16 Pro giảm giá sốc hơn 9 triệu đồng tại Trung Quốc...
+
+[2025-05-17T21:11:10.558+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thu-tuong-chu-tri-phien-hop-ban-chi-dao-ve-phat-trien-khcn-dmst-cds-de-an-06-2402089.html
+[2025-05-17T21:11:11.069+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:14.141+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thu-tuong-chu-tri-phien-ho...e-phat-trien-khcn-dmst-cds-de-an-06-2402089.html  | 
+[2025-05-17T21:11:14.142+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:14.143+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.01s
+[2025-05-17T21:11:14.323+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thu-tuong-chu-tri-phien-ho...e-phat-trien-khcn-dmst-cds-de-an-06-2402089.html  | 
+[2025-05-17T21:11:14.324+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:14.324+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-17T21:11:14.326+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thu-tuong-chu-tri-phien-ho...e-phat-trien-khcn-dmst-cds-de-an-06-2402089.html  | 
+[2025-05-17T21:11:14.327+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:14.328+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.20s
+[2025-05-17T21:11:14.792+0000] {crawler.py:262} INFO -     ✓ Thủ tướng chủ trì phiên họp Ban chỉ đạo về phát triển KHCN, ...
+
+[2025-05-17T21:11:14.793+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/mat-than-nasa-phat-hien-bi-mat-chan-dong-duoi-lop-bang-greenland-2402015.html
+[2025-05-17T21:11:15.348+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:18.895+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/mat-than-nasa-phat-hien-bi-mat-chan-dong-duoi-lop-bang-greenland-2402015.html  | 
+[2025-05-17T21:11:18.896+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:18.897+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.47s
+[2025-05-17T21:11:19.223+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/mat-than-nasa-phat-hien-bi-mat-chan-dong-duoi-lop-bang-greenland-2402015.html  | 
+[2025-05-17T21:11:19.224+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:19.225+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.32s
+[2025-05-17T21:11:19.226+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/mat-than-nasa-phat-hien-bi-mat-chan-dong-duoi-lop-bang-greenland-2402015.html  | 
+[2025-05-17T21:11:19.227+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:19.228+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.80s
+[2025-05-17T21:11:19.808+0000] {crawler.py:262} INFO -     ✓ 'Mắt thần' NASA phát hiện bí mật chấn động dưới lớp băng Gre...
+
+[2025-05-17T21:11:19.809+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html
+[2025-05-17T21:11:20.473+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:23.763+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-17T21:11:23.764+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:23.765+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.22s
+[2025-05-17T21:11:23.972+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-17T21:11:23.973+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:23.974+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-17T21:11:23.975+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/them-mot-hang-dien-thoai-trung-quoc-co-the-khien-my-lo-lang-2401585.html       | 
+[2025-05-17T21:11:23.976+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:23.976+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.43s
+[2025-05-17T21:11:24.369+0000] {crawler.py:262} INFO -     ✓ Thêm một hãng điện thoại Trung Quốc có thể khiến Mỹ lo lắng...
+
+[2025-05-17T21:11:24.370+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html
+[2025-05-17T21:11:24.972+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:28.368+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-17T21:11:28.369+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:28.369+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.33s
+[2025-05-17T21:11:28.590+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-17T21:11:28.591+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:28.592+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-17T21:11:28.594+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hue-dua-vao-hoat-dong-136-diem-dai-ly-dich-vu-cong-truc-tuyen-2401711.html     | 
+[2025-05-17T21:11:28.594+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:28.595+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.56s
+[2025-05-17T21:11:29.022+0000] {crawler.py:262} INFO -     ✓ Huế đưa vào hoạt động 136 điểm đại lý dịch vụ công trực tuyế...
+
+[2025-05-17T21:11:29.023+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/loat-san-pham-hap-dan-tu-trien-lam-thanh-tuu-khoa-hoc-va-cong-nghe-viet-nam-2401876.html
+[2025-05-17T21:11:29.677+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:33.211+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loat-san-pham-hap-dan-tu-t...-tuu-khoa-hoc-va-cong-nghe-viet-nam-2401876.html  | 
+[2025-05-17T21:11:33.212+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:33.212+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.43s
+[2025-05-17T21:11:33.517+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loat-san-pham-hap-dan-tu-t...-tuu-khoa-hoc-va-cong-nghe-viet-nam-2401876.html  | 
+[2025-05-17T21:11:33.520+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:33.522+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-17T21:11:33.524+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loat-san-pham-hap-dan-tu-t...-tuu-khoa-hoc-va-cong-nghe-viet-nam-2401876.html  | 
+[2025-05-17T21:11:33.525+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:33.526+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.74s
+[2025-05-17T21:11:34.054+0000] {crawler.py:262} INFO -     ✓ Loạt sản phẩm hấp dẫn từ triển lãm thành tựu khoa học và côn...
+
+[2025-05-17T21:11:34.054+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/quoc-hoi-nhat-tri-can-doi-3-tong-chi-ngan-sach-nam-2025-cho-kh-cn-va-dmst-2402143.html
+[2025-05-17T21:11:34.622+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:37.897+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/quoc-hoi-nhat-tri-can-doi-...gan-sach-nam-2025-cho-kh-cn-va-dmst-2402143.html  | 
+[2025-05-17T21:11:37.898+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:37.899+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.21s
+[2025-05-17T21:11:38.137+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/quoc-hoi-nhat-tri-can-doi-...gan-sach-nam-2025-cho-kh-cn-va-dmst-2402143.html  | 
+[2025-05-17T21:11:38.138+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:38.138+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-17T21:11:38.140+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/quoc-hoi-nhat-tri-can-doi-...gan-sach-nam-2025-cho-kh-cn-va-dmst-2402143.html  | 
+[2025-05-17T21:11:38.140+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:38.141+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.45s
+[2025-05-17T21:11:38.715+0000] {crawler.py:262} INFO -     ✓ Quốc hội nhất trí cân đối 3% tổng chi ngân sách năm 2025 cho...
+
+[2025-05-17T21:11:38.716+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-se-theo-mo-hinh-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html
+[2025-05-17T21:11:39.262+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:42.490+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-17T21:11:42.491+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:42.492+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.17s
+[2025-05-17T21:11:42.723+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-17T21:11:42.724+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:42.725+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T21:11:42.725+0000] {logging_mixin.py:188} INFO - 0.23
+[2025-05-17T21:11:42.726+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T21:11:42.727+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khu-cong-nghe-cao-hoa-lac-...-thanh-pho-khoa-hoc-va-cong-nghe-mo-2401668.html  | 
+[2025-05-17T21:11:42.728+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:42.729+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.41s
+[2025-05-17T21:11:43.294+0000] {crawler.py:262} INFO -     ✓ Khu Công nghệ cao Hòa Lạc sẽ theo mô hình thành phố khoa học...
+
+[2025-05-17T21:11:43.295+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/sieu-mau-lan-khue-tro-thanh-dai-su-thuong-hieu-vertu-tai-viet-nam-2401814.html
+[2025-05-17T21:11:43.951+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:47.208+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/sieu-mau-lan-khue-tro-thanh-dai-su-thuong-hieu-vertu-tai-viet-nam-2401814.html | 
+[2025-05-17T21:11:47.209+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:47.210+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.18s
+[2025-05-17T21:11:47.432+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/sieu-mau-lan-khue-tro-thanh-dai-su-thuong-hieu-vertu-tai-viet-nam-2401814.html | 
+[2025-05-17T21:11:47.433+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:47.434+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T21:11:47.435+0000] {logging_mixin.py:188} INFO - 0.22
+[2025-05-17T21:11:47.435+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T21:11:47.436+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/sieu-mau-lan-khue-tro-thanh-dai-su-thuong-hieu-vertu-tai-viet-nam-2401814.html | 
+[2025-05-17T21:11:47.437+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:47.438+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.41s
+[2025-05-17T21:11:47.883+0000] {crawler.py:262} INFO -     ✓ Siêu mẫu Lan Khuê trở thành đại sứ thương hiệu Vertu tại Việ...
+
+[2025-05-17T21:11:47.884+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html
+[2025-05-17T21:11:48.422+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:51.539+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-17T21:11:51.540+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:51.541+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.20s
+[2025-05-17T21:11:51.752+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-17T21:11:51.753+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:51.754+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T21:11:51.755+0000] {logging_mixin.py:188} INFO - 0.21
+[2025-05-17T21:11:51.755+0000] {logging_mixin.py:188} INFO - s
+[2025-05-17T21:11:51.756+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-khoa-hoc-va-cong-nghe-se-ton-vinh-nhung-nguoi-lam-khoa-hoc-2401624.html   | 
+[2025-05-17T21:11:51.757+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:51.758+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.42s
+[2025-05-17T21:11:52.181+0000] {crawler.py:262} INFO -     ✓ Ngày Khoa học và Công nghệ sẽ tôn vinh những người làm khoa ...
+
+[2025-05-17T21:11:52.182+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/pho-bien-ky-nang-ai-cho-nguoi-dung-viet-qua-bo-sach-deepseek-2401977.html
+[2025-05-17T21:11:52.683+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:11:55.551+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/pho-bien-ky-nang-ai-cho-nguoi-dung-viet-qua-bo-sach-deepseek-2401977.html      | 
+[2025-05-17T21:11:55.552+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:55.553+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.80s
+[2025-05-17T21:11:55.768+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/pho-bien-ky-nang-ai-cho-nguoi-dung-viet-qua-bo-sach-deepseek-2401977.html      | 
+[2025-05-17T21:11:55.769+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:55.769+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-17T21:11:55.771+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/pho-bien-ky-nang-ai-cho-nguoi-dung-viet-qua-bo-sach-deepseek-2401977.html      | 
+[2025-05-17T21:11:55.772+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:11:55.772+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-17T21:11:56.353+0000] {crawler.py:262} INFO -     ✓ Phổ biến kỹ năng AI cho người dùng Việt qua bộ sách DeepSeek...
+
+[2025-05-17T21:11:56.353+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos-khung-co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html
+[2025-05-17T21:11:56.934+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:12:00.045+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-17T21:12:00.046+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:00.046+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.04s
+[2025-05-17T21:12:00.269+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-17T21:12:00.270+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:00.271+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.22s
+[2025-05-17T21:12:00.272+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ten-lua-sieu-thanh-brahmos...co-nao-ma-co-the-thay-doi-cuoc-choi-2400015.html  | 
+[2025-05-17T21:12:00.273+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:00.274+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.27s
+[2025-05-17T21:12:00.709+0000] {crawler.py:262} INFO -     ✓ Sức mạnh tên lửa BrahMos: Công nghệ vũ khí Nga - Ấn có đang ...
+
+[2025-05-17T21:12:00.710+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-nghe-vn-ngay-hoi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html
+[2025-05-17T21:12:01.346+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:12:05.113+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-17T21:12:05.114+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:05.115+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.69s
+[2025-05-17T21:12:05.375+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-17T21:12:05.376+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:05.377+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-17T21:12:05.379+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngay-hoi-khoa-hoc-va-cong-...oi-cua-tri-tue-doi-moi-va-khat-vong-2401728.html  | 
+[2025-05-17T21:12:05.380+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:05.380+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.96s
+[2025-05-17T21:12:05.849+0000] {crawler.py:262} INFO -     ✓ Ngày hội Khoa học và Công nghệ: Ngày hội của trí tuệ, đổi mớ...
+
+[2025-05-17T21:12:05.850+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/bo-kh-cn-muon-co-cong-vien-dung-tuong-dai-cac-nha-khoa-hoc-co-cong-hien-2401950.html
+[2025-05-17T21:12:06.384+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:12:09.745+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bo-kh-cn-muon-co-cong-vien...g-dai-cac-nha-khoa-hoc-co-cong-hien-2401950.html  | 
+[2025-05-17T21:12:09.746+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:09.747+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.29s
+[2025-05-17T21:12:10.024+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bo-kh-cn-muon-co-cong-vien...g-dai-cac-nha-khoa-hoc-co-cong-hien-2401950.html  | 
+[2025-05-17T21:12:10.025+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:10.026+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-17T21:12:10.028+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bo-kh-cn-muon-co-cong-vien...g-dai-cac-nha-khoa-hoc-co-cong-hien-2401950.html  | 
+[2025-05-17T21:12:10.029+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:10.030+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.57s
+[2025-05-17T21:12:10.491+0000] {crawler.py:262} INFO -     ✓ Bộ KH&CN muốn có công viên dựng tượng đài các nhà khoa học c...
+
+[2025-05-17T21:12:10.492+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/so-huu-tri-tue-phai-bien-ket-qua-nghien-cuu-thanh-tai-san-2401778.html
+[2025-05-17T21:12:11.103+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:12:14.175+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/so-huu-tri-tue-phai-bien-ket-qua-nghien-cuu-thanh-tai-san-2401778.html         | 
+[2025-05-17T21:12:14.177+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:14.177+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.01s
+[2025-05-17T21:12:14.702+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/so-huu-tri-tue-phai-bien-ket-qua-nghien-cuu-thanh-tai-san-2401778.html         | 
+[2025-05-17T21:12:14.703+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:14.704+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.52s
+[2025-05-17T21:12:14.706+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/so-huu-tri-tue-phai-bien-ket-qua-nghien-cuu-thanh-tai-san-2401778.html         | 
+[2025-05-17T21:12:14.706+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:14.707+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.54s
+[2025-05-17T21:12:15.245+0000] {crawler.py:262} INFO -     ✓ Sở hữu trí tuệ phải biến kết quả nghiên cứu thành tài sản...
+
+[2025-05-17T21:12:15.246+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vi-sao-s-400-duoc-menh-danh-la-ke-huy-diet-tren-bau-troi-hien-dai-2401580.html
+[2025-05-17T21:12:15.956+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T21:12:19.153+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vi-sao-s-400-duoc-menh-danh-la-ke-huy-diet-tren-bau-troi-hien-dai-2401580.html | 
+[2025-05-17T21:12:19.154+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:19.155+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.10s
+[2025-05-17T21:12:19.369+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vi-sao-s-400-duoc-menh-danh-la-ke-huy-diet-tren-bau-troi-hien-dai-2401580.html | 
+[2025-05-17T21:12:19.370+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:19.370+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-17T21:12:19.372+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vi-sao-s-400-duoc-menh-danh-la-ke-huy-diet-tren-bau-troi-hien-dai-2401580.html | 
+[2025-05-17T21:12:19.372+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T21:12:19.373+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.32s
+[2025-05-17T21:12:19.621+0000] {crawler.py:262} INFO -     ✓ Giải mã công nghệ S-400: 'Rồng lửa' có khả năng săn mồi ở kh...
+
+[2025-05-17T21:12:19.622+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 119.56 giây
+[2025-05-17T21:12:19.985+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'cong-nghe'
+[2025-05-17T21:12:20.050+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-17T21:12:20.051+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T21:12:20.059+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=manual__2025-05-17T21:09:51.309657+00:00, execution_date=20250517T210951, start_date=20250517T211019, end_date=20250517T211220
+[2025-05-17T21:12:20.102+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T21:12:20.126+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T21:12:20.128+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

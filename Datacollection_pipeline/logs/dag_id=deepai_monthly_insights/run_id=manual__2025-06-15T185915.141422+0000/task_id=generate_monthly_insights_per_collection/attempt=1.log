@@ -1,0 +1,122 @@
+[2025-06-15T18:59:18.281+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-15T18:59:18.303+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:59:15.141422+00:00 [queued]>
+[2025-06-15T18:59:18.313+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:59:15.141422+00:00 [queued]>
+[2025-06-15T18:59:18.313+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-15T18:59:18.329+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): generate_monthly_insights_per_collection> on 2025-06-15 18:59:15.141422+00:00
+[2025-06-15T18:59:18.336+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=145) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-15T18:59:18.338+0000] {standard_task_runner.py:63} INFO - Started process 154 to run task
+[2025-06-15T18:59:18.338+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_monthly_insights', 'generate_monthly_insights_per_collection', 'manual__2025-06-15T18:59:15.141422+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmperdffcxy']
+[2025-06-15T18:59:18.343+0000] {standard_task_runner.py:91} INFO - Job 56: Subtask generate_monthly_insights_per_collection
+[2025-06-15T18:59:18.392+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-15T18:59:15.141422+00:00 [running]> on host d8dffa52d0ec
+[2025-06-15T18:59:18.492+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_monthly_insights' AIRFLOW_CTX_TASK_ID='generate_monthly_insights_per_collection' AIRFLOW_CTX_EXECUTION_DATE='2025-06-15T18:59:15.141422+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-15T18:59:15.141422+00:00'
+[2025-06-15T18:59:18.493+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-15T18:59:18.508+0000] {dags.py:199} INFO - Bắt đầu tạo insights cho từng category từ dữ liệu tháng qua
+[2025-06-15T18:59:18.872+0000] {dags.py:213} INFO - Tạo insights riêng cho từng category và lưu vào database...
+[2025-06-15T18:59:24.112+0000] {before_sleep.py:65} WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised NotFound: 404 models/gemini-2.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+[2025-06-15T18:59:26.387+0000] {dags.py:233} ERROR - Lỗi khi tạo insights: 404 models/gemini-2.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-06-15T18:59:26.388+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-15T18:59:26.389+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 214, in generate_monthly_insights
+    saved_count = summarizer.save_insights_to_db(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/deeplearning_ai/Insight.py", line 211, in save_insights_to_db
+    insights = self.summarize_each_collection(k=k, max_tokens=max_tokens, return_prompt_only=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/deeplearning_ai/Insight.py", line 186, in summarize_each_collection
+    markmap_md = self.generate_markmap_from_text(response)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/deeplearning_ai/Insight.py", line 138, in generate_markmap_from_text
+    response = genai.invoke(prompt)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 1255, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 372, in invoke
+    self.generate_prompt(
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 957, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 776, in generate
+    self._generate_with_cache(
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 1342, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 210, in _chat_with_retry
+    return _chat_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 330, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 467, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 368, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 410, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 183, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 208, in _chat_with_retry
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 192, in _chat_with_retry
+    return generation_method(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+               ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-2.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-06-15T18:59:26.401+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_monthly_insights, task_id=generate_monthly_insights_per_collection, run_id=manual__2025-06-15T18:59:15.141422+00:00, execution_date=20250615T185915, start_date=20250615T185918, end_date=20250615T185926
+[2025-06-15T18:59:26.416+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 56 for task generate_monthly_insights_per_collection (404 models/gemini-2.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.; 154)
+[2025-06-15T18:59:26.443+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-15T18:59:26.456+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-15T18:59:26.459+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

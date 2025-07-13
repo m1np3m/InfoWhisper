@@ -1,0 +1,135 @@
+[2025-07-10T03:46:06.829+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-10T03:46:06.852+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-07-10T03:30:00+00:00 [queued]>
+[2025-07-10T03:46:06.865+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-07-10T03:30:00+00:00 [queued]>
+[2025-07-10T03:46:06.866+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-10T03:46:06.889+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-07-10 03:30:00+00:00
+[2025-07-10T03:46:06.900+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1658) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-10T03:46:06.904+0000] {standard_task_runner.py:63} INFO - Started process 1799 to run task
+[2025-07-10T03:46:06.905+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'scheduled__2025-07-10T03:30:00+00:00', '--job-id', '1530', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp8r2xqf60']
+[2025-07-10T03:46:06.910+0000] {standard_task_runner.py:91} INFO - Job 1530: Subtask crawl_business
+[2025-07-10T03:46:06.970+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-07-10T03:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-07-10T03:46:07.111+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-07-10T03:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-10T03:30:00+00:00'
+[2025-07-10T03:46:07.114+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-10T03:46:07.139+0000] {dags.py:178} INFO - Bắt đầu crawl category: business
+[2025-07-10T03:46:07.361+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-10T03:46:07.406+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-10T03:46:07.407+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-10T03:46:07.408+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-10T03:46:07.436+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:07.450+0000] {log.py:232} WARNING - 2025-07-10 03:46:07,450 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:46:07.450+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:46:07.457+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-10T03:46:08.437+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:08.925+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:46:08.926+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/business/
+[2025-07-10T03:46:08.928+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-10T03:46:09.438+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:10.439+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:12.049+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:13.049+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:13.707+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 4.16s
+[2025-07-10T03:46:13.868+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 0.16s
+[2025-07-10T03:46:13.871+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 4.33s
+[2025-07-10T03:46:13.873+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-10T03:46:13.948+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-07-10T03:46:13.949+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-10T03:46:13.950+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-agents-and-infrastructure-dominate-cb-insights-top-100-ai-startups-list/
+[2025-07-10T03:46:13.950+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/alexa-adds-generative-ai-and-agents-using-claude-and-other-models/
+[2025-07-10T03:46:13.951+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/amazon-plans-to-spend-tens-of-billions-on-ai-infrastructure-with-project-rainier/
+[2025-07-10T03:46:13.952+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-07-10T03:46:13.953+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/claude-3-7-sonnet-introduces-hybrid-reasoning-and-extended-thinking/
+[2025-07-10T03:46:13.953+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-07-10T03:46:14.051+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:15.052+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:15.685+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-07-10T03:46:15.685+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-07-10T03:46:15.686+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/amazon-plans-to-spend-tens-of-billions-on-ai-infrastructure-with-project-rainier/
+[2025-07-10T03:46:16.052+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:16.683+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:46:17.053+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:18.054+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:18.925+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 2.24s
+[2025-07-10T03:46:18.995+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 0.07s
+[2025-07-10T03:46:18.998+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 2.31s
+[2025-07-10T03:46:19.027+0000] {logging_mixin.py:188} INFO - Title: Amazon’s Constellation of Compute
+[2025-07-10T03:46:19.028+0000] {logging_mixin.py:188} INFO - Subtitle: Amazon plans to spend tens of billions on AI infrastructure with Project Rainier
+[2025-07-10T03:46:19.055+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:19.370+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 9a0d1, parent_run_id: f7349
+[2025-07-10T03:46:20.056+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:21.057+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:22.057+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:22.702+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 9a0d1, parent_run_id: f7349
+[2025-07-10T03:46:22.704+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "19a5acc5e3734aa509f4b1deae22d41a",
+    "span_id": "e9a8cfe8280bc6fe",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-10T03:46:19.371549Z",
+  "end_time": "2025-07-10T03:46:22.703978Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Amazon\\u2019s Constellation of Compute\\n\\nAmazon revealed new details of its plan to build a constellation of massive data centers and connect them into an \\u201cultracluster.\\u201d Customer Number One: Anthropic.\\n\\nWhat\\u2019s new:Dubbed Project Rainier, the plan calls for Amazon tobuildseven next-generation data centers \\u2014 with up to 30 on the drawing board \\u2014 near New Carlisle, Indiana,The New York Timesreported. Still other data centers\\u00a0will be located in Mississippi, and possibly in North Carolina and Pennsylvania, contributing to an expected$100 billionin capital expenditures this year alone. These\\u00a0plans complement the company\\u2019s previously announced intention to spend $11 billion worth on data centers in the United Kingdom by 2028. (Disclosure: Andrew Ng is a member of Amazon\\u2019s board of directors.)\\n\\nHow it works:Announced late last year, Project Rainier calls for connecting hundreds of thousands of high-performance processors for use by Amazon\\u2019s AI partner Anthropic. Amazoninvested$8 billion in Anthropic over the last two years, and their alliance is a key part of Amazon\\u2019s strategy to compete against other AI giants. Anthropic may use all of New Carlisle\\u2019s processing power to build a single system, Anthropic co-founder Tom Brown said.\\n\\nBehind the news:AI leaders are spending tens of billions of dollars on computing infrastructure to serve fast-growing customer bases and, they hope, develop breakthroughs that\\u00a0enable them to leap ahead of competitors. A large part of Alphabet\\u2019s expected $75 billion in capital expenditures will bespentbuilding data centers. Microsoft plans to invest $80 billion in data centers this year, and OpenAI and partners are building a data center complex in Texas at an\\u00a0estimated\\u00a0cost of\\u00a0$60 billion.\\n\\nWhy it matters:Amazon\\u2019s commitment to Project Rainier signals its belief that Anthropic can give it a crucial edge. The stakes are high, as the company dives headlong into AI-driven retailing and logistics, warehouse robotics, and consumer services\\u00a0like the revamped Alexa digital assistant. However, should Anthropic stall, Amazon can roll its immense computing resources into its enormously successful Amazon Web Services cloud-computing business.\\n\\nWe\\u2019re thinking:Amazon\\u2019s emphasis on internal hardware development reflects a focus on maintaining control of costs and operations. It has learned the hard lessons of competition in retailing, where margins are thin and expenses are in flux.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u1ebf ho\\u1ea1ch x\\u00e2y d\\u1ef1ng c\\u1ee5m trung t\\u00e2m d\\u1eef li\\u1ec7u c\\u1ee7a Amazon:\\n\\n*   Amazon \\u0111ang tri\\u1ec3n khai \\\"Project Rainier\\\", m\\u1ed9t d\\u1ef1 \\u00e1n x\\u00e2y d\\u1ef1ng h\\u00e0ng lo\\u1ea1t trung t\\u00e2m d\\u1eef li\\u1ec7u th\\u1ebf h\\u1ec7 m\\u1edbi, v\\u1edbi k\\u1ebf ho\\u1ea1ch ban \\u0111\\u1ea7u l\\u00e0 7 trung t\\u00e2m v\\u00e0 c\\u00f3 th\\u1ec3 m\\u1edf r\\u1ed9ng l\\u00ean \\u0111\\u1ebfn 30 trung t\\u00e2m, nh\\u1eb1m \\u0111\\u00e1p \\u1ee9ng nhu c\\u1ea7u v\\u1ec1 s\\u1ee9c m\\u1ea1nh t\\u00ednh to\\u00e1n cho \\u0111\\u1ed1i t\\u00e1c AI Anthropic.\\n*   D\\u1ef1 \\u00e1n n\\u00e0y bao g\\u1ed3m vi\\u1ec7c k\\u1ebft n\\u1ed1i h\\u00e0ng tr\\u0103m ng\\u00e0n b\\u1ed9 x\\u1eed l\\u00fd hi\\u1ec7u n\\u0103ng cao, v\\u1edbi t\\u1ed5ng v\\u1ed1n \\u0111\\u1ea7u t\\u01b0 d\\u1ef1 ki\\u1ebfn l\\u00ean \\u0111\\u1ebfn 100 t\\u1ef7 \\u0111\\u00f4 la M\\u1ef9 trong n\\u0103m nay, v\\u00e0 l\\u00e0 m\\u1ed9t ph\\u1ea7n trong chi\\u1ebfn l\\u01b0\\u1ee3c c\\u1ea1nh tranh c\\u1ee7a Amazon trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1eb7c bi\\u1ec7t l\\u00e0 v\\u1edbi s\\u1ef1 h\\u1ee3p t\\u00e1c c\\u00f9ng Anthropic.\\n*   Vi\\u1ec7c \\u0111\\u1ea7u t\\u01b0 v\\u00e0o c\\u01a1 s\\u1edf h\\u1ea1 t\\u1ea7ng t\\u00ednh to\\u00e1n l\\u1edbn cho th\\u1ea5y Amazon \\u0111\\u1eb7t c\\u01b0\\u1ee3c v\\u00e0o ti\\u1ec1m n\\u0103ng c\\u1ee7a Anthropic, \\u0111\\u1ed3ng th\\u1eddi \\u0111\\u1ea3m b\\u1ea3o kh\\u1ea3 n\\u0103ng t\\u1eadn d\\u1ee5ng t\\u00e0i nguy\\u00ean t\\u00ednh to\\u00e1n n\\u00e0y cho d\\u1ecbch v\\u1ee5 \\u0111i\\u1ec7n to\\u00e1n \\u0111\\u00e1m m\\u00e2y Amazon Web Services (AWS) n\\u1ebfu c\\u1ea7n thi\\u1ebft.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 684, \"output\": 219, \"total\": 903, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-10T03:46:22.909+0000] {crawler_deeplai.py:490} INFO -     ✅ Amazon’s Constellation of Compute...
+[2025-07-10T03:46:23.058+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:23.910+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 16.45 giây
+[2025-07-10T03:46:23.911+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-07-10T03:46:24.059+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:24.333+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'business'
+[2025-07-10T03:46:24.393+0000] {dags.py:183} INFO - Hoàn thành crawl category: business
+[2025-07-10T03:46:24.393+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-10T03:46:24.394+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-10T03:46:24.406+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_business, run_id=scheduled__2025-07-10T03:30:00+00:00, execution_date=20250710T033000, start_date=20250710T034606, end_date=20250710T034624
+[2025-07-10T03:46:24.473+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-10T03:46:24.502+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-10T03:46:24.505+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

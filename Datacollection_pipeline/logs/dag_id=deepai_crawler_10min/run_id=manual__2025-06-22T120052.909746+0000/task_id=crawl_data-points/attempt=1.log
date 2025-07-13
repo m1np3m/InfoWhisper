@@ -1,0 +1,39 @@
+[2025-06-22T12:01:07.077+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T12:01:07.109+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-22T12:00:52.909746+00:00 [queued]>
+[2025-06-22T12:01:07.126+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-22T12:00:52.909746+00:00 [queued]>
+[2025-06-22T12:01:07.128+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T12:01:07.156+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-06-22 12:00:52.909746+00:00
+[2025-06-22T12:01:07.175+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=15991) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T12:01:07.178+0000] {standard_task_runner.py:63} INFO - Started process 16131 to run task
+[2025-06-22T12:01:07.182+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'manual__2025-06-22T12:00:52.909746+00:00', '--job-id', '515', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpml748a6l']
+[2025-06-22T12:01:07.188+0000] {standard_task_runner.py:91} INFO - Job 515: Subtask crawl_data-points
+[2025-06-22T12:01:07.294+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-22T12:00:52.909746+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T12:01:07.478+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T12:00:52.909746+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T12:00:52.909746+00:00'
+[2025-06-22T12:01:07.481+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T12:01:07.502+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T12:01:07.503+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: crawl_deepai_category() missing 5 required positional arguments: 'category_url', 'category_name', 'max_articles', 'min_articles_threshold', and 'max_load_more_clicks'
+[2025-06-22T12:01:07.519+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=manual__2025-06-22T12:00:52.909746+00:00, execution_date=20250622T120052, start_date=20250622T120107, end_date=20250622T120107
+[2025-06-22T12:01:07.539+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 515 for task crawl_data-points (crawl_deepai_category() missing 5 required positional arguments: 'category_url', 'category_name', 'max_articles', 'min_articles_threshold', and 'max_load_more_clicks'; 16131)
+[2025-06-22T12:01:07.557+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-22T12:01:07.599+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T12:01:07.604+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-06-22T12:01:07.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs

@@ -1,0 +1,45 @@
+[2025-06-22T09:21:37.244+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T09:21:37.270+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-22T09:10:00+00:00 [queued]>
+[2025-06-22T09:21:37.283+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-22T09:10:00+00:00 [queued]>
+[2025-06-22T09:21:37.284+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T09:21:37.305+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-06-22 09:10:00+00:00
+[2025-06-22T09:21:37.321+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7275) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T09:21:37.324+0000] {standard_task_runner.py:63} INFO - Started process 7293 to run task
+[2025-06-22T09:21:37.326+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'scheduled__2025-06-22T09:10:00+00:00', '--job-id', '273', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpwwfrwteb']
+[2025-06-22T09:21:37.331+0000] {standard_task_runner.py:91} INFO - Job 273: Subtask crawl_data-points
+[2025-06-22T09:21:37.393+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-22T09:10:00+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T09:21:37.530+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T09:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T09:10:00+00:00'
+[2025-06-22T09:21:37.532+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T09:21:37.553+0000] {dags.py:169} INFO - Bắt đầu crawl category: data-points
+[2025-06-22T09:21:37.708+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T09:21:37.749+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T09:21:38.673+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T09:21:38.674+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/data-points/
+[2025-06-22T09:21:38.674+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T09:21:42.572+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 3.89s
+[2025-06-22T09:21:42.714+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 0.14s
+[2025-06-22T09:21:42.717+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 4.04s
+[2025-06-22T09:21:42.718+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T09:21:42.789+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 15 link bài viết unique
+[2025-06-22T09:21:42.791+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T09:21:42.791+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/alibaba-outdoes-itself-with-latest-open-models/
+[2025-06-22T09:21:42.792+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/all-about-claudes-new-opus-and-sonnet/
+[2025-06-22T09:21:42.794+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/building-multi-agent-systems-in-rowboats-ide/
+[2025-06-22T09:21:42.794+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/deepseek-outlines-v3-training-hardware-limits/
+[2025-06-22T09:21:42.795+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/deepseek-r1-regains-open-weights-crown/
+[2025-06-22T09:21:42.797+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 15 bài viết
+[2025-06-22T09:21:43.600+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 15 URLs ban đầu -> 0 URLs mới
+[2025-06-22T09:21:43.601+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục data-points cần crawl.
+[2025-06-22T09:21:43.602+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'data-points'
+[2025-06-22T09:21:43.671+0000] {dags.py:174} INFO - Hoàn thành crawl category: data-points
+[2025-06-22T09:21:43.672+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T09:21:43.673+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T09:21:43.681+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=scheduled__2025-06-22T09:10:00+00:00, execution_date=20250622T091000, start_date=20250622T092137, end_date=20250622T092143
+[2025-06-22T09:21:43.727+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T09:21:43.743+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T09:21:43.745+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

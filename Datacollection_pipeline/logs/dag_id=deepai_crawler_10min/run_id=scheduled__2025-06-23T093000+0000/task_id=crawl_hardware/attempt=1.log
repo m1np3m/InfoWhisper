@@ -1,0 +1,163 @@
+[2025-06-28T16:41:17.001+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-28T16:41:17.029+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-23T09:30:00+00:00 [queued]>
+[2025-06-28T16:41:17.046+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-23T09:30:00+00:00 [queued]>
+[2025-06-28T16:41:17.047+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-28T16:41:17.074+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-23 09:30:00+00:00
+[2025-06-28T16:41:17.085+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=132) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-28T16:41:17.089+0000] {standard_task_runner.py:63} INFO - Started process 147 to run task
+[2025-06-28T16:41:17.093+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'scheduled__2025-06-23T09:30:00+00:00', '--job-id', '1300', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpijowwsm_']
+[2025-06-28T16:41:17.097+0000] {standard_task_runner.py:91} INFO - Job 1300: Subtask crawl_hardware
+[2025-06-28T16:41:17.171+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-23T09:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-06-28T16:41:17.438+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:17.474+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-23T09:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-23T09:30:00+00:00'
+[2025-06-28T16:41:17.499+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-28T16:41:17.629+0000] {dags.py:178} INFO - Bắt đầu crawl category: hardware
+[2025-06-28T16:41:18.492+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:18.870+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-28T16:41:19.106+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-06-28T16:41:19.115+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-06-28T16:41:19.120+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-06-28T16:41:19.494+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:20.497+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:21.498+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:22.500+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:23.584+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:24.586+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:25.313+0000] {log.py:232} WARNING - 2025-06-28 16:41:25,313 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:41:25.313+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:41:25.341+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-28T16:41:25.596+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:26.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:27.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:28.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:29.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:30.634+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:31.645+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:32.678+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:33.371+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:41:33.374+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-28T16:41:33.375+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-28T16:41:33.690+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:34.691+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:35.697+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:36.796+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:37.926+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:39.003+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:40.046+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:41.054+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:42.122+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:43.161+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:44.022+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 10.58s
+[2025-06-28T16:41:44.179+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:44.466+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.43s
+[2025-06-28T16:41:44.478+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 11.04s
+[2025-06-28T16:41:44.487+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-28T16:41:44.695+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-28T16:41:44.703+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-28T16:41:44.704+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-28T16:41:44.735+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-28T16:41:44.743+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-28T16:41:44.754+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-28T16:41:44.766+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-28T16:41:44.770+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-28T16:41:45.225+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:46.234+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:47.240+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:47.862+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-28T16:41:47.863+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-28T16:41:47.864+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/researchers-at-microsoft-and-tsinghua-propose-1-58-bit-ai-model-that-rivals-full-precision-competitors/
+[2025-06-28T16:41:48.261+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:49.262+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:50.265+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:50.430+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:41:51.278+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:52.285+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:53.317+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:54.335+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:55.358+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:55.592+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/researcher...ai-model-that-rivals-full-pre
+cision-competitors/  | ✓ | ⏱: 5.15s
+[2025-06-28T16:41:55.748+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/researcher...ai-model-that-rivals-full-pre
+cision-competitors/  | ✓ | ⏱: 0.15s
+[2025-06-28T16:41:55.753+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/researcher...ai-model-that-rivals-full-pre
+cision-competitors/  | ✓ | ⏱: 5.31s
+[2025-06-28T16:41:55.883+0000] {logging_mixin.py:188} INFO - Title: Low Precision, High Performance
+[2025-06-28T16:41:55.887+0000] {logging_mixin.py:188} INFO - Subtitle: Researchers at Microsoft and Tsinghua researchers propose 1.58-bit AI model that rivals full-precision competitors
+[2025-06-28T16:41:56.328+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 0e7e9, parent_run_id: d1c7b
+[2025-06-28T16:41:56.381+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:57.390+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:58.391+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:59.392+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:41:59.663+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 0e7e9, parent_run_id: d1c7b
+[2025-06-28T16:41:59.670+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "8febfe7e02e79118bd0171f80a740a71",
+    "span_id": "6e6973fb1bee3bdd",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-06-28T16:41:56.329887Z",
+  "end_time": "2025-06-28T16:41:59.669364Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Low Precision, High Performance\\n\\nReducing the number of bits used to represent each parameter in a neural network from, say, 16 bits to 8 bits shrinks the network\\u2019s size and boosts its speed. Researchers took this approach to an extreme: They built a competitive large language model whose weights are limited to three values.\\n\\nWhat\\u2019s new:Shuming Ma, Hongyu Wang, and colleagues at Microsoft, University of Chinese Academy of Sciences, and Tsinghua Universityupdatedtheir earlier BitNet b1.58, in which most weight values are limited to -1, 0, or +1, competing with the top full-precision models up to 2 billion parameters.Weightsare free to download for noncommercial and commercial uses according to an MIT license.\\n\\nKey insight:Linear layers have a big impact on a transformer\\u2019s overall speed. They make up large parts of attention layers and fully connected layers, so they account for most computations. The authors\\u2019 2023 work onBitNetshowed that using 1-bit weights \\u2014 whose values are limited to -1 and +1 \\u2014 makes multiplications very fast (because multiplying by -1 simply flips the sign and multiplying by +1 changes nothing), but performance suffers. They improved on the idea the following year withBitNet b1.58, which allowed weights to be -1, 0, or +1. (Implemented perfectly, this approach allocates approximately 1.58 bits per parameter, since the number of bits needed to represent 3 values is log\\u2082(3)=1.58.) In this case, multiplying by -1 or +1 still just flips or keeps the sign, and multiplying by 0 zeroes out the value. This ternary setup retains the original BitNet\\u2019s low memory requirements, fast training, and fast inference. With careful attention to hyperparameters, it also improves performance.\\n\\nHow it works:The authors pretrained the 2-billion parameter BitNet b1.58, which has an architecture similar to LLaMA, on a dataset of 4 trillion tokens that included web data plus synthetic math problems. To strengthen its reasoning abilities, they fine-tuned it onchatdata,instruction-followingdata,\\u00a0andsyntheticinstruction-followingdata. Finally, they fine-tuned the model viaDPOto better matchhuman preferences.\\n\\nResults:Across 16 popular benchmarks for language understanding, mathematical reasoning, and coding, BitNet b1.58 was faster and used less memory than competitors, including Alibaba\\u2019s Qwen2.5-1.5B, Google\\u2019s Gemma-3 1B, Hugging Face\\u2019s SmolLM2 1.7B, Meta\\u2019s Llama 3.2 1B, and ModelBest\\u2019s MiniCPM 2B. It achieved better performance than all except Qwen2.5 1.5B.\\n\\nWhy it matters:Quantizing an LLM to a few bits is not as simple as applying the current best practices for full-precision models. It demands rethinking LLM training, down to hyperparameter details like learning rate and weight decay. Even these seemingly small changes can have a large impact on final performance. By delving into these nuances, the authors provide a guide for how to ensure good performance from low-precision models.\\n\\nWe\\u2019re thinking:This work makes more than\\u00a0a bit of progress!\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t tri\\u1ec3n m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) BitNet b1.58 v\\u1edbi tr\\u1ecdng s\\u1ed1 ch\\u1ec9 g\\u1ed3m ba gi\\u00e1 tr\\u1ecb (-1, 0, +1), gi\\u00fap gi\\u1ea3m k\\u00edch th\\u01b0\\u1edbc v\\u00e0 t\\u0103ng t\\u1ed1c \\u0111\\u1ed9 x\\u1eed l\\u00fd c\\u1ee7a m\\u00f4 h\\u00ecnh.\\n*   BitNet b1.58 c\\u00f3 ki\\u1ebfn tr\\u00fac t\\u01b0\\u01a1ng t\\u1ef1 LLaMA, \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n tr\\u01b0\\u1edbc tr\\u00ean t\\u1eadp d\\u1eef li\\u1ec7u 4 ngh\\u00ecn t\\u1ef7 token v\\u00e0 tinh ch\\u1ec9nh th\\u00eam \\u0111\\u1ec3 c\\u1ea3i thi\\u1ec7n kh\\u1ea3 n\\u0103ng suy lu\\u1eadn v\\u00e0 ph\\u00f9 h\\u1ee3p v\\u1edbi s\\u1edf th\\u00edch c\\u1ee7a con ng\\u01b0\\u1eddi.\\n*   K\\u1ebft qu\\u1ea3 cho th\\u1ea5y BitNet b1.58 v\\u01b0\\u1ee3t tr\\u1ed9i v\\u1ec1 t\\u1ed1c \\u0111\\u1ed9 v\\u00e0 m\\u1ee9c s\\u1eed d\\u1ee5ng b\\u1ed9 nh\\u1edb so v\\u1edbi c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 c\\u1ea1nh tranh tr\\u00ean 16 ti\\u00eau ch\\u00ed \\u0111\\u00e1nh gi\\u00e1 kh\\u00e1c nhau, \\u0111\\u1ed3ng th\\u1eddi \\u0111\\u1ea1t hi\\u1ec7u su\\u1ea5t t\\u1ed1t h\\u01a1n h\\u1ea7u h\\u1ebft c\\u00e1c m\\u00f4 h\\u00ecnh kh\\u00e1c.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 890, \"output\": 186, \"total\": 1076, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-06-28T16:42:00.435+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:01.174+0000] {crawler_deeplai.py:490} INFO -     ✅ Low Precision, High Performance...
+[2025-06-28T16:42:01.445+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:02.178+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 36.84 giây
+[2025-06-28T16:42:02.208+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-28T16:42:02.273+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'hardware'
+[2025-06-28T16:42:02.407+0000] {dags.py:183} INFO - Hoàn thành crawl category: hardware
+[2025-06-28T16:42:02.417+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-28T16:42:02.419+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-28T16:42:02.442+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-06-23T09:30:00+00:00, execution_date=20250623T093000, start_date=20250628T164117, end_date=20250628T164202
+[2025-06-28T16:42:02.446+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:02.703+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-28T16:42:02.771+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-28T16:42:02.866+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

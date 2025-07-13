@@ -1,0 +1,23 @@
+[2025-06-22T12:24:33.869+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T12:24:33.885+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.flush_langfuse manual__2025-06-22T12:22:41.783508+00:00 [queued]>
+[2025-06-22T12:24:33.893+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.flush_langfuse manual__2025-06-22T12:22:41.783508+00:00 [queued]>
+[2025-06-22T12:24:33.894+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T12:24:33.910+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): flush_langfuse> on 2025-06-22 12:22:41.783508+00:00
+[2025-06-22T12:24:33.923+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=24036) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T12:24:33.926+0000] {standard_task_runner.py:63} INFO - Started process 24054 to run task
+[2025-06-22T12:24:33.927+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'flush_langfuse', 'manual__2025-06-22T12:22:41.783508+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpox4ng7tl']
+[2025-06-22T12:24:33.931+0000] {standard_task_runner.py:91} INFO - Job 559: Subtask flush_langfuse
+[2025-06-22T12:24:33.978+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.flush_langfuse manual__2025-06-22T12:22:41.783508+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T12:24:34.072+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='flush_langfuse' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T12:22:41.783508+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T12:22:41.783508+00:00'
+[2025-06-22T12:24:34.074+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T12:24:34.089+0000] {resource_manager.py:361} DEBUG - Successfully flushed OTEL tracer provider
+[2025-06-22T12:24:34.090+0000] {resource_manager.py:364} DEBUG - Successfully flushed score ingestion queue
+[2025-06-22T12:24:34.091+0000] {resource_manager.py:367} DEBUG - Successfully flushed media upload queue
+[2025-06-22T12:24:34.091+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T12:24:34.091+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T12:24:34.100+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=flush_langfuse, run_id=manual__2025-06-22T12:22:41.783508+00:00, execution_date=20250622T122241, start_date=20250622T122433, end_date=20250622T122434
+[2025-06-22T12:24:34.141+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T12:24:34.155+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T12:24:34.157+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

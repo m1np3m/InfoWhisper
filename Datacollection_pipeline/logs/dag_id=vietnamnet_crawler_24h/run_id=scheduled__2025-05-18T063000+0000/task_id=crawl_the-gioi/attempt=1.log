@@ -1,0 +1,36 @@
+[2025-05-18T07:22:59.592+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:22:59.633+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T06:30:00+00:00 [queued]>
+[2025-05-18T07:22:59.645+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T06:30:00+00:00 [queued]>
+[2025-05-18T07:22:59.646+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:22:59.664+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-18 06:30:00+00:00
+[2025-05-18T07:22:59.671+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=10366) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:22:59.673+0000] {standard_task_runner.py:63} INFO - Started process 10459 to run task
+[2025-05-18T07:22:59.675+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-18T06:30:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp0o035eea']
+[2025-05-18T07:22:59.678+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask crawl_the-gioi
+[2025-05-18T07:22:59.749+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T06:30:00+00:00 [running]> on host fa0f5fb7e7ff
+[2025-05-18T07:22:59.921+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T06:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T06:30:00+00:00'
+[2025-05-18T07:22:59.923+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:23:00.469+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:23:01.643+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:23:09.248+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 7.48s
+[2025-05-18T07:23:09.811+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-05-18T07:23:09.814+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-18T07:23:09.820+0000] {process_utils.py:132} INFO - Sending 15 to group 10459. PIDs of all processes in the group: [10481, 10574, 10581, 10584, 10616, 10623, 10737, 10961, 10610, 10459]
+[2025-05-18T07:23:09.821+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 10459
+[2025-05-18T07:23:09.823+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-18T07:23:09.919+0000] {logging_mixin.py:188} INFO - [ERROR]... × Error closing context: BrowserContext.close: Target page, context 
+or browser has been closed
+[2025-05-18T07:23:09.967+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:23:10.019+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10459, status='terminated', exitcode=0, started='07:22:58') (10459) terminated with exit code 0
+[2025-05-18T07:23:10.021+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10610, status='terminated', started='07:23:00') (10610) terminated with exit code None
+[2025-05-18T07:23:10.022+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10616, status='terminated', started='07:23:00') (10616) terminated with exit code None
+[2025-05-18T07:23:10.023+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10584, status='terminated', started='07:23:00') (10584) terminated with exit code None
+[2025-05-18T07:23:10.024+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10961, status='terminated', started='07:23:06') (10961) terminated with exit code None
+[2025-05-18T07:23:10.026+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10574, status='terminated', started='07:23:00') (10574) terminated with exit code None
+[2025-05-18T07:23:10.027+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10623, status='terminated', started='07:23:00') (10623) terminated with exit code None
+[2025-05-18T07:23:10.028+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10581, status='terminated', started='07:23:00') (10581) terminated with exit code None
+[2025-05-18T07:23:10.028+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10481, status='terminated', started='07:22:59') (10481) terminated with exit code None
+[2025-05-18T07:23:10.029+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10737, status='terminated', started='07:23:01') (10737) terminated with exit code None

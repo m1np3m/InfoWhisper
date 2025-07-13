@@ -1,0 +1,59 @@
+[2025-05-18T07:26:30.177+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:26:30.197+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-18T07:19:39.916816+00:00 [queued]>
+[2025-05-18T07:26:30.205+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-18T07:19:39.916816+00:00 [queued]>
+[2025-05-18T07:26:30.206+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:26:30.250+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-05-18 07:19:39.916816+00:00
+[2025-05-18T07:26:30.256+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=16456) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:26:30.258+0000] {standard_task_runner.py:63} INFO - Started process 16457 to run task
+[2025-05-18T07:26:30.258+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'manual__2025-05-18T07:19:39.916816+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpl_2r91xe']
+[2025-05-18T07:26:30.260+0000] {standard_task_runner.py:91} INFO - Job 43: Subtask crawl_giao-duc
+[2025-05-18T07:26:30.338+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-18T07:19:39.916816+00:00 [running]> on host fa0f5fb7e7ff
+[2025-05-18T07:26:30.488+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T07:19:39.916816+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-18T07:19:39.916816+00:00'
+[2025-05-18T07:26:30.490+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:26:30.841+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:26:31.507+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:26:34.488+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 2.92s
+[2025-05-18T07:26:34.743+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 0.25s
+[2025-05-18T07:26:34.747+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 3.18s
+[2025-05-18T07:26:35.077+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-05-18T07:26:35.756+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 2 URLs sau xử lý live
+[2025-05-18T07:26:35.757+0000] {crawler.py:255} INFO - Đang crawl 2 bài viết mới từ danh mục giao-duc...
+[2025-05-18T07:26:35.757+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2025-2402327.html
+[2025-05-18T07:26:36.398+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:26:40.001+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 3.48s
+[2025-05-18T07:26:40.302+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 0.30s
+[2025-05-18T07:26:40.304+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/danh-sach-852-hoc-sinh-tieu-bieu-xuat-sac-cua-ha-noi-nam-2
+025-2402327.html     | ✓ | ⏱: 3.78s
+[2025-05-18T07:26:40.840+0000] {crawler.py:262} INFO -     ✓ Danh sách 852 học sinh được tuyên dương tiêu biểu, xuất sắc ...
+
+[2025-05-18T07:26:40.840+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html
+[2025-05-18T07:26:41.865+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:26:46.042+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 4.02s
+[2025-05-18T07:26:46.246+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 0.20s
+[2025-05-18T07:26:46.248+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/tphcm-thi-tuyen-sinh-vao-lop-10-nhu-the-nao-2391198.html  
+| ✓ | ⏱: 4.23s
+[2025-05-18T07:26:46.633+0000] {crawler.py:262} INFO -     ✓ Thành phố đông học sinh thứ 2 cả nước tuyển sinh và thi vào ...
+
+[2025-05-18T07:26:46.633+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 15.79 giây
+[2025-05-18T07:26:46.754+0000] {crawler.py:292} INFO - Đã lưu 2 bài viết vào collection 'giao-duc'
+[2025-05-18T07:26:46.808+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T07:26:46.809+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:26:46.819+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=manual__2025-05-18T07:19:39.916816+00:00, execution_date=20250518T071939, start_date=20250518T072630, end_date=20250518T072646
+[2025-05-18T07:26:46.867+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T07:26:46.904+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T07:26:46.907+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

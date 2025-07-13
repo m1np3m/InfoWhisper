@@ -1,0 +1,30 @@
+[2025-05-16T09:42:43.930+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T09:42:43.963+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.clean_old_articles manual__2025-05-16T09:42:41.531007+00:00 [queued]>
+[2025-05-16T09:42:43.975+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.clean_old_articles manual__2025-05-16T09:42:41.531007+00:00 [queued]>
+[2025-05-16T09:42:43.975+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T09:42:44.000+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_old_articles> on 2025-05-16 09:42:41.531007+00:00
+[2025-05-16T09:42:44.009+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=11609) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T09:42:44.012+0000] {standard_task_runner.py:63} INFO - Started process 11620 to run task
+[2025-05-16T09:42:44.012+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'clean_old_articles', 'manual__2025-05-16T09:42:41.531007+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpno0axz_t']
+[2025-05-16T09:42:44.016+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask clean_old_articles
+[2025-05-16T09:42:44.084+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.clean_old_articles manual__2025-05-16T09:42:41.531007+00:00 [running]> on host 8aef10b8fcb6
+[2025-05-16T09:42:44.230+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='clean_old_articles' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T09:42:41.531007+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T09:42:41.531007+00:00'
+[2025-05-16T09:42:44.232+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T09:42:44.510+0000] {database_cleaner.py:33} INFO - Đã kết nối MongoDB: News
+[2025-05-16T09:42:44.511+0000] {database_cleaner.py:102} INFO - Xóa các bài viết trước: 2025-04-15T16:42:44.511197+07:00
+[2025-05-16T09:42:45.879+0000] {database_cleaner.py:125} INFO - Collection 'cong-nghe': 0 bài bị xóa
+[2025-05-16T09:42:46.242+0000] {database_cleaner.py:125} INFO - Collection 'the-gioi': 1 bài bị xóa
+[2025-05-16T09:42:46.787+0000] {database_cleaner.py:125} INFO - Collection 'chinh-tri': 1 bài bị xóa
+[2025-05-16T09:42:47.202+0000] {database_cleaner.py:125} INFO - Collection 'phap-luat': 1 bài bị xóa
+[2025-05-16T09:42:47.570+0000] {database_cleaner.py:125} INFO - Collection 'doi-song': 0 bài bị xóa
+[2025-05-16T09:42:48.055+0000] {database_cleaner.py:125} INFO - Collection 'giao-duc': 1 bài bị xóa
+[2025-05-16T09:42:48.130+0000] {database_cleaner.py:42} INFO - Đã đóng kết nối MongoDB
+[2025-05-16T09:42:48.132+0000] {database_cleaner.py:142} INFO - Đã xóa tổng cộng 4 bài, còn lại 1939
+[2025-05-16T09:42:48.134+0000] {python.py:237} INFO - Done. Returned value was: {'cong-nghe': {'total': 185, 'deleted': 0, 'remaining': 185}, 'the-gioi': {'total': 413, 'deleted': 1, 'remaining': 412}, 'chinh-tri': {'total': 523, 'deleted': 1, 'remaining': 522}, 'phap-luat': {'total': 223, 'deleted': 1, 'remaining': 222}, 'doi-song': {'total': 289, 'deleted': 0, 'remaining': 289}, 'giao-duc': {'total': 310, 'deleted': 1, 'remaining': 309}}
+[2025-05-16T09:42:48.135+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T09:42:48.200+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=clean_old_articles, run_id=manual__2025-05-16T09:42:41.531007+00:00, execution_date=20250516T094241, start_date=20250516T094243, end_date=20250516T094248
+[2025-05-16T09:42:48.280+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T09:42:48.320+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T09:42:48.324+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,32 @@
+[2025-05-18T09:30:38.878+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T09:30:38.927+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T09:00:00+00:00 [queued]>
+[2025-05-18T09:30:38.947+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T09:00:00+00:00 [queued]>
+[2025-05-18T09:30:38.948+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T09:30:38.985+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-18 09:00:00+00:00
+[2025-05-18T09:30:38.995+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T09:30:38.997+0000] {standard_task_runner.py:63} INFO - Started process 3360 to run task
+[2025-05-18T09:30:38.998+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-18T09:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpcwiwi316']
+[2025-05-18T09:30:39.002+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask crawl_the-gioi
+[2025-05-18T09:30:39.080+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T09:00:00+00:00 [running]> on host 4a3ee431a987
+[2025-05-18T09:30:39.316+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T09:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T09:00:00+00:00'
+[2025-05-18T09:30:39.319+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T09:30:39.792+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T09:30:41.338+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T09:30:45.144+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 3.63s
+[2025-05-18T09:30:45.365+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 0.22s
+[2025-05-18T09:30:45.368+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 3.85s
+[2025-05-18T09:30:45.641+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-18T09:30:46.225+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs sau xử lý live
+[2025-05-18T09:30:46.226+0000] {crawler.py:252} INFO - Không có bài viết mới nào trong danh mục the-gioi cần crawl.
+[2025-05-18T09:30:46.294+0000] {crawler.py:294} INFO - Không có bài viết để lưu vào collection 'the-gioi'
+[2025-05-18T09:30:46.356+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T09:30:46.357+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T09:30:46.365+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-18T09:00:00+00:00, execution_date=20250518T090000, start_date=20250518T093038, end_date=20250518T093046
+[2025-05-18T09:30:46.391+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T09:30:46.414+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T09:30:46.416+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

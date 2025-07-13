@@ -1,0 +1,674 @@
+[2025-07-12T20:57:37.956+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/dags.py
+[2025-07-12T20:57:37.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T20:57:37.960+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:37.960+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T20:57:43.205+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:43.205+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T20:57:47.661+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:47.660+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T20:57:47.662+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:47.661+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T20:57:47.664+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:47.663+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T20:57:47.665+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:47.664+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T20:57:47.702+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T20:57:48.205+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:48.204+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T20:57:48.240+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:48.240+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 20:40:00+00:00, run_after=2025-07-12 20:50:00+00:00
+[2025-07-12T20:57:48.248+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:48.247+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T20:57:48.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 10.619 seconds
+[2025-07-12T20:57:57.621+0000] {processor.py:161} INFO - Started process (PID=110) to work on /opt/airflow/dags/dags.py
+[2025-07-12T20:57:57.624+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T20:57:57.628+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:57:57.628+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T20:58:00.228+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:00.228+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T20:58:02.679+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.669+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T20:58:02.692+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.680+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T20:58:02.696+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.695+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T20:58:02.698+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.695+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T20:58:02.753+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T20:58:02.842+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.840+0000] {taskinstance.py:2907} ERROR - {'DAG Id': 'deepai_crawler_10min', 'Task Id': 'crawl_hardware', 'Run Id': 'scheduled__2025-07-10T03:50:00+00:00', 'Hostname': '13e6c13b5a13', 'External Executor Id': '679b5b33-baec-460f-8068-3ed0285276e6'}
+[2025-07-12T20:58:02.931+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.931+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-07-10T03:50:00+00:00, execution_date=20250710T035000, start_date=20250711T075506, end_date=20250712T205802
+[2025-07-12T20:58:02.963+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-10T03:50:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-07-12T20:58:02.972+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.968+0000] {taskinstance.py:2907} ERROR - {'DAG Id': 'deepai_crawler_10min', 'Task Id': 'crawl_hardware', 'Run Id': 'scheduled__2025-07-11T07:40:00+00:00', 'Hostname': '13e6c13b5a13', 'External Executor Id': '44b91f7f-04da-4527-9d41-448aff7bc516'}
+[2025-07-12T20:58:02.996+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:02.996+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-07-11T07:40:00+00:00, execution_date=20250711T074000, start_date=20250711T075506, end_date=20250712T205802
+[2025-07-12T20:58:03.002+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-11T07:40:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-07-12T20:58:03.008+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:03.007+0000] {taskinstance.py:2907} ERROR - {'DAG Id': 'deepai_crawler_10min', 'Task Id': 'crawl_hardware', 'Run Id': 'scheduled__2025-07-10T03:50:00+00:00', 'Hostname': '13e6c13b5a13', 'External Executor Id': '679b5b33-baec-460f-8068-3ed0285276e6'}
+[2025-07-12T20:58:03.024+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:03.024+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-07-10T03:50:00+00:00, execution_date=20250710T035000, start_date=20250711T075506, end_date=20250712T205803
+[2025-07-12T20:58:03.032+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-10T03:50:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-07-12T20:58:03.043+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:03.042+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T20:58:03.082+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:03.082+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 20:50:00+00:00, run_after=2025-07-12 21:00:00+00:00
+[2025-07-12T20:58:03.101+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:03.101+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T20:58:03.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.542 seconds
+[2025-07-12T20:58:33.536+0000] {processor.py:161} INFO - Started process (PID=123) to work on /opt/airflow/dags/dags.py
+[2025-07-12T20:58:33.537+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T20:58:33.540+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:33.540+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T20:58:38.404+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:38.403+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T20:58:41.163+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.162+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T20:58:41.164+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.164+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T20:58:41.165+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.165+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T20:58:41.166+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.165+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T20:58:41.194+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T20:58:41.247+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.247+0000] {taskinstance.py:2907} ERROR - {'DAG Id': 'deepai_crawler_10min', 'Task Id': 'crawl_hardware', 'Run Id': 'scheduled__2025-07-11T07:40:00+00:00', 'Hostname': '13e6c13b5a13', 'External Executor Id': '44b91f7f-04da-4527-9d41-448aff7bc516'}
+[2025-07-12T20:58:41.274+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.274+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-07-11T07:40:00+00:00, execution_date=20250711T074000, start_date=20250711T075506, end_date=20250712T205841
+[2025-07-12T20:58:41.289+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-11T07:40:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-07-12T20:58:41.368+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.367+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T20:58:41.719+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.718+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 20:50:00+00:00, run_after=2025-07-12 21:00:00+00:00
+[2025-07-12T20:58:41.725+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:58:41.725+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T20:58:41.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 8.273 seconds
+[2025-07-12T20:59:11.837+0000] {processor.py:161} INFO - Started process (PID=144) to work on /opt/airflow/dags/dags.py
+[2025-07-12T20:59:11.839+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T20:59:11.842+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:11.841+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T20:59:14.960+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:14.960+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T20:59:16.609+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.608+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T20:59:16.610+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.610+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T20:59:16.612+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.611+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T20:59:16.613+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.612+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T20:59:16.635+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T20:59:16.684+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.683+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T20:59:16.732+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.731+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 20:50:00+00:00, run_after=2025-07-12 21:00:00+00:00
+[2025-07-12T20:59:16.739+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:16.739+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T20:59:16.769+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.939 seconds
+[2025-07-12T20:59:47.155+0000] {processor.py:161} INFO - Started process (PID=157) to work on /opt/airflow/dags/dags.py
+[2025-07-12T20:59:47.157+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T20:59:47.163+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:47.161+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T20:59:51.077+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:51.077+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T20:59:52.862+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:52.861+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T20:59:52.864+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:52.863+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T20:59:52.866+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:52.865+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T20:59:52.867+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:52.866+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T20:59:52.911+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T20:59:53.021+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:53.020+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T20:59:53.133+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:53.133+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 20:50:00+00:00, run_after=2025-07-12 21:00:00+00:00
+[2025-07-12T20:59:53.535+0000] {logging_mixin.py:188} INFO - [2025-07-12T20:59:53.534+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T20:59:53.573+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.434 seconds
+[2025-07-12T21:00:24.398+0000] {processor.py:161} INFO - Started process (PID=170) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:00:24.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:00:24.435+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:24.426+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:00:30.013+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:30.013+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:00:31.681+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:31.680+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:00:31.682+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:31.681+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:00:31.684+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:31.683+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:00:31.684+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:31.683+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:00:31.701+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:00:31.738+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:31.737+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:00:32.002+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:32.002+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:00:32.013+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:00:32.013+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:00:32.311+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 7.984 seconds
+[2025-07-12T21:01:02.639+0000] {processor.py:161} INFO - Started process (PID=183) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:01:02.640+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:01:02.642+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:02.642+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:01:06.054+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:06.054+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:01:07.119+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.119+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:01:07.120+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.120+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:01:07.122+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.121+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:01:07.123+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.122+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:01:07.142+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:01:07.348+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.347+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:01:07.376+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.376+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:01:07.383+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:07.382+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:01:07.373+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.774 seconds
+[2025-07-12T21:01:37.603+0000] {processor.py:161} INFO - Started process (PID=202) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:01:37.608+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:01:37.611+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:37.611+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:01:40.224+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:40.224+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:01:42.094+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.092+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:01:42.100+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.098+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:01:42.102+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.102+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:01:42.104+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.102+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:01:42.141+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:01:42.182+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.181+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:01:42.218+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.218+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:01:42.235+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:01:42.235+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:01:42.326+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.732 seconds
+[2025-07-12T21:02:12.524+0000] {processor.py:161} INFO - Started process (PID=215) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:02:12.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:02:12.528+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:12.527+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:02:14.674+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:14.673+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:02:16.013+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.013+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:02:16.015+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.014+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:02:16.018+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.017+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:02:16.019+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.017+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:02:16.038+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:02:16.078+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.077+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:02:16.111+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.111+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:02:16.119+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:16.119+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:02:16.150+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.632 seconds
+[2025-07-12T21:02:46.536+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:02:46.538+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:02:46.542+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:46.541+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:02:49.263+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:49.262+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:02:50.542+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.541+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:02:50.543+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.543+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:02:50.545+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.544+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:02:50.545+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.544+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:02:50.564+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:02:50.622+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.621+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:02:50.651+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.651+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:02:50.658+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:02:50.658+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:02:50.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.164 seconds
+[2025-07-12T21:03:20.969+0000] {processor.py:161} INFO - Started process (PID=241) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:03:20.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:03:20.975+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:20.974+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:03:26.010+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:26.009+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:03:29.073+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.072+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:03:29.075+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.074+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:03:29.078+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.077+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:03:29.080+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.079+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:03:29.113+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:03:29.171+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.170+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:03:29.214+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.213+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:03:29.230+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:29.229+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:03:29.273+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 8.314 seconds
+[2025-07-12T21:03:59.492+0000] {processor.py:161} INFO - Started process (PID=254) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:03:59.495+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:03:59.502+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:03:59.500+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:04:03.578+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:03.576+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:04:06.438+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:06.437+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:04:06.445+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:06.439+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:04:06.448+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:06.447+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:04:06.459+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:06.447+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:04:07.073+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:04:07.215+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:07.214+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:04:07.335+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:07.330+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:04:07.350+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:07.349+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:04:07.402+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 7.962 seconds
+[2025-07-12T21:04:38.229+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:04:38.237+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:04:38.246+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:38.245+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:04:45.783+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:45.782+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:04:48.149+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.148+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:04:48.150+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.150+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:04:48.153+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.152+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:04:48.154+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.152+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:04:48.193+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:04:48.268+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.259+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:04:48.345+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.345+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:04:48.365+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:04:48.364+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:04:48.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 10.307 seconds
+[2025-07-12T21:05:19.058+0000] {processor.py:161} INFO - Started process (PID=286) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:05:19.064+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:05:19.068+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:19.067+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:05:22.175+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:22.175+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:05:23.671+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.670+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:05:23.672+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.672+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:05:23.674+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.674+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:05:23.675+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.674+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:05:23.696+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:05:23.744+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.743+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:05:23.778+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.777+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:05:23.785+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:23.785+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:05:23.815+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.768 seconds
+[2025-07-12T21:05:54.044+0000] {processor.py:161} INFO - Started process (PID=299) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:05:54.045+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:05:54.048+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:54.047+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:05:56.019+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:56.018+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:05:57.015+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.014+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:05:57.016+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.015+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:05:57.017+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.017+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:05:57.018+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.017+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:05:57.033+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:05:57.062+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.061+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:05:57.085+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.085+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:05:57.092+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:05:57.091+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:05:57.137+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.100 seconds
+[2025-07-12T21:06:27.214+0000] {processor.py:161} INFO - Started process (PID=312) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:06:27.215+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:06:27.217+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:27.217+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:06:29.336+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:29.336+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:06:30.264+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.264+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:06:30.265+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.265+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:06:30.267+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.267+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:06:30.268+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.267+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:06:30.465+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:06:30.504+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.503+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:06:30.535+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.535+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:06:30.542+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:06:30.541+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:06:30.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.362 seconds
+[2025-07-12T21:07:00.756+0000] {processor.py:161} INFO - Started process (PID=325) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:07:00.758+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:07:00.761+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:00.760+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:07:02.536+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:02.536+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:07:03.422+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.421+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:07:03.422+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.421+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:07:03.423+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.423+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:07:03.424+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.424+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:07:03.436+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:07:03.464+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.464+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:07:03.486+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.486+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:07:03.493+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:03.493+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:07:03.519+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 2.771 seconds
+[2025-07-12T21:07:33.634+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:07:33.636+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:07:33.639+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:33.638+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:07:35.754+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:35.754+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:07:37.078+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.078+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:07:37.079+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.079+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:07:37.080+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.080+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:07:37.081+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.081+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:07:37.099+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:07:37.114+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.113+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:07:37.144+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.144+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:07:37.152+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:07:37.151+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:07:37.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.572 seconds
+[2025-07-12T21:08:07.343+0000] {processor.py:161} INFO - Started process (PID=357) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:08:07.344+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:08:07.346+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:07.346+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:08:09.205+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:09.205+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:08:10.234+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.234+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:08:10.235+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.235+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:08:10.236+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.236+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:08:10.237+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.236+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:08:10.253+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:08:10.284+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.283+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:08:10.310+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.309+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:08:10.316+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:10.316+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:08:10.338+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.000 seconds
+[2025-07-12T21:08:40.530+0000] {processor.py:161} INFO - Started process (PID=370) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:08:40.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:08:40.535+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:40.534+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:08:43.159+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:43.159+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:08:44.330+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.329+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:08:44.332+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.331+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:08:44.333+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.333+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:08:44.334+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.333+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:08:44.573+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:08:44.611+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.610+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:08:44.654+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.653+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:08:44.666+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:08:44.665+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:08:44.699+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.177 seconds
+[2025-07-12T21:09:14.911+0000] {processor.py:161} INFO - Started process (PID=383) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:09:14.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:09:14.915+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:14.914+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:09:17.102+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:17.101+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:09:18.173+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.172+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:09:18.174+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.173+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:09:18.176+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.175+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:09:18.177+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.176+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:09:18.199+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:09:18.234+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.233+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:09:18.260+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.260+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:09:18.268+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:18.268+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:09:18.326+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.424 seconds
+[2025-07-12T21:09:48.512+0000] {processor.py:161} INFO - Started process (PID=396) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:09:48.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:09:48.515+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:48.515+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:09:51.771+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:51.771+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:09:52.687+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.687+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:09:52.688+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.688+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:09:52.689+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.689+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:09:52.690+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.689+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:09:52.704+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:09:52.734+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.733+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:09:52.758+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.758+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:00:00+00:00, run_after=2025-07-12 21:10:00+00:00
+[2025-07-12T21:09:52.764+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:09:52.764+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:09:52.898+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.394 seconds
+[2025-07-12T21:10:25.109+0000] {processor.py:161} INFO - Started process (PID=409) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:10:25.210+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:10:25.623+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:25.589+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:10:45.304+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:45.304+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:10:49.442+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.442+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:10:49.445+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.445+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:10:49.448+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.447+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:10:49.449+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.447+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:10:49.483+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:10:49.589+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.587+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:10:49.738+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.737+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:10:49.791+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:10:49.790+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:10:50.184+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 25.696 seconds
+[2025-07-12T21:11:20.625+0000] {processor.py:161} INFO - Started process (PID=428) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:11:20.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:11:20.628+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:20.627+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:11:43.621+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:43.621+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:11:47.362+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.362+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:11:47.363+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.363+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:11:47.364+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.364+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:11:47.365+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.365+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:11:47.385+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:11:47.421+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.420+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:11:47.476+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.476+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:11:47.483+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:11:47.483+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:11:47.597+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 26.999 seconds
+[2025-07-12T21:12:17.826+0000] {processor.py:161} INFO - Started process (PID=447) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:12:17.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:12:17.836+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:17.835+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:12:22.381+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:22.380+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:12:25.128+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.127+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:12:25.129+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.128+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:12:25.132+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.131+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:12:25.134+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.132+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:12:25.192+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:12:25.280+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.279+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:12:25.359+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.359+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:12:25.374+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:25.373+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:12:25.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 7.759 seconds
+[2025-07-12T21:12:56.034+0000] {processor.py:161} INFO - Started process (PID=460) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:12:56.036+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:12:56.040+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:12:56.039+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:13:01.299+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:01.299+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:13:04.243+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.242+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:13:04.245+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.244+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:13:04.252+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.249+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:13:04.255+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.250+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:13:04.292+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:13:04.400+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.399+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:13:04.479+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.478+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:13:04.505+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:04.504+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:13:04.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 8.565 seconds
+[2025-07-12T21:13:35.069+0000] {processor.py:161} INFO - Started process (PID=473) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:13:35.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:13:35.098+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:35.072+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:13:42.781+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:42.780+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:13:45.829+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:45.828+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:13:45.830+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:45.829+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:13:45.832+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:45.831+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:13:45.832+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:45.831+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:13:45.929+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:13:45.986+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:45.985+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:13:46.043+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:46.042+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:13:46.056+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:13:46.055+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:13:46.162+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 11.284 seconds
+[2025-07-12T21:14:16.373+0000] {processor.py:161} INFO - Started process (PID=492) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:14:16.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:14:16.391+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:16.376+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:14:21.832+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:21.832+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:14:22.615+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.614+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:14:22.616+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.615+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:14:22.617+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.616+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:14:22.617+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.617+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:14:22.774+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:14:22.804+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.804+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:14:22.828+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.828+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:14:22.834+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:22.833+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:14:22.998+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.632 seconds
+[2025-07-12T21:14:53.263+0000] {processor.py:161} INFO - Started process (PID=505) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:14:53.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:14:53.305+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:53.305+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:14:57.834+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:57.834+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:14:58.907+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.906+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:14:58.908+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.907+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:14:58.909+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.909+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:14:58.910+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.909+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:14:58.925+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:14:58.959+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.959+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:14:58.986+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.986+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:14:58.993+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:14:58.992+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:14:59.146+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.913 seconds
+[2025-07-12T21:15:29.482+0000] {processor.py:161} INFO - Started process (PID=518) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:15:29.484+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:15:29.492+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:29.488+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:15:34.128+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:34.128+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:15:35.291+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.290+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:15:35.292+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.291+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:15:35.293+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.293+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:15:35.294+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.293+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:15:35.313+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:15:35.354+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.353+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:15:35.383+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.383+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:15:35.390+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:15:35.389+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:15:35.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.132 seconds
+[2025-07-12T21:16:05.759+0000] {processor.py:161} INFO - Started process (PID=531) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:16:05.762+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:16:05.770+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:05.766+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:16:10.625+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:10.625+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:16:11.886+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.885+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:16:11.887+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.886+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:16:11.888+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.888+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:16:11.889+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.888+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:16:11.905+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:16:11.938+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.938+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:16:11.965+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.964+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:16:11.972+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:11.972+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:16:12.013+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.290 seconds
+[2025-07-12T21:16:42.221+0000] {processor.py:161} INFO - Started process (PID=550) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:16:42.223+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:16:42.226+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:42.225+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:16:55.924+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:16:55.924+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:17:00.401+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.400+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:17:00.402+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.402+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:17:00.404+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.404+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:17:00.405+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.405+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:17:00.716+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:17:00.919+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.918+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:17:00.960+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.959+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:17:00.968+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:00.967+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:17:01.031+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 18.822 seconds
+[2025-07-12T21:17:31.117+0000] {processor.py:161} INFO - Started process (PID=563) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:17:31.118+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:17:31.120+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:31.119+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:17:38.567+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:38.567+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:17:53.799+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:53.798+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:17:53.800+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:53.799+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:17:53.801+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:53.800+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:17:53.802+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:53.801+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:17:53.996+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:17:54.028+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:54.028+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:17:54.055+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:54.055+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:17:54.063+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:17:54.062+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:17:54.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 23.146 seconds
+[2025-07-12T21:18:24.513+0000] {processor.py:161} INFO - Started process (PID=581) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:18:24.514+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:18:24.869+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:24.868+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:18:36.585+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:36.585+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:18:39.524+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.524+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:18:39.526+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.525+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:18:39.527+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.526+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:18:39.528+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.527+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:18:39.551+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:18:39.623+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.622+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:18:39.648+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.647+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:18:39.654+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:18:39.653+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:18:39.928+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 15.458 seconds
+[2025-07-12T21:19:10.132+0000] {processor.py:161} INFO - Started process (PID=594) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:19:10.133+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:19:10.135+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:10.135+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:19:12.460+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:12.457+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:19:15.058+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.058+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:19:15.096+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.059+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:19:15.097+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.097+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:19:15.098+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.097+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:19:15.112+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:19:15.150+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.149+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:19:15.173+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.173+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:19:15.179+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:15.178+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:19:15.433+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.308 seconds
+[2025-07-12T21:19:45.595+0000] {processor.py:161} INFO - Started process (PID=607) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:19:45.595+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:19:45.597+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:45.597+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:19:58.607+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:58.606+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:19:59.828+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.827+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:19:59.829+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.829+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:19:59.830+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.829+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:19:59.831+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.830+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:19:59.862+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:19:59.906+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.906+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:19:59.933+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.933+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:10:00+00:00, run_after=2025-07-12 21:20:00+00:00
+[2025-07-12T21:19:59.939+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:19:59.939+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:19:59.976+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 14.387 seconds
+[2025-07-12T21:20:30.956+0000] {processor.py:161} INFO - Started process (PID=626) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:20:30.958+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:20:30.968+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:30.967+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:20:36.033+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:36.033+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:20:37.200+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.200+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:20:37.201+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.201+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:20:37.202+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.202+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:20:37.203+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.202+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:20:37.218+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:20:37.250+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.249+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:20:37.273+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.273+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:20:37.280+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:20:37.279+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:20:37.310+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.380 seconds
+[2025-07-12T21:21:07.520+0000] {processor.py:161} INFO - Started process (PID=639) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:21:07.521+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:21:07.524+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:07.523+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:21:11.297+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:11.297+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:21:12.761+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.760+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:21:12.762+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.761+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:21:12.763+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.763+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:21:12.764+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.763+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:21:12.779+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:21:12.822+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.821+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:21:12.850+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.850+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:21:12.858+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:12.858+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:21:12.886+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.373 seconds
+[2025-07-12T21:21:43.179+0000] {processor.py:161} INFO - Started process (PID=652) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:21:43.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:21:43.183+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:43.183+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:21:45.916+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:45.915+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:21:47.465+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.464+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:21:47.466+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.466+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:21:47.468+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.468+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:21:47.469+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.468+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:21:47.488+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:21:47.530+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.528+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:21:47.563+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.562+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:21:47.571+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:21:47.570+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:21:48.031+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.859 seconds
+[2025-07-12T21:22:18.250+0000] {processor.py:161} INFO - Started process (PID=665) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:22:18.252+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:22:18.257+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:18.256+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:22:22.421+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:22.420+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:22:25.248+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.247+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:22:25.250+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.249+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:22:25.253+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.252+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:22:25.255+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.252+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:22:25.300+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:22:25.378+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.376+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:22:25.465+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.465+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:22:25.486+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:25.485+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:22:25.597+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 7.360 seconds
+[2025-07-12T21:22:56.357+0000] {processor.py:161} INFO - Started process (PID=678) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:22:56.358+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:22:56.361+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:56.360+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:22:58.327+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:58.327+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:22:59.480+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.479+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:22:59.481+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.480+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:22:59.482+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.481+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:22:59.482+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.482+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:22:59.498+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:22:59.536+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.535+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:22:59.567+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.567+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:22:59.573+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:22:59.573+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:22:59.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.614 seconds
+[2025-07-12T21:23:30.078+0000] {processor.py:161} INFO - Started process (PID=697) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:23:30.079+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:23:30.081+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:30.080+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:23:32.110+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:32.109+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:23:33.249+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.249+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:23:33.668+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.250+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:23:33.669+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.669+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:23:33.671+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.669+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:23:33.689+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:23:33.736+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.734+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:23:33.779+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.779+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:23:33.788+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:33.788+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:23:34.668+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:23:34.667+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:23:35.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.148 seconds
+[2025-07-12T21:24:05.461+0000] {processor.py:161} INFO - Started process (PID=710) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:24:05.463+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:24:05.469+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:05.468+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:24:07.707+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:07.706+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:24:08.998+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:08.998+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:24:09.000+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:08.999+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:24:09.002+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:09.001+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:24:09.004+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:09.002+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:24:09.029+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:24:09.065+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:09.065+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:24:09.094+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:09.094+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:24:09.103+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:09.103+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:24:09.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 3.835 seconds
+[2025-07-12T21:24:39.564+0000] {processor.py:161} INFO - Started process (PID=724) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:24:39.566+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:24:39.612+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:39.611+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:24:46.484+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:46.484+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:24:48.699+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:48.698+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:24:48.701+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:48.700+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:24:48.703+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:48.703+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:24:48.705+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:48.704+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:24:48.738+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:24:48.796+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:48.794+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:24:49.235+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:49.234+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:24:49.246+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:49.245+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:24:49.701+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:49.701+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:24:50.702+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:50.702+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:24:52.052+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:52.051+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:24:53.338+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:24:53.337+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:24:53.530+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 13.975 seconds
+[2025-07-12T21:25:23.900+0000] {processor.py:161} INFO - Started process (PID=737) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:25:23.902+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:25:23.904+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:23.904+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:25:26.544+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:26.544+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:25:29.296+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.295+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:25:29.298+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.297+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:25:29.300+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.299+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:25:29.301+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.300+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:25:29.364+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:25:29.437+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.435+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:25:29.502+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.502+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:25:29.519+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:29.518+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:25:29.578+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.685 seconds
+[2025-07-12T21:25:59.970+0000] {processor.py:161} INFO - Started process (PID=756) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:25:59.986+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:25:59.990+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:25:59.989+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:26:04.701+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:04.700+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:26:06.496+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.496+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:26:06.497+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.497+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:26:06.498+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.498+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:26:06.499+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.498+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:26:06.514+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:26:06.547+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.546+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:26:06.572+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.572+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:26:06.579+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:06.578+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:26:07.482+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:07.481+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:26:08.180+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 8.247 seconds
+[2025-07-12T21:26:38.544+0000] {processor.py:161} INFO - Started process (PID=769) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:26:38.545+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:26:38.548+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:38.547+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:26:41.910+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:41.910+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:26:43.755+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.754+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:26:43.760+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.755+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:26:43.761+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.761+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:26:43.762+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.762+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:26:43.800+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:26:43.852+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.851+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:26:43.882+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.882+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:20:00+00:00, run_after=2025-07-12 21:30:00+00:00
+[2025-07-12T21:26:43.892+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:26:43.892+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:26:43.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.392 seconds
+[2025-07-12T21:27:14.128+0000] {processor.py:161} INFO - Started process (PID=782) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:27:14.130+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:27:14.133+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:27:14.132+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:28:34.350+0000] {processor.py:161} INFO - Started process (PID=789) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:28:34.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:28:34.355+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:28:34.354+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:47:48.524+0000] {processor.py:161} INFO - Started process (PID=97) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:47:48.526+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:47:48.530+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:48.529+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:47:52.008+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:52.007+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:47:54.121+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.120+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:47:54.122+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.121+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:47:54.123+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.122+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:47:54.123+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.123+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:47:54.147+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:47:54.188+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.187+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:47:54.212+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.212+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:40:00+00:00, run_after=2025-07-12 21:50:00+00:00
+[2025-07-12T21:47:54.221+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:47:54.221+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:47:54.242+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 5.725 seconds
+[2025-07-12T21:48:24.371+0000] {processor.py:161} INFO - Started process (PID=116) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:48:24.375+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:48:24.381+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:24.380+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:48:27.346+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:27.344+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:48:29.007+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.007+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:48:29.008+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.008+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:48:29.010+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.009+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:48:29.011+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.010+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:48:29.035+0000] {processor.py:840} INFO - DAG(s) 'deepai_crawler_10min', 'deepai_monthly_insights' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:48:29.081+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.081+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:48:29.119+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.119+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:40:00+00:00, run_after=2025-07-12 21:50:00+00:00
+[2025-07-12T21:48:29.128+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:29.128+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:48:29.153+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.792 seconds
+[2025-07-12T21:48:59.694+0000] {processor.py:161} INFO - Started process (PID=137) to work on /opt/airflow/dags/dags.py
+[2025-07-12T21:48:59.699+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-12T21:48:59.704+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:48:59.703+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-12T21:49:02.872+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:02.872+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-12T21:49:03.811+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.811+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-12T21:49:03.812+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.812+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-12T21:49:03.814+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.813+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-12T21:49:03.814+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.814+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-12T21:49:03.828+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-12T21:49:03.857+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.856+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-12T21:49:03.890+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.889+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-12 21:40:00+00:00, run_after=2025-07-12 21:50:00+00:00
+[2025-07-12T21:49:03.898+0000] {logging_mixin.py:188} INFO - [2025-07-12T21:49:03.898+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-12T21:49:04.048+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 4.370 seconds

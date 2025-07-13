@@ -1,0 +1,94 @@
+[2025-05-03T15:17:08.676+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:17:08.695+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_doi-song manual__2025-05-03T15:15:13.250242+00:00 [queued]>
+[2025-05-03T15:17:08.703+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_doi-song manual__2025-05-03T15:15:13.250242+00:00 [queued]>
+[2025-05-03T15:17:08.703+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:17:08.716+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-03 15:15:13.250242+00:00
+[2025-05-03T15:17:08.721+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3590) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:17:08.723+0000] {standard_task_runner.py:63} INFO - Started process 3591 to run task
+[2025-05-03T15:17:08.723+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_doi-song', 'manual__2025-05-03T15:15:13.250242+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpaky3zfqq']
+[2025-05-03T15:17:08.725+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask crawl_doi-song
+[2025-05-03T15:17:08.764+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_doi-song manual__2025-05-03T15:15:13.250242+00:00 [running]> on host fdbcedb99356
+[2025-05-03T15:17:08.830+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-03T15:15:13.250242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-03T15:15:13.250242+00:00'
+[2025-05-03T15:17:08.831+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:17:09.343+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:12.209+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/doi-song                                                                       | 
+[2025-05-03T15:17:12.210+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:12.211+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.81s
+[2025-05-03T15:17:12.476+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/doi-song                                                                       | 
+[2025-05-03T15:17:12.477+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:12.477+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-03T15:17:12.479+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/doi-song                                                                       | 
+[2025-05-03T15:17:12.479+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:12.480+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.07s
+[2025-05-03T15:17:12.593+0000] {logging_mixin.py:188} INFO - Tìm thấy 64 link bài viết
+[2025-05-03T15:17:12.784+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục doi-song...
+[2025-05-03T15:17:12.785+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/nguoi-dan-ong-tu-tay-dot-nha-2-lan-trong-1-dem-vi-ly-do-ky-quac-2397259.html
+[2025-05-03T15:17:13.313+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:16.330+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguoi-dan-ong-tu-tay-dot-nha-2-lan-trong-1-dem-vi-ly-do-ky-quac-2397259.html   | 
+[2025-05-03T15:17:16.331+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:16.332+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.95s
+[2025-05-03T15:17:16.515+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguoi-dan-ong-tu-tay-dot-nha-2-lan-trong-1-dem-vi-ly-do-ky-quac-2397259.html   | 
+[2025-05-03T15:17:16.516+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:16.516+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-03T15:17:16.517+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguoi-dan-ong-tu-tay-dot-nha-2-lan-trong-1-dem-vi-ly-do-ky-quac-2397259.html   | 
+[2025-05-03T15:17:16.518+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:16.519+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.14s
+[2025-05-03T15:17:16.893+0000] {logging_mixin.py:188} INFO -     ✓ Người đàn ông tự tay đốt nhà 2 lần trong 1 đêm vì lý do kỳ q...
+[2025-05-03T15:17:16.894+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/bi-ban-cu-doi-no-quy-tu-thien-chuyen-tien-cho-be-khac-me-be-bap-noi-gi-2377156.html
+[2025-05-03T15:17:17.481+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:20.592+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bi-ban-cu-doi-no-quy-tu-th...n-tien-cho-be-khac-me-be-bap-noi-gi-2377156.html  | 
+[2025-05-03T15:17:20.594+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:20.594+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.05s
+[2025-05-03T15:17:20.959+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bi-ban-cu-doi-no-quy-tu-th...n-tien-cho-be-khac-me-be-bap-noi-gi-2377156.html  | 
+[2025-05-03T15:17:20.960+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:20.961+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.36s
+[2025-05-03T15:17:20.962+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bi-ban-cu-doi-no-quy-tu-th...n-tien-cho-be-khac-me-be-bap-noi-gi-2377156.html  | 
+[2025-05-03T15:17:20.962+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:20.963+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.42s
+[2025-05-03T15:17:21.337+0000] {logging_mixin.py:188} INFO -     ✓ Bị đồng nghiệp cũ đòi nợ, quỹ từ thiện chuyển tiền cho bé kh...
+[2025-05-03T15:17:21.338+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/co-gai-bac-giang-lai-xe-tai-may-xuc-dieu-luyen-khien-nhieu-nguoi-tram-tro-2389378.html
+[2025-05-03T15:17:21.892+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:25.455+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/co-gai-bac-giang-lai-xe-ta...eu-luyen-khien-nhieu-nguoi-tram-tro-2389378.html  | 
+[2025-05-03T15:17:25.456+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:25.456+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.50s
+[2025-05-03T15:17:25.683+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/co-gai-bac-giang-lai-xe-ta...eu-luyen-khien-nhieu-nguoi-tram-tro-2389378.html  | 
+[2025-05-03T15:17:25.684+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:25.685+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-03T15:17:25.686+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/co-gai-bac-giang-lai-xe-ta...eu-luyen-khien-nhieu-nguoi-tram-tro-2389378.html  | 
+[2025-05-03T15:17:25.687+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:25.688+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.73s
+[2025-05-03T15:17:26.146+0000] {logging_mixin.py:188} INFO -     ✓ Cô gái Bắc Giang lái xe tải, máy xúc điêu luyện khiến nhiều ...
+[2025-05-03T15:17:26.146+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-cho-muon-em-chong-dung-ngoi-khong-yen-2397067.html#comment
+[2025-05-03T15:17:26.882+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:30.171+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-c...m-chong-dung-ngoi-khong-yen-2397067.html#comment  | 
+[2025-05-03T15:17:30.172+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:30.173+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.21s
+[2025-05-03T15:17:30.356+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-c...m-chong-dung-ngoi-khong-yen-2397067.html#comment  | 
+[2025-05-03T15:17:30.357+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:30.358+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-03T15:17:30.359+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-c...m-chong-dung-ngoi-khong-yen-2397067.html#comment  | 
+[2025-05-03T15:17:30.359+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:30.360+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.40s
+[2025-05-03T15:17:30.743+0000] {logging_mixin.py:188} INFO -     ✓ Chị dâu bất ngờ đòi vàng cho mượn, em chồng đứng ngồi không ...
+[2025-05-03T15:17:30.744+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/tai-xe-cuoi-tit-mat-khi-thay-me-don-than-bam-nut-tai-ban-muon-hen-ho-2396522.html
+[2025-05-03T15:17:31.262+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:17:34.347+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tai-xe-cuoi-tit-mat-khi-th...on-than-bam-nut-tai-ban-muon-hen-ho-2396522.html  | 
+[2025-05-03T15:17:34.348+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:34.349+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-03T15:17:34.563+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tai-xe-cuoi-tit-mat-khi-th...on-than-bam-nut-tai-ban-muon-hen-ho-2396522.html  | 
+[2025-05-03T15:17:34.564+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:34.564+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-03T15:17:34.565+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tai-xe-cuoi-tit-mat-khi-th...on-than-bam-nut-tai-ban-muon-hen-ho-2396522.html  | 
+[2025-05-03T15:17:34.566+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:17:34.566+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.24s
+[2025-05-03T15:17:35.178+0000] {logging_mixin.py:188} INFO -     ✓ Tài xế Kiên Giang 'cười tít mắt' khi được mẹ đơn thân đồng ý...
+[2025-05-03T15:17:35.178+0000] {logging_mixin.py:188} INFO - ⏱️  Tổng thời gian crawl: 26.34 giây
+[2025-05-03T15:17:36.081+0000] {logging_mixin.py:188} INFO - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 3, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.doi-song index: _id_ dup key: { _id: "https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-cho-muon-em-chong-dung-ngoi-khong-yen-2397067.html#comment" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-cho-muon-em-chong-dung-ngoi-khong-yen-2397067.html#comment'}, 'op': {'title': 'Chị dâu bất ngờ đòi vàng cho mượn, em chồng đứng ngồi không yên', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-02T11:38:13.000 +07:00', 'views': None, 'tags': [], 'description': 'Tôi bị chị dâu đòi vàng dù chưa đến hạn trả, hơn nữa còn đúng vào thời điểm vàng đang lên giá cao ngất. Tôi không biết xoay tiền ở đâu để mua vàng trả lại chị.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/2/vaytien-fp-51540.jpg?width=0&s=yY_9sNuDaRtTVvOIRuw8-w', 'content': 'Cuối năm 2023, tôi mượn chị dâu 1 cây vàng để mua nhà và hẹn trả sau 3 năm. Vì là người trong nhà nên mọi thứ rất thoải mái, không viết giấy vay, không lãi suất. Theo lịch hẹn, cuối năm 2026 tôi mới phải tính chuyện trả lại.\n\nHôm trước, chị dâu bất ngờ gọi điện cho tôi nói khéo: “Trước chị hứa cho cô chú vay vàng 3 năm trả nhưng thực tình bây giờ anh chị khó khăn quá. Cháu lớn sắp đi nước ngoài du học, anh chị cần tiền để lo cho cháu.\n\nChị cũng cố gắng xoay mấy chỗ nhưng chưa đủ. Biết là đòi trước cũng làm khó các em nhưng mong cô chú hiểu. Cô chú xoay tiền giúp anh chị trong tháng này nhé”.\n\nTôi thực sự không biết nói gì. Vốn nghĩ phải hơn 1 năm nữa mới phải lo số tiền trả anh chị nhưng giờ tình hình thế này, tôi biết tính sao. Giá vàng hiện quá cao. Trong khi vợ chồng tôi không có tiền tiết kiệm.\n\nTôi nói với chồng mà nước mắt rưng rưng. Giờ tôi đã hiểu lời bạn bè nói: “Vay tiền của người thân tốt hiện tại nhưng khó về sau. Đùng một cái, người nhà có việc, mình không thể không trả. Nếu bị đòi gấp thì khổ hơn vay ngân hàng”.\n\nChồng tôi nghe xong thì rất bực. Chồng tôi cho rằng chị dâu làm vậy là cố tình gây khó dễ cho vợ chồng tôi.\n\nNgày chúng tôi mua nhà, các anh chị bên chồng đều gom góp mỗi người một ít giúp các em. Bên nhà vợ không ai góp tiền, chỉ có chị dâu cho mượn 1 cây vàng. Điều này vốn đã khiến chồng tôi luôn không hài lòng với nhà vợ.\n\nAnh lập tức gọi cho mẹ tôi, nói hết sự bức xúc của mình. Anh nhất quyết không trả trước hạn, kể cả anh chị có không hài lòng, có nói chúng tôi không biết điều.\n\nThật ra, tôi cũng chưa tính được đến thời hạn 3 năm sẽ trả bằng cách nào nhưng ít ra, có thời gian chuẩn bị vẫn tốt hơn. Vả lại, nhỡ đâu lúc đó vàng không cao như hiện tại thì vợ chồng tôi cũng dễ bề xoay chuyển.\n\nTôi bần thần suốt mấy ngày, ngồi tính toán như người mất hồn. Nếu giờ đi mua vàng để trả thì tôi phải vay tiền ngân hàng hoặc vay bạn bè.\n\nNhưng bạn bè xung quanh cũng không ai có điều kiện cho tôi vay một khoản lớn như vậy, còn vay ngân hàng thì thủ tục rất lằng nhằng, phải thế chấp tài sản. Mà tài sản tôi có duy nhất lúc này là ngôi nhà. Tôi nên làm gì đây?\n\nĐộc giả giấu tên', 'url': 'https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-cho-muon-em-chong-dung-ngoi-khong-yen-2397067.html#comment', 'category': 'doi-song', 'crawled_at': '2025-05-03T15:17:30.573232', '_id': 'https://vietnamnet.vn/chi-dau-bat-ngo-doi-vang-cho-muon-em-chong-dung-ngoi-khong-yen-2397067.html#comment'}}], 'writeConcernErrors': [], 'nInserted': 4, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-03T15:17:36.084+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T15:17:36.086+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T15:17:36.095+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_doi-song, run_id=manual__2025-05-03T15:15:13.250242+00:00, execution_date=20250503T151513, start_date=20250503T151708, end_date=20250503T151736
+[2025-05-03T15:17:36.146+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T15:17:36.158+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T15:17:36.161+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

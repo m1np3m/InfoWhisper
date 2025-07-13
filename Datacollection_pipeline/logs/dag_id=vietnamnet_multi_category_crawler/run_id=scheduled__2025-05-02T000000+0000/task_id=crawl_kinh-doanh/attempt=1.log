@@ -1,0 +1,429 @@
+[2025-05-03T15:06:41.738+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:06:41.757+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:06:41.766+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:06:41.767+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:06:41.781+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-02 00:00:00+00:00
+[2025-05-03T15:06:41.787+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1827) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:06:41.789+0000] {standard_task_runner.py:63} INFO - Started process 1828 to run task
+[2025-05-03T15:06:41.788+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'scheduled__2025-05-02T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp992oh54v']
+[2025-05-03T15:06:41.791+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask crawl_kinh-doanh
+[2025-05-03T15:06:41.840+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [running]> on host bc2513595922
+[2025-05-03T15:06:41.921+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-02T00:00:00+00:00'
+[2025-05-03T15:06:41.922+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:06:42.522+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:06:45.456+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:06:45.457+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:45.458+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.86s
+[2025-05-03T15:06:45.730+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:06:45.730+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:45.731+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T15:06:45.731+0000] {logging_mixin.py:188} INFO - 0.27
+[2025-05-03T15:06:45.732+0000] {logging_mixin.py:188} INFO - s
+[2025-05-03T15:06:45.733+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:06:45.733+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:45.734+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.14s
+[2025-05-03T15:06:45.835+0000] {logging_mixin.py:188} INFO - Tìm thấy 50 link bài viết
+[2025-05-03T15:06:46.012+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T15:06:46.013+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/chau-lan-khung-dat-vang-bay-tu-da-lat-ra-ha-noi-duoc-chao-gia-gan-4-ty-dong-2365191.html#comment
+[2025-05-03T15:06:46.610+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:06:50.429+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chau-lan-khung-dat-vang-ba...duoc-chao-gia-gan-4-ty-dong-2365191.html#comment  | 
+[2025-05-03T15:06:50.430+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:50.432+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.76s
+[2025-05-03T15:06:50.627+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chau-lan-khung-dat-vang-ba...duoc-chao-gia-gan-4-ty-dong-2365191.html#comment  | 
+[2025-05-03T15:06:50.628+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:50.628+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-03T15:06:50.629+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chau-lan-khung-dat-vang-ba...duoc-chao-gia-gan-4-ty-dong-2365191.html#comment  | 
+[2025-05-03T15:06:50.630+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:50.631+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.96s
+[2025-05-03T15:06:50.956+0000] {logging_mixin.py:188} INFO -     ✓ Chậu lan 'khủng' dát vàng bay từ Đà Lạt ra Hà Nội, được chào...
+[2025-05-03T15:06:50.956+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/co-nen-lap-dien-mat-troi-tren-ruong-lua-2396793.html
+[2025-05-03T15:06:51.551+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:06:54.632+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/co-nen-lap-dien-mat-troi-tren-ruong-lua-2396793.html                           | 
+[2025-05-03T15:06:54.633+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:54.633+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.01s
+[2025-05-03T15:06:54.795+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/co-nen-lap-dien-mat-troi-tren-ruong-lua-2396793.html                           | 
+[2025-05-03T15:06:54.796+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:54.797+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.16s
+[2025-05-03T15:06:54.798+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/co-nen-lap-dien-mat-troi-tren-ruong-lua-2396793.html                           | 
+[2025-05-03T15:06:54.798+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:54.799+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.18s
+[2025-05-03T15:06:55.287+0000] {logging_mixin.py:188} INFO -     ✓ Có nên lắp điện mặt trời trên ruộng lúa?...
+[2025-05-03T15:06:55.288+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/thoa-thuan-khoang-san-my-ukraine-kiev-kiem-soat-chinh-quyen-ong-trump-duoc-gi-2396945.html
+[2025-05-03T15:06:55.861+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:06:59.247+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thoa-thuan-khoang-san-my-u...-soat-chinh-quyen-ong-trump-duoc-gi-2396945.html  | 
+[2025-05-03T15:06:59.248+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:59.248+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.32s
+[2025-05-03T15:06:59.522+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thoa-thuan-khoang-san-my-u...-soat-chinh-quyen-ong-trump-duoc-gi-2396945.html  | 
+[2025-05-03T15:06:59.522+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:59.523+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.27s
+[2025-05-03T15:06:59.524+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thoa-thuan-khoang-san-my-u...-soat-chinh-quyen-ong-trump-duoc-gi-2396945.html  | 
+[2025-05-03T15:06:59.525+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:06:59.525+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.60s
+[2025-05-03T15:07:00.052+0000] {logging_mixin.py:188} INFO -     ✓ Thỏa thuận khoáng sản Mỹ-Ukraine: Kiev kiểm soát, chính quyề...
+[2025-05-03T15:07:00.053+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-100-ngay-nam-quyen-kinh-te-my-dao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html
+[2025-05-03T15:07:00.958+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:07:05.294+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T15:07:05.295+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:05.296+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.23s
+[2025-05-03T15:07:05.563+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T15:07:05.567+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:05.568+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.27s
+[2025-05-03T15:07:05.570+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T15:07:05.572+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:05.572+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.51s
+[2025-05-03T15:07:06.073+0000] {logging_mixin.py:188} INFO -     ✓ Đối diện chỉ số mới đầy bất an, ông Trump nói về thời kỳ 'bù...
+[2025-05-03T15:07:06.074+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chia-se-nhung-dieu-truoc-nay-chua-tung-cong-khai-2394612.html
+[2025-05-03T15:07:06.692+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:07:10.262+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:07:10.263+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:10.263+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.46s
+[2025-05-03T15:07:10.525+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:07:10.526+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:10.526+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T15:07:10.527+0000] {logging_mixin.py:188} INFO - 0.26
+[2025-05-03T15:07:10.527+0000] {logging_mixin.py:188} INFO - s
+[2025-05-03T15:07:10.529+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:07:10.529+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:07:10.530+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.72s
+[2025-05-03T15:07:10.961+0000] {logging_mixin.py:188} INFO -     ✓ Tỷ phú Phạm Nhật Vượng chia sẻ những điều trước nay chưa từn...
+[2025-05-03T15:07:11.865+0000] {logging_mixin.py:188} INFO - Đã lưu 5 bài viết vào collection 'kinh-doanh'
+[2025-05-03T15:07:11.928+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T15:07:11.929+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T15:07:11.937+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_kinh-doanh, run_id=scheduled__2025-05-02T00:00:00+00:00, execution_date=20250502T000000, start_date=20250503T150641, end_date=20250503T150711
+[2025-05-03T15:07:11.977+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T15:07:11.999+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T15:07:12.002+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-03T15:21:12.169+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:21:12.192+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:21:12.200+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:21:12.201+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:21:12.214+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-02 00:00:00+00:00
+[2025-05-03T15:21:12.220+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=6157) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:21:12.222+0000] {standard_task_runner.py:63} INFO - Started process 6158 to run task
+[2025-05-03T15:21:12.222+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'scheduled__2025-05-02T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp4iw47rio']
+[2025-05-03T15:21:12.225+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask crawl_kinh-doanh
+[2025-05-03T15:21:12.278+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [running]> on host fdbcedb99356
+[2025-05-03T15:21:12.364+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-02T00:00:00+00:00'
+[2025-05-03T15:21:12.365+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:21:13.023+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:15.828+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:21:15.828+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:15.829+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.73s
+[2025-05-03T15:21:16.088+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:21:16.089+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:16.089+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-03T15:21:16.091+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:21:16.091+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:16.092+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.99s
+[2025-05-03T15:21:16.230+0000] {logging_mixin.py:188} INFO - Tìm thấy 50 link bài viết
+[2025-05-03T15:21:16.419+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T15:21:16.419+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-cua-phim-2395546.html#comment
+[2025-05-03T15:21:17.073+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:20.030+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-ti...go-ve-diem-hoa-von-cua-phim-2395546.html#comment  | 
+[2025-05-03T15:21:20.031+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:20.032+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.87s
+[2025-05-03T15:21:20.213+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-ti...go-ve-diem-hoa-von-cua-phim-2395546.html#comment  | 
+[2025-05-03T15:21:20.214+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:20.215+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T15:21:20.215+0000] {logging_mixin.py:188} INFO - 0.18
+[2025-05-03T15:21:20.216+0000] {logging_mixin.py:188} INFO - s
+[2025-05-03T15:21:20.217+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-ti...go-ve-diem-hoa-von-cua-phim-2395546.html#comment  | 
+[2025-05-03T15:21:20.218+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:20.218+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.06s
+[2025-05-03T15:21:20.608+0000] {logging_mixin.py:188} INFO -     ✓ Nhà đầu tư phim 'Địa đạo' tiết lộ bất ngờ về điểm hoà vốn và...
+[2025-05-03T15:21:20.608+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-2397009.html
+[2025-05-03T15:21:21.171+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:24.044+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/mot-startup-tai-che-pin-ma...-90-trieu-usd-xay-nha-may-o-florida-2397009.html  | 
+[2025-05-03T15:21:24.045+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:24.046+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.80s
+[2025-05-03T15:21:24.406+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/mot-startup-tai-che-pin-ma...-90-trieu-usd-xay-nha-may-o-florida-2397009.html  | 
+[2025-05-03T15:21:24.406+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:24.407+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.36s
+[2025-05-03T15:21:24.408+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/mot-startup-tai-che-pin-ma...-90-trieu-usd-xay-nha-may-o-florida-2397009.html  | 
+[2025-05-03T15:21:24.409+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:24.409+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.16s
+[2025-05-03T15:21:24.756+0000] {logging_mixin.py:188} INFO -     ✓ Một startup tái chế pin mặt trời rót 90 triệu USD xây nhà má...
+[2025-05-03T15:21:24.757+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html
+[2025-05-03T15:21:25.350+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:28.853+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html                             | 
+[2025-05-03T15:21:28.854+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:28.855+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.44s
+[2025-05-03T15:21:29.097+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html                             | 
+[2025-05-03T15:21:29.097+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:29.098+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-03T15:21:29.099+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html                             | 
+[2025-05-03T15:21:29.100+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:29.100+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.69s
+[2025-05-03T15:21:29.550+0000] {logging_mixin.py:188} INFO -     ✓ Hội đồng Vàng Thế giới: Nhu cầu vàng của Việt Nam quý I là 1...
+[2025-05-03T15:21:29.551+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html
+[2025-05-03T15:21:30.082+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:33.219+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loai-qua-viet-nam-co-2-tri...-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html  | 
+[2025-05-03T15:21:33.224+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:33.231+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.03s
+[2025-05-03T15:21:33.539+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loai-qua-viet-nam-co-2-tri...-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html  | 
+[2025-05-03T15:21:33.539+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:33.540+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-03T15:21:33.541+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loai-qua-viet-nam-co-2-tri...-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html  | 
+[2025-05-03T15:21:33.542+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:33.542+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.35s
+[2025-05-03T15:21:33.990+0000] {logging_mixin.py:188} INFO -     ✓ Loại quả Việt Nam có 2 triệu tấn, khách Mỹ và Trung Quốc tra...
+[2025-05-03T15:21:33.991+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-nam-moi-2366154.html
+[2025-05-03T15:21:34.510+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:21:37.875+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/quat-dat-vang-24k-xuat-hie...h-khen-sang-trong-vuong-khi-nam-moi-2366154.html  | 
+[2025-05-03T15:21:37.876+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:37.876+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.30s
+[2025-05-03T15:21:37.993+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/quat-dat-vang-24k-xuat-hie...h-khen-sang-trong-vuong-khi-nam-moi-2366154.html  | 
+[2025-05-03T15:21:37.994+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:37.995+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.12s
+[2025-05-03T15:21:37.996+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/quat-dat-vang-24k-xuat-hie...h-khen-sang-trong-vuong-khi-nam-moi-2366154.html  | 
+[2025-05-03T15:21:37.996+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:21:37.997+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.42s
+[2025-05-03T15:21:38.330+0000] {logging_mixin.py:188} INFO -     ✓ Quất dát vàng 24k xuất hiện ở Hà Nội, khách khen 'sang trọng...
+[2025-05-03T15:21:38.331+0000] {logging_mixin.py:188} INFO - ⏱️  Tổng thời gian crawl: 25.95 giây
+[2025-05-03T15:21:39.411+0000] {logging_mixin.py:188} INFO - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.kinh-doanh index: _id_ dup key: { _id: "https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-cua-phim-2395546.html#comment" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-cua-phim-2395546.html#comment'}, 'op': {'title': "Nhà đầu tư phim 'Địa đạo' tiết lộ bất ngờ về điểm hoà vốn và ẩn ý cho giới CEO", 'author': 'Không có thông tin tác giả', 'publish_date': '2025-04-26T21:58:08.000 +07:00', 'views': None, 'tags': [], 'description': 'Nhà đầu tư phim Địa đạo cho biết địa đạo không chỉ là một bộ phim, mà còn là bài học về tinh thần vượt nghịch cảnh trong kinh doanh', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/4/26/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-va-an-y-cho-gioi-ceo-104096.jpg?width=0&s=U4M0t85_e-c0e0lmgi2vgw', 'content': 'Hạnh Nguyên\n\nNgày 26/4, sau khi 1.000 CEO cùng tham dự buổi chiếu phimĐịa đạo, các lãnh đạo doanh nghiệp và các bạn trẻ đã có cuộc trò chuyện đặc biệt với ông Nguyễn Thành Nam - nhà đầu tư bộ phim, nguyên Tổng giám đốc Tập đoàn FPT về chủ đề “Địa đạo văn hoá doanh nghiệp và tinh thần vượt qua nghịch cảnh trong kinh doanh”.\n\nChia sẻ tại sự kiện, ông Nguyễn Thành Nam cho biết, ông thường nhận được câu hỏi liên quan đến khả năng thu hồi vốn và doanh thu của bộ phim Địa đạo. Tuy nhiên, theo ông, thành công của bộ phim không thể đo đếm bằng những con số tài chính thông thường.\n\n“Nếu tính đúng chi phí sản xuất theo tiêu chuẩn chuyên nghiệp của Hollywood, bộ phim có thể cần tới 100 triệu USD. Nhưng trên thực tế, số tiền tôi đầu tư chỉ là phần rất nhỏ so với công sức to lớn mà rất nhiều người đã chung tay đóng góp. Các diễn viên nổi tiếng đều sẵn sàng nhận cát-xê thấp hơn mức bình thường, mọi người cùng chung tay vì một tinh thần chung,” ông Nam chia sẻ.\n\nÔng nhấn mạnh, giá trị lớn nhất của Địa đạo chính là sự đóng góp tự nguyện và tinh thần gắn kết của toàn bộ ê-kíp sản xuất. "Hòa vốn ở đây có nghĩa là bộ phim chạm được tới cảm xúc của người xem, mang lại cho họ sự đồng cảm và suy ngẫm. Khi các bạn xem phim thấy hay thì chúng tôi coi như đã hòa vốn rồi," ông Nam dí dỏm nói.\n\nBên cạnh câu chuyện làm phim, ông Nguyễn Thành Nam cũng chia sẻ những kinh nghiệm thực tiễn trong kinh doanh. Theo ông, tinh thần “chiến tranh nhân dân” vốn gắn liền với sự bền bỉ, kiên cường và sáng tạo trong hoàn cảnh khó khăn hoàn toàn có thể vận dụng vào môi trường doanh nghiệp hiện đại.\n\nLấy ví dụ từ bộ phim Địa đạo, nơi các chiến sĩ du kích phải đối đầu với những đối thủ mạnh vượt trội với đầy đủ xe tăng, máy bay, ông Nam nhấn mạnh: “Câu chuyện ở đây là trong bất kỳ hoàn cảnh nào cũng phải tìm cách để giành chiến thắng.”\n\nÔng kể lại trải nghiệm năm 2000, khi đưa phần mềm Việt Nam tiếp cận thị trường Mỹ – nơi mà phần lớn người Mỹ khi đó chỉ biết đến Việt Nam qua chiến tranh. "Chúng tôi tin rằng, nếu ngày xưa các bậc cha anh có thể làm nên những điều kỳ diệu, thì mình cũng không có lý do gì để bỏ cuộc," ông nói. Dù thừa nhận đã có nhiều người bỏ cuộc, ông Nam khẳng định, điều quan trọng là phải kiên trì vượt qua.\n\n“Doanh nghiệp muốn vận dụng được tinh thần chiến tranh nhân dân thì phải tự tạo ra một ‘cuộc chiến’ cho riêng mình. Phải dựng lên một ‘kẻ thù’. Đó có thể là đối thủ cạnh tranh hoặc một mục tiêu thách thức để còn có động lực phấn đấu, nỗ lực đánh bại,” ông Nguyễn Thành Nam nhấn mạnh.\n\nCuối cùng, ông nhắn nhủ tới các CEO trẻ: "Điều đầu tiên các bạn cần là làm cho người khác tin mình. Các bạn phải có giá trị thực sự để người khác đi theo, chứ không phải đi theo các bạn".', 'url': 'https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-cua-phim-2395546.html#comment', 'category': 'kinh-doanh', 'crawled_at': '2025-05-03T15:21:20.442342', '_id': 'https://vietnamnet.vn/nha-dau-tu-phim-dia-dao-tiet-lo-bat-ngo-ve-diem-hoa-von-cua-phim-2395546.html#comment'}}, {'index': 1, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.kinh-doanh index: _id_ dup key: { _id: "https://vietnamnet.vn/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-2397009.html" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-2397009.html'}, 'op': {'title': 'Một startup tái chế pin mặt trời rót 90 triệu USD xây nhà máy ở Florida', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-02T14:59:07.000 +07:00', 'views': None, 'tags': [], 'description': 'OnePlanet sử dụng một quy trình mới lạ để thu hồi đồng, silicon và nhôm từ các tấm pin năng lượng mặt trời đã hỏng.Dự định nhà máy này sẽ hoạt động vào năm 2027.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/2/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-68182.webp?width=0&s=s5hf1W8xmgQDkhaEOICUsA', 'content': 'Tâm An\n\nFlorida là thị trường năng lượng mặt trời lớn thứ hai của Mỹ. Thế nhưng, mỗi khi một cơn bão càn quét qua, những tấm pin năng lượng mặt trời bị hỏng lại chất đống tại các bãi rác.\n\nOnePlanet Solar Recycling có kế hoạch giải quyết vấn đề đó. Startup này có trụ sở tại Jacksonville, Florida, do một cựu giám đốc ngành thép điều hành, vừa huy động được 7 triệu USD để phát triển nhà máy tái chế pin năng lượng mặt trời đầu tiên của công ty.\n\nĐặc biệt, trong bối cảnh thuế quan có thể làm tăng giá các vật liệu nhập khẩu, biến rác thải thành nguồn cung kim loại nội địa như đồng và nhôm.\n\nTheo đó, công ty dự định rót 90 triệu USD để xây dựng cơ sở tái chế River City, tại Green Cove Springs, ngay phía nam Jacksonville, thành phố đông dân nhất của Florida. Dự án được chia làm 3 giai đoạn.\n\nOnePlanet dự kiến năm 2027 sẽ hoàn thành giai đoạn đầu xây dựng nhà máy và khai trương dây chuyền tháo dỡ đầu tiên có khả năng xử lý 2 triệu mô-đun năng lượng mặt trời mỗi năm.\n\nĐồng thời, OnePlanet cũng đặt đặt mục tiêu tăng công suất lên gấp ba lần, lên 6 triệu tấm pin mặt trời vào năm 2030. Ở công suất đỉnh, cơ sở này sẽ nằm trong số các nhà máy tái chế pin năng lượng mặt trời lớn nhất tại Mỹ.\n\nKế hoạch đầy tham vọng của OnePlanet dựa trên quy trình tái chế pin năng lượng mặt trời độc đáo của mình.\n\n"Chúng tôi thực hiện rất nhiều công việc trước khi thực sự đưa các tấm pin vào dây chuyền tái chế", André Pujadas - Giám đốc điều hành của OnePlanet, chia sẻ.\n\nĐáng chú ý, nhờ ứng dụng trí tuệ nhân tạo và các cảm biến công nghệ cao, OnePlanet không chỉ có khả năng thu hồi kính, nhựa và silicon từ các tấm pin mặt trời, mà còn tái chế được tới 97% lượng kim loại nhôm và đồng trong đó, ông Pujadas nhấn mạnh.\n\nPujadas từng làm việc tại Nucor, một nhà sản xuất thép lớn. Đây là công ty đi đầu trong việc sử dụng lò hồ quang điện tại Mỹ. Công nghệ này biến phế liệu kim loại thành thép mới bằng điện, cung cấp một giải pháp thay thế carbon thấp hơn cho thép mới được tạo ra từ quặng sắt trong lò luyện kim sử dụng than đá.\n\nKinh nghiệm đó đã dạy Pujadas về những nơi chi phí có thể tăng trong chuỗi cung ứng và giá trị doanh nghiệp có thể tạo ra bằng cách thu hồi nguyên liệu thô từ các vật liệu bị ô nhiễm.\n\nSo với cách tiếp cận của các công ty tái chế khác, phương pháp của OnePlanet sẽ tiết kiệm chi phí bảo trì. Bởi, quá trình tách biệt trước khi tháo dỡ tránh được sự hao mòn không cần thiết đối với máy móc.\n\nTheo ông Pujadas, vòng tài trợ được công bố vào thứ Ba sẽ được sử dụng cho các bước kỹ thuật cuối cùng, xin cấp phép về môi trường, ký kết các thỏa thuận tái chế tổng thể cũng như chuẩn bị cho những hạng mục cần thời gian triển khai dài hạn.\n\nKhoản đầu tư này “phản ánh niềm tin của chúng tôi rằng việc tái chế các mô-đun năng lượng mặt trời không chỉ là điều tất yếu mà còn có thể thực hiện ở quy mô lớn, với động lực bền vững đến từ các yếu tố pháp lý, kinh tế và an ninh tài nguyên", bà Ashlynn Horras, đối tác tại Khasma Capital - quỹ đầu tư khí hậu dẫn đầu vòng gọi vốn hạt giống của OnePlanet, cho biết trong một tuyên bố.\n\nOnePlanet cũng đang nhận được một số hỗ trợ từ Đạo luật Giảm lạm phát. Công ty sẽ được tài trợ một phần bởi khoản đầu tư 14,5 triệu USD từ tín dụng thuế cạnh tranh 48C của Bộ Năng lượng được trao vào năm ngoái.\n\nTheo Canary Media', 'url': 'https://vietnamnet.vn/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-2397009.html', 'category': 'kinh-doanh', 'crawled_at': '2025-05-03T15:21:24.591429', '_id': 'https://vietnamnet.vn/mot-startup-tai-che-pin-mat-troi-rot-90-trieu-usd-xay-nha-may-o-florida-2397009.html'}}, {'index': 2, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.kinh-doanh index: _id_ dup key: { _id: "https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html'}, 'op': {'title': 'Hội đồng Vàng Thế giới: Nhu cầu vàng của Việt Nam quý I là 12 tấn', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-01T06:00:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Theo báo cáo của Hội đồng Vàng Thế giới (WGC), nhu cầu vàng thỏi và tiền vàng của Việt Nam giảm 15%, xuống còn 12 tấn vàng trong quý I/2025.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/4/30/doanh-nghiep-viet-nam-mua-12-tan-vang-trong-3-thang-dau-nam-80574.jpg?width=0&s=ypeILYaHgot_d22eCqg4vA', 'content': 'Duy Anh\n\nTheo WGC, tình trạng khan hiếm trên thị trường vàng trong nước và mức phí bảo hiểm cao là những yếu tố khiến nhu cầu vàng của Việt Nam giảm.\n\nTại khu vực Đông Nam Á (ASEAN), nhu cầu vàng thỏi của các nhà đầu tư Singapore vẫn mạnh mẽ trong quý đầu tiên năm nay, tăng 35% so với cùng kỳ năm trước, lên 2,5 tấn, đạt mức cao nhất kể từ năm 2010.\n\nNhu cầu đầu tư vàng ở Indonesia, Malaysia và Thái Lan cũng tăng ở mức hai con số so với cùng kỳ năm trước.\n\nTại các nước ASEAN, nhu cầu trang sức vàng giảm do giá vàng tăng cao kỷ lục. Riêng tại Singapore, nhu cầu vàng trang sức đã giảm 20%, xuống còn 1,7 tấn.\n\nÔng Fan Shaokai, người đứng đầu khu vực Châu Á - Thái Bình Dương (trừ Trung Quốc) tại WGC, cho biết nhu cầu trang sức toàn cầu ghi nhận mức thấp nhất kể từ khi đại dịch Covid-19. Đây là điều dễ hiểu khi giá vàng đã có tới 20 lần phá đỉnh ngay trong quý đầu tiên.\n\nÔng Fan cho biết thêm, các ngân hàng trung ương toàn cầu đã mua ròng vàng trong năm thứ 16 liên tiếp, với tổng cộng 243,7 tấn trong quý đầu tiên.\n\nCác ngân hàng trung ương mua vàng nhằm đa dạng hóa danh mục đầu tư, quản lý rủi ro, phòng ngừa lạm phát và bảo vệ chống lại biến động địa chính trị và thị trường. Tuy nhiên, so với cùng kỳ năm ngoái, lượng vàng mua vào của các ngân hàng trung ương giảm 21%.\n\nTheo WGC, mặc dù số lượng giảm nhưng giá trị vàng lại tăng do giá vàng duy trì ở mức cao.\n\nNhu cầu đầu tư vàng toàn cầu, bao gồm cả các quỹ ETF vàng (quỹ hoán đổi danh mục được đảm bảo bằng vàng), cũng như vàng thỏi và vàng xu, đã tăng vọt 170% so với cùng kỳ năm ngoái, đạt 551,9 tấn. Trong đó, các ETF vàng đã mua vào 226,5 tấn, so với mức bán ra 113 tấn trong cùng kỳ năm 2024.\n\nNhu cầu vàng nói chung (gồm nhu cầu đầu tư, chế tác đồ trang sức, mua vàng của ngân hàng trung ương và sử dụng trong công nghệ) ổn định ở mức 1.206 tấn, tăng 1% so với năm trước.\n\nÔng Fan cho biết, trong bối cảnh căng thẳng địa chính trị đang diễn ra và biến động thị trường toàn cầu, vàng vẫn là một tài sản trú ẩn an toàn.\n\nWGC dự báo rằng rủi ro đình lạm trong ngắn hạn, suy thoái trung hạn, tương quan cổ phiếu - trái phiếu tăng cao, dự kiến thâm hụt của Mỹ gia tăng, và căng thẳng địa chính trị tiếp tục thúc đẩy nhu cầu đầu tư vàng.\n\n(Theo ST)', 'url': 'https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html', 'category': 'kinh-doanh', 'crawled_at': '2025-05-03T15:21:29.323719', '_id': 'https://vietnamnet.vn/doanh-nghiep-viet-nam-mua-12-tan-vang-2396857.html'}}, {'index': 3, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.kinh-doanh index: _id_ dup key: { _id: "https://vietnamnet.vn/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html'}, 'op': {'title': 'Loại quả Việt Nam có 2 triệu tấn, khách Mỹ và Trung Quốc tranh mua để giải nhiệt', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-03T05:00:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Dừa - loại quả đang sốt giá trên toàn cầu, trong khi  ở Việt Nam mỗi năm cho sản lượng khoảng 2 triệu tấn, được khách Trung Quốc và Mỹ thích mê.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/2/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-98550.jpg?width=0&s=Uw76YH9eaCQlKbuEoIdv0g', 'content': 'Tâm An\n\nSau gạo, cà phê, ca cao và hồ tiêu, thị trường thế giới lại tiếp tục chứng kiến cơn sốt của dừa và các sản phẩm từ loại quả có tác dụng giải nhiệt cao này.\n\nĐơn cử, tại Mỹ, giá dầu dừa trong tháng 4 vừa qua tăng vọt 127% so với mức trung bình 5 năm gần nhất. Hay ở Philippines - quốc gia xuất khẩu dầu dừa hàng đầu thế giới - giá dầu dừa đã vượt 2.658 USD/tấn, cao nhất trong vòng 3 năm trở lại đây.\n\nNguyên nhân khiến giá dừa và các sản phẩm từ dừa tăng\xa0mạnh\xa0là do tình trạng biến đổi khí hậu làm năng suất dừa tại các quốc gia có sản lượng lớn nhất thế giới\xa0giảm sâu. Đặc biệt, tình trạng sâu bệnh lan rộng trên cây dừa ở Sri Lanka và Philippines càng làm nguồn cung nguyên liệu thô dùng để sản xuất dầu dừa rơi vào khủng hoảng.\n\nTrong khi đó, nhu cầu về dừa tại các thị trường lớn như Mỹ, Trung Quốc và EU lại tăng cao. Theo Bộ Nông nghiệp Hoa Kỳ (USDA), lượng nhập khẩu dầu dừa của nước này trong quý I/2025 tăng gần 30% so với cùng kỳ năm trước.\n\nTrồng dừa là thế mạnh của nhiều tỉnh ở vùng ĐBSCL. Nhờ đó, Việt Nam hiện là nhà xuất khẩu dừa lớn thứ 5 thế giới.\n\nThống kê từ Bộ Nông nghiệp và Môi trường cho thấy, diện tích dừa ở nước ta đạt khoảng 200.000ha, sản lượng ước đạt 2 triệu tấn mỗi năm. Trong đó, 1/3 diện tích đáp ứng tiêu chuẩn hữu cơ của Mỹ và EU.\n\nNăm 2024, tổng kim ngạch xuất khẩu dừa và các sản phẩm từ dừa đạt gần 1,1 tỷ USD, trong đó riêng dừa tươi đạt 390 triệu USD.\n\nĐáng chú ý, tình trạng khan hiếm dừa trên toàn cầu đã đẩy giá dừa ở Việt Nam tăng mạnh trong thời gian qua. Ở Trà Vinh, thời điểm này năm ngoái giá dừa được thương lái thu mua phục vụ tiêu thụ nội địa và xuất khẩu chỉ 100.000-120.000 đồng/chục thì nay đã vọt lên 200.000-210.000 đồng.\n\nMột doanh nghiệp chế biến dừa xuất khẩu cho hay, nhu cầu từ các thị trường tăng cao, trong khi nguồn cung dừa nguyên liệu ở các tỉnh ĐBSCL đang khá khan hiếm. Nhà máy cố gắng gom dừa nguyên liệu song không đủ nguồn cung cho sản xuất.\n\nCuối tháng 4 vừa qua, giá dừa thu mua cho bà con là 200.000-210.000 đồng/10 quả, cộng với chi phí vận chuyển từ 15.000-20.000 đồng/10 quả nên giá về tới nhà máy từ 215.000-230.000 đồng/10 quả.\n\nTrước đây, giá dừa khô nguyên liệu tại Bến Tre dao động trong khoảng 50.000-70.000 đồng/10 quả, nay được các doanh nghiệp và thương lái săn mua với giá 200.000 đồng/10 quả.\n\nDừa và sản phẩm dừa của Việt Nam đã xuất khẩu sang 40 quốc gia và vùng lãnh thổ trên thế giới. Trong đó, thị trường chủ lực vẫn là Mỹ và Trung Quốc.\n\nTháng 8/2023, Mỹ chính thức mở cửa cho quả dừa Việt Nam. Sau chưa đầy một năm, lượng dừa tươi xuất khẩu sang thị trường này tăng gấp 11 lần. Hai tháng đầu năm nay, xuất khẩu sang thị trường Mỹ tăng mạnh 46% so với cùng kỳ năm trước.\n\nTương tự, tháng 8/2024, nghị định thư về xuất khẩu chính ngạch dừa tươi vào Trung Quốc được ký kết, xuất khẩu loại quả giải nhiệt vào thị trường tỷ dân này tăng mạnh.\n\nBộ Nông nghiệp và Môi trường cho biết, Trung Quốc là thị trường rất quan trọng và tiềm năng. Hàng năm, quốc gia này tiêu thụ 4 tỷ quả dừa, trong đó có khoảng 2,6 tỷ quả dừa tươi. Hai tháng đầu năm nay, Việt Nam trở thành nhà cung cấp dừa lớn thứ ba, chiếm 20% tổng kim ngạch nhập khẩu của Trung Quốc.\n\nTrao đổi vớiVietNamNetchiều 2/5, ông Đặng Phúc Nguyên - Tổng Thư ký Hiệp hội Rau quả Việt Nam, cho biết, dừa của Việt Nam có mùi thơm và vị ngọt đặc trưng nên người Mỹ, Trung Quốc đặc biệt ưa thích. Nhất là vào thời điểm hè nắng nóng, nhu cầu giải nhiệt tăng cao, các thị trường này đang có xu hướng tăng nhập khẩu quả dừa Việt Nam.\n\nÔng đánh giá, đây là mặt hàng tiềm năng mới của ngành hàng rau quả Việt. Bởi, xuất khẩu dừa có nhiều lợi thế như vận chuyển dễ, thời gian bảo quản dài. Ngoài ra, quả dừa còn có thể chế biến thành nhiều sản phẩm khác như: dừa khô, sữa dừa, nước dừa đóng hộp, nguyên liệu để sản xuất hóa mỹ phẩm...\n\nGiá dừa nguyên liệu ở các tỉnh khu vực ĐBSCL đang ở ngưỡng cao, nông dân thu được mức lợi nhuận rất tốt, ông Nguyên nói và dự báo kim ngạch xuất khẩu dừa tươi năm nay của nước ta có thể đạt khoảng 500 triệu USD.', 'url': 'https://vietnamnet.vn/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html', 'category': 'kinh-doanh', 'crawled_at': '2025-05-03T15:21:33.809714', '_id': 'https://vietnamnet.vn/loai-qua-viet-nam-co-2-trieu-tan-khach-my-va-trung-quoc-tranh-mua-de-giai-nhiet-2397204.html'}}, {'index': 4, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.kinh-doanh index: _id_ dup key: { _id: "https://vietnamnet.vn/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-nam-moi-2366154.html" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-nam-moi-2366154.html'}, 'op': {'title': "Quất dát vàng 24k xuất hiện ở Hà Nội, khách khen 'sang trọng, vượng khí cho năm mới'", 'author': 'Không có thông tin tác giả', 'publish_date': '2025-01-24T09:35:00.000 +07:00', 'views': None, 'tags': [], 'description': 'Những cây quất được dát vàng 24K độc đáo đang thu hút sự chú ý đặc biệt trên thị trường cây cảnh Tết Ất Tỵ 2025.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/1/24/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-cho-nam-moi-33760.gif?width=0&s=Ie0M_nMQdry-bufec8M0FQ', 'content': 'Xuân Minh', 'url': 'https://vietnamnet.vn/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-nam-moi-2366154.html', 'category': 'kinh-doanh', 'crawled_at': '2025-05-03T15:21:38.144882', '_id': 'https://vietnamnet.vn/quat-dat-vang-24k-xuat-hien-o-ha-noi-khach-khen-sang-trong-vuong-khi-nam-moi-2366154.html'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-03T15:21:39.412+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T15:21:39.413+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T15:21:39.576+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_kinh-doanh, run_id=scheduled__2025-05-02T00:00:00+00:00, execution_date=20250502T000000, start_date=20250503T152112, end_date=20250503T152139
+[2025-05-03T15:21:39.619+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T15:21:39.642+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T15:21:39.644+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-03T15:27:46.129+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:27:46.150+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:27:46.157+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:27:46.158+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:27:46.171+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-02 00:00:00+00:00
+[2025-05-03T15:27:46.176+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3506) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:27:46.178+0000] {standard_task_runner.py:63} INFO - Started process 3507 to run task
+[2025-05-03T15:27:46.179+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'scheduled__2025-05-02T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpfupxysh8']
+[2025-05-03T15:27:46.181+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask crawl_kinh-doanh
+[2025-05-03T15:27:46.229+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [running]> on host 35c23d20a97a
+[2025-05-03T15:27:46.311+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-02T00:00:00+00:00'
+[2025-05-03T15:27:46.312+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:27:47.021+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:27:50.918+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:27:50.919+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:50.920+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.82s
+[2025-05-03T15:27:51.249+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:27:51.250+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:51.251+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.33s
+[2025-05-03T15:27:51.252+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:27:51.253+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:51.253+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.15s
+[2025-05-03T15:27:51.382+0000] {logging_mixin.py:188} INFO - Tìm thấy 50 link bài viết (trước khi lọc trùng trong DB)
+[2025-05-03T15:27:52.291+0000] {logging_mixin.py:188} INFO - 40 bài viết mới cần crawl
+[2025-05-03T15:27:52.422+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T15:27:52.423+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/hoan-thue-thu-nhap-ca-nhan-hon-1-nam-nguoi-dan-chua-duoc-nhan-2396961.html
+[2025-05-03T15:27:53.056+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:27:56.918+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hoan-thue-thu-nhap-ca-nhan-hon-1-nam-nguoi-dan-chua-duoc-nhan-2396961.html     | 
+[2025-05-03T15:27:56.919+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:56.919+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.77s
+[2025-05-03T15:27:57.171+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hoan-thue-thu-nhap-ca-nhan-hon-1-nam-nguoi-dan-chua-duoc-nhan-2396961.html     | 
+[2025-05-03T15:27:57.171+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:57.172+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T15:27:57.173+0000] {logging_mixin.py:188} INFO - 0.25
+[2025-05-03T15:27:57.173+0000] {logging_mixin.py:188} INFO - s
+[2025-05-03T15:27:57.175+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hoan-thue-thu-nhap-ca-nhan-hon-1-nam-nguoi-dan-chua-duoc-nhan-2396961.html     | 
+[2025-05-03T15:27:57.175+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:27:57.176+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.03s
+[2025-05-03T15:27:57.841+0000] {logging_mixin.py:188} INFO -     ✓ Hơn 1 năm chưa được hoàn thuế thu nhập cá nhân, cái kết khi ...
+[2025-05-03T15:27:57.843+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/thu-nghiem-fintech-tu-1-7-khong-duoc-chay-thu-ra-nuoc-ngoai-2396885.html
+[2025-05-03T15:27:58.628+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:28:02.414+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thu-nghiem-fintech-tu-1-7-khong-duoc-chay-thu-ra-nuoc-ngoai-2396885.html       | 
+[2025-05-03T15:28:02.415+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:02.420+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.70s
+[2025-05-03T15:28:02.832+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thu-nghiem-fintech-tu-1-7-khong-duoc-chay-thu-ra-nuoc-ngoai-2396885.html       | 
+[2025-05-03T15:28:02.833+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:02.835+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.41s
+[2025-05-03T15:28:02.836+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thu-nghiem-fintech-tu-1-7-khong-duoc-chay-thu-ra-nuoc-ngoai-2396885.html       | 
+[2025-05-03T15:28:02.837+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:02.837+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.12s
+[2025-05-03T15:28:03.333+0000] {logging_mixin.py:188} INFO -     ✓ Thử nghiệm giải pháp Fintech từ 1/7: Không được “chạy thử” r...
+[2025-05-03T15:28:03.333+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/gia-vang-hom-nay-3-5-2025-du-bao-kho-tang-manh-sjc-va-nhan-van-neo-cao-2397214.html
+[2025-05-03T15:28:03.991+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:28:08.935+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/gia-vang-hom-nay-3-5-2025-...o-tang-manh-sjc-va-nhan-van-neo-cao-2397214.html  | 
+[2025-05-03T15:28:08.936+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:08.937+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.83s
+[2025-05-03T15:28:09.250+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/gia-vang-hom-nay-3-5-2025-...o-tang-manh-sjc-va-nhan-van-neo-cao-2397214.html  | 
+[2025-05-03T15:28:09.251+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:09.252+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.31s
+[2025-05-03T15:28:09.253+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/gia-vang-hom-nay-3-5-2025-...o-tang-manh-sjc-va-nhan-van-neo-cao-2397214.html  | 
+[2025-05-03T15:28:09.254+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:09.254+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.15s
+[2025-05-03T15:28:09.718+0000] {logging_mixin.py:188} INFO -     ✓ Giá vàng hôm nay 3/5/2025 khó tăng đột biến, vàng bớt hấp dẫ...
+[2025-05-03T15:28:09.719+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/chuoi-su-kien-viet-malliday-he-holiday-trai-nghiem-gan-ket-tinh-than-viet-2397003.html
+[2025-05-03T15:28:10.441+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:28:14.972+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chuoi-su-kien-viet-mallida...-trai-nghiem-gan-ket-tinh-than-viet-2397003.html  | 
+[2025-05-03T15:28:14.973+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:14.974+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.43s
+[2025-05-03T15:28:15.271+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chuoi-su-kien-viet-mallida...-trai-nghiem-gan-ket-tinh-than-viet-2397003.html  | 
+[2025-05-03T15:28:15.272+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:15.273+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-03T15:28:15.274+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chuoi-su-kien-viet-mallida...-trai-nghiem-gan-ket-tinh-than-viet-2397003.html  | 
+[2025-05-03T15:28:15.274+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:15.275+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.73s
+[2025-05-03T15:28:15.694+0000] {logging_mixin.py:188} INFO -     ✓ Chuỗi sự kiện ‘Việt Malliday - Hè Holiday’ - trải nghiệm gắn...
+[2025-05-03T15:28:15.695+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ban-baby-three-dip-valentine-co-gai-ha-noi-thu-ca-tram-trieu-moi-ngay-2371386.html
+[2025-05-03T15:28:16.391+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:28:21.217+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ban-baby-three-dip-valenti...i-ha-noi-thu-ca-tram-trieu-moi-ngay-2371386.html  | 
+[2025-05-03T15:28:21.218+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:21.219+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.74s
+[2025-05-03T15:28:21.409+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ban-baby-three-dip-valenti...i-ha-noi-thu-ca-tram-trieu-moi-ngay-2371386.html  | 
+[2025-05-03T15:28:21.410+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:21.411+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.19s
+[2025-05-03T15:28:21.412+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ban-baby-three-dip-valenti...i-ha-noi-thu-ca-tram-trieu-moi-ngay-2371386.html  | 
+[2025-05-03T15:28:21.413+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:28:21.414+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.94s
+[2025-05-03T15:28:21.781+0000] {logging_mixin.py:188} INFO -     ✓ Bán Baby Three dịp Valentine, cô gái Hà Nội thu cả trăm triệ...
+[2025-05-03T15:28:21.782+0000] {logging_mixin.py:188} INFO - ⏱️  Tổng thời gian crawl: 35.45 giây
+[2025-05-03T15:28:22.639+0000] {logging_mixin.py:188} INFO - Đã lưu 5 bài viết vào collection 'kinh-doanh'
+[2025-05-03T15:28:22.704+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T15:28:22.709+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T15:28:22.718+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_kinh-doanh, run_id=scheduled__2025-05-02T00:00:00+00:00, execution_date=20250502T000000, start_date=20250503T152746, end_date=20250503T152822
+[2025-05-03T15:28:22.757+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T15:28:22.780+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T15:28:22.783+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-03T15:39:39.423+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T15:39:39.465+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:39:39.479+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T15:39:39.480+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T15:39:39.513+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-02 00:00:00+00:00
+[2025-05-03T15:39:39.524+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=163) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T15:39:39.533+0000] {standard_task_runner.py:63} INFO - Started process 181 to run task
+[2025-05-03T15:39:39.530+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'scheduled__2025-05-02T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp71n0rfbm']
+[2025-05-03T15:39:39.541+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask crawl_kinh-doanh
+[2025-05-03T15:39:39.681+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [running]> on host 4b7373746518
+[2025-05-03T15:39:39.895+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-02T00:00:00+00:00'
+[2025-05-03T15:39:39.897+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T15:39:41.807+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:39:53.215+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:53.216+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:53.217+0000] {logging_mixin.py:188} INFO -  | ⏱: 11.13s
+[2025-05-03T15:39:54.026+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:54.028+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:54.028+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.81s
+[2025-05-03T15:39:54.034+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T15:39:54.036+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:39:54.037+0000] {logging_mixin.py:188} INFO -  | ⏱: 11.95s
+[2025-05-03T15:39:54.416+0000] {logging_mixin.py:188} INFO - Tìm thấy 49 link bài viết
+[2025-05-03T15:39:54.747+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T15:39:54.748+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chia-se-nhung-dieu-truoc-nay-chua-tung-cong-khai-2394612.html
+[2025-05-03T15:39:56.411+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:40:10.994+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:10.996+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:10.997+0000] {logging_mixin.py:188} INFO -  | ⏱: 14.33s
+[2025-05-03T15:40:12.055+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:12.061+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:12.063+0000] {logging_mixin.py:188} INFO -  | ⏱: 1.05s
+[2025-05-03T15:40:12.066+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...-dieu-truoc-nay-chua-tung-cong-khai-2394612.html  | 
+[2025-05-03T15:40:12.070+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:12.071+0000] {logging_mixin.py:188} INFO -  | ⏱: 15.40s
+[2025-05-03T15:40:14.797+0000] {logging_mixin.py:188} INFO -     ✓ Tỷ phú Phạm Nhật Vượng chia sẻ những điều trước nay chưa từn...
+[2025-05-03T15:40:14.798+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/nu-dai-gia-giao-duc-nguyen-thi-ut-em-voi-vong-xoay-3-200-ty-tu-tui-phu-huynh-2397121.html
+[2025-05-03T15:40:16.004+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T15:40:24.851+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nu-dai-gia-giao-duc-nguyen...vong-xoay-3-200-ty-tu-tui-phu-huynh-2397121.html  | 
+[2025-05-03T15:40:24.852+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T15:40:24.853+0000] {logging_mixin.py:188} INFO -  | ⏱: 8.56s
+[2025-05-03T16:55:50.678+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-03T16:55:50.703+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T16:55:50.715+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [queued]>
+[2025-05-03T16:55:50.716+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-03T16:55:50.732+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_kinh-doanh> on 2025-05-02 00:00:00+00:00
+[2025-05-03T16:55:50.738+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5278) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-03T16:55:50.739+0000] {standard_task_runner.py:63} INFO - Started process 5279 to run task
+[2025-05-03T16:55:50.740+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_multi_category_crawler', 'crawl_kinh-doanh', 'scheduled__2025-05-02T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpt42pggne']
+[2025-05-03T16:55:50.743+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask crawl_kinh-doanh
+[2025-05-03T16:55:50.798+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_multi_category_crawler.crawl_kinh-doanh scheduled__2025-05-02T00:00:00+00:00 [running]> on host 3ca514faf7bb
+[2025-05-03T16:55:50.891+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_multi_category_crawler' AIRFLOW_CTX_TASK_ID='crawl_kinh-doanh' AIRFLOW_CTX_EXECUTION_DATE='2025-05-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-02T00:00:00+00:00'
+[2025-05-03T16:55:50.894+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-03T16:55:51.763+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:55:55.017+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T16:55:55.017+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:55.018+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.17s
+[2025-05-03T16:55:55.317+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T16:55:55.317+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:55.318+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-03T16:55:55.319+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/kinh-doanh                                                                     | 
+[2025-05-03T16:55:55.320+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:55.320+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.47s
+[2025-05-03T16:55:55.425+0000] {logging_mixin.py:188} INFO - Tìm thấy 49 link bài viết
+[2025-05-03T16:55:55.568+0000] {logging_mixin.py:188} INFO - Đang crawl 5 bài viết từ danh mục kinh-doanh...
+[2025-05-03T16:55:55.569+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-100-ngay-nam-quyen-kinh-te-my-dao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html
+[2025-05-03T16:55:56.152+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:55:59.546+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T16:55:59.546+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:59.547+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.33s
+[2025-05-03T16:55:59.754+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T16:55:59.755+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:59.756+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-03T16:55:59.757+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ong-trump-100-ngay-nam-quy...ao-nguoc-vi-nhung-thay-doi-dot-ngot-2396870.html  | 
+[2025-05-03T16:55:59.757+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:55:59.758+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.54s
+[2025-05-03T16:56:00.189+0000] {logging_mixin.py:188} INFO -     ✓ Đối diện chỉ số mới đầy bất an, ông Trump nói về thời kỳ 'bù...
+[2025-05-03T16:56:00.190+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chia-se-nhung-dieu-truoc-nay-chua-tung-cong-khai-2394612.html#comment
+[2025-05-03T16:56:00.763+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:56:04.646+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...uoc-nay-chua-tung-cong-khai-2394612.html#comment  | 
+[2025-05-03T16:56:04.647+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:04.648+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.83s
+[2025-05-03T16:56:05.042+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...uoc-nay-chua-tung-cong-khai-2394612.html#comment  | 
+[2025-05-03T16:56:05.042+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:05.043+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.39s
+[2025-05-03T16:56:05.044+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ty-phu-pham-nhat-vuong-chi...uoc-nay-chua-tung-cong-khai-2394612.html#comment  | 
+[2025-05-03T16:56:05.045+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:05.045+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.22s
+[2025-05-03T16:56:05.460+0000] {logging_mixin.py:188} INFO -     ✓ Tỷ phú Phạm Nhật Vượng chia sẻ những điều trước nay chưa từn...
+[2025-05-03T16:56:05.461+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/vnpay-len-tieng-ve-nhung-tranh-cai-tai-buoi-tong-duyet-trinh-dien-10-500-drone-2396372.html
+[2025-05-03T16:56:06.084+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:56:09.603+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vnpay-len-tieng-ve-nhung-t...-tong-duyet-trinh-dien-10-500-drone-2396372.html  | 
+[2025-05-03T16:56:09.604+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:09.604+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.46s
+[2025-05-03T16:56:09.839+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vnpay-len-tieng-ve-nhung-t...-tong-duyet-trinh-dien-10-500-drone-2396372.html  | 
+[2025-05-03T16:56:09.839+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:09.840+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-03T16:56:09.841+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vnpay-len-tieng-ve-nhung-t...-tong-duyet-trinh-dien-10-500-drone-2396372.html  | 
+[2025-05-03T16:56:09.842+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:09.842+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.70s
+[2025-05-03T16:56:10.254+0000] {logging_mixin.py:188} INFO -     ✓ VNPay lên tiếng về những tranh cãi tại buổi tổng duyệt trình...
+[2025-05-03T16:56:10.254+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/bi-thue-cham-hoan-thue-thu-nhap-ca-nhan-gan-1-nam-dan-hoi-thang-bo-tai-chinh-2397190.html
+[2025-05-03T16:56:10.894+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:56:14.675+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bi-thue-cham-hoan-thue-thu...an-1-nam-dan-hoi-thang-bo-tai-chinh-2397190.html  | 
+[2025-05-03T16:56:14.676+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:14.676+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.71s
+[2025-05-03T16:56:14.962+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bi-thue-cham-hoan-thue-thu...an-1-nam-dan-hoi-thang-bo-tai-chinh-2397190.html  | 
+[2025-05-03T16:56:14.963+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:14.964+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-03T16:56:14.965+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bi-thue-cham-hoan-thue-thu...an-1-nam-dan-hoi-thang-bo-tai-chinh-2397190.html  | 
+[2025-05-03T16:56:14.965+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:14.966+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.00s
+[2025-05-03T16:56:15.444+0000] {logging_mixin.py:188} INFO -     ✓ Bị chậm hoàn thuế thu nhập cá nhân gần 1 năm, dân hỏi thẳng ...
+[2025-05-03T16:56:15.445+0000] {logging_mixin.py:188} INFO - --> Crawl: https://vietnamnet.vn/vu-mat-dien-dien-rong-o-tay-ban-nha-nang-luong-tai-tao-la-thu-pham-2396520.html
+[2025-05-03T16:56:16.133+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-03T16:56:19.699+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vu-mat-dien-dien-rong-o-ta...-nha-nang-luong-tai-tao-la-thu-pham-2396520.html  | 
+[2025-05-03T16:56:19.699+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:19.700+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.49s
+[2025-05-03T16:56:19.951+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vu-mat-dien-dien-rong-o-ta...-nha-nang-luong-tai-tao-la-thu-pham-2396520.html  | 
+[2025-05-03T16:56:19.952+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:19.952+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-03T16:56:19.953+0000] {logging_mixin.py:188} INFO - 0.25
+[2025-05-03T16:56:19.953+0000] {logging_mixin.py:188} INFO - s
+[2025-05-03T16:56:19.954+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vu-mat-dien-dien-rong-o-ta...-nha-nang-luong-tai-tao-la-thu-pham-2396520.html  | 
+[2025-05-03T16:56:19.955+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-03T16:56:19.955+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.75s
+[2025-05-03T16:56:20.381+0000] {logging_mixin.py:188} INFO -     ✓ Vụ mất điện diện rộng ở Tây Ban Nha: Năng lượng tái tạo là '...
+[2025-05-03T16:56:20.382+0000] {logging_mixin.py:188} INFO - ⏱️  Tổng thời gian crawl: 29.47 giây
+[2025-05-03T16:56:21.420+0000] {logging_mixin.py:188} INFO - Đã lưu 5 bài viết vào collection 'kinh-doanh'
+[2025-05-03T16:56:21.483+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-03T16:56:21.484+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-03T16:56:21.491+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_multi_category_crawler, task_id=crawl_kinh-doanh, run_id=scheduled__2025-05-02T00:00:00+00:00, execution_date=20250502T000000, start_date=20250503T165550, end_date=20250503T165621
+[2025-05-03T16:56:21.546+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-03T16:56:21.567+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-03T16:56:21.569+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

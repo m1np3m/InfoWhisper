@@ -1,0 +1,1 @@
+[2025-06-22T17:20:37.811+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-06-22T17:10:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

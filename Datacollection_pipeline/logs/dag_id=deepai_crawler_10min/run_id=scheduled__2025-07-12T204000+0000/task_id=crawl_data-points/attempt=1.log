@@ -1,0 +1,152 @@
+[2025-07-12T20:59:53.783+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-12T20:59:53.844+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-07-12T20:40:00+00:00 [queued]>
+[2025-07-12T20:59:53.900+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-07-12T20:40:00+00:00 [queued]>
+[2025-07-12T20:59:53.936+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-12T20:59:54.009+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:59:54.011+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-07-12 20:40:00+00:00
+[2025-07-12T20:59:54.038+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1434) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-12T20:59:54.041+0000] {standard_task_runner.py:63} INFO - Started process 1441 to run task
+[2025-07-12T20:59:54.042+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'scheduled__2025-07-12T20:40:00+00:00', '--job-id', '1554', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpb_3yun4i']
+[2025-07-12T20:59:54.051+0000] {standard_task_runner.py:91} INFO - Job 1554: Subtask crawl_data-points
+[2025-07-12T20:59:54.164+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-07-12T20:40:00+00:00 [running]> on host 0eb58692feb3
+[2025-07-12T20:59:54.559+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-07-12T20:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-12T20:40:00+00:00'
+[2025-07-12T20:59:54.562+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-12T20:59:54.604+0000] {dags.py:178} INFO - Bắt đầu crawl category: data-points
+[2025-07-12T20:59:54.981+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-12T20:59:55.020+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:59:55.049+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-12T20:59:55.055+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-12T20:59:55.075+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-12T20:59:55.134+0000] {log.py:232} WARNING - 2025-07-12 20:59:55,134 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T20:59:55.134+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T20:59:55.142+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-12T20:59:56.021+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:59:57.022+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:59:57.741+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-12T20:59:57.759+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/data-points/
+[2025-07-12T20:59:57.773+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-12T20:59:58.041+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:59:59.044+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:00.046+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:01.120+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:02.131+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:03.133+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:04.145+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:05.201+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:06.207+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:07.210+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:08.177+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:09.194+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:10.209+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:11.026+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 13.28s
+[2025-07-12T21:00:11.202+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 0.17s
+[2025-07-12T21:00:11.206+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 13.46s
+[2025-07-12T21:00:11.207+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-12T21:00:11.210+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:11.278+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-07-12T21:00:11.279+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-12T21:00:11.280+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/adapting-r1-like-techniques-to-video-reasoning/
+[2025-07-12T21:00:11.281+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-giants-u-s-policy-proposals/
+[2025-07-12T21:00:11.281+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/alibaba-outdoes-itself-with-latest-open-models/
+[2025-07-12T21:00:11.282+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-claudes-new-opus-and-sonnet/
+[2025-07-12T21:00:11.283+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/building-a-model-for-vision-and-speech/
+[2025-07-12T21:00:11.284+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-07-12T21:00:12.194+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-07-12T21:00:12.196+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-07-12T21:00:12.197+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/european-ceos-urge-2-year-pause-in-eu-ai-act/
+[2025-07-12T21:00:12.212+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:13.214+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:13.949+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-12T21:00:14.216+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:15.217+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:16.233+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:17.234+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:18.240+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:19.241+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:20.245+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:21.263+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:22.350+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:22.948+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/european-ceos-urge-2-year-pause-in-eu-ai-a
+ct/                  | ✓ | ⏱: 8.99s
+[2025-07-12T21:00:23.151+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/european-ceos-urge-2-year-pause-in-eu-ai-a
+ct/                  | ✓ | ⏱: 0.18s
+[2025-07-12T21:00:23.155+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/european-ceos-urge-2-year-pause-in-eu-ai-a
+ct/                  | ✓ | ⏱: 9.20s
+[2025-07-12T21:00:23.229+0000] {logging_mixin.py:188} INFO - Title: European CEOs urge 2-year pause in EU AI Act
+[2025-07-12T21:00:23.231+0000] {logging_mixin.py:188} INFO - Subtitle: DeepSeek-TNG-R1T2-Chimera merges DeepSeek LLMs to cut inference cost in half
+[2025-07-12T21:00:23.353+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:23.434+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: d626c, parent_run_id: d327e
+[2025-07-12T21:00:24.355+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:25.357+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:26.302+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: d626c, parent_run_id: d327e
+[2025-07-12T21:00:26.305+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "e3a165abcce6390ca137da96372f28f2",
+    "span_id": "085246552499f323",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-12T21:00:23.436502Z",
+  "end_time": "2025-07-12T21:00:26.303811Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"European CEOs urge 2-year pause in EU AI Act\\n\\nWelcome back! In today\\u2019s edition of Data Points, you\\u2019ll learn more about:\\n\\nEuropean CEOs seek 2-year pause in AI Act enforcement\\n\\n44 chief executives at Airbus, BNP Paribas, Carrefour, Philips, and other top European companies asked European Commission President Ursula von der Leyen to postpone the AI Act\\u2019s general-purpose model rules for two years. Theyarguedthat overlapping regulations and a still-unfinished \\u201ccode of practice\\u201d create legal uncertainty that could slow AI deployment and weaken Europe\\u2019s competitiveness. A delay would allow regulators to finalize technical standards and give developers time to adapt their systems, reducing compliance risk for companies that build or integrate large language models in the EU. (The Wall Street JournalandFinancial Times)\\n\\nTNG releases weights for DeepSeek-TNG-R1T2-Chimera, a merging of DeepSeek models that cuts inference cost\\n\\nTNG Technology Consulting, a German firm, built DeepSeek-TNG-R1T2-Chimera by merging DeepSeek-R1-0528, DeepSeek-R1, and DeepSeek-V3-0324. The 671 billion-parameter reasoning LLM achieves about 90 percent of Deepseek-R1-0528\\u2019s benchmark performance while trimming output lengths by 60 percent. The team\\u2019sassembly-of-expertsmodel-merging method cut response time and GPU cost roughly in half. The release offers a compute-efficient, cost-effective alternative to Deepseek-R1-0528. You can download the weightshereunder an MIT license. (VentureBeatandHugging Face)\\n\\nTencent releases weights for Hunyuan-A13B with switchable reasoning\\n\\nHunyuan-A13B is an 80 billion-parameter mixture-of-experts large language model that activates groups of 13 billion weights at run time and lets users toggle reasoning on or off. It can process inputs of up to 256,000 input tokens and delivers performance that approaches that of larger models on the AIME math exam, GPQA graduate-level science test, and several agent benchmarks. You candownloadthe weights under a license that limits commercial uses to 100 million monthly active users. (The DecoderandHugging Face)\\n\\nAlibaba launches closed-weights Qwen VLo for image editing and generation\\n\\nThe tech conglomerate opened a preview of Qwen VLo, a large vision-language model that interprets images, generates new ones, and alters existing ones. Unlike earlier models in the Qwen family, Alibaba did not release weights. Qwen VLo builds on the Qwen-VL line of vision-language models with a progressive left-to-right image generator, natural-language image editing, and support for various image resolutions. The model can swap image backgrounds, transfer image styles, and edit image objects. You cantryit via a web interface. (Tech in AsiaandGitHub)\\n\\nHugging Face offers Reachy Mini robot kits\\n\\nHugging Face is accepting orders for Reachy Mini, an open desktop robot kit that users can assemble and program in Python. Reachy robots feature code and some hardware schematics that are freely available for users to use and modify. The Lite version costs $299, while the Wireless version costs $449 and includes a Raspberry Pi 5, Wi-Fi, battery power, camera, microphones, and access to models. Shipments of Lite units start in late summer, with Wireless units following in fall. (Hugging FaceandTechCrunch)\\n\\nMicrosoft links AI to $500 million in cost savings amid ongoing layoffs\\n\\nIn-house AI tools trimmed Microsoft\\u2019s call-center costs by more than $500 million last year, the company told staff. Chief Commercial Officer Judson Althoff said Copilot now writes 35 percent of the code for new products, handles interactions with some small customers, and boosts revenue per salesperson by 9 percent. The internal briefing followed layoffs that have eliminated about 15,000 jobs this year, most recently sales and other customer-facing roles. (BloombergandTechCrunch)\\n\\nStill want to know more about what matters in AI right now?\\n\\nReadthis week\\u2019s issueofThe Batchfor in-depth analysis of news and research.\\n\\nThis week, Andrew Ng warned that rushed state-level AI regulation could harm innovation. He called for giving policymakers more time to understand AI before passing laws driven by fear.\\n\\n\\u201cWhile there is a role for AI regulation, it is when the technology is new and poorly understood that lobbyists are most likely to succeed at pushing through anti-competitive regulations that hamper open-source and other beneficial AI efforts.\\u201d\\n\\nRead Andrew\\u2019s full letterhere.\\n\\nOther top AI news and research stories we covered in depth:\\n\\nSubscribe to Data Points\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft c\\u00e1c th\\u00f4ng tin ch\\u00ednh t\\u1eeb b\\u00e0i vi\\u1ebft:\\n\\n*   C\\u00e1c CEO ch\\u00e2u \\u00c2u, bao g\\u1ed3m Airbus, BNP Paribas, v\\u00e0 Carrefour, \\u0111\\u00e3 k\\u00eau g\\u1ecdi Ch\\u1ee7 t\\u1ecbch \\u1ee6y ban ch\\u00e2u \\u00c2u Ursula von der Leyen ho\\u00e3n thi h\\u00e0nh c\\u00e1c quy \\u0111\\u1ecbnh v\\u1ec1 m\\u00f4 h\\u00ecnh AI trong \\u0110\\u1ea1o lu\\u1eadt AI (AI Act) th\\u00eam hai n\\u0103m, do lo ng\\u1ea1i v\\u1ec1 s\\u1ef1 kh\\u00f4ng ch\\u1eafc ch\\u1eafn v\\u1ec1 ph\\u00e1p l\\u00fd v\\u00e0 t\\u00e1c \\u0111\\u1ed9ng \\u0111\\u1ebfn kh\\u1ea3 n\\u0103ng c\\u1ea1nh tranh c\\u1ee7a ch\\u00e2u \\u00c2u.\\n*   TNG Technology Consulting \\u0111\\u00e3 ph\\u00e1t h\\u00e0nh DeepSeek-TNG-R1T2-Chimera, m\\u1ed9t m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) k\\u1ebft h\\u1ee3p t\\u1eeb c\\u00e1c m\\u00f4 h\\u00ecnh DeepSeek, gi\\u00fap gi\\u1ea3m chi ph\\u00ed suy lu\\u1eadn v\\u00e0 th\\u1eddi gian ph\\u1ea3n h\\u1ed3i trong khi v\\u1eabn duy tr\\u00ec hi\\u1ec7u su\\u1ea5t cao.\\n*   Microsoft ti\\u1ebft l\\u1ed9 r\\u1eb1ng c\\u00e1c c\\u00f4ng c\\u1ee5 AI n\\u1ed9i b\\u1ed9 \\u0111\\u00e3 gi\\u00fap c\\u00f4ng ty ti\\u1ebft ki\\u1ec7m h\\u01a1n 500 tri\\u1ec7u \\u0111\\u00f4 la chi ph\\u00ed trung t\\u00e2m cu\\u1ed9c g\\u1ecdi trong n\\u0103m ngo\\u00e1i, \\u0111\\u1ed3ng th\\u1eddi t\\u0103ng doanh thu cho nh\\u00e2n vi\\u00ean b\\u00e1n h\\u00e0ng.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 1209, \"output\": 212, \"total\": 1421, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-12T21:00:26.358+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:26.669+0000] {crawler_deeplai.py:490} INFO -     ✅ European CEOs urge 2-year pause in EU AI Act...
+[2025-07-12T21:00:27.359+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T21:00:27.671+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 32.53 giây
+[2025-07-12T21:00:27.672+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-07-12T21:00:27.741+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'data-points'
+[2025-07-12T21:00:27.799+0000] {dags.py:183} INFO - Hoàn thành crawl category: data-points
+[2025-07-12T21:00:27.800+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-12T21:00:27.802+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-12T21:00:27.825+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=scheduled__2025-07-12T20:40:00+00:00, execution_date=20250712T204000, start_date=20250712T205953, end_date=20250712T210027
+[2025-07-12T21:00:27.919+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-12T21:00:27.958+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-12T21:00:27.964+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

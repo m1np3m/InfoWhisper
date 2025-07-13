@@ -1,0 +1,36 @@
+[2025-05-15T10:28:13.094+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-15T10:28:13.140+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-15T09:30:00+00:00 [queued]>
+[2025-05-15T10:28:13.153+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-15T09:30:00+00:00 [queued]>
+[2025-05-15T10:28:13.154+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-15T10:28:13.178+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-15 09:30:00+00:00
+[2025-05-15T10:28:13.189+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7072) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-15T10:28:13.191+0000] {standard_task_runner.py:63} INFO - Started process 7074 to run task
+[2025-05-15T10:28:13.192+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'scheduled__2025-05-15T09:30:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp12lmng5g']
+[2025-05-15T10:28:13.195+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask crawl_doi-song
+[2025-05-15T10:28:13.266+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-15T09:30:00+00:00 [running]> on host 45f6bdc6b965
+[2025-05-15T10:28:13.395+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-15T09:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-15T09:30:00+00:00'
+[2025-05-15T10:28:13.396+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-15T10:28:13.628+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-15T10:28:13.802+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-15T10:28:14.805+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-15T10:28:19.099+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-15T10:28:19.100+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:19.102+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.16s
+[2025-05-15T10:28:19.700+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-15T10:28:19.701+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:19.702+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.60s
+[2025-05-15T10:28:19.703+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-15T10:28:19.704+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-15T10:28:19.704+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.77s
+[2025-05-15T10:28:19.813+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-15T10:28:21.977+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs mới
+[2025-05-15T10:28:21.977+0000] {crawler.py:222} INFO - Không có bài viết mới nào trong danh mục doi-song cần crawl.
+[2025-05-15T10:28:21.978+0000] {crawler.py:257} INFO - Không có bài viết để lưu vào collection 'doi-song'
+[2025-05-15T10:28:22.039+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-15T10:28:22.040+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-15T10:28:22.053+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=scheduled__2025-05-15T09:30:00+00:00, execution_date=20250515T093000, start_date=20250515T102813, end_date=20250515T102822
+[2025-05-15T10:28:22.113+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-15T10:28:22.135+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-15T10:28:22.138+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

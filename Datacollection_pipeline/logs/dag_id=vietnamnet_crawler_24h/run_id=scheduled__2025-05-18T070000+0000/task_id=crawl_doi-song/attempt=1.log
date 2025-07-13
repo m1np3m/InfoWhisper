@@ -1,0 +1,358 @@
+[2025-05-18T08:02:25.807+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T08:02:25.845+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T08:02:25.858+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-18T07:00:00+00:00 [queued]>
+[2025-05-18T08:02:25.859+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T08:02:25.907+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-18 07:00:00+00:00
+[2025-05-18T08:02:25.916+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=31800) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T08:02:25.918+0000] {standard_task_runner.py:63} INFO - Started process 31953 to run task
+[2025-05-18T08:02:25.918+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'scheduled__2025-05-18T07:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpnlkni5sp']
+[2025-05-18T08:02:25.922+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask crawl_doi-song
+[2025-05-18T08:02:26.008+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-18T07:00:00+00:00 [running]> on host 396ee2b23973
+[2025-05-18T08:02:27.081+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T07:00:00+00:00'
+[2025-05-18T08:02:27.083+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T08:02:27.826+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T08:02:29.009+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:02:36.269+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007          
+| ✓ | ⏱: 7.16s
+[2025-05-18T08:02:37.014+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007          
+| ✓ | ⏱: 0.73s
+[2025-05-18T08:02:37.023+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007          
+| ✓ | ⏱: 7.92s
+[2025-05-18T08:02:37.351+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-18T08:02:38.892+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-05-18T08:02:38.897+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục doi-song...
+[2025-05-18T08:02:38.900+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cach-nau-canh-chua-ngao-dua-thanh-ngot-2399488.html
+[2025-05-18T08:02:41.493+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:02:46.311+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/cach-nau-canh-chua-ngao-dua-thanh-ngot-2399488.html       
+| ✓ | ⏱: 4.66s
+[2025-05-18T08:02:46.912+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/cach-nau-canh-chua-ngao-dua-thanh-ngot-2399488.html       
+| ✓ | ⏱: 0.59s
+[2025-05-18T08:02:46.917+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/cach-nau-canh-chua-ngao-dua-thanh-ngot-2399488.html       
+| ✓ | ⏱: 5.26s
+[2025-05-18T08:02:48.066+0000] {crawler.py:262} INFO -     ✓ Cách nấu canh chua ngao dứa thanh ngọt cho ngày hè...
+
+[2025-05-18T08:02:48.067+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hom-nay-toi-du-mot-dam-tang-rat-khac-thuong-2402165.html
+[2025-05-18T08:02:49.342+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:02:55.990+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hom-nay-toi-du-mot-dam-tang-rat-khac-thuong-2402165.html  
+| ✓ | ⏱: 6.34s
+[2025-05-18T08:02:56.986+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hom-nay-toi-du-mot-dam-tang-rat-khac-thuong-2402165.html  
+| ✓ | ⏱: 0.96s
+[2025-05-18T08:02:56.993+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hom-nay-toi-du-mot-dam-tang-rat-khac-thuong-2402165.html  
+| ✓ | ⏱: 7.35s
+[2025-05-18T08:02:58.442+0000] {crawler.py:262} INFO -     ✓ ‘Hôm nay, tôi dự một đám tang rất khác thường’...
+
+[2025-05-18T08:02:58.452+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/mua-ve-so-cao-dung-ngay-sinh-nhat-nguoi-phu-nu-trung-130-ty-dong-2402161.html
+[2025-05-18T08:03:00.687+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:03:05.506+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/mua-ve-so-cao-dung-ngay-sinh-nhat-nguoi-phu-nu-trung-130-t
+y-dong-2402161.html  | ✓ | ⏱: 4.58s
+[2025-05-18T08:03:05.840+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/mua-ve-so-cao-dung-ngay-sinh-nhat-nguoi-phu-nu-trung-130-t
+y-dong-2402161.html  | ✓ | ⏱: 0.33s
+[2025-05-18T08:03:05.843+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/mua-ve-so-cao-dung-ngay-sinh-nhat-nguoi-phu-nu-trung-130-t
+y-dong-2402161.html  | ✓ | ⏱: 4.92s
+[2025-05-18T08:03:06.498+0000] {crawler.py:262} INFO -     ✓ Mua vé số cào đúng ngày sinh nhật, người phụ nữ trúng 130 tỷ...
+
+[2025-05-18T08:03:06.499+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-dan-ong-bi-su-tu-can-tu-vong-sau-vai-ngay-mang-ve-nha-nuoi-2401796.html
+[2025-05-18T08:03:07.691+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:03:15.692+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguoi-dan-ong-bi-su-tu-can-tu-vong-sau-vai-ngay-mang-ve-nh
+a-nuoi-2401796.html  | ✓ | ⏱: 7.86s
+[2025-05-18T08:03:16.709+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguoi-dan-ong-bi-su-tu-can-tu-vong-sau-vai-ngay-mang-ve-nh
+a-nuoi-2401796.html  | ✓ | ⏱: 0.99s
+[2025-05-18T08:03:16.718+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguoi-dan-ong-bi-su-tu-can-tu-vong-sau-vai-ngay-mang-ve-nh
+a-nuoi-2401796.html  | ✓ | ⏱: 8.90s
+[2025-05-18T08:03:18.277+0000] {crawler.py:262} INFO -     ✓ Người đàn ông bị sư tử cắn tử vong sau vài ngày mang về nhà ...
+
+[2025-05-18T08:03:18.278+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/canh-kho-tin-trong-nghia-trang-o-hung-yen-buoi-chieu-he-gay-sot-mang-2401657.html
+[2025-05-18T08:03:20.411+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:03:29.552+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-so
+t-mang-2401657.html  | ✓ | ⏱: 8.93s
+[2025-05-18T08:03:30.516+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-so
+t-mang-2401657.html  | ✓ | ⏱: 0.96s
+[2025-05-18T08:03:30.520+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/canh-kho-tin-trong-nghia-t...hung-yen-buoi-chieu-he-gay-so
+t-mang-2401657.html  | ✓ | ⏱: 9.90s
+[2025-05-18T08:03:31.419+0000] {crawler.py:262} INFO -     ✓ Cảnh khó tin trong nghĩa trang ở Hưng Yên buổi chiều hè gây ...
+
+[2025-05-18T08:03:31.421+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360-do-dang-gay-sot-cua-nguoi-dan-ong-o-dak-lak-2401417.html
+[2025-05-18T08:03:32.825+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:03:44.651+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-d
+ak-lak-2401417.html  | ✓ | ⏱: 11.57s
+[2025-05-18T08:03:45.348+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-d
+ak-lak-2401417.html  | ✓ | ⏱: 0.69s
+[2025-05-18T08:03:45.354+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/can-canh-ngoi-nha-xoay-360...gay-sot-cua-nguoi-dan-ong-o-d
+ak-lak-2401417.html  | ✓ | ⏱: 12.28s
+[2025-05-18T08:03:45.958+0000] {crawler.py:262} INFO -     ✓ Cận cảnh ngôi nhà xoay 360 độ đang gây sốt của người đàn ông...
+
+[2025-05-18T08:03:45.959+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/hang-xom-o-tra-vinh-ru-nhau-mua-ve-so-cau-may-khong-ngo-trung-5-to-doc-dac-2401327.html
+[2025-05-18T08:03:47.598+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:03:53.192+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/hang-xom-o-tra-vinh-ru-nha...au-may-khong-ngo-trung-5-to-d
+oc-dac-2401327.html  | ✓ | ⏱: 5.41s
+[2025-05-18T08:03:53.630+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/hang-xom-o-tra-vinh-ru-nha...au-may-khong-ngo-trung-5-to-d
+oc-dac-2401327.html  | ✓ | ⏱: 0.43s
+[2025-05-18T08:03:53.634+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/hang-xom-o-tra-vinh-ru-nha...au-may-khong-ngo-trung-5-to-d
+oc-dac-2401327.html  | ✓ | ⏱: 5.86s
+[2025-05-18T08:03:54.291+0000] {crawler.py:262} INFO -     ✓ Hàng xóm ở Trà Vinh rủ nhau mua vé số cầu may, không ngờ trú...
+
+[2025-05-18T08:03:54.292+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do-mai-cong-chi-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html
+[2025-05-18T08:03:55.755+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:04:06.820+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-t
+am-hon-2400711.html  | ✓ | ⏱: 10.88s
+[2025-05-18T08:04:08.144+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-t
+am-hon-2400711.html  | ✓ | ⏱: 1.29s
+[2025-05-18T08:04:08.162+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-t
+am-hon-2400711.html  | ✓ | ⏱: 12.22s
+[2025-05-18T08:04:09.764+0000] {crawler.py:262} INFO -     ✓ Ngôi chùa có tường gạch đỏ, mái cong, chỉ dành cho phụ nữ 'c...
+
+[2025-05-18T08:04:09.766+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chong-ngoai-tinh-dua-bo-vao-nha-nghi-tren-chiec-xe-bo-me-toi-mua-2400855.html
+[2025-05-18T08:04:11.936+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:04:18.393+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chong-ngoai-tinh-dua-bo-vao-nha-nghi-tren-chiec-xe-bo-me-t
+oi-mua-2400855.html  | ✓ | ⏱: 6.29s
+[2025-05-18T08:04:19.204+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chong-ngoai-tinh-dua-bo-vao-nha-nghi-tren-chiec-xe-bo-me-t
+oi-mua-2400855.html  | ✓ | ⏱: 0.81s
+[2025-05-18T08:04:19.208+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chong-ngoai-tinh-dua-bo-vao-nha-nghi-tren-chiec-xe-bo-me-t
+oi-mua-2400855.html  | ✓ | ⏱: 7.10s
+[2025-05-18T08:04:19.764+0000] {crawler.py:262} INFO -     ✓ Chồng ngoại tình, đưa bồ vào nhà nghỉ trên chiếc xe bố mẹ tô...
+
+[2025-05-18T08:04:19.765+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau-3-ngay-2401650.html
+[2025-05-18T08:04:20.707+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:04:28.679+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau
+-3-ngay-2401650.html | ✓ | ⏱: 7.82s
+[2025-05-18T08:04:29.856+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau
+-3-ngay-2401650.html | ✓ | ⏱: 1.15s
+[2025-05-18T08:04:29.874+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau
+-3-ngay-2401650.html | ✓ | ⏱: 9.03s
+[2025-05-18T08:04:31.272+0000] {crawler.py:262} INFO -     ✓ Vì cái điều hòa, đồng nghiệp bất hòa, mẹ chồng giận nàng dâu...
+
+[2025-05-18T08:04:31.273+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2401434.html
+[2025-05-18T08:04:32.979+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:04:45.246+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2
+401434.html          | ✓ | ⏱: 12.07s
+[2025-05-18T08:04:46.172+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2
+401434.html          | ✓ | ⏱: 0.90s
+[2025-05-18T08:04:46.184+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/biet-phu-duoc-xay-dung-suot-12-nam-bi-yeu-cau-pha-do-gap-2
+401434.html          | ✓ | ⏱: 13.00s
+[2025-05-18T08:04:49.076+0000] {crawler.py:262} INFO -     ✓ Biệt phủ được xây dựng suốt 12 năm bị yêu cầu phá dỡ gấp...
+
+[2025-05-18T08:04:49.105+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-dan-ong-so-huu-hon-dao-dep-nguyen-so-hoang-tu-tra-nghin-ty-cung-khong-ban-2401092.html
+[2025-05-18T08:04:52.429+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:04:59.719+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguoi-dan-ong-so-huu-hon-d...oang-tu-tra-nghin-ty-cung-kho
+ng-ban-2401092.html  | ✓ | ⏱: 7.17s
+[2025-05-18T08:05:00.547+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguoi-dan-ong-so-huu-hon-d...oang-tu-tra-nghin-ty-cung-kho
+ng-ban-2401092.html  | ✓ | ⏱: 0.75s
+[2025-05-18T08:05:00.554+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguoi-dan-ong-so-huu-hon-d...oang-tu-tra-nghin-ty-cung-kho
+ng-ban-2401092.html  | ✓ | ⏱: 8.01s
+[2025-05-18T08:05:01.548+0000] {crawler.py:262} INFO -     ✓ Người đàn ông sở hữu hòn đảo đẹp nguyên sơ, hoàng tử trả ngh...
+
+[2025-05-18T08:05:01.549+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-trong-vuon-hoa-hong-ruc-ro-mong-tim-lai-nu-cuoi-cua-me-2401311.html
+[2025-05-18T08:05:02.743+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:05:13.041+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-
+cua-me-2401311.html  | ✓ | ⏱: 10.15s
+[2025-05-18T08:05:13.867+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-
+cua-me-2401311.html  | ✓ | ⏱: 0.81s
+[2025-05-18T08:05:13.874+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguoi-phu-nu-viet-o-my-tro...-ruc-ro-mong-tim-lai-nu-cuoi-
+cua-me-2401311.html  | ✓ | ⏱: 10.98s
+[2025-05-18T08:05:15.914+0000] {crawler.py:262} INFO -     ✓ Người phụ nữ Việt ở Mỹ trồng vườn hoa hồng rực rỡ, mong tìm ...
+
+[2025-05-18T08:05:15.915+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/co-gai-xay-ngoi-nha-mau-hong-mo-uoc-dua-me-va-ba-ngoai-den-o-cung-2401035.html
+[2025-05-18T08:05:16.740+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:05:24.047+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/co-gai-xay-ngoi-nha-mau-hong-mo-uoc-dua-me-va-ba-ngoai-den
+-o-cung-2401035.html | ✓ | ⏱: 7.20s
+[2025-05-18T08:05:24.718+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/co-gai-xay-ngoi-nha-mau-hong-mo-uoc-dua-me-va-ba-ngoai-den
+-o-cung-2401035.html | ✓ | ⏱: 0.66s
+[2025-05-18T08:05:24.722+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/co-gai-xay-ngoi-nha-mau-hong-mo-uoc-dua-me-va-ba-ngoai-den
+-o-cung-2401035.html | ✓ | ⏱: 7.88s
+[2025-05-18T08:05:25.544+0000] {crawler.py:262} INFO -     ✓ Cô gái xây ngôi nhà màu hồng mơ ước, đưa mẹ và bà ngoại đến ...
+
+[2025-05-18T08:05:25.546+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/khach-nuoc-ngoai-toat-mo-hoi-khi-thu-ren-dao-bo-thep-2401105.html
+[2025-05-18T08:05:26.705+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:05:37.480+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/khach-nuoc-ngoai-toat-mo-hoi-khi-thu-ren-dao-bo-thep-24011
+05.html              | ✓ | ⏱: 10.60s
+[2025-05-18T08:05:38.068+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/khach-nuoc-ngoai-toat-mo-hoi-khi-thu-ren-dao-bo-thep-24011
+05.html              | ✓ | ⏱: 0.58s
+[2025-05-18T08:05:38.076+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/khach-nuoc-ngoai-toat-mo-hoi-khi-thu-ren-dao-bo-thep-24011
+05.html              | ✓ | ⏱: 11.19s
+[2025-05-18T08:05:39.427+0000] {crawler.py:262} INFO -     ✓ Khách nước ngoài toát mồ hôi khi thử rèn "dao bổ thép"...
+
+[2025-05-18T08:05:39.427+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-u70-gay-bao-du-luan-6-nam-truoc-gio-ra-sao-2401421.html
+[2025-05-18T08:05:40.058+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:05:44.713+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-
+ra-sao-2401421.html  | ✓ | ⏱: 4.58s
+[2025-05-18T08:05:45.129+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-
+ra-sao-2401421.html  | ✓ | ⏱: 0.41s
+[2025-05-18T08:05:45.132+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chang-trai-28-tuoi-lay-vo-...-bao-du-luan-6-nam-truoc-gio-
+ra-sao-2401421.html  | ✓ | ⏱: 5.00s
+[2025-05-18T08:05:46.408+0000] {crawler.py:262} INFO -     ✓ Chàng trai 28 tuổi lấy vợ U70 gây bão dư luận 6 năm trước gi...
+
+[2025-05-18T08:05:46.410+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/cap-doi-to-chuc-dam-cuoi-tai-quan-lau-hoa-don-dai-toi-2m-2402291.html
+[2025-05-18T08:05:47.505+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:05:54.989+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/cap-doi-to-chuc-dam-cuoi-tai-quan-lau-hoa-don-dai-toi-2m-2
+402291.html          | ✓ | ⏱: 7.34s
+[2025-05-18T08:05:55.834+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/cap-doi-to-chuc-dam-cuoi-tai-quan-lau-hoa-don-dai-toi-2m-2
+402291.html          | ✓ | ⏱: 0.84s
+[2025-05-18T08:05:55.858+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/cap-doi-to-chuc-dam-cuoi-tai-quan-lau-hoa-don-dai-toi-2m-2
+402291.html          | ✓ | ⏱: 8.22s
+[2025-05-18T08:05:57.224+0000] {crawler.py:262} INFO -     ✓ Cặp đôi tổ chức đám cưới tại nhà hàng lẩu, hóa đơn dài tới 2...
+
+[2025-05-18T08:05:57.225+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-trong-mot-thang-duoc-me-cham-nhu-tre-so-sinh-2399388.html
+[2025-05-18T08:05:59.129+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:04.537+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-s
+o-sinh-2399388.html  | ✓ | ⏱: 5.27s
+[2025-05-18T08:06:05.124+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-s
+o-sinh-2399388.html  | ✓ | ⏱: 0.58s
+[2025-05-18T08:06:05.128+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/co-gai-phu-tho-mat-tu-chi-...-thang-duoc-me-cham-nhu-tre-s
+o-sinh-2399388.html  | ✓ | ⏱: 5.86s
+[2025-05-18T08:06:06.536+0000] {crawler.py:262} INFO -     ✓ Cô gái Phú Thọ mất tứ chi trong một tháng, được mẹ chăm như ...
+
+[2025-05-18T08:06:06.537+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/to-tinh-moi-ngay-suot-nhieu-thang-anh-tay-u70-lay-duoc-vo-dep-o-tphcm-2401654.html
+[2025-05-18T08:06:07.765+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:13.228+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/to-tinh-moi-ngay-suot-nhie...anh-tay-u70-lay-duoc-vo-dep-o
+-tphcm-2401654.html  | ✓ | ⏱: 5.29s
+[2025-05-18T08:06:13.942+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/to-tinh-moi-ngay-suot-nhie...anh-tay-u70-lay-duoc-vo-dep-o
+-tphcm-2401654.html  | ✓ | ⏱: 0.70s
+[2025-05-18T08:06:13.949+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/to-tinh-moi-ngay-suot-nhie...anh-tay-u70-lay-duoc-vo-dep-o
+-tphcm-2401654.html  | ✓ | ⏱: 6.01s
+[2025-05-18T08:06:15.022+0000] {crawler.py:262} INFO -     ✓ Tỏ tình mỗi ngày suốt nhiều tháng, anh Tây U70 lấy được vợ đ...
+
+[2025-05-18T08:06:15.023+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra-lai-2401792.html
+[2025-05-18T08:06:17.119+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:22.526+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra
+-lai-2401792.html    | ✓ | ⏱: 5.17s
+[2025-05-18T08:06:22.896+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra
+-lai-2401792.html    | ✓ | ⏱: 0.36s
+[2025-05-18T08:06:22.900+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nhat-duoc-tien-tren-pho-ong-lao-75-tuoi-cho-ca-ngay-de-tra
+-lai-2401792.html    | ✓ | ⏱: 5.55s
+[2025-05-18T08:06:23.485+0000] {crawler.py:262} INFO -     ✓ Nhặt được tiền trên phố, ông lão 75 tuổi chờ cả ngày để trả ...
+
+[2025-05-18T08:06:23.486+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/to-gia-dinh-trieu-phu-quyt-tien-bua-toi-nha-hang-tra-gia-dat-2401502.html
+[2025-05-18T08:06:24.708+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:30.038+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/to-gia-dinh-trieu-phu-quyt-tien-bua-toi-nha-hang-tra-gia-d
+at-2401502.html      | ✓ | ⏱: 5.18s
+[2025-05-18T08:06:30.791+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/to-gia-dinh-trieu-phu-quyt-tien-bua-toi-nha-hang-tra-gia-d
+at-2401502.html      | ✓ | ⏱: 0.74s
+[2025-05-18T08:06:30.800+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/to-gia-dinh-trieu-phu-quyt-tien-bua-toi-nha-hang-tra-gia-d
+at-2401502.html      | ✓ | ⏱: 5.95s
+[2025-05-18T08:06:32.081+0000] {crawler.py:262} INFO -     ✓ Tố gia đình triệu phú quỵt tiền bữa tối, nhà hàng trả giá đắ...
+
+[2025-05-18T08:06:32.082+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/kiem-700-trieu-dong-moi-nam-co-gai-van-khong-co-nguoi-yeu-vi-lam-nghe-la-2400283.html
+[2025-05-18T08:06:34.167+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:40.388+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/kiem-700-trieu-dong-moi-na...n-khong-co-nguoi-yeu-vi-lam-n
+ghe-la-2400283.html  | ✓ | ⏱: 5.85s
+[2025-05-18T08:06:40.639+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/kiem-700-trieu-dong-moi-na...n-khong-co-nguoi-yeu-vi-lam-n
+ghe-la-2400283.html  | ✓ | ⏱: 0.25s
+[2025-05-18T08:06:40.642+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/kiem-700-trieu-dong-moi-na...n-khong-co-nguoi-yeu-vi-lam-n
+ghe-la-2400283.html  | ✓ | ⏱: 6.11s
+[2025-05-18T08:06:41.128+0000] {crawler.py:262} INFO -     ✓ Kiếm 700 triệu đồng mỗi năm, cô gái vẫn không có người yêu v...
+
+[2025-05-18T08:06:41.129+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chang-trai-thua-ke-6-can-nha-nhung-khong-con-nguoi-than-an-mi-goi-qua-ngay-2401840.html
+[2025-05-18T08:06:41.982+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:45.485+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chang-trai-thua-ke-6-can-n...g-con-nguoi-than-an-mi-goi-qu
+a-ngay-2401840.html  | ✓ | ⏱: 3.40s
+[2025-05-18T08:06:46.367+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chang-trai-thua-ke-6-can-n...g-con-nguoi-than-an-mi-goi-qu
+a-ngay-2401840.html  | ✓ | ⏱: 0.88s
+[2025-05-18T08:06:46.375+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chang-trai-thua-ke-6-can-n...g-con-nguoi-than-an-mi-goi-qu
+a-ngay-2401840.html  | ✓ | ⏱: 4.29s
+[2025-05-18T08:06:47.065+0000] {crawler.py:262} INFO -     ✓ Chàng trai thừa kế 6 căn nhà nhưng không còn người thân, ăn ...
+
+[2025-05-18T08:06:47.066+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vo-chong-o-thanh-hoa-co-10-con-40-chau-chat-moi-lan-tu-hop-dong-nhu-hoi-2401300.html
+[2025-05-18T08:06:49.074+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:06:53.860+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/vo-chong-o-thanh-hoa-co-10...au-chat-moi-lan-tu-hop-dong-n
+hu-hoi-2401300.html  | ✓ | ⏱: 4.54s
+[2025-05-18T08:06:54.172+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/vo-chong-o-thanh-hoa-co-10...au-chat-moi-lan-tu-hop-dong-n
+hu-hoi-2401300.html  | ✓ | ⏱: 0.31s
+[2025-05-18T08:06:54.175+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/vo-chong-o-thanh-hoa-co-10...au-chat-moi-lan-tu-hop-dong-n
+hu-hoi-2401300.html  | ✓ | ⏱: 4.86s
+[2025-05-18T08:06:54.833+0000] {crawler.py:262} INFO -     ✓ Vợ chồng ở Thanh Hóa có 10 con, 40 cháu chắt, mỗi lần tụ họp...
+
+[2025-05-18T08:06:54.834+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-phu-nu-o-son-la-bien-khu-dat-200m2-ngap-rac-thanh-vuon-sum-se-rau-trai-2401461.html
+[2025-05-18T08:06:55.987+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T08:07:03.233+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguoi-phu-nu-o-son-la-bien...ngap-rac-thanh-vuon-sum-se-ra
+u-trai-2401461.html  | ✓ | ⏱: 7.11s
+[2025-05-18T08:07:04.278+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguoi-phu-nu-o-son-la-bien...ngap-rac-thanh-vuon-sum-se-ra
+u-trai-2401461.html  | ✓ | ⏱: 1.00s
+[2025-05-18T08:07:04.283+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguoi-phu-nu-o-son-la-bien...ngap-rac-thanh-vuon-sum-se-ra
+u-trai-2401461.html  | ✓ | ⏱: 8.17s
+[2025-05-18T08:07:05.922+0000] {crawler.py:262} INFO -     ✓ Người phụ nữ ở Sơn La biến khu đất 200m2 ngập rác thành vườn...
+
+[2025-05-18T08:07:05.933+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 278.11 giây
+[2025-05-18T08:07:26.679+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'doi-song'
+[2025-05-18T08:07:26.761+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T08:07:26.767+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T08:07:26.833+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=scheduled__2025-05-18T07:00:00+00:00, execution_date=20250518T070000, start_date=20250518T080225, end_date=20250518T080726
+[2025-05-18T08:07:27.058+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T08:07:27.232+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T08:07:27.255+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

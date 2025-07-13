@@ -1,0 +1,224 @@
+[2025-05-16T08:59:04.024+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T08:59:04.076+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-16T08:57:47.172260+00:00 [queued]>
+[2025-05-16T08:59:04.102+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-16T08:57:47.172260+00:00 [queued]>
+[2025-05-16T08:59:04.103+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T08:59:04.136+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-05-16 08:57:47.172260+00:00
+[2025-05-16T08:59:04.150+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=15328) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T08:59:04.153+0000] {standard_task_runner.py:63} INFO - Started process 15532 to run task
+[2025-05-16T08:59:04.154+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'manual__2025-05-16T08:57:47.172260+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpi69qa0e4']
+[2025-05-16T08:59:04.159+0000] {standard_task_runner.py:91} INFO - Job 39: Subtask crawl_giao-duc
+[2025-05-16T08:59:04.239+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc manual__2025-05-16T08:57:47.172260+00:00 [running]> on host 3e0aeda9ad24
+[2025-05-16T08:59:04.400+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T08:57:47.172260+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T08:57:47.172260+00:00'
+[2025-05-16T08:59:04.402+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T08:59:04.938+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T08:59:05.275+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-16T08:59:06.525+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:09.520+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T08:59:09.521+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:09.522+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.87s
+[2025-05-16T08:59:09.785+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T08:59:09.787+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:09.789+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-16T08:59:09.791+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T08:59:09.793+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:09.794+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.15s
+[2025-05-16T08:59:10.156+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-05-16T08:59:12.274+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 11 URLs mới
+[2025-05-16T08:59:12.275+0000] {crawler.py:234} INFO - Đang crawl 11 bài viết mới từ danh mục giao-duc...
+[2025-05-16T08:59:12.276+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/sau-22-nam-quy-hoach-mang-luoi-truong-hoc-ha-noi-van-thieu-truong-cong-2401301.html
+[2025-05-16T08:59:13.308+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:17.389+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/sau-22-nam-quy-hoach-mang-...ng-hoc-ha-noi-van-thieu-truong-cong-2401301.html  | 
+[2025-05-16T08:59:17.390+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:17.391+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.99s
+[2025-05-16T08:59:17.739+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/sau-22-nam-quy-hoach-mang-...ng-hoc-ha-noi-van-thieu-truong-cong-2401301.html  | 
+[2025-05-16T08:59:17.740+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:17.740+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.34s
+[2025-05-16T08:59:17.742+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/sau-22-nam-quy-hoach-mang-...ng-hoc-ha-noi-van-thieu-truong-cong-2401301.html  | 
+[2025-05-16T08:59:17.742+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:17.743+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.34s
+[2025-05-16T08:59:18.126+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Sau 22 năm quy hoạch mạng lưới trường học, Hà Nội vẫn thiếu trường công
+[2025-05-16T08:59:18.128+0000] {llm_summary.py:128} INFO - Nội dung quá dài (6121 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:19.117+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:19.131+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:19.341+0000] {crawler.py:241} INFO -     ✓ Sau 22 năm quy hoạch mạng lưới trường học, Hà Nội vẫn thiếu ...
+
+[2025-05-16T08:59:19.342+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html
+[2025-05-16T08:59:20.180+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:24.856+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html                                    | 
+[2025-05-16T08:59:24.857+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:24.858+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.61s
+[2025-05-16T08:59:25.278+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html                                    | 
+[2025-05-16T08:59:25.279+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:25.279+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.42s
+[2025-05-16T08:59:25.282+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/quoc-gia-nao-co-toan-trieu-phu-2401576.html                                    | 
+[2025-05-16T08:59:25.283+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:25.284+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.03s
+[2025-05-16T08:59:25.696+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Quốc gia nào có toàn triệu phú?
+[2025-05-16T08:59:26.416+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:26.421+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:26.686+0000] {crawler.py:241} INFO -     ✓ Quốc gia nào có toàn triệu phú?...
+
+[2025-05-16T08:59:26.687+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.html
+[2025-05-16T08:59:27.501+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:30.821+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.html                  | 
+[2025-05-16T08:59:30.821+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:30.822+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.23s
+[2025-05-16T08:59:31.086+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.html                  | 
+[2025-05-16T08:59:31.086+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:31.087+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.26s
+[2025-05-16T08:59:31.089+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/du-kien-bo-quy-dinh-chia-hang-chuc-danh-nha-giao-2401647.html                  | 
+[2025-05-16T08:59:31.089+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:31.090+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.49s
+[2025-05-16T08:59:31.464+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Dự kiến bỏ quy định chia hạng chức danh nhà giáo
+[2025-05-16T08:59:31.465+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3090 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:32.119+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:32.121+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:32.248+0000] {crawler.py:241} INFO -     ✓ Dự kiến bỏ quy định chia hạng chức danh nhà giáo...
+
+[2025-05-16T08:59:32.248+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/nguyen-giam-doc-so-y-te-lam-chu-tich-hoi-dong-giao-su-dh-y-khoa-pham-ngoc-thach-2401677.html
+[2025-05-16T08:59:32.748+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:35.955+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc-thach-2401677.html  | 
+[2025-05-16T08:59:35.955+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:35.956+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.14s
+[2025-05-16T08:59:36.323+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc-thach-2401677.html  | 
+[2025-05-16T08:59:36.325+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:36.325+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.37s
+[2025-05-16T08:59:36.326+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nguyen-giam-doc-so-y-te-la...g-giao-su-dh-y-khoa-pham-ngoc-thach-2401677.html  | 
+[2025-05-16T08:59:36.327+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:36.328+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.51s
+[2025-05-16T08:59:36.933+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Nguyên Giám đốc Sở Y tế làm Chủ tịch Hội đồng giáo sư ĐH Y khoa Phạm Ngọc Thạch
+[2025-05-16T08:59:37.541+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:37.543+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:37.686+0000] {crawler.py:241} INFO -     ✓ Nguyên Giám đốc Sở Y tế làm Chủ tịch Hội đồng giáo sư ĐH Y k...
+
+[2025-05-16T08:59:37.687+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-cung-nhom-nghe-hot-nhat-o-to-cong-nghe-thong-tin-2401718.html
+[2025-05-16T08:59:38.267+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:41.663+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-thong-tin-2401718.html  | 
+[2025-05-16T08:59:41.664+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:41.665+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.33s
+[2025-05-16T08:59:41.896+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-thong-tin-2401718.html  | 
+[2025-05-16T08:59:41.897+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:41.898+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T08:59:41.898+0000] {logging_mixin.py:188} INFO - 0.23
+[2025-05-16T08:59:41.899+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T08:59:41.900+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/hon-1-trieu-hoc-sinh-chon-...e-hot-nhat-o-to-cong-nghe-thong-tin-2401718.html  | 
+[2025-05-16T08:59:41.901+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:41.901+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.57s
+[2025-05-16T08:59:42.166+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Hơn 1 triệu học sinh chọn cùng nhóm nghề, hot nhất ô tô, công nghệ thông tin
+[2025-05-16T08:59:42.878+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:42.879+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:43.050+0000] {crawler.py:241} INFO -     ✓ Hơn 1 triệu học sinh chọn cùng nhóm nghề, hot nhất ô tô, côn...
+
+[2025-05-16T08:59:43.050+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sinh-lop-10-chia-se-cach-giu-binh-tinh-trong-phong-thi-2399539.html
+[2025-05-16T08:59:43.841+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:47.012+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-phong-thi-2399539.html  | 
+[2025-05-16T08:59:47.012+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:47.013+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.09s
+[2025-05-16T08:59:47.216+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-phong-thi-2399539.html  | 
+[2025-05-16T08:59:47.217+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:47.218+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-16T08:59:47.219+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cac-thu-khoa-thi-tuyen-sin...-cach-giu-binh-tinh-trong-phong-thi-2399539.html  | 
+[2025-05-16T08:59:47.220+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:47.221+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.30s
+[2025-05-16T08:59:47.470+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Thủ khoa thi vào lớp 10 tiết lộ bí quyết giúp thí sinh bình tĩnh trong phòng thi
+[2025-05-16T08:59:47.471+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3079 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:48.083+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:48.086+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:48.251+0000] {crawler.py:241} INFO -     ✓ Thủ khoa thi vào lớp 10 tiết lộ bí quyết giúp thí sinh bình ...
+
+[2025-05-16T08:59:48.252+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu-o-tphcm-bat-ngo-bien-mat-phu-huynh-hoang-mang-2401724.html
+[2025-05-16T08:59:49.083+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:52.407+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoang-mang-2401724.html  | 
+[2025-05-16T08:59:52.408+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:52.409+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.23s
+[2025-05-16T08:59:52.699+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoang-mang-2401724.html  | 
+[2025-05-16T08:59:52.699+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:52.700+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-16T08:59:52.701+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/giam-doc-trung-tam-anh-ngu...t-ngo-bien-mat-phu-huynh-hoang-mang-2401724.html  | 
+[2025-05-16T08:59:52.702+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:52.702+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.52s
+[2025-05-16T08:59:53.065+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Giám đốc trung tâm Anh ngữ ở TPHCM bất ngờ biến mất, phụ huynh hoang mang
+[2025-05-16T08:59:53.066+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3683 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T08:59:53.769+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T08:59:53.771+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T08:59:53.912+0000] {crawler.py:241} INFO -     ✓ Giám đốc trung tâm Anh ngữ ở TPHCM bất ngờ biến mất, phụ huy...
+
+[2025-05-16T08:59:53.913+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cua-giao-vien-2401538.html
+[2025-05-16T08:59:54.787+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T08:59:58.858+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cua-giao-vien-2401538.html        | 
+[2025-05-16T08:59:58.861+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:58.862+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.95s
+[2025-05-16T08:59:59.169+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cua-giao-vien-2401538.html        | 
+[2025-05-16T08:59:59.170+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:59.171+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-16T08:59:59.172+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cua-giao-vien-2401538.html        | 
+[2025-05-16T08:59:59.173+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T08:59:59.174+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.26s
+[2025-05-16T08:59:59.599+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Bộ GD-ĐT sửa quy định trả lương dạy thêm giờ cho giáo viên
+[2025-05-16T08:59:59.599+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4226 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:00:00.833+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:00:00.836+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:00:01.051+0000] {crawler.py:241} INFO -     ✓ Bộ GD-ĐT sửa quy định trả lương dạy thêm giờ cho giáo viên...
+
+[2025-05-16T09:00:01.052+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/pho-truong-khoa-bi-cach-chuc-vi-gian-lan-de-nang-thanh-tich-cho-con-gai-2401466.html
+[2025-05-16T09:00:02.195+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:00:05.318+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/pho-truong-khoa-bi-cach-ch...-lan-de-nang-thanh-tich-cho-con-gai-2401466.html  | 
+[2025-05-16T09:00:05.319+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:05.320+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.03s
+[2025-05-16T09:00:05.526+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/pho-truong-khoa-bi-cach-ch...-lan-de-nang-thanh-tich-cho-con-gai-2401466.html  | 
+[2025-05-16T09:00:05.527+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:05.528+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.20s
+[2025-05-16T09:00:05.529+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/pho-truong-khoa-bi-cach-ch...-lan-de-nang-thanh-tich-cho-con-gai-2401466.html  | 
+[2025-05-16T09:00:05.529+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:05.530+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.24s
+[2025-05-16T09:00:05.746+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Phó trưởng khoa đại học bị cách chức vì gian lận để nâng thành tích cho con gái
+[2025-05-16T09:00:06.560+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:00:06.561+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:00:06.718+0000] {crawler.py:241} INFO -     ✓ Phó trưởng khoa đại học bị cách chức vì gian lận để nâng thà...
+
+[2025-05-16T09:00:06.719+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan-1-5-trieu-bai-thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html
+[2025-05-16T09:00:07.264+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:00:10.039+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html  | 
+[2025-05-16T09:00:10.040+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:10.040+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.70s
+[2025-05-16T09:00:10.241+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html  | 
+[2025-05-16T09:00:10.242+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:10.243+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T09:00:10.243+0000] {logging_mixin.py:188} INFO - 0.2
+[2025-05-16T09:00:10.244+0000] {logging_mixin.py:188} INFO - 0s
+[2025-05-16T09:00:10.245+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cuoc-thi-viet-thu-upu-nhan...thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html  | 
+[2025-05-16T09:00:10.246+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:10.246+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.91s
+[2025-05-16T09:00:10.457+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Cuộc thi viết thư UPU nhận 1,5 triệu bài thi, nữ sinh Đà Nẵng giành giải Nhất
+[2025-05-16T09:00:10.458+0000] {llm_summary.py:128} INFO - Nội dung quá dài (4059 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:00:11.436+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:00:11.438+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:00:11.609+0000] {crawler.py:241} INFO -     ✓ Cuộc thi viết thư UPU nhận 1,5 triệu bài thi, nữ sinh Đà Nẵn...
+
+[2025-05-16T09:00:11.610+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/tranh-luan-hoi-dong-truong-ton-tai-o-muc-hinh-thuc-can-hoat-dong-thuc-chat-hon-2401360.html
+[2025-05-16T09:00:12.094+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:00:14.544+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-chat-hon-2401360.html  | 
+[2025-05-16T09:00:14.545+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:14.545+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.38s
+[2025-05-16T09:00:14.714+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-chat-hon-2401360.html  | 
+[2025-05-16T09:00:14.715+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:14.716+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-16T09:00:14.717+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tranh-luan-hoi-dong-truong...nh-thuc-can-hoat-dong-thuc-chat-hon-2401360.html  | 
+[2025-05-16T09:00:14.717+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:00:14.718+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.56s
+[2025-05-16T09:00:14.924+0000] {crawler.py:198} INFO - Đang tạo tóm tắt cho bài viết: Tranh luận hội đồng trường tồn tại ở mức hình thức, cần hoạt động thực chất hơn
+[2025-05-16T09:00:14.924+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2997 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-16T09:00:15.796+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-16T09:00:15.798+0000] {crawler.py:200} INFO - Đã tạo tóm tắt thành công
+[2025-05-16T09:00:15.958+0000] {crawler.py:241} INFO -     ✓ Tranh luận hội đồng trường tồn tại ở mức hình thức, cần hoạt...
+
+[2025-05-16T09:00:15.959+0000] {crawler.py:244} INFO - ⏱️  Tổng thời gian crawl: 70.68 giây
+[2025-05-16T09:00:16.233+0000] {crawler.py:276} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 7, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.giao-duc index: _id_ dup key: { _id: "2401538" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2401538'}, 'op': {'title': 'Bộ GD-ĐT sửa quy định trả lương dạy thêm giờ cho giáo viên', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-15T19:39:18.000 +07:00', 'views': None, 'tags': [], 'description': 'Bộ GD-ĐT vừa công bố dự thảo thông tư quy định chế độ trả lương dạy thêm giờ đối với nhà giáo trong các cơ sở giáo dục công lập để lấy ý kiến góp ý.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/15/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cho-giao-vien-94339.jpg?width=0&s=sc2PNGUzcZ_MtPJERULtzQ', 'content': 'Thanh Hùng\n\nDự thảo thông tư này nếu được thông qua sẽ thay thế Thông tư liên tịch số 07/2013/TTLT-BGDĐT-BNV-BTC (Thông tư liên tịch số 07) hiện hành, nhằm khắc phục những khó khăn, vướng mắc trong việc thực hiện các chế độ trả lương dạy thêm giờ đối với nhà giáo trong các cơ sở giáo dục công lập thời gian qua.\n\nMột trong những điểm mới đáng chú ý là việc điều chỉnh điều kiện chi trả chế độ thêm giờ. Dự thảo thông tư bỏ quy định về điều kiện chi trả chế độ thêm giờ cho nhà giáo tại khoản 6 Điều 3 Thông tư liên tịch số 07, thay vào đó chỉ quy định tổng số giờ dạy tối đa trong một năm học mà mỗi cơ sở giáo dục được chi trả tiền lương dạy thêm giờ.\n\nĐồng thời, dự thảo bổ sung quy định tổng số giờ dạy thêm trong một năm học của tất cả nhà giáo không được cao hơn tổng số giờ dạy thêm giờ tối đa trong một năm học của cơ sở giáo dục; trường hợp môn học không thể bố trí đủ người giảng dạy, nhà giáo phải dạy vượt quá số giờ tối đa được thanh toán, thì người đứng đầu cơ sở giáo dục báo cáo cơ quan quản lý có thẩm quyền để thực hiện chi trả tiền lương dạy thêm giờ đối với nhà giáo đó.\n\nTheo Bộ GD-ĐT, quy định này nhằm tháo gỡ vướng mắc của các cơ sở giáo dục, đồng thời bảo đảm việc nhà giáo được hưởng chế độ làm thêm giờ theo quy định của Luật Viên chức và Bộ luật Lao động.\n\nBên cạnh đó, căn cứ quy định này, hiệu trưởng nhà trường phải phân công nhiệm vụ cho giáo viên phù hợp, đảm bảo công bằng, hạn chế tối đa tình trạng trong một cơ sở giáo dục vừa có giáo viên dạy vượt giờ, vừa có giáo viên dạy thiếu giờ.\n\nMột điểm mới khác là điều chỉnh tổng số giờ dạy thêm trong một năm học đối với nhà giáo được chi trả tiền lương dạy thêm giờ. Thông tư liên tịch số 07 quy định tổng số giờ dạy thêm được tính trả tiền lương dạy thêm giờ trong một năm học không quá số giờ làm thêm theo quy định của pháp luật. Tuy nhiên, với dự thảo thông tư mới, quy định chi tiết tổng số giờ được chi trả tiền lương dạy thêm giờ như sau: (1) đối với giáo viên mầm non không quá số giờ làm thêm theo quy định của pháp luật; (2) đối với nhà giáo khác không quá 150 giờ dạy.\n\nBộ GD-ĐT cho hay, quy định này bảo đảm phù hợp với đặc thù về hoạt động nghề nghiệp của nhà giáo. Để có 1 giờ dạy trực tiếp trên lớp, nhà giáo phải có thời gian chuẩn bị trước và thời gian sau giờ giảng để đánh giá, xếp loại người học. Quy định này cũng nhằm bảo đảm nhà giáo không phải làm việc quá tải, có thời gian nghỉ ngơi tái tạo sức lao động.\n\nĐiểm mới thứ ba là quy định rõ trách nhiệm chi trả tiền dạy thêm giờ đối với nhà giáo dạy liên trường hoặc biệt phái. Theo dự thảo thông tư mới: Giáo viên được cử biệt phái sẽ do cơ sở giáo dục tiếp nhận chi trả tiền dạy thêm giờ; Giáo viên dạy liên trường sẽ do cơ sở giáo dục nơi họ đến dạy chi trả; Trường hợp giáo viên dạy liên trường tại từ 3 cơ sở trở lên (kể cả nơi công tác chính), thì các cơ sở nơi giáo viên đến dạy sẽ cùng chi trả tiền dạy thêm giờ, trên cơ sở chia đều số giờ dạy.\n\nDự thảo mới bổ sung quy định những nhiệm vụ đã được trả thù lao bằng tiền hoặc phụ cấp thì không được quy đổi ra giờ dạy hoặc giảm định mức tiết dạy để tính tiền lương dạy thêm giờ trừ trường hợp pháp luật có quy định khác. Việc này theo Bộ GD-ĐT nhằm bảo đảm thống nhất, đồng bộ với các quy định khác về chế độ làm việc của giáo viên, giảng viên.\n\nDự thảo cũng quy định về thời điểm chi trả chế độ tiền lương dạy thêm giờ đối với nhà giáo. Theo đó, cơ sở giáo dục mầm non, phổ thông, thường xuyên, dự bị đại học, trường chuyên biệt và cơ sở giáo dục nghề nghiệp chi trả khoản này khi kết thúc năm học.\n\nTheo dự thảo mới, các cơ sở giáo dục đại học, cao đẳng; cơ sở đào tạo, bồi dưỡng của Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ; Trường Chính trị tỉnh, thành phố trực thuộc Trung ương căn cứ vào thông tư này và điều kiện thực tế để quy định mức trả lương dạy thêm giờ cho nhà giáo thuộc thẩm quyền quản lý, không thấp hơn mức quy định tại thông tư.\n\nNgoài ra, dự thảo bổ sung quy định về việc chi trả tiền lương dạy thêm giờ cho nhà giáo công tác không đủ 1 năm học. Những nhà giáo do nghỉ hưu, nghỉ ốm đau, thai sản vượt quá quy định của pháp luật, nghỉ việc không lương hoặc các trường hợp nghỉ khác không trực tiếp tham gia giảng dạy thì được hưởng tiền lương dạy thêm giờ đối với thời gian thực tế công tác.', 'bullet_summary': 'Dưới đây là tóm tắt bài viết về dự thảo thông tư mới về chế độ trả lương dạy thêm giờ cho nhà giáo:\n\n* Dự thảo thông tư này sẽ thay thế Thông tư liên tịch số 07/2013, nhằm giải quyết các khó khăn, vướng mắc trong việc thực hiện chế độ trả lương dạy thêm giờ.\n* Điều kiện chi trả chế độ thêm giờ được điều chỉnh, chỉ quy định tổng số giờ dạy tối đa được chi trả tiền lương thêm giờ cho mỗi cơ sở giáo dục trong một năm học.\n* Tổng số giờ dạy thêm của tất cả nhà giáo không được vượt quá tổng số giờ dạy thêm tối đa của cơ sở giáo dục, trường hợp vượt giờ phải báo cáo cơ quan quản lý để được chi trả.\n* Tổng số giờ dạy thêm được chi trả tiền lương trong một năm học được điều chỉnh: không quá số giờ làm thêm theo quy định pháp luật đối với giáo viên mầm non; không quá 150 giờ dạy đối với nhà giáo khác.\n* Dự thảo thông tư quy định rõ trách nhiệm chi trả tiền dạy thêm giờ đối với nhà giáo.\n\n\n', 'url': 'https://vietnamnet.vn/bo-gd-dt-sua-quy-dinh-tra-luong-day-them-gio-cua-giao-vien-2401538.html', 'category': 'giao-duc', 'crawled_at': '2025-05-16T09:00:00.837191', '_id': '2401538'}}], 'writeConcernErrors': [], 'nInserted': 10, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T09:00:16.306+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T09:00:16.308+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T09:00:16.318+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=manual__2025-05-16T08:57:47.172260+00:00, execution_date=20250516T085747, start_date=20250516T085904, end_date=20250516T090016
+[2025-05-16T09:00:16.381+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T09:00:16.408+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T09:00:16.410+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

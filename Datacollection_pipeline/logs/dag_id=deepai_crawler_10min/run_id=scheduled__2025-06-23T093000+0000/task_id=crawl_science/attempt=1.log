@@ -1,0 +1,142 @@
+[2025-06-28T16:42:55.489+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-28T16:42:55.532+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:55.545+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-23T09:30:00+00:00 [queued]>
+[2025-06-28T16:42:55.673+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-23T09:30:00+00:00 [queued]>
+[2025-06-28T16:42:55.676+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-28T16:42:55.796+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_science> on 2025-06-23 09:30:00+00:00
+[2025-06-28T16:42:55.838+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=985) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-28T16:42:55.855+0000] {standard_task_runner.py:63} INFO - Started process 1049 to run task
+[2025-06-28T16:42:55.832+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_science', 'scheduled__2025-06-23T09:30:00+00:00', '--job-id', '1304', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmptc095de3']
+[2025-06-28T16:42:55.879+0000] {standard_task_runner.py:91} INFO - Job 1304: Subtask crawl_science
+[2025-06-28T16:42:56.095+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-23T09:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-06-28T16:42:56.464+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_science' AIRFLOW_CTX_EXECUTION_DATE='2025-06-23T09:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-23T09:30:00+00:00'
+[2025-06-28T16:42:56.491+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-28T16:42:56.556+0000] {dags.py:178} INFO - Bắt đầu crawl category: science
+[2025-06-28T16:42:56.586+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:57.370+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-28T16:42:57.516+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-06-28T16:42:57.528+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-06-28T16:42:57.536+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-06-28T16:42:57.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:57.607+0000] {log.py:232} WARNING - 2025-06-28 16:42:57,607 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:42:57.607+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:42:57.640+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-28T16:42:58.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:42:59.625+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:00.658+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:00.886+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:43:00.907+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/science/
+[2025-06-28T16:43:00.909+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-28T16:43:01.659+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:02.677+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:03.703+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:04.706+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:05.706+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:06.708+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:07.717+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:08.423+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 7.51s
+[2025-06-28T16:43:08.657+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 0.23s
+[2025-06-28T16:43:08.661+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 7.75s
+[2025-06-28T16:43:08.663+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-28T16:43:08.722+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:08.734+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-28T16:43:08.735+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-28T16:43:08.735+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/a-neural-network-shows-remarkable-accuracy-in-forecasting-risk-of-pancreatic-cancer/
+[2025-06-28T16:43:08.736+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/a-roadmap-explores-how-ai-can-detect-and-mitigate-greenhouse-gases/
+[2025-06-28T16:43:08.737+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/agentic-workflow-generates-novel-scientific-research-papers/
+[2025-06-28T16:43:08.737+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/ai-and-data-center-boom-challenges-big-techs-emissions-targets/
+[2025-06-28T16:43:08.738+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/ai-co-scientist-an-agent-that-generates-research-hypotheses-aiding-drug-discovery/
+[2025-06-28T16:43:08.739+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-28T16:43:09.723+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:10.024+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-28T16:43:10.025+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-28T16:43:10.027+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/biomni-an-ai-agent-for-multidisciplinary-biology-research/
+[2025-06-28T16:43:10.724+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:11.274+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:43:11.725+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:12.726+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:13.727+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:16.845+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:17.554+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/biomni-an-ai-agent-for-multidisciplinary-b
+iology-research/     | ✓ | ⏱: 4.17s
+[2025-06-28T16:43:17.706+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/biomni-an-ai-agent-for-multidisciplinary-b
+iology-research/     | ✓ | ⏱: 0.15s
+[2025-06-28T16:43:17.727+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/biomni-an-ai-agent-for-multidisciplinary-b
+iology-research/     | ✓ | ⏱: 4.34s
+[2025-06-28T16:43:17.777+0000] {logging_mixin.py:188} INFO - Title: A Research Agent for All Biology
+[2025-06-28T16:43:17.778+0000] {logging_mixin.py:188} INFO - Subtitle: Biomni, an AI agent for multidisciplinary biology research
+[2025-06-28T16:43:17.847+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:17.895+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: d8845, parent_run_id: ee2da
+[2025-06-28T16:43:18.847+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:19.848+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:19.925+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: d8845, parent_run_id: ee2da
+[2025-06-28T16:43:19.927+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "00bd270cf0575d6f8660bc5748557c80",
+    "span_id": "ca825c78c7338c2e",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-06-28T16:43:17.896711Z",
+  "end_time": "2025-06-28T16:43:19.927112Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"A Research Agent for All Biology\\n\\nAn\\u00a0agent designed for broad biological research could accelerate the work of scientists in specialties from anatomy to zoology.\\n\\nWhat\\u2019s new:Kexing Huang and colleagues at Stanford, Princeton, University of Washington, Arc Institute, and Genentech introducedBiomni, an agent that performs tasks in genomics, immunology, microbiology, neuroscience, pathology, and much more. You can join awaitlistto get access. The authors intend to release the system as open source.\\n\\nHow it works:The authors assembled a collection of tools, software packages, and databases. Then they built an agent based on Claude 4 Sonnet that draws upon those resources to answer questions, propose hypotheses, design processes, analyze datasets, generate graphs, and so on.\\n\\nResults:Biomni outperformed Claude 4 Sonnet alone, as well as the same model with access to research literature, on Lab-bench, a biomedical subset of Humanity\\u2019s Last Exam, and eight other datasets, as well as three practical case studies.\\n\\nBehind the news:While Biomni is designed to apply to biology broadly, most previous work on agents focused on narrower areas. For instance, just two days after the release of Biomni, a separate team at Stanford releasedCellVoyager, an\\u00a0agent that generates hypotheses about datasets of single-cell RNA sequences. Other examples includeCRISPR-GPT, which designs gene-editing experiments, andSpatialAgent, which analyzes and hypothesizes about how cells interact within organisms.\\n\\nWhy it matters:While agents conversant in biology typically focus on narrow specialties, Biomni\\u2019s knowledge and skills span the entire domain, offering expert assistance to biologists across many specialties. Its reasoning capabilities can improve by substituting more capable LLMs as they become available, and its library of resources can be updated to keep up with changes in the field and extend its knowledge to new areas.\\n\\nWe\\u2019re thinking:Like biology, many sciences are so deep and broad that most scientists have deep expertise only within their areas of specialty. Yet agents can pull together resources from disparate areas to reach novel conclusions. In this way, Biomni demonstrates the potential of AI to augment human expertise in meaningful ways.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Biomni l\\u00e0 m\\u1ed9t t\\u00e1c nh\\u00e2n (agent) nghi\\u00ean c\\u1ee9u sinh h\\u1ecdc \\u0111a n\\u0103ng, \\u0111\\u01b0\\u1ee3c ph\\u00e1t tri\\u1ec3n b\\u1edfi c\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u t\\u1eeb Stanford v\\u00e0 c\\u00e1c t\\u1ed5 ch\\u1ee9c kh\\u00e1c, c\\u00f3 kh\\u1ea3 n\\u0103ng th\\u1ef1c hi\\u1ec7n c\\u00e1c t\\u00e1c v\\u1ee5 trong nhi\\u1ec1u l\\u0129nh v\\u1ef1c sinh h\\u1ecdc kh\\u00e1c nhau nh\\u01b0 di truy\\u1ec1n h\\u1ecdc, mi\\u1ec5n d\\u1ecbch h\\u1ecdc, v\\u00e0 th\\u1ea7n kinh h\\u1ecdc.\\n*   Biomni ho\\u1ea1t \\u0111\\u1ed9ng b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) Claude 4 Sonnet, k\\u1ebft h\\u1ee3p v\\u1edbi m\\u1ed9t b\\u1ed9 s\\u01b0u t\\u1eadp c\\u00e1c c\\u00f4ng c\\u1ee5, ph\\u1ea7n m\\u1ec1m v\\u00e0 c\\u01a1 s\\u1edf d\\u1eef li\\u1ec7u \\u0111\\u1ec3 tr\\u1ea3 l\\u1eddi c\\u00e2u h\\u1ecfi, \\u0111\\u1ec1 xu\\u1ea5t gi\\u1ea3 thuy\\u1ebft, ph\\u00e2n t\\u00edch d\\u1eef li\\u1ec7u v\\u00e0 t\\u1ea1o ra c\\u00e1c bi\\u1ec3u \\u0111\\u1ed3.\\n*   K\\u1ebft qu\\u1ea3 cho th\\u1ea5y Biomni v\\u01b0\\u1ee3t tr\\u1ed9i h\\u01a1n so v\\u1edbi vi\\u1ec7c ch\\u1ec9 s\\u1eed d\\u1ee5ng Claude 4 Sonnet ho\\u1eb7c Claude 4 Sonnet v\\u1edbi quy\\u1ec1n truy c\\u1eadp v\\u00e0o t\\u00e0i li\\u1ec7u nghi\\u00ean c\\u1ee9u, \\u0111\\u1ed3ng th\\u1eddi th\\u1ec3 hi\\u1ec7n ti\\u1ec1m n\\u0103ng c\\u1ee7a AI trong vi\\u1ec7c h\\u1ed7 tr\\u1ee3 c\\u00e1c nh\\u00e0 sinh h\\u1ecdc tr\\u00ean nhi\\u1ec1u l\\u0129nh v\\u1ef1c chuy\\u00ean m\\u00f4n kh\\u00e1c nhau.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 639, \"output\": 216, \"total\": 855, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-06-28T16:43:20.154+0000] {crawler_deeplai.py:490} INFO -     ✅ A Research Agent for All Biology...
+[2025-06-28T16:43:20.849+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:21.155+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 23.52 giây
+[2025-06-28T16:43:21.156+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-28T16:43:21.213+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'science'
+[2025-06-28T16:43:21.266+0000] {dags.py:183} INFO - Hoàn thành crawl category: science
+[2025-06-28T16:43:21.267+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-28T16:43:21.267+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-28T16:43:21.281+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_science, run_id=scheduled__2025-06-23T09:30:00+00:00, execution_date=20250623T093000, start_date=20250628T164255, end_date=20250628T164321
+[2025-06-28T16:43:21.360+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-28T16:43:21.389+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-28T16:43:21.392+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

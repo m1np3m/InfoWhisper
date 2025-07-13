@@ -1,0 +1,55 @@
+[2025-06-23T08:30:50.882+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-23T08:30:50.897+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-23T08:20:00+00:00 [queued]>
+[2025-06-23T08:30:50.906+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-23T08:20:00+00:00 [queued]>
+[2025-06-23T08:30:50.907+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-23T08:30:50.922+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-06-23 08:20:00+00:00
+[2025-06-23T08:30:50.931+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=17777) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-23T08:30:50.932+0000] {standard_task_runner.py:63} INFO - Started process 17784 to run task
+[2025-06-23T08:30:50.933+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'scheduled__2025-06-23T08:20:00+00:00', '--job-id', '1260', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp9iqvp9y8']
+[2025-06-23T08:30:50.937+0000] {standard_task_runner.py:91} INFO - Job 1260: Subtask crawl_data-points
+[2025-06-23T08:30:50.980+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-23T08:20:00+00:00 [running]> on host 13e6c13b5a13
+[2025-06-23T08:30:51.074+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-06-23T08:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-23T08:20:00+00:00'
+[2025-06-23T08:30:51.076+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-23T08:30:51.092+0000] {dags.py:178} INFO - Bắt đầu crawl category: data-points
+[2025-06-23T08:30:51.246+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-23T08:30:51.278+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-06-23T08:30:51.279+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-06-23T08:30:51.279+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-06-23T08:30:51.298+0000] {log.py:232} WARNING - 2025-06-23 08:30:51,298 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-23T08:30:51.298+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-23T08:30:51.303+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-23T08:30:51.663+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:52.157+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-23T08:30:52.158+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/data-points/
+[2025-06-23T08:30:52.158+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-23T08:30:52.664+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:53.665+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:54.665+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:55.666+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:55.939+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 3.78s
+[2025-06-23T08:30:56.053+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 0.11s
+[2025-06-23T08:30:56.055+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 3.90s
+[2025-06-23T08:30:56.056+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-23T08:30:56.098+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-23T08:30:56.099+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-23T08:30:56.099+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/adapting-r1-like-techniques-to-video-reasoning/
+[2025-06-23T08:30:56.100+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-giants-u-s-policy-proposals/
+[2025-06-23T08:30:56.100+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/alibaba-outdoes-itself-with-latest-open-models/
+[2025-06-23T08:30:56.101+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-claudes-new-opus-and-sonnet/
+[2025-06-23T08:30:56.101+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/all-the-models-weve-been-waiting-for/
+[2025-06-23T08:30:56.101+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-23T08:30:56.855+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-23T08:30:57.031+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-23T08:30:57.031+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục data-points cần crawl.
+[2025-06-23T08:30:57.032+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'data-points'
+[2025-06-23T08:30:57.088+0000] {dags.py:183} INFO - Hoàn thành crawl category: data-points
+[2025-06-23T08:30:57.089+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-23T08:30:57.089+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-23T08:30:57.098+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=scheduled__2025-06-23T08:20:00+00:00, execution_date=20250623T082000, start_date=20250623T083050, end_date=20250623T083057
+[2025-06-23T08:30:57.164+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-23T08:30:57.172+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

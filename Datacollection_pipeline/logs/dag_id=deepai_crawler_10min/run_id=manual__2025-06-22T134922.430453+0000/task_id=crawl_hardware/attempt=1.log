@@ -1,0 +1,178 @@
+[2025-06-22T13:49:29.598+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T13:49:29.611+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T13:49:22.430453+00:00 [queued]>
+[2025-06-22T13:49:29.619+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T13:49:22.430453+00:00 [queued]>
+[2025-06-22T13:49:29.620+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T13:49:29.633+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 13:49:22.430453+00:00
+[2025-06-22T13:49:29.642+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=50031) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T13:49:29.644+0000] {standard_task_runner.py:63} INFO - Started process 50049 to run task
+[2025-06-22T13:49:29.644+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'manual__2025-06-22T13:49:22.430453+00:00', '--job-id', '704', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpwhwjk9a3']
+[2025-06-22T13:49:29.647+0000] {standard_task_runner.py:91} INFO - Job 704: Subtask crawl_hardware
+[2025-06-22T13:49:29.690+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T13:49:22.430453+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T13:49:29.781+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T13:49:22.430453+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T13:49:22.430453+00:00'
+[2025-06-22T13:49:29.783+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T13:49:29.799+0000] {dags.py:183} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T13:49:30.039+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T13:49:30.077+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T13:49:30.391+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:31.076+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T13:49:31.077+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T13:49:31.078+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T13:49:31.391+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:32.393+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:33.394+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:34.394+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:34.742+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.73s
+[2025-06-22T13:49:34.830+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.09s
+[2025-06-22T13:49:34.832+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.82s
+[2025-06-22T13:49:34.833+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T13:49:34.866+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T13:49:34.866+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T13:49:34.867+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T13:49:34.867+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T13:49:34.868+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T13:49:34.868+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T13:49:34.869+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T13:49:34.869+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T13:49:35.329+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:35.426+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-22T13:49:35.426+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-22T13:49:35.427+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/the-international-energy-agency-examines-the-energy-costs-and-potential-savings-of-the-ai-boom/
+[2025-06-22T13:49:36.045+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T13:49:36.330+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:37.331+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:37.561+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 1.51s
+[2025-06-22T13:49:37.639+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 0.07s
+[2025-06-22T13:49:37.642+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 1.59s
+[2025-06-22T13:49:37.673+0000] {logging_mixin.py:188} INFO - Title: AI Uses Energy, AI Saves Energy
+[2025-06-22T13:49:37.674+0000] {logging_mixin.py:188} INFO - Subtitle: The International Energy Agency examines the energy costs and potential savings of the AI boom
+[2025-06-22T13:49:37.755+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: b8fe9, parent_run_id: 0e89d
+[2025-06-22T13:49:38.332+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:39.333+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:39.693+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: b8fe9, parent_run_id: 0e89d
+[2025-06-22T13:49:39.695+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='SummaryWithBERTScore' | Full details:
+{
+  "name": "SummaryWithBERTScore",
+  "context": {
+    "trace_id": "042badda2fdfd2ed16f4700645dfe6ab",
+    "span_id": "182dd7253f641b76",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": "0560b490a8e1aca9",
+  "start_time": "2025-06-22T13:49:37.756749Z",
+  "end_time": "2025-06-22T13:49:39.694240Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"AI Uses Energy, AI Saves Energy\\n\\nAI\\u2019s thirst for energy is growing, but the technology\\u00a0also could help produce huge energy savings over the next five to 10 years, according to a recent report.\\n\\nWhat\\u2019s new:The International Energy Agency (IEA), which advises 44 countries on energy policy, performed a comprehensiveanalysisof AI\\u2019s energy consumption including energy required to obtain critical materials needed for chips and data centers. The report sees dark clouds ahead but also silver linings.\\n\\nDark clouds:The report, which is based on interviews with officials in government, energy, and technology, makes four projections for AI\\u2019s energy consumption. In the base scenario, future growth and efficiency gains are similar to those of the past five years. The agency also plots a \\u201ctake-off\\u201d scenario in which AI adoption happens faster, a \\u201chigh efficiency\\u201d scenario with lower energy needs, and a \\u201cheadwinds\\u201d scenario in which adoption of AI slows or infrastructure bottlenecks impede construction. Among the conclusions:\\n\\nSilver linings:AI already makes energy generation, distribution, and use more efficient. The authors expect these savings to accelerate.\\n\\nYes, but:The authors concede that lower energy costs for AI likely will lead to much greater consumption \\u2014 according to theJevons paradox\\u2014 so more-efficient models and hardware will result in higher energy consumption overall.\\n\\nBehind the news:Data centers were growing rapidly prior to the boom in generative AI. Data centers\\u2019 electricity use doubled between 2000 and 2005 and again between 2017 and 2022, driven by the growth of cloud computing and data storage, streaming and social media, and cryptocurrency mining. However, these periods of accelerating growth were followed by periods of slower growth as efforts to cut costs led to more-efficient software and hardware. The authors expect this pattern to hold.\\n\\nWhy it matters:The IEA report is a first-of-its-kind analysis of AI\\u2019s energy requirements, how they\\u2019re likely to grow, as well as the potential of the technology itself to reduce those requirements. It confirms that AI is poised to consume huge amounts of energy. However, it also suggests that today\\u2019s energy costs will be tomorrow\\u2019s energy savings as AI makes energy generation, distribution, and use more efficient across a wide variety of industries.\\n\\nWe\\u2019re thinking:While demand for electricity for data centers is growing rapidly,\\u00a0calibrating the right level of investment is tricky. High levels of growth come\\u00a0with high levels of hype that can lead analysts to overestimate future demand. For example, Microsoft, after examining\\u00a0its forecasts,canceleddata-center projects that would have consumed 2 gigawatts.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Theo m\\u1ed9t b\\u00e1o c\\u00e1o g\\u1ea7n \\u0111\\u00e2y, AI ng\\u00e0y c\\u00e0ng ti\\u00eau t\\u1ed1n nhi\\u1ec1u n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng c\\u00f4ng ngh\\u1ec7 n\\u00e0y c\\u0169ng c\\u00f3 th\\u1ec3 gi\\u00fap ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng \\u0111\\u00e1ng k\\u1ec3 trong 5 \\u0111\\u1ebfn 10 n\\u0103m t\\u1edbi.\\n*   B\\u00e1o c\\u00e1o c\\u1ee7a C\\u01a1 quan N\\u0103ng l\\u01b0\\u1ee3ng Qu\\u1ed1c t\\u1ebf (IEA) \\u0111\\u01b0a ra nhi\\u1ec1u k\\u1ecbch b\\u1ea3n v\\u1ec1 m\\u1ee9c ti\\u00eau th\\u1ee5 n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI, bao g\\u1ed3m c\\u1ea3 k\\u1ecbch b\\u1ea3n t\\u0103ng tr\\u01b0\\u1edfng nhanh v\\u00e0 k\\u1ecbch b\\u1ea3n hi\\u1ec7u qu\\u1ea3 cao, \\u0111\\u1ed3ng th\\u1eddi nh\\u1ea5n m\\u1ea1nh ti\\u1ec1m n\\u0103ng ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI trong t\\u01b0\\u01a1ng lai.\\n*   M\\u1eb7c d\\u00f9 AI d\\u1ef1 ki\\u1ebfn s\\u1ebd ti\\u00eau th\\u1ee5 m\\u1ed9t l\\u01b0\\u1ee3ng l\\u1edbn n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng n\\u00f3 c\\u0169ng c\\u00f3 th\\u1ec3 l\\u00e0m cho vi\\u1ec7c s\\u1ea3n xu\\u1ea5t, ph\\u00e2n ph\\u1ed1i v\\u00e0 s\\u1eed d\\u1ee5ng n\\u0103ng l\\u01b0\\u1ee3ng hi\\u1ec7u qu\\u1ea3 h\\u01a1n, d\\u1eabn \\u0111\\u1ebfn ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng tr\\u00ean nhi\\u1ec1u l\\u0129nh v\\u1ef1c.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 743, \"output\": 174, \"total\": 917, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-1f10d355-392c-4cb4-903c-7e9d2910b10e"
+    }
+  }
+}
+
+[2025-06-22T13:49:40.333+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:41.334+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:42.335+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:43.336+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:44.337+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:45.337+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:45.679+0000] {summary_gemini.py:159} INFO - [BERT BULLET] F1=0.8092083930969238
+[2025-06-22T13:49:45.681+0000] {resource_manager.py:290} DEBUG - Score: Enqueuing event type=score-create for trace_id=042badda2fdfd2ed16f4700645dfe6ab name=bert_f1_score value=0.8092083930969238
+[2025-06-22T13:49:46.339+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:47.340+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:48.341+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:49.342+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:50.343+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:50.683+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='BulletSummaryWithBERTScore' | Full details:
+{
+  "name": "BulletSummaryWithBERTScore",
+  "context": {
+    "trace_id": "042badda2fdfd2ed16f4700645dfe6ab",
+    "span_id": "0560b490a8e1aca9",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-06-22T13:49:37.742653Z",
+  "end_time": "2025-06-22T13:49:50.682536Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.type": "span",
+    "langfuse.trace.input": "{\"content\": \"AI Uses Energy, AI Saves Energy\\n\\nAI\\u2019s thirst for energy is growing, but the technology\\u00a0also could help produce huge energy savings over the next five to 10 years, according to a recent report.\\n\\nWhat\\u2019s new:The International Energy Agency (IEA), which advises 44 countries on energy policy, performed a comprehensiveanalysisof AI\\u2019s energy consumption including energy required to obtain critical materials needed for chips and data centers. The report sees dark clouds ahead but also silver linings.\\n\\nDark clouds:The report, which is based on interviews with officials in government, energy, and technology, makes four projections for AI\\u2019s energy consumption. In the base scenario, future growth and efficiency gains are similar to those of the past five years. The agency also plots a \\u201ctake-off\\u201d scenario in which AI adoption happens faster, a \\u201chigh efficiency\\u201d scenario with lower energy needs, and a \\u201cheadwinds\\u201d scenario in which adoption of AI slows or infrastructure bottlenecks impede construction. Among the conclusions:\\n\\nSilver linings:AI already makes energy generation, distribution, and use more efficient. The authors expect these savings to accelerate.\\n\\nYes, but:The authors concede that lower energy costs for AI likely will lead to much greater consumption \\u2014 according to theJevons paradox\\u2014 so more-efficient models and hardware will result in higher energy consumption overall.\\n\\nBehind the news:Data centers were growing rapidly prior to the boom in generative AI. Data centers\\u2019 electricity use doubled between 2000 and 2005 and again between 2017 and 2022, driven by the growth of cloud computing and data storage, streaming and social media, and cryptocurrency mining. However, these periods of accelerating growth were followed by periods of slower growth as efforts to cut costs led to more-efficient software and hardware. The authors expect this pattern to hold.\\n\\nWhy it matters:The IEA report is a first-of-its-kind analysis of AI\\u2019s energy requirements, how they\\u2019re likely to grow, as well as the potential of the technology itself to reduce those requirements. It confirms that AI is poised to consume huge amounts of energy. However, it also suggests that today\\u2019s energy costs will be tomorrow\\u2019s energy savings as AI makes energy generation, distribution, and use more efficient across a wide variety of industries.\\n\\nWe\\u2019re thinking:While demand for electricity for data centers is growing rapidly,\\u00a0calibrating the right level of investment is tricky. High levels of growth come\\u00a0with high levels of hype that can lead analysts to overestimate future demand. For example, Microsoft, after examining\\u00a0its forecasts,canceleddata-center projects that would have consumed 2 gigawatts.\"}",
+    "langfuse.trace.output": "{\"summary\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Theo m\\u1ed9t b\\u00e1o c\\u00e1o g\\u1ea7n \\u0111\\u00e2y, AI ng\\u00e0y c\\u00e0ng ti\\u00eau t\\u1ed1n nhi\\u1ec1u n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng c\\u00f4ng ngh\\u1ec7 n\\u00e0y c\\u0169ng c\\u00f3 th\\u1ec3 gi\\u00fap ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng \\u0111\\u00e1ng k\\u1ec3 trong 5 \\u0111\\u1ebfn 10 n\\u0103m t\\u1edbi.\\n*   B\\u00e1o c\\u00e1o c\\u1ee7a C\\u01a1 quan N\\u0103ng l\\u01b0\\u1ee3ng Qu\\u1ed1c t\\u1ebf (IEA) \\u0111\\u01b0a ra nhi\\u1ec1u k\\u1ecbch b\\u1ea3n v\\u1ec1 m\\u1ee9c ti\\u00eau th\\u1ee5 n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI, bao g\\u1ed3m c\\u1ea3 k\\u1ecbch b\\u1ea3n t\\u0103ng tr\\u01b0\\u1edfng nhanh v\\u00e0 k\\u1ecbch b\\u1ea3n hi\\u1ec7u qu\\u1ea3 cao, \\u0111\\u1ed3ng th\\u1eddi nh\\u1ea5n m\\u1ea1nh ti\\u1ec1m n\\u0103ng ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI trong t\\u01b0\\u01a1ng lai.\\n*   M\\u1eb7c d\\u00f9 AI d\\u1ef1 ki\\u1ebfn s\\u1ebd ti\\u00eau th\\u1ee5 m\\u1ed9t l\\u01b0\\u1ee3ng l\\u1edbn n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng n\\u00f3 c\\u0169ng c\\u00f3 th\\u1ec3 l\\u00e0m cho vi\\u1ec7c s\\u1ea3n xu\\u1ea5t, ph\\u00e2n ph\\u1ed1i v\\u00e0 s\\u1eed d\\u1ee5ng n\\u0103ng l\\u01b0\\u1ee3ng hi\\u1ec7u qu\\u1ea3 h\\u01a1n, d\\u1eabn \\u0111\\u1ebfn ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng tr\\u00ean nhi\\u1ec1u l\\u0129nh v\\u1ef1c.\"}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-1f10d355-392c-4cb4-903c-7e9d2910b10e"
+    }
+  }
+}
+
+[2025-06-22T13:49:50.836+0000] {crawler_deeplai.py:490} INFO -     ✅ AI Uses Energy, AI Saves Energy...
+[2025-06-22T13:49:51.345+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T13:49:51.837+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 21.76 giây
+[2025-06-22T13:49:51.839+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-22T13:49:51.902+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'hardware'
+[2025-06-22T13:49:51.981+0000] {dags.py:188} INFO - Hoàn thành crawl category: hardware
+[2025-06-22T13:49:51.982+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T13:49:51.983+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T13:49:51.992+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=manual__2025-06-22T13:49:22.430453+00:00, execution_date=20250622T134922, start_date=20250622T134929, end_date=20250622T134951
+[2025-06-22T13:49:52.062+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T13:49:52.088+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T13:49:52.091+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

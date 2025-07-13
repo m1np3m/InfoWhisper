@@ -1,0 +1,77 @@
+[2025-06-21T22:54:28.588+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-21T22:54:28.608+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-21T22:50:44.479568+00:00 [queued]>
+[2025-06-21T22:54:28.618+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-21T22:50:44.479568+00:00 [queued]>
+[2025-06-21T22:54:28.620+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-21T22:54:28.686+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-06-21 22:50:44.479568+00:00
+[2025-06-21T22:54:28.699+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4473) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-21T22:54:28.701+0000] {standard_task_runner.py:63} INFO - Started process 4638 to run task
+[2025-06-21T22:54:28.703+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'manual__2025-06-21T22:50:44.479568+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpqrcglce4']
+[2025-06-21T22:54:28.706+0000] {standard_task_runner.py:91} INFO - Job 49: Subtask crawl_data-points
+[2025-06-21T22:54:28.786+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points manual__2025-06-21T22:50:44.479568+00:00 [running]> on host 92193d0efdf7
+[2025-06-21T22:54:29.002+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-06-21T22:50:44.479568+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-21T22:50:44.479568+00:00'
+[2025-06-21T22:54:29.004+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-21T22:54:29.025+0000] {dags.py:167} INFO - Bắt đầu crawl category: data-points
+[2025-06-21T22:54:29.166+0000] {crawler_deeplai.py:49} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-21T22:54:29.201+0000] {crawler_deeplai.py:463} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-21T22:54:30.510+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:54:30.511+0000] {crawler_deeplai.py:177} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/data-points/
+[2025-06-21T22:54:30.511+0000] {crawler_deeplai.py:178} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-21T22:54:34.554+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 4.04s
+[2025-06-21T22:54:34.724+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 0.17s
+[2025-06-21T22:54:34.727+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 4.21s
+[2025-06-21T22:54:34.728+0000] {crawler_deeplai.py:182} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-21T22:54:34.789+0000] {crawler_deeplai.py:202} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-21T22:54:34.791+0000] {crawler_deeplai.py:206} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-21T22:54:34.791+0000] {crawler_deeplai.py:208} INFO -   1. https://www.deeplearning.ai/the-batch/adapting-r1-like-techniques-to-video-reasoning/
+[2025-06-21T22:54:34.792+0000] {crawler_deeplai.py:208} INFO -   2. https://www.deeplearning.ai/the-batch/ai-giants-u-s-policy-proposals/
+[2025-06-21T22:54:34.793+0000] {crawler_deeplai.py:208} INFO -   3. https://www.deeplearning.ai/the-batch/alibaba-outdoes-itself-with-latest-open-models/
+[2025-06-21T22:54:34.794+0000] {crawler_deeplai.py:208} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-claudes-new-opus-and-sonnet/
+[2025-06-21T22:54:34.797+0000] {crawler_deeplai.py:208} INFO -   5. https://www.deeplearning.ai/the-batch/all-the-models-weve-been-waiting-for/
+[2025-06-21T22:54:34.798+0000] {crawler_deeplai.py:212} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-21T22:54:35.536+0000] {crawler_deeplai.py:456} INFO - Đã lọc: 30 URLs ban đầu -> 2 URLs mới
+[2025-06-21T22:54:35.537+0000] {crawler_deeplai.py:477} INFO - 📝 Đang crawl 2 bài viết mới...
+[2025-06-21T22:54:35.537+0000] {crawler_deeplai.py:484} INFO - [1/2] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/minimax-m1-tackles-qwen3-deepseek-r1-claude-4-opus-and-more/
+[2025-06-21T22:54:35.659+0000] {crawler_deeplai.py:484} INFO - [2/2] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/predicting-cyclones-using-neural-networks/
+[2025-06-21T22:54:36.978+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:54:37.010+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:54:39.229+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/minimax-m1-tackles-qwen3-deepseek-r1-claud
+e-4-opus-and-more/   | ✓ | ⏱: 2.25s
+[2025-06-21T22:54:39.314+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/minimax-m1-tackles-qwen3-deepseek-r1-claud
+e-4-opus-and-more/   | ✓ | ⏱: 0.08s
+[2025-06-21T22:54:39.316+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/minimax-m1-tackles-qwen3-deepseek-r1-claud
+e-4-opus-and-more/   | ✓ | ⏱: 2.34s
+[2025-06-21T22:54:39.355+0000] {logging_mixin.py:188} INFO - Title: MiniMax M1 tackles Qwen3, DeepSeek-R1, Claude 4 Opus, and more
+[2025-06-21T22:54:39.356+0000] {logging_mixin.py:188} INFO - Subtitle: Gemini 2.5 models get price changes and a new partner
+[2025-06-21T22:54:47.418+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8030
+[2025-06-21T22:54:47.441+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/predicting-cyclones-using-neural-networks/
+| ✓ | ⏱: 11.11s
+[2025-06-21T22:54:47.504+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/predicting-cyclones-using-neural-networks/
+| ✓ | ⏱: 0.06s
+[2025-06-21T22:54:47.506+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/predicting-cyclones-using-neural-networks/
+| ✓ | ⏱: 11.18s
+[2025-06-21T22:54:47.533+0000] {logging_mixin.py:188} INFO - Title: Predicting cyclones using neural networks
+[2025-06-21T22:54:47.534+0000] {logging_mixin.py:188} INFO - Subtitle: o3-pro trades speed for accuracy in code, science
+[2025-06-21T22:54:53.246+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8044
+[2025-06-21T22:54:53.444+0000] {crawler_deeplai.py:488} INFO -     ✅ MiniMax M1 tackles Qwen3, DeepSeek-R1, Claude 4 Opus, and mo...
+[2025-06-21T22:54:53.493+0000] {crawler_deeplai.py:488} INFO -     ✅ Predicting cyclones using neural networks...
+[2025-06-21T22:54:54.495+0000] {crawler_deeplai.py:501} INFO - ⏱️ Tổng thời gian crawl: 25.29 giây
+[2025-06-21T22:54:54.496+0000] {crawler_deeplai.py:502} INFO - 📊 Thành công crawl: 2/2 bài viết
+[2025-06-21T22:54:54.621+0000] {crawler_deeplai.py:529} INFO - 💾 Đã lưu thành công 2/2 bài viết vào collection 'data-points'
+[2025-06-21T22:54:54.681+0000] {dags.py:172} INFO - Hoàn thành crawl category: data-points
+[2025-06-21T22:54:54.683+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-21T22:54:54.684+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-21T22:54:54.698+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=manual__2025-06-21T22:50:44.479568+00:00, execution_date=20250621T225044, start_date=20250621T225428, end_date=20250621T225454
+[2025-06-21T22:54:54.806+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-21T22:54:54.821+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-21T22:54:54.824+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

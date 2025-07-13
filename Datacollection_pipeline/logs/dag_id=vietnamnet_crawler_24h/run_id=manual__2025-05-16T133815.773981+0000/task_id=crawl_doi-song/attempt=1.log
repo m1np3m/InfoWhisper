@@ -1,0 +1,49 @@
+[2025-05-16T13:38:55.415+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T13:38:55.436+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T13:38:15.773981+00:00 [queued]>
+[2025-05-16T13:38:55.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T13:38:15.773981+00:00 [queued]>
+[2025-05-16T13:38:55.445+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T13:38:55.459+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-16 13:38:15.773981+00:00
+[2025-05-16T13:38:55.465+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=13171) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T13:38:55.466+0000] {standard_task_runner.py:63} INFO - Started process 13172 to run task
+[2025-05-16T13:38:55.466+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'manual__2025-05-16T13:38:15.773981+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp63u670wx']
+[2025-05-16T13:38:55.469+0000] {standard_task_runner.py:91} INFO - Job 58: Subtask crawl_doi-song
+[2025-05-16T13:38:55.510+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T13:38:15.773981+00:00 [running]> on host 60d771d880eb
+[2025-05-16T13:38:55.591+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T13:38:15.773981+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T13:38:15.773981+00:00'
+[2025-05-16T13:38:55.593+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T13:38:55.750+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T13:38:56.308+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T13:38:58.763+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T13:38:58.763+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:38:58.764+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.40s
+[2025-05-16T13:38:58.947+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T13:38:58.947+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:38:58.948+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-16T13:38:58.949+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T13:38:58.950+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:38:58.950+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.59s
+[2025-05-16T13:38:59.170+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-16T13:38:59.763+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-16T13:38:59.764+0000] {crawler.py:232} INFO - Đang crawl 1 bài viết mới từ danh mục doi-song...
+[2025-05-16T13:38:59.764+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau-3-ngay-2401650.html
+[2025-05-16T13:39:00.271+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T13:39:02.602+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau-3-ngay-2401650.html | 
+[2025-05-16T13:39:02.603+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:39:02.603+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.28s
+[2025-05-16T13:39:02.770+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau-3-ngay-2401650.html | 
+[2025-05-16T13:39:02.771+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:39:02.771+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-16T13:39:02.772+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vi-cai-dieu-hoa-dong-nghiep-bat-hoa-me-chong-gian-nang-dau-3-ngay-2401650.html | 
+[2025-05-16T13:39:02.773+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:39:02.774+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.45s
+[2025-05-16T13:39:03.158+0000] {crawler.py:239} INFO -     ✓ Vì cái điều hòa, đồng nghiệp bất hòa, mẹ chồng giận nàng dâu...
+
+[2025-05-16T13:39:03.159+0000] {crawler.py:242} INFO - ⏱️  Tổng thời gian crawl: 7.41 giây
+[2025-05-16T13:39:03.230+0000] {crawler.py:267} INFO - Đã lưu 1 bài viết vào collection 'doi-song'
+[2025-05-16T13:39:03.293+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T13:39:02.967+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T13:39:02.975+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=manual__2025-05-16T13:38:15.773981+00:00, execution_date=20250516T133815, start_date=20250516T133855, end_date=20250516T133902
+[2025-05-16T13:39:03.019+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T13:39:03.034+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T13:39:03.037+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

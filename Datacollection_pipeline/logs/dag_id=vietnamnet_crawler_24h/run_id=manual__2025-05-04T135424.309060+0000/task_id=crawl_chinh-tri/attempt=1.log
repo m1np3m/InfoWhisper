@@ -1,0 +1,36 @@
+[2025-05-04T13:54:33.261+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-04T13:54:33.289+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-04T13:54:24.309060+00:00 [queued]>
+[2025-05-04T13:54:33.300+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-04T13:54:24.309060+00:00 [queued]>
+[2025-05-04T13:54:33.301+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-04T13:54:33.319+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-04 13:54:24.309060+00:00
+[2025-05-04T13:54:33.326+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=182) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-04T13:54:33.328+0000] {standard_task_runner.py:63} INFO - Started process 184 to run task
+[2025-05-04T13:54:33.329+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_chinh-tri', 'manual__2025-05-04T13:54:24.309060+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmphe_9aeu2']
+[2025-05-04T13:54:33.332+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask crawl_chinh-tri
+[2025-05-04T13:54:33.389+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-04T13:54:24.309060+00:00 [running]> on host 78b16fb5ec43
+[2025-05-04T13:54:33.499+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T13:54:24.309060+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T13:54:24.309060+00:00'
+[2025-05-04T13:54:33.501+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-04T13:54:33.740+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-04T13:54:33.947+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-04T13:54:35.140+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T13:54:39.129+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-04T13:54:39.132+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:54:39.133+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.88s
+[2025-05-04T13:54:39.516+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-04T13:54:39.517+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:54:39.518+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.38s
+[2025-05-04T13:54:39.520+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-04T13:54:39.520+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:54:39.521+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.27s
+[2025-05-04T13:54:39.930+0000] {crawler.py:86} INFO - Tìm thấy 0 link bài viết cho danh mục chinh-tri
+[2025-05-04T13:54:40.855+0000] {crawler.py:105} INFO - Đã lọc: 0 URLs ban đầu -> 0 URLs mới
+[2025-05-04T13:54:40.856+0000] {crawler.py:224} INFO - Không có bài viết mới nào trong danh mục chinh-tri cần crawl.
+[2025-05-04T13:54:40.856+0000] {crawler.py:259} INFO - Không có bài viết để lưu vào collection 'chinh-tri'
+[2025-05-04T13:54:40.857+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-04T13:54:40.857+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-04T13:54:40.864+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_chinh-tri, run_id=manual__2025-05-04T13:54:24.309060+00:00, execution_date=20250504T135424, start_date=20250504T135433, end_date=20250504T135440
+[2025-05-04T13:54:40.910+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-04T13:54:40.935+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-04T13:54:40.956+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,62 @@
+[2025-06-22T09:16:09.866+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T09:16:09.901+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [queued]>
+[2025-06-22T09:16:09.920+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [queued]>
+[2025-06-22T09:16:09.921+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 3
+[2025-06-22T09:16:09.950+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-06-22 00:59:08.288322+00:00
+[2025-06-22T09:16:09.966+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=563) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T09:16:09.970+0000] {standard_task_runner.py:63} INFO - Started process 675 to run task
+[2025-06-22T09:16:09.976+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'manual__2025-06-22T00:59:08.288322+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpnsh_gsow']
+[2025-06-22T09:16:09.984+0000] {standard_task_runner.py:91} INFO - Job 235: Subtask crawl_business
+[2025-06-22T09:16:10.066+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T09:16:10.246+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T00:59:08.288322+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T00:59:08.288322+00:00'
+[2025-06-22T09:16:10.252+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T09:16:10.287+0000] {dags.py:169} INFO - Bắt đầu crawl category: business
+[2025-06-22T09:16:10.568+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T09:16:10.643+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T09:16:15.263+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T09:16:15.288+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/business/
+[2025-06-22T09:16:15.299+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T09:16:25.100+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 9.79s
+[2025-06-22T09:16:25.293+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 0.19s
+[2025-06-22T09:16:25.302+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 10.01s
+[2025-06-22T09:16:25.304+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T09:16:25.347+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 15 link bài viết unique
+[2025-06-22T09:16:25.348+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T09:16:25.348+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-agents-and-infrastructure-dominate-cb-insights-top-100-ai-startups-list/
+[2025-06-22T09:16:25.349+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-06-22T09:16:25.349+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/disney-and-universal-sue-midjourney-alleging-the-image-generator-violates-their-intellectual-property-rights/
+[2025-06-22T09:16:25.350+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/duolingo-turns-to-ai-translation-to-expand-its-most-popular-courses-to-all-28-user-languages/
+[2025-06-22T09:16:25.351+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/european-regulators-move-to-relax-some-ai-act-rules-on-developers-liability-other-provisions/
+[2025-06-22T09:16:25.351+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 15 bài viết
+[2025-06-22T09:16:29.525+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 15 URLs ban đầu -> 1 URLs mới
+[2025-06-22T09:16:29.525+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-22T09:16:29.526+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/venture-capitalist-mary-meeker-revives-her-trend-reports-with-a-deep-dive-into-the-ai-boom/
+[2025-06-22T09:16:30.930+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T09:16:33.666+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/venture-ca...trend-reports-with-a-deep-div
+e-into-the-ai-boom/  | ✓ | ⏱: 2.73s
+[2025-06-22T09:16:33.817+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/venture-ca...trend-reports-with-a-deep-div
+e-into-the-ai-boom/  | ✓ | ⏱: 0.14s
+[2025-06-22T09:16:33.827+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/venture-ca...trend-reports-with-a-deep-div
+e-into-the-ai-boom/  | ✓ | ⏱: 2.89s
+[2025-06-22T09:16:33.891+0000] {logging_mixin.py:188} INFO - Title: AI Market Trends in Charts and Graphs
+[2025-06-22T09:16:33.893+0000] {logging_mixin.py:188} INFO - Subtitle: Venture Capitalist Mary Meeker Revives Her Trend Reports With a Deep Dive Into the AI Boom
+[2025-06-22T09:17:15.942+0000] {summary_gemini.py:156} INFO - [BERT BULLET] F1=0.8056142926216125
+[2025-06-22T09:17:16.244+0000] {crawler_deeplai.py:490} INFO -     ✅ AI Market Trends in Charts and Graphs...
+[2025-06-22T09:17:17.247+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 66.60 giây
+[2025-06-22T09:17:17.248+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-22T09:17:17.310+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'business'
+[2025-06-22T09:17:17.369+0000] {dags.py:174} INFO - Hoàn thành crawl category: business
+[2025-06-22T09:17:17.370+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T09:17:17.372+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T09:17:17.387+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_business, run_id=manual__2025-06-22T00:59:08.288322+00:00, execution_date=20250622T005908, start_date=20250622T091609, end_date=20250622T091717
+[2025-06-22T09:17:17.530+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T09:17:17.590+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T09:17:17.593+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

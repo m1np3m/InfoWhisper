@@ -1,0 +1,62 @@
+[2025-05-16T11:30:27.577+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T11:30:27.605+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-16T11:00:00+00:00 [queued]>
+[2025-05-16T11:30:27.617+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-16T11:00:00+00:00 [queued]>
+[2025-05-16T11:30:27.618+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T11:30:27.639+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-05-16 11:00:00+00:00
+[2025-05-16T11:30:27.647+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=708) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T11:30:27.650+0000] {standard_task_runner.py:63} INFO - Started process 709 to run task
+[2025-05-16T11:30:27.649+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'scheduled__2025-05-16T11:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpc0q7q65a']
+[2025-05-16T11:30:27.654+0000] {standard_task_runner.py:91} INFO - Job 53: Subtask crawl_giao-duc
+[2025-05-16T11:30:27.720+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-05-16T11:00:00+00:00 [running]> on host 71b827885e5f
+[2025-05-16T11:30:27.902+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-16T11:00:00+00:00'
+[2025-05-16T11:30:27.904+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T11:30:28.188+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T11:30:29.099+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:30:33.512+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T11:30:33.514+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:33.515+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.30s
+[2025-05-16T11:30:33.981+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T11:30:33.982+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:33.983+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.47s
+[2025-05-16T11:30:33.985+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006                                            | 
+[2025-05-16T11:30:33.986+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:33.987+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.77s
+[2025-05-16T11:30:34.365+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-05-16T11:30:35.046+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 2 URLs mới
+[2025-05-16T11:30:35.048+0000] {crawler.py:232} INFO - Đang crawl 2 bài viết mới từ danh mục giao-duc...
+[2025-05-16T11:30:35.049+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-trung-binh-bo-gd-dt-noi-truong-nghe-tu-xem-lai-minh-2401817.html
+[2025-05-16T11:30:35.887+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:30:41.051+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-lai-minh-2401817.html  | 
+[2025-05-16T11:30:41.056+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:41.057+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.08s
+[2025-05-16T11:30:41.682+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-lai-minh-2401817.html  | 
+[2025-05-16T11:30:41.683+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:41.684+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.62s
+[2025-05-16T11:30:41.688+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/trach-dh-hut-ca-hoc-sinh-t...-dt-noi-truong-nghe-tu-xem-lai-minh-2401817.html  | 
+[2025-05-16T11:30:41.691+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:41.694+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.72s
+[2025-05-16T11:30:42.537+0000] {crawler.py:239} INFO -     ✓ Trách ĐH hút cả học sinh trung bình, Bộ GD-ĐT nói trường ngh...
+
+[2025-05-16T11:30:42.538+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-doc-bien-mat-om-hang-ty-dong-cua-phu-huynh-2401858.html
+[2025-05-16T11:30:43.587+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:30:47.902+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu-huynh-2401858.html  | 
+[2025-05-16T11:30:47.905+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:47.906+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.12s
+[2025-05-16T11:30:48.292+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu-huynh-2401858.html  | 
+[2025-05-16T11:30:48.293+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:48.294+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.39s
+[2025-05-16T11:30:48.295+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/trung-tam-anh-ngu-co-giam-...n-mat-om-hang-ty-dong-cua-phu-huynh-2401858.html  | 
+[2025-05-16T11:30:48.296+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:30:48.296+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.51s
+[2025-05-16T11:30:48.992+0000] {crawler.py:239} INFO -     ✓ Trung tâm Anh ngữ có giám đốc biến mất 'ôm' hàng tỷ đồng của...
+
+[2025-05-16T11:30:48.993+0000] {crawler.py:242} INFO - ⏱️  Tổng thời gian crawl: 20.80 giây
+[2025-05-16T11:30:49.070+0000] {crawler.py:267} INFO - Đã lưu 2 bài viết vào collection 'giao-duc'
+[2025-05-16T11:30:49.140+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T11:30:49.142+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T11:30:49.157+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=scheduled__2025-05-16T11:00:00+00:00, execution_date=20250516T110000, start_date=20250516T113027, end_date=20250516T113049
+[2025-05-16T11:30:49.233+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T11:30:49.286+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T11:30:49.290+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

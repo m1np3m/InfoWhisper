@@ -1,0 +1,134 @@
+[2025-07-10T03:45:42.014+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-10T03:45:42.033+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-28T22:30:00+00:00 [queued]>
+[2025-07-10T03:45:42.044+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-28T22:30:00+00:00 [queued]>
+[2025-07-10T03:45:42.045+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-10T03:45:42.062+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_science> on 2025-06-28 22:30:00+00:00
+[2025-07-10T03:45:42.073+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1169) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-10T03:45:42.075+0000] {standard_task_runner.py:63} INFO - Started process 1179 to run task
+[2025-07-10T03:45:42.076+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_science', 'scheduled__2025-06-28T22:30:00+00:00', '--job-id', '1527', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpzen68q_u']
+[2025-07-10T03:45:42.080+0000] {standard_task_runner.py:91} INFO - Job 1527: Subtask crawl_science
+[2025-07-10T03:45:42.135+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-06-28T22:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-07-10T03:45:42.248+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_science' AIRFLOW_CTX_EXECUTION_DATE='2025-06-28T22:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-28T22:30:00+00:00'
+[2025-07-10T03:45:42.250+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-10T03:45:42.268+0000] {dags.py:178} INFO - Bắt đầu crawl category: science
+[2025-07-10T03:45:42.420+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-10T03:45:42.454+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-10T03:45:42.454+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-10T03:45:42.455+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-10T03:45:42.484+0000] {log.py:232} WARNING - 2025-07-10 03:45:42,484 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:45:42.484+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:45:42.489+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-10T03:45:42.707+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:43.647+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:45:43.649+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/science/
+[2025-07-10T03:45:43.650+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-10T03:45:43.707+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:44.708+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:45.709+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:46.711+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:47.712+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:48.259+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 4.61s
+[2025-07-10T03:45:48.356+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 0.10s
+[2025-07-10T03:45:48.359+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 4.71s
+[2025-07-10T03:45:48.360+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-10T03:45:48.402+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 15 link bài viết unique
+[2025-07-10T03:45:48.403+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-10T03:45:48.404+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/agentic-workflow-generates-novel-scientific-research-papers/
+[2025-07-10T03:45:48.404+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-and-data-center-boom-challenges-big-techs-emissions-targets/
+[2025-07-10T03:45:48.405+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/ai-co-scientist-an-agent-that-generates-research-hypotheses-aiding-drug-discovery/
+[2025-07-10T03:45:48.406+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/albert-gu-more-learning-less-data/
+[2025-07-10T03:45:48.406+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/biomni-an-ai-agent-for-multidisciplinary-biology-research/
+[2025-07-10T03:45:48.407+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 15 bài viết
+[2025-07-10T03:45:48.713+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:49.095+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 15 URLs ban đầu -> 1 URLs mới
+[2025-07-10T03:45:49.096+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-07-10T03:45:49.097+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/u-s-working-with-google-weather-lab-ai-to-improve-storm-forecasts/
+[2025-07-10T03:45:49.713+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:50.023+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:45:50.714+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:51.716+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:52.717+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:53.094+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/u-s-workin...oogle-weather-lab-ai-to-impro
+ve-storm-forecasts/  | ✓ | ⏱: 3.07s
+[2025-07-10T03:45:53.169+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/u-s-workin...oogle-weather-lab-ai-to-impro
+ve-storm-forecasts/  | ✓ | ⏱: 0.07s
+[2025-07-10T03:45:53.172+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/u-s-workin...oogle-weather-lab-ai-to-impro
+ve-storm-forecasts/  | ✓ | ⏱: 3.15s
+[2025-07-10T03:45:53.200+0000] {logging_mixin.py:188} INFO - Title: AI Weather Prediction Gains Traction
+[2025-07-10T03:45:53.201+0000] {logging_mixin.py:188} INFO - Subtitle: U.S. working with Google Weather Lab AI to improve storm forecasts
+[2025-07-10T03:45:53.281+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: c2f29, parent_run_id: c70c5
+[2025-07-10T03:45:53.718+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:54.742+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:55.402+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: c2f29, parent_run_id: c70c5
+[2025-07-10T03:45:55.403+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "664a193cb4cd4bd3f8441c6e937a0441",
+    "span_id": "2160009ff3d418b9",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-10T03:45:53.282873Z",
+  "end_time": "2025-07-10T03:45:55.403196Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"AI Weather Prediction Gains Traction\\n\\nThe U.S. government is using AI to predict the paths of hurricanes.\\n\\nWhat\\u2019s new:As the world enters the season of tropical cyclones, National Hurricane Center (NHC), a division of the National Weather Service, iscollaboratingon Google\\u2019sWeather Lab. The web-based lab hosts various weather-prediction models, including a newmodelthat can predict a storm\\u2019s\\u00a0formation, path, and intensity more accurately, 15 days ahead, than traditional methods.\\n\\nKey insight:Models of complicated systems like weather must account for two types of randomness: (i) randomness that a model could have learned to predict with better data or training and (ii) randomness the model could not have learned, regardless of data or training methods. To address the first type, you can train an ensemble of models. To address the second, you can add randomness at inference.\\n\\nHow it works:The authors trained an ensemble of graph neural networks, which process data in the form of nodes and edges that connect them, to predict the weather at locations on Earth based on the weather at each location (node) and nearby locations (other nodes connected to the target location by edges) at the previous two time steps (which were 12 hours apart early in training and 6 hours apart later).\\n\\nResults:The authors\\u2019 method predicted 2023 weather and cyclone tracks better than their previous model,GenCast, which had exceeded the previously state-of-the-artENSmodel).\\n\\nWhy it matters:Hurricanes are often destructive and deadly. In 2005, Hurricane Katrina struck the U.S. Gulf Coast, resulting in 1,200 deaths and $108 billion in damage. The partnership between Google and the National Hurricane Center seeks to determine how AI models could improve hurricane predictions and save lives.\\n\\nWe\\u2019re thinking:This lightning fast progress in weather modeling should precipitate better forecasts.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Trung t\\u00e2m B\\u00e3o Qu\\u1ed1c gia (NHC) c\\u1ee7a Hoa K\\u1ef3 \\u0111ang h\\u1ee3p t\\u00e1c v\\u1edbi Google Weather Lab \\u0111\\u1ec3 s\\u1eed d\\u1ee5ng AI d\\u1ef1 \\u0111o\\u00e1n \\u0111\\u01b0\\u1eddng \\u0111i, s\\u1ef1 h\\u00ecnh th\\u00e0nh v\\u00e0 c\\u01b0\\u1eddng \\u0111\\u1ed9 c\\u1ee7a b\\u00e3o ch\\u00ednh x\\u00e1c h\\u01a1n 15 ng\\u00e0y so v\\u1edbi c\\u00e1c ph\\u01b0\\u01a1ng ph\\u00e1p truy\\u1ec1n th\\u1ed1ng.\\n*   \\u0110\\u1ec3 c\\u1ea3i thi\\u1ec7n \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c, m\\u00f4 h\\u00ecnh AI s\\u1eed d\\u1ee5ng m\\u1ed9t t\\u1eadp h\\u1ee3p c\\u00e1c m\\u1ea1ng n\\u01a1-ron \\u0111\\u1ed3 th\\u1ecb (graph neural networks) \\u0111\\u1ec3 x\\u1eed l\\u00fd d\\u1eef li\\u1ec7u th\\u1eddi ti\\u1ebft, d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft t\\u1ea1i c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m d\\u1ef1a tr\\u00ean d\\u1eef li\\u1ec7u t\\u1eeb c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m l\\u00e2n c\\u1eadn.\\n*   Ph\\u01b0\\u01a1ng ph\\u00e1p n\\u00e0y \\u0111\\u00e3 d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft v\\u00e0 \\u0111\\u01b0\\u1eddng \\u0111i c\\u1ee7a b\\u00e3o n\\u0103m 2023 t\\u1ed1t h\\u01a1n so v\\u1edbi c\\u00e1c m\\u00f4 h\\u00ecnh tr\\u01b0\\u1edbc \\u0111\\u00f3, v\\u1edbi m\\u1ee5c ti\\u00eau c\\u1ea3i thi\\u1ec7n d\\u1ef1 b\\u00e1o b\\u00e3o \\u0111\\u1ec3 gi\\u1ea3m thi\\u1ec3u thi\\u1ec7t h\\u1ea1i v\\u00e0 c\\u1ee9u s\\u1ed1ng.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 589, \"output\": 184, \"total\": 773, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-10T03:45:55.788+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:56.532+0000] {crawler_deeplai.py:490} INFO -     ✅ AI Weather Prediction Gains Traction...
+[2025-07-10T03:45:56.789+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:57.533+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 15.04 giây
+[2025-07-10T03:45:57.534+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-07-10T03:45:57.804+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:58.150+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'science'
+[2025-07-10T03:45:58.211+0000] {dags.py:183} INFO - Hoàn thành crawl category: science
+[2025-07-10T03:45:58.212+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-10T03:45:58.212+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-10T03:45:58.220+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_science, run_id=scheduled__2025-06-28T22:30:00+00:00, execution_date=20250628T223000, start_date=20250710T034542, end_date=20250710T034558
+[2025-07-10T03:45:58.311+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-10T03:45:58.338+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-10T03:45:58.380+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

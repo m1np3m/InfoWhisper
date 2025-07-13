@@ -1,0 +1,58 @@
+[2025-05-18T07:23:03.026+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:23:03.062+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T06:30:00+00:00 [queued]>
+[2025-05-18T07:23:03.074+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T06:30:00+00:00 [queued]>
+[2025-05-18T07:23:03.075+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:23:03.094+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_phap-luat> on 2025-05-18 06:30:00+00:00
+[2025-05-18T07:23:03.103+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=10496) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:23:03.105+0000] {standard_task_runner.py:63} INFO - Started process 10770 to run task
+[2025-05-18T07:23:03.106+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_phap-luat', 'scheduled__2025-05-18T06:30:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp_zgtasab']
+[2025-05-18T07:23:03.109+0000] {standard_task_runner.py:91} INFO - Job 37: Subtask crawl_phap-luat
+[2025-05-18T07:23:03.164+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-18T06:30:00+00:00 [running]> on host fa0f5fb7e7ff
+[2025-05-18T07:23:03.304+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_phap-luat' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T06:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T06:30:00+00:00'
+[2025-05-18T07:23:03.306+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:23:03.694+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:23:05.433+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:23:11.290+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 5.68s
+[2025-05-18T07:23:11.729+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 0.43s
+[2025-05-18T07:23:11.735+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008          
+| ✓ | ⏱: 6.12s
+[2025-05-18T07:23:12.307+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục phap-luat
+[2025-05-18T07:23:12.982+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-05-18T07:23:12.984+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục phap-luat...
+[2025-05-18T07:23:12.986+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/khoi-to-6-nguoi-tai-cong-ty-thu-phi-dich-vu-xuat-khau-lao-dong-vuot-muc-2401598.html
+[2025-05-18T07:23:14.598+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:23:19.889+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/khoi-to-6-nguoi-tai-cong-t...dich-vu-xuat-khau-lao-dong-vu
+ot-muc-2401598.html  | ✓ | ⏱: 5.12s
+[2025-05-18T07:23:20.419+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/khoi-to-6-nguoi-tai-cong-t...dich-vu-xuat-khau-lao-dong-vu
+ot-muc-2401598.html  | ✓ | ⏱: 0.53s
+[2025-05-18T07:23:20.431+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/khoi-to-6-nguoi-tai-cong-t...dich-vu-xuat-khau-lao-dong-vu
+ot-muc-2401598.html  | ✓ | ⏱: 5.66s
+[2025-05-18T07:23:21.138+0000] {crawler.py:262} INFO -     ✓ Khởi tố vợ chồng Chủ tịch HĐQT Công ty Hoàng Long...
+
+[2025-05-18T07:23:21.140+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nam-thanh-nien-lua-tien-ty-cua-nu-dong-nghiep-roi-di-danh-bac-2401398.html
+[2025-05-18T07:23:22.672+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T07:23:23.379+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-05-18T07:23:23.381+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-18T07:23:23.390+0000] {process_utils.py:132} INFO - Sending 15 to group 10770. PIDs of all processes in the group: [11709, 11819, 11823, 11827, 11853, 11854, 11901, 11902, 11847, 10770]
+[2025-05-18T07:23:23.391+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 10770
+[2025-05-18T07:23:23.392+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-18T07:23:23.419+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11901, status='terminated', started='07:23:22') (11901) terminated with exit code None
+[2025-05-18T07:23:23.420+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11902, status='terminated', started='07:23:22') (11902) terminated with exit code None
+[2025-05-18T07:23:23.496+0000] {logging_mixin.py:188} INFO - [ERROR]... × Error closing context: BrowserContext.close: Target page, context 
+or browser has been closed
+[2025-05-18T07:23:23.558+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11823, status='terminated', started='07:23:21') (11823) terminated with exit code None
+[2025-05-18T07:23:23.559+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11854, status='terminated', started='07:23:21') (11854) terminated with exit code None
+[2025-05-18T07:23:23.560+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11847, status='terminated', started='07:23:21') (11847) terminated with exit code None
+[2025-05-18T07:23:23.604+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:23:23.700+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=10770, status='terminated', exitcode=0, started='07:23:02') (10770) terminated with exit code 0
+[2025-05-18T07:23:23.707+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11827, status='terminated', started='07:23:21') (11827) terminated with exit code None
+[2025-05-18T07:23:23.710+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11819, status='terminated', started='07:23:21') (11819) terminated with exit code None
+[2025-05-18T07:23:23.722+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11709, status='terminated', started='07:23:20') (11709) terminated with exit code None
+[2025-05-18T07:23:23.724+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=11853, status='terminated', started='07:23:21') (11853) terminated with exit code None

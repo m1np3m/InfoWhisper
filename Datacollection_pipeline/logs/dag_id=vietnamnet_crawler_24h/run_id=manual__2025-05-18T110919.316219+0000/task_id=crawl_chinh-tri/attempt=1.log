@@ -1,0 +1,46 @@
+[2025-05-18T11:09:27.422+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T11:09:27.443+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-18T11:09:19.316219+00:00 [queued]>
+[2025-05-18T11:09:27.451+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-18T11:09:19.316219+00:00 [queued]>
+[2025-05-18T11:09:27.452+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T11:09:27.466+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-18 11:09:19.316219+00:00
+[2025-05-18T11:09:27.472+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=32574) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T11:09:27.474+0000] {standard_task_runner.py:63} INFO - Started process 32582 to run task
+[2025-05-18T11:09:27.474+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_chinh-tri', 'manual__2025-05-18T11:09:19.316219+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpd08ehlru']
+[2025-05-18T11:09:27.477+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask crawl_chinh-tri
+[2025-05-18T11:09:27.516+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-18T11:09:19.316219+00:00 [running]> on host cc92a118fd3e
+[2025-05-18T11:09:27.601+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T11:09:19.316219+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-18T11:09:19.316219+00:00'
+[2025-05-18T11:09:27.602+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T11:09:27.775+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T11:09:28.395+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T11:09:30.966+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 2.49s
+[2025-05-18T11:09:31.142+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 0.17s
+[2025-05-18T11:09:31.144+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 2.67s
+[2025-05-18T11:09:31.380+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục chinh-tri
+[2025-05-18T11:09:32.006+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs sau xử lý live
+[2025-05-18T11:09:32.007+0000] {crawler.py:255} INFO - Đang crawl 1 bài viết mới từ danh mục chinh-tri...
+[2025-05-18T11:09:32.007+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/bo-truong-tai-chinh-dau-thau-nhung-du-an-van-cham-tien-do-van-sai-pham-2402184.html
+[2025-05-18T11:09:32.722+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T11:09:35.822+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/bo-truong-tai-chinh-dau-th...du-an-van-cham-tien-do-van-sa
+i-pham-2402184.html  | ✓ | ⏱: 3.04s
+[2025-05-18T11:09:36.065+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/bo-truong-tai-chinh-dau-th...du-an-van-cham-tien-do-van-sa
+i-pham-2402184.html  | ✓ | ⏱: 0.24s
+[2025-05-18T11:09:36.067+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/bo-truong-tai-chinh-dau-th...du-an-van-cham-tien-do-van-sa
+i-pham-2402184.html  | ✓ | ⏱: 3.28s
+[2025-05-18T11:09:36.468+0000] {crawler.py:262} INFO -     ✓ Bộ trưởng Tài chính: Đấu thầu nhưng dự án vẫn chậm tiến độ, ...
+
+[2025-05-18T11:09:36.469+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 8.69 giây
+[2025-05-18T11:09:36.604+0000] {crawler.py:292} INFO - Đã lưu 1 bài viết vào collection 'chinh-tri'
+[2025-05-18T11:09:36.673+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T11:09:36.674+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T11:09:36.682+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_chinh-tri, run_id=manual__2025-05-18T11:09:19.316219+00:00, execution_date=20250518T110919, start_date=20250518T110927, end_date=20250518T110936
+[2025-05-18T11:09:36.726+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T11:09:36.748+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T11:09:36.751+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
