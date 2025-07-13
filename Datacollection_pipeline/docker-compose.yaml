@@ -75,6 +75,15 @@ x-airflow-common:
     LANGFUSE_HOST     : ${LANGFUSE_HOST}
     LANGFUSE_API_KEY : ${LANGFUSE_SECRET_KEY}
     LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES: "true"
+    QDRANT_API_KEY: ${QDRANT_API_KEY}
+    MONGODB_URI_1: ${MONGODB_URI_1}
+    MONGODB_PASSWORD_1: ${MONGODB_PASSWORD_1}
+    MONGODB_URI_2: ${MONGODB_URI_2}
+    MONGODB_PASSWORD_2: ${MONGODB_PASSWORD_2}
+    GEMINI_API_KEY: ${GEMINI_API_KEY}
+    GEMINI_API_KEY_2: ${GEMINI_API_KEY_2}
+    GEMINI_API_KEY_3: ${GEMINI_API_KEY_3}
+    OPENAI_API_KEY: ${OPENAI_API_KEY}
 
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
