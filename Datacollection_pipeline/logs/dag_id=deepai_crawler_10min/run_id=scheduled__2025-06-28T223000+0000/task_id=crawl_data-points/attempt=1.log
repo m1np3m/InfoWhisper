@@ -1,0 +1,137 @@
+[2025-07-10T03:46:57.343+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-10T03:46:57.382+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-28T22:30:00+00:00 [queued]>
+[2025-07-10T03:46:57.410+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-28T22:30:00+00:00 [queued]>
+[2025-07-10T03:46:57.411+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-10T03:46:57.446+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_data-points> on 2025-06-28 22:30:00+00:00
+[2025-07-10T03:46:57.463+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3134) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-10T03:46:57.466+0000] {standard_task_runner.py:63} INFO - Started process 3157 to run task
+[2025-07-10T03:46:57.467+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_data-points', 'scheduled__2025-06-28T22:30:00+00:00', '--job-id', '1533', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp4cb90e3w']
+[2025-07-10T03:46:57.472+0000] {standard_task_runner.py:91} INFO - Job 1533: Subtask crawl_data-points
+[2025-07-10T03:46:57.581+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_data-points scheduled__2025-06-28T22:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-07-10T03:46:57.670+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:57.901+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_data-points' AIRFLOW_CTX_EXECUTION_DATE='2025-06-28T22:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-28T22:30:00+00:00'
+[2025-07-10T03:46:57.913+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-10T03:46:57.949+0000] {dags.py:178} INFO - Bắt đầu crawl category: data-points
+[2025-07-10T03:46:58.401+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-10T03:46:58.481+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-10T03:46:58.483+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-10T03:46:58.487+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-10T03:46:58.543+0000] {log.py:232} WARNING - 2025-07-10 03:46:58,543 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:46:58.543+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:46:58.553+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-10T03:46:58.682+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:46:59.684+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:00.632+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:47:00.634+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/data-points/
+[2025-07-10T03:47:00.634+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-10T03:47:00.688+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:01.688+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:02.690+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:03.692+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:04.693+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:05.694+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:06.095+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 5.46s
+[2025-07-10T03:47:06.281+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 0.17s
+[2025-07-10T03:47:06.284+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/data-points/             
+| ✓ | ⏱: 5.65s
+[2025-07-10T03:47:06.285+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-10T03:47:06.341+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-07-10T03:47:06.342+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-10T03:47:06.342+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/adapting-r1-like-techniques-to-video-reasoning/
+[2025-07-10T03:47:06.343+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-giants-u-s-policy-proposals/
+[2025-07-10T03:47:06.343+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/alibaba-outdoes-itself-with-latest-open-models/
+[2025-07-10T03:47:06.344+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-claudes-new-opus-and-sonnet/
+[2025-07-10T03:47:06.344+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/building-a-model-for-vision-and-speech/
+[2025-07-10T03:47:06.345+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-07-10T03:47:06.695+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:07.696+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:08.337+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-07-10T03:47:08.338+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-07-10T03:47:08.339+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/meta-unites-its-ai-teams-under-superintelligence-labs/
+[2025-07-10T03:47:08.697+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:09.339+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:47:09.697+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:10.699+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:11.604+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/meta-unites-its-ai-teams-under-superintell
+igence-labs/         | ✓ | ⏱: 2.26s
+[2025-07-10T03:47:11.675+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/meta-unites-its-ai-teams-under-superintell
+igence-labs/         | ✓ | ⏱: 0.07s
+[2025-07-10T03:47:11.678+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/meta-unites-its-ai-teams-under-superintell
+igence-labs/         | ✓ | ⏱: 2.34s
+[2025-07-10T03:47:11.699+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:11.710+0000] {logging_mixin.py:188} INFO - Title: Meta unites its AI teams under Superintelligence Labs
+[2025-07-10T03:47:11.711+0000] {logging_mixin.py:188} INFO - Subtitle: Google tempts developers with a free, open-source Gemini CLI
+[2025-07-10T03:47:11.810+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: b7218, parent_run_id: 0778e
+[2025-07-10T03:47:12.700+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:13.701+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:14.614+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: b7218, parent_run_id: 0778e
+[2025-07-10T03:47:14.616+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "d4ad29adac722ee136cda6cb2b3c178c",
+    "span_id": "7c119449ee5346d3",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-10T03:47:11.812132Z",
+  "end_time": "2025-07-10T03:47:14.615644Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Meta unites its AI teams under Superintelligence Labs\\n\\nWelcome back! In today\\u2019s edition of Data Points, you\\u2019ll learn more about:\\n\\nMeta Poaches Top Talent\\u00a0to Build\\u00a0Superintelligence Labs\\n\\nMeta reorganized its AI teams into Meta Superintelligence Labs, bringing in 11 senior hires from OpenAI, Anthropic, and Google under the direction of Scale AI founder Alexandr Wang and former GitHub CEO Nat Friedman. The unit merges groups previously in charge of research, large language models, and products. Zuckerberg has pledged to invest \\u201chundreds of billions\\u201d of dollars in next-generation models, and the new lab marks\\u00a0an aggressive push to build systems that match or surpass human performance and intensifying\\u00a0AI\\u2019s talent and spending race. (Bloomberg)\\n\\nGoogle launches open-source Gemini CLI\\n\\nGemini CLI is a command line interface that executes natural language commands using the company\\u2019s Gemini Pro 2.5 model. The CLI offers a free tier with 60 requests per minute and 1,000 requests per day, and it supports the MCP standard to connect\\u00a0to external data and services. It directly challenges OpenAI\\u2019s Codex and Anthropic\\u2019s Claude Code by offering free access to similar command line capabilities, potentially accelerating AI adoption among developers who\\u00a0avoid paid tools. (VentureBeat)\\n\\nBaidu open-sources Ernie chatbot\\n\\nSearch giant Baidu announced it will open-source its Ernie chatbot, marking a shift from its previous closed approach and challenging closed competitors. The decision follows an aggressive pricing strategy that has included making Ernie free in February and slashing API prices by 80 percent in March, as the company seeks to undercut rivals and build a developer ecosystem around its technology. Industry analysts describe the latest move\\u00a0as a \\\"declaration of war on pricing.\\\" (Silicon Angle)\\n\\nCloudflare blocks AI crawlers by default and tests pay-per-crawl\\n\\nIn a decisive move against companies that crawl the web to collect AI training data, Cloudflare turned on its AI-bot blocker by default for all customers and launched a Pay Per Crawl beta that lets web publishers charge scrapers. The service enables publishers to block identified AI crawlers altogether or selectively and to allow crawlers that don\\u2019t collect\\u00a0training data, such as search engine crawlers. The change potentially raises the cost of large-scale web scraping and may encourage model developers to pay licensing fees for data instead of gathering it freely. (Wired)\\n\\nChinese venture capital firm launches dynamic AI benchmark\\n\\nHongShan Capital Group released Xbench, a free benchmark designed to test\\u00a0models on both academic knowledge and business task execution, including activities like sourcing job candidates and matching advertisers with influencers. HongShan intends to update the benchmark quarterly with new questions and maintains a half-public, half-private dataset to prevent models from memorizing desired responses. Currently, ChatGPT o3 ranks first across categories followed by ByteDance\\u00a0Doubao and Google Gemini 2.5 Pro. The regularly updated benchmark could reduce the risk of systems overfitting to fixed tests. (MIT Technology Review)\\n\\nAI-generated rock band covertly gains 500,000 Spotify listeners\\n\\nA fake band called Velvet Sundown drew more than 500,000 Spotify listeners within weeks of releasing two rock-style albums. Online sleuths found no record of the four listed band members, spotted image and lyric artifacts typical of generation models, and noted that Spotify and some other services do not require AI-generated music to be disclosed. The case illustrates that generated music can reach a mass audience, and it may increase pressure on businesses and regulators to support watermarking and transparency. (Ars Technica)\\n\\nWant to know more about what matters in AI right now?\\n\\nReadthe latest issueofThe Batchfor in-depth analysis of news and research.\\n\\nLast week, Andrew Ng shared a strategy for building with AI: Reduce project scope to fit your available time. He shows how even small builds can accelerate learning and unlock user feedback.\\n\\n\\u201cIf you have only an hour, find a small component of an idea that you\\u2019re excited about that you can build in an hour. With modern coding assistants like Anthropic\\u2019s Claude Code (my favorite dev tool right now), you might be surprised at how much you can do even in short periods of time!\\u201d\\n\\nRead Andrew\\u2019s\\u00a0letterhere.\\n\\nOther top AI news and research stories covered in depth:\\n\\nSubscribe to Data Points\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft c\\u00e1c th\\u00f4ng tin ch\\u00ednh t\\u1eeb b\\u00e0i vi\\u1ebft:\\n\\n*   Meta \\u0111\\u00e3 t\\u00e1i c\\u1ea5u tr\\u00fac c\\u00e1c nh\\u00f3m AI c\\u1ee7a m\\u00ecnh th\\u00e0nh Meta Superintelligence Labs, t\\u1eadp h\\u1ee3p c\\u00e1c chuy\\u00ean gia h\\u00e0ng \\u0111\\u1ea7u t\\u1eeb OpenAI, Anthropic v\\u00e0 Google \\u0111\\u1ec3 ph\\u00e1t tri\\u1ec3n c\\u00e1c h\\u1ec7 th\\u1ed1ng AI v\\u01b0\\u1ee3t tr\\u1ed9i, \\u0111\\u1ed3ng th\\u1eddi cam k\\u1ebft \\u0111\\u1ea7u t\\u01b0 h\\u00e0ng tr\\u0103m t\\u1ef7 \\u0111\\u00f4 la v\\u00e0o l\\u0129nh v\\u1ef1c n\\u00e0y.\\n*   Google ra m\\u1eaft Gemini CLI, m\\u1ed9t giao di\\u1ec7n d\\u00f2ng l\\u1ec7nh s\\u1eed d\\u1ee5ng m\\u00f4 h\\u00ecnh Gemini Pro 2.5, cung c\\u1ea5p mi\\u1ec5n ph\\u00ed c\\u00e1c t\\u00ednh n\\u0103ng t\\u01b0\\u01a1ng t\\u1ef1 nh\\u01b0 OpenAI's Codex v\\u00e0 Anthropic's Claude Code, nh\\u1eb1m th\\u00fac \\u0111\\u1ea9y vi\\u1ec7c \\u1ee9ng d\\u1ee5ng AI trong gi\\u1edbi l\\u1eadp tr\\u00ecnh vi\\u00ean.\\n*   Cloudflare ch\\u1eb7n c\\u00e1c tr\\u00ecnh thu th\\u1eadp d\\u1eef li\\u1ec7u AI theo m\\u1eb7c \\u0111\\u1ecbnh v\\u00e0 th\\u1eed nghi\\u1ec7m Pay Per Crawl, cho ph\\u00e9p c\\u00e1c nh\\u00e0 xu\\u1ea5t b\\u1ea3n web t\\u00ednh ph\\u00ed c\\u00e1c tr\\u00ecnh thu th\\u1eadp d\\u1eef li\\u1ec7u, nh\\u1eb1m h\\u1ea1n ch\\u1ebf vi\\u1ec7c thu th\\u1eadp d\\u1eef li\\u1ec7u tr\\u00e1i ph\\u00e9p \\u0111\\u1ec3 hu\\u1ea5n luy\\u1ec7n AI v\\u00e0 khuy\\u1ebfn kh\\u00edch c\\u00e1c nh\\u00e0 ph\\u00e1t tri\\u1ec3n AI tr\\u1ea3 ph\\u00ed b\\u1ea3n quy\\u1ec1n d\\u1eef li\\u1ec7u.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 1093, \"output\": 210, \"total\": 1303, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-10T03:47:14.702+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:14.797+0000] {crawler_deeplai.py:490} INFO -     ✅ Meta unites its AI teams under Superintelligence Labs...
+[2025-07-10T03:47:17.940+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:47:18.036+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 19.48 giây
+[2025-07-10T03:47:18.037+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-07-10T03:47:18.114+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'data-points'
+[2025-07-10T03:47:18.174+0000] {dags.py:183} INFO - Hoàn thành crawl category: data-points
+[2025-07-10T03:47:18.175+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-10T03:47:18.176+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-10T03:47:18.186+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_data-points, run_id=scheduled__2025-06-28T22:30:00+00:00, execution_date=20250628T223000, start_date=20250710T034657, end_date=20250710T034718
+[2025-07-10T03:47:18.224+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-10T03:47:18.241+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-10T03:47:18.244+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

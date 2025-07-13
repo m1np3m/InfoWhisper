@@ -1,0 +1,66 @@
+[2025-05-04T13:31:14.901+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-04T13:31:14.928+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri scheduled__2025-05-04T13:00:00+00:00 [queued]>
+[2025-05-04T13:31:14.939+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri scheduled__2025-05-04T13:00:00+00:00 [queued]>
+[2025-05-04T13:31:14.939+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-04T13:31:14.956+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-04 13:00:00+00:00
+[2025-05-04T13:31:14.963+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=217) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-04T13:31:14.965+0000] {standard_task_runner.py:63} INFO - Started process 220 to run task
+[2025-05-04T13:31:14.965+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_with_summary', 'crawl_chinh-tri', 'scheduled__2025-05-04T13:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpyqh8n494']
+[2025-05-04T13:31:14.968+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask crawl_chinh-tri
+[2025-05-04T13:31:15.043+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_with_summary.crawl_chinh-tri scheduled__2025-05-04T13:00:00+00:00 [running]> on host 38037b7cfc5d
+[2025-05-04T13:31:15.163+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_with_summary' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T13:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-04T13:00:00+00:00'
+[2025-05-04T13:31:15.165+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-04T13:31:15.383+0000] {crawler.py:61} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-04T13:31:15.560+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-04T13:31:16.368+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T13:31:19.481+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-04T13:31:19.482+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:19.483+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.03s
+[2025-05-04T13:31:19.796+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-04T13:31:19.797+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:19.798+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.31s
+[2025-05-04T13:31:19.799+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chinh-tri                                                                      | 
+[2025-05-04T13:31:19.800+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:19.800+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.35s
+[2025-05-04T13:31:20.267+0000] {crawler.py:88} INFO - Tìm thấy 49 link bài viết
+[2025-05-04T13:31:24.033+0000] {crawler.py:107} INFO - Đã lọc: 49 URLs ban đầu -> 2 URLs mới
+[2025-05-04T13:31:24.034+0000] {crawler.py:229} INFO - Đang crawl 2 bài viết mới từ danh mục chinh-tri...
+[2025-05-04T13:31:24.035+0000] {crawler.py:232} INFO - --> Crawl: https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nhan-khien-nghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html
+[2025-05-04T13:31:24.819+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T13:31:28.787+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T13:31:28.789+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:28.790+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.87s
+[2025-05-04T13:31:29.086+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T13:31:29.086+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:29.087+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-04T13:31:29.088+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/loi-khai-tiet-lo-nguyen-nh...ghi-pham-sat-hai-nu-chu-quan-ca-phe-2397592.html  | 
+[2025-05-04T13:31:29.089+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:29.090+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.17s
+[2025-05-04T13:31:29.399+0000] {crawler.py:193} INFO - Đang tạo tóm tắt cho bài viết: Lời khai tiết lộ nguyên nhân nghi phạm sát hại nữ chủ quán cà phê
+[2025-05-04T13:31:30.138+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-04T13:31:30.146+0000] {crawler.py:195} INFO - Đã tạo tóm tắt thành công
+[2025-05-04T13:31:30.324+0000] {crawler.py:236} INFO -     ✓ Lời khai tiết lộ nguyên nhân nghi phạm sát hại nữ chủ quán c...
+
+[2025-05-04T13:31:30.325+0000] {crawler.py:232} INFO - --> Crawl: https://vietnamnet.vn/tiem-kich-su-30mk2-tha-moi-bay-nhiet-nguoi-dan-ha-noi-vuot-gio-ret-di-xem-2352332.html
+[2025-05-04T13:31:30.944+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-04T13:31:35.066+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tiem-kich-su-30mk2-tha-moi...guoi-dan-ha-noi-vuot-gio-ret-di-xem-2352332.html  | 
+[2025-05-04T13:31:35.067+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:35.067+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.03s
+[2025-05-04T13:31:35.223+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tiem-kich-su-30mk2-tha-moi...guoi-dan-ha-noi-vuot-gio-ret-di-xem-2352332.html  | 
+[2025-05-04T13:31:35.224+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:35.224+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.15s
+[2025-05-04T13:31:35.225+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tiem-kich-su-30mk2-tha-moi...guoi-dan-ha-noi-vuot-gio-ret-di-xem-2352332.html  | 
+[2025-05-04T13:31:35.226+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-04T13:31:35.226+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.19s
+[2025-05-04T13:31:35.545+0000] {crawler.py:236} INFO -     ✓ Tiêm kích Su-30MK2 thả mồi bẫy nhiệt, người dân Hà Nội vượt ...
+
+[2025-05-04T13:31:35.546+0000] {crawler.py:239} INFO - ⏱️  Tổng thời gian crawl: 19.99 giây
+[2025-05-04T13:31:35.614+0000] {crawler.py:259} INFO - Đã lưu 2 bài viết vào collection 'chinh-tri'
+[2025-05-04T13:31:35.678+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-04T13:31:35.679+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-04T13:31:35.687+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_with_summary, task_id=crawl_chinh-tri, run_id=scheduled__2025-05-04T13:00:00+00:00, execution_date=20250504T130000, start_date=20250504T133114, end_date=20250504T133135
+[2025-05-04T13:31:35.720+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-04T13:31:35.746+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-04T13:31:35.748+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

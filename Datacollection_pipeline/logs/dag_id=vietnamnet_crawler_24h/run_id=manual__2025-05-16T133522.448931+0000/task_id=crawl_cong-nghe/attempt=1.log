@@ -1,0 +1,37 @@
+[2025-05-16T13:35:53.892+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T13:35:53.914+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T13:35:22.448931+00:00 [queued]>
+[2025-05-16T13:35:53.922+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T13:35:22.448931+00:00 [queued]>
+[2025-05-16T13:35:53.923+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T13:35:53.936+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-16 13:35:22.448931+00:00
+[2025-05-16T13:35:53.942+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=11363) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T13:35:53.943+0000] {standard_task_runner.py:63} INFO - Started process 11365 to run task
+[2025-05-16T13:35:53.944+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'manual__2025-05-16T13:35:22.448931+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp773fulwd']
+[2025-05-16T13:35:53.946+0000] {standard_task_runner.py:91} INFO - Job 47: Subtask crawl_cong-nghe
+[2025-05-16T13:35:53.987+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-16T13:35:22.448931+00:00 [running]> on host 60d771d880eb
+[2025-05-16T13:35:54.074+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T13:35:22.448931+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T13:35:22.448931+00:00'
+[2025-05-16T13:35:54.075+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T13:35:54.250+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T13:35:55.082+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T13:35:59.402+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T13:35:59.404+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:35:59.404+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.23s
+[2025-05-16T13:35:59.837+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T13:35:59.837+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:35:59.838+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T13:35:59.838+0000] {logging_mixin.py:188} INFO - 0.43
+[2025-05-16T13:35:59.839+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T13:35:59.842+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V                                            | 
+[2025-05-16T13:35:59.843+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T13:35:59.844+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.67s
+[2025-05-16T13:36:00.469+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-05-16T13:36:01.148+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs mới
+[2025-05-16T13:36:01.149+0000] {crawler.py:229} INFO - Không có bài viết mới nào trong danh mục cong-nghe cần crawl.
+[2025-05-16T13:36:01.149+0000] {crawler.py:269} INFO - Không có bài viết để lưu vào collection 'cong-nghe'
+[2025-05-16T13:36:01.213+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T13:36:01.213+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T13:36:01.222+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=manual__2025-05-16T13:35:22.448931+00:00, execution_date=20250516T133522, start_date=20250516T133553, end_date=20250516T133601
+[2025-05-16T13:36:01.243+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T13:36:01.265+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T13:36:01.267+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

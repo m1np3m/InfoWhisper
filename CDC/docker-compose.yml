@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq/logs:/var/log/rabbitmq
+      - ./rabbitmq/data:/var/lib/rabbitmq
+      - ./rabbitmq/conf/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+    environment:
+      - RABBITMQ_DEFAULT_USER=VinhThuan
+      - RABBITMQ_DEFAULT_PASS=VinhThuan
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongo_cdc:
+    build:
+      context: ./src
+    container_name: mongo_cdc
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    env_file:
+      - ./src/.env
+    restart: unless-stopped

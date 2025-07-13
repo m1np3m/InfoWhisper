@@ -1,0 +1,16 @@
+[2025-06-21T15:20:20.477+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-21T15:20:20.495+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-21T15:19:58.552895+00:00 [queued]>
+[2025-06-21T15:20:20.504+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-21T15:19:58.552895+00:00 [queued]>
+[2025-06-21T15:20:20.505+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-21T15:20:20.836+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): generate_monthly_insights_per_collection> on 2025-06-21 15:19:58.552895+00:00
+[2025-06-21T15:20:20.887+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_monthly_insights', 'generate_monthly_insights_per_collection', 'manual__2025-06-21T15:19:58.552895+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpm0lmzgvo']
+[2025-06-21T15:20:20.891+0000] {standard_task_runner.py:91} INFO - Job 70: Subtask generate_monthly_insights_per_collection
+[2025-06-21T15:20:20.891+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=362) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-21T15:20:20.892+0000] {standard_task_runner.py:63} INFO - Started process 364 to run task
+[2025-06-21T15:20:26.107+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-21T15:19:58.552895+00:00 [running]> on host d4e9928a73da
+[2025-06-21T15:20:47.848+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_monthly_insights' AIRFLOW_CTX_TASK_ID='generate_monthly_insights_per_collection' AIRFLOW_CTX_EXECUTION_DATE='2025-06-21T15:19:58.552895+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-21T15:19:58.552895+00:00'
+[2025-06-21T15:20:48.656+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-21T15:21:00.232+0000] {dags.py:199} INFO - Bắt đầu tạo insights cho từng category từ dữ liệu tháng qua
+[2025-06-21T15:21:40.734+0000] {dags.py:213} INFO - Tạo insights riêng cho từng category và lưu vào database...

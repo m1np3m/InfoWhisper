@@ -1,0 +1,51 @@
+[2025-05-16T11:31:16.662+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T11:31:16.724+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-16T11:00:00+00:00 [queued]>
+[2025-05-16T11:31:16.745+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-16T11:00:00+00:00 [queued]>
+[2025-05-16T11:31:16.760+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T11:31:16.798+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_phap-luat> on 2025-05-16 11:00:00+00:00
+[2025-05-16T11:31:16.810+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1394) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T11:31:16.814+0000] {standard_task_runner.py:63} INFO - Started process 1395 to run task
+[2025-05-16T11:31:16.814+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_phap-luat', 'scheduled__2025-05-16T11:00:00+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpqxnpyriz']
+[2025-05-16T11:31:16.826+0000] {standard_task_runner.py:91} INFO - Job 56: Subtask crawl_phap-luat
+[2025-05-16T11:31:16.931+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_phap-luat scheduled__2025-05-16T11:00:00+00:00 [running]> on host 71b827885e5f
+[2025-05-16T11:31:17.115+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_phap-luat' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-16T11:00:00+00:00'
+[2025-05-16T11:31:17.117+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T11:31:17.384+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T11:31:18.421+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:31:22.327+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-16T11:31:22.328+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:22.330+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.77s
+[2025-05-16T11:31:22.642+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-16T11:31:22.644+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:22.645+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-16T11:31:22.646+0000] {logging_mixin.py:188} INFO - 0.31
+[2025-05-16T11:31:22.646+0000] {logging_mixin.py:188} INFO - s
+[2025-05-16T11:31:22.648+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000008                                            | 
+[2025-05-16T11:31:22.651+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:22.659+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.10s
+[2025-05-16T11:31:23.207+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục phap-luat
+[2025-05-16T11:31:23.981+0000] {crawler.py:108} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-16T11:31:23.982+0000] {crawler.py:232} INFO - Đang crawl 1 bài viết mới từ danh mục phap-luat...
+[2025-05-16T11:31:23.989+0000] {crawler.py:235} INFO - --> Crawl: https://vietnamnet.vn/nam-doanh-nhan-mat-16-ty-dong-chay-an-van-khong-thoat-toi-2401824.html
+[2025-05-16T11:31:25.028+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T11:31:30.391+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/nam-doanh-nhan-mat-16-ty-dong-chay-an-van-khong-thoat-toi-2401824.html         | 
+[2025-05-16T11:31:30.392+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:30.393+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.18s
+[2025-05-16T11:31:30.739+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/nam-doanh-nhan-mat-16-ty-dong-chay-an-van-khong-thoat-toi-2401824.html         | 
+[2025-05-16T11:31:30.739+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:30.740+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.34s
+[2025-05-16T11:31:30.743+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/nam-doanh-nhan-mat-16-ty-dong-chay-an-van-khong-thoat-toi-2401824.html         | 
+[2025-05-16T11:31:30.744+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T11:31:30.745+0000] {logging_mixin.py:188} INFO -  | ⏱: 5.53s
+[2025-05-16T11:31:31.587+0000] {crawler.py:239} INFO -     ✓ Bắt kẻ lừa 'chạy án' lấy 16 tỷ đồng...
+
+[2025-05-16T11:31:31.588+0000] {crawler.py:242} INFO - ⏱️  Tổng thời gian crawl: 14.20 giây
+[2025-05-16T11:31:31.659+0000] {crawler.py:267} INFO - Đã lưu 1 bài viết vào collection 'phap-luat'
+[2025-05-16T11:31:31.726+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T11:31:31.727+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T11:31:31.742+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_phap-luat, run_id=scheduled__2025-05-16T11:00:00+00:00, execution_date=20250516T110000, start_date=20250516T113116, end_date=20250516T113131
+[2025-05-16T11:31:31.798+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T11:31:31.834+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T11:31:31.838+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

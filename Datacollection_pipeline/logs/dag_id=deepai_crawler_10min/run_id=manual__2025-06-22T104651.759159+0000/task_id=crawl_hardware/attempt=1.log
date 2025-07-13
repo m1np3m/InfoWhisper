@@ -1,0 +1,404 @@
+[2025-06-22T10:47:02.870+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T10:47:02.888+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T10:46:51.759159+00:00 [queued]>
+[2025-06-22T10:47:02.897+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T10:46:51.759159+00:00 [queued]>
+[2025-06-22T10:47:02.897+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T10:47:02.915+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 10:46:51.759159+00:00
+[2025-06-22T10:47:02.926+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=9914) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T10:47:02.928+0000] {standard_task_runner.py:63} INFO - Started process 10097 to run task
+[2025-06-22T10:47:02.930+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'manual__2025-06-22T10:46:51.759159+00:00', '--job-id', '400', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpgtytoyyy']
+[2025-06-22T10:47:02.934+0000] {standard_task_runner.py:91} INFO - Job 400: Subtask crawl_hardware
+[2025-06-22T10:47:02.985+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T10:46:51.759159+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T10:47:03.094+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T10:46:51.759159+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T10:46:51.759159+00:00'
+[2025-06-22T10:47:03.095+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T10:47:03.112+0000] {dags.py:172} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T10:47:03.243+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T10:47:03.274+0000] {crawler_deeplai.py:466} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T10:47:03.597+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:04.018+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T10:47:04.019+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T10:47:04.020+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T10:47:04.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:05.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:06.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:07.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:07.624+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.60s
+[2025-06-22T10:47:07.736+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.11s
+[2025-06-22T10:47:07.739+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.72s
+[2025-06-22T10:47:07.740+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T10:47:07.787+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T10:47:07.787+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T10:47:07.788+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T10:47:07.789+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T10:47:07.789+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T10:47:07.790+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T10:47:07.790+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T10:47:07.791+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T10:47:08.390+0000] {crawler_deeplai.py:459} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-22T10:47:08.391+0000] {crawler_deeplai.py:480} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-22T10:47:08.391+0000] {crawler_deeplai.py:487} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/the-international-energy-agency-examines-the-energy-costs-and-potential-savings-of-the-ai-boom/
+[2025-06-22T10:47:08.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:09.212+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T10:47:09.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:10.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:10.754+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 1.54s
+[2025-06-22T10:47:10.839+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 0.08s
+[2025-06-22T10:47:10.841+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 1.63s
+[2025-06-22T10:47:10.871+0000] {logging_mixin.py:188} INFO - Title: AI Uses Energy, AI Saves Energy
+[2025-06-22T10:47:10.872+0000] {logging_mixin.py:188} INFO - Subtitle: The International Energy Agency examines the energy costs and potential savings of the AI boom
+[2025-06-22T10:47:10.956+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 435b5, parent_run_id: 4216b
+[2025-06-22T10:47:11.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:12.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:13.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:13.703+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 435b5, parent_run_id: 4216b
+[2025-06-22T10:47:13.705+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='SummaryWithBERTScore' | Full details:
+{
+  "name": "SummaryWithBERTScore",
+  "context": {
+    "trace_id": "d81e7a7af1fc3cab7d4ad4dcc6b9a036",
+    "span_id": "34d35431af4b014b",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": "4c9c1dcff3550640",
+  "start_time": "2025-06-22T10:47:10.957295Z",
+  "end_time": "2025-06-22T10:47:13.704537Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"AI Uses Energy, AI Saves Energy\\n\\nAI\\u2019s thirst for energy is growing, but the technology\\u00a0also could help produce huge energy savings over the next five to 10 years, according to a recent report.\\n\\nWhat\\u2019s new:The International Energy Agency (IEA), which advises 44 countries on energy policy, performed a comprehensiveanalysisof AI\\u2019s energy consumption including energy required to obtain critical materials needed for chips and data centers. The report sees dark clouds ahead but also silver linings.\\n\\nDark clouds:The report, which is based on interviews with officials in government, energy, and technology, makes four projections for AI\\u2019s energy consumption. In the base scenario, future growth and efficiency gains are similar to those of the past five years. The agency also plots a \\u201ctake-off\\u201d scenario in which AI adoption happens faster, a \\u201chigh efficiency\\u201d scenario with lower energy needs, and a \\u201cheadwinds\\u201d scenario in which adoption of AI slows or infrastructure bottlenecks impede construction. Among the conclusions:\\n\\nSilver linings:AI already makes energy generation, distribution, and use more efficient. The authors expect these savings to accelerate.\\n\\nYes, but:The authors concede that lower energy costs for AI likely will lead to much greater consumption \\u2014 according to theJevons paradox\\u2014 so more-efficient models and hardware will result in higher energy consumption overall.\\n\\nBehind the news:Data centers were growing rapidly prior to the boom in generative AI. Data centers\\u2019 electricity use doubled between 2000 and 2005 and again between 2017 and 2022, driven by the growth of cloud computing and data storage, streaming and social media, and cryptocurrency mining. However, these periods of accelerating growth were followed by periods of slower growth as efforts to cut costs led to more-efficient software and hardware. The authors expect this pattern to hold.\\n\\nWhy it matters:The IEA report is a first-of-its-kind analysis of AI\\u2019s energy requirements, how they\\u2019re likely to grow, as well as the potential of the technology itself to reduce those requirements. It confirms that AI is poised to consume huge amounts of energy. However, it also suggests that today\\u2019s energy costs will be tomorrow\\u2019s energy savings as AI makes energy generation, distribution, and use more efficient across a wide variety of industries.\\n\\nWe\\u2019re thinking:While demand for electricity for data centers is growing rapidly,\\u00a0calibrating the right level of investment is tricky. High levels of growth come\\u00a0with high levels of hype that can lead analysts to overestimate future demand. For example, Microsoft, after examining\\u00a0its forecasts,canceleddata-center projects that would have consumed 2 gigawatts.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Theo m\\u1ed9t b\\u00e1o c\\u00e1o g\\u1ea7n \\u0111\\u00e2y, AI ng\\u00e0y c\\u00e0ng ti\\u00eau t\\u1ed1n nhi\\u1ec1u n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng c\\u00f4ng ngh\\u1ec7 n\\u00e0y c\\u0169ng c\\u00f3 th\\u1ec3 gi\\u00fap ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng \\u0111\\u00e1ng k\\u1ec3 trong 5 \\u0111\\u1ebfn 10 n\\u0103m t\\u1edbi.\\n*   B\\u00e1o c\\u00e1o c\\u1ee7a C\\u01a1 quan N\\u0103ng l\\u01b0\\u1ee3ng Qu\\u1ed1c t\\u1ebf (IEA) \\u0111\\u01b0a ra nhi\\u1ec1u k\\u1ecbch b\\u1ea3n v\\u1ec1 m\\u1ee9c ti\\u00eau th\\u1ee5 n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI, bao g\\u1ed3m c\\u1ea3 k\\u1ecbch b\\u1ea3n t\\u0103ng tr\\u01b0\\u1edfng nhanh v\\u00e0 k\\u1ecbch b\\u1ea3n hi\\u1ec7u qu\\u1ea3 cao, \\u0111\\u1ed3ng th\\u1eddi nh\\u1ea5n m\\u1ea1nh s\\u1ef1 c\\u1ea7n thi\\u1ebft ph\\u1ea3i \\u0111\\u1ea7u t\\u01b0 \\u0111\\u00fang m\\u1ee9c v\\u00e0o c\\u01a1 s\\u1edf h\\u1ea1 t\\u1ea7ng.\\n*   M\\u1eb7c d\\u00f9 AI d\\u1ef1 ki\\u1ebfn s\\u1ebd ti\\u00eau th\\u1ee5 m\\u1ed9t l\\u01b0\\u1ee3ng l\\u1edbn n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng n\\u00f3 c\\u0169ng c\\u00f3 ti\\u1ec1m n\\u0103ng l\\u00e0m cho vi\\u1ec7c s\\u1ea3n xu\\u1ea5t, ph\\u00e2n ph\\u1ed1i v\\u00e0 s\\u1eed d\\u1ee5ng n\\u0103ng l\\u01b0\\u1ee3ng hi\\u1ec7u qu\\u1ea3 h\\u01a1n, d\\u1eabn \\u0111\\u1ebfn ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng trong t\\u01b0\\u01a1ng lai.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 743, \"output\": 176, \"total\": 919, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-1f10d355-392c-4cb4-903c-7e9d2910b10e"
+    }
+  }
+}
+
+[2025-06-22T10:47:14.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:15.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:16.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:17.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:18.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:19.586+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:19.912+0000] {summary_gemini.py:157} INFO - [BERT BULLET] F1=0.8075090646743774
+[2025-06-22T10:47:19.914+0000] {resource_manager.py:290} DEBUG - Score: Enqueuing event type=score-create for trace_id=d81e7a7af1fc3cab7d4ad4dcc6b9a036 name=bert_f1_score value=0.8075090646743774
+[2025-06-22T10:47:19.915+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='BulletSummaryWithBERTScore' | Full details:
+{
+  "name": "BulletSummaryWithBERTScore",
+  "context": {
+    "trace_id": "d81e7a7af1fc3cab7d4ad4dcc6b9a036",
+    "span_id": "4c9c1dcff3550640",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-06-22T10:47:10.942483Z",
+  "end_time": "2025-06-22T10:47:19.915406Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.type": "span",
+    "langfuse.trace.input": "{\"content\": \"AI Uses Energy, AI Saves Energy\\n\\nAI\\u2019s thirst for energy is growing, but the technology\\u00a0also could help produce huge energy savings over the next five to 10 years, according to a recent report.\\n\\nWhat\\u2019s new:The International Energy Agency (IEA), which advises 44 countries on energy policy, performed a comprehensiveanalysisof AI\\u2019s energy consumption including energy required to obtain critical materials needed for chips and data centers. The report sees dark clouds ahead but also silver linings.\\n\\nDark clouds:The report, which is based on interviews with officials in government, energy, and technology, makes four projections for AI\\u2019s energy consumption. In the base scenario, future growth and efficiency gains are similar to those of the past five years. The agency also plots a \\u201ctake-off\\u201d scenario in which AI adoption happens faster, a \\u201chigh efficiency\\u201d scenario with lower energy needs, and a \\u201cheadwinds\\u201d scenario in which adoption of AI slows or infrastructure bottlenecks impede construction. Among the conclusions:\\n\\nSilver linings:AI already makes energy generation, distribution, and use more efficient. The authors expect these savings to accelerate.\\n\\nYes, but:The authors concede that lower energy costs for AI likely will lead to much greater consumption \\u2014 according to theJevons paradox\\u2014 so more-efficient models and hardware will result in higher energy consumption overall.\\n\\nBehind the news:Data centers were growing rapidly prior to the boom in generative AI. Data centers\\u2019 electricity use doubled between 2000 and 2005 and again between 2017 and 2022, driven by the growth of cloud computing and data storage, streaming and social media, and cryptocurrency mining. However, these periods of accelerating growth were followed by periods of slower growth as efforts to cut costs led to more-efficient software and hardware. The authors expect this pattern to hold.\\n\\nWhy it matters:The IEA report is a first-of-its-kind analysis of AI\\u2019s energy requirements, how they\\u2019re likely to grow, as well as the potential of the technology itself to reduce those requirements. It confirms that AI is poised to consume huge amounts of energy. However, it also suggests that today\\u2019s energy costs will be tomorrow\\u2019s energy savings as AI makes energy generation, distribution, and use more efficient across a wide variety of industries.\\n\\nWe\\u2019re thinking:While demand for electricity for data centers is growing rapidly,\\u00a0calibrating the right level of investment is tricky. High levels of growth come\\u00a0with high levels of hype that can lead analysts to overestimate future demand. For example, Microsoft, after examining\\u00a0its forecasts,canceleddata-center projects that would have consumed 2 gigawatts.\"}",
+    "langfuse.trace.output": "{\"summary\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Theo m\\u1ed9t b\\u00e1o c\\u00e1o g\\u1ea7n \\u0111\\u00e2y, AI ng\\u00e0y c\\u00e0ng ti\\u00eau t\\u1ed1n nhi\\u1ec1u n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng c\\u00f4ng ngh\\u1ec7 n\\u00e0y c\\u0169ng c\\u00f3 th\\u1ec3 gi\\u00fap ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng \\u0111\\u00e1ng k\\u1ec3 trong 5 \\u0111\\u1ebfn 10 n\\u0103m t\\u1edbi.\\n*   B\\u00e1o c\\u00e1o c\\u1ee7a C\\u01a1 quan N\\u0103ng l\\u01b0\\u1ee3ng Qu\\u1ed1c t\\u1ebf (IEA) \\u0111\\u01b0a ra nhi\\u1ec1u k\\u1ecbch b\\u1ea3n v\\u1ec1 m\\u1ee9c ti\\u00eau th\\u1ee5 n\\u0103ng l\\u01b0\\u1ee3ng c\\u1ee7a AI, bao g\\u1ed3m c\\u1ea3 k\\u1ecbch b\\u1ea3n t\\u0103ng tr\\u01b0\\u1edfng nhanh v\\u00e0 k\\u1ecbch b\\u1ea3n hi\\u1ec7u qu\\u1ea3 cao, \\u0111\\u1ed3ng th\\u1eddi nh\\u1ea5n m\\u1ea1nh s\\u1ef1 c\\u1ea7n thi\\u1ebft ph\\u1ea3i \\u0111\\u1ea7u t\\u01b0 \\u0111\\u00fang m\\u1ee9c v\\u00e0o c\\u01a1 s\\u1edf h\\u1ea1 t\\u1ea7ng.\\n*   M\\u1eb7c d\\u00f9 AI d\\u1ef1 ki\\u1ebfn s\\u1ebd ti\\u00eau th\\u1ee5 m\\u1ed9t l\\u01b0\\u1ee3ng l\\u1edbn n\\u0103ng l\\u01b0\\u1ee3ng, nh\\u01b0ng n\\u00f3 c\\u0169ng c\\u00f3 ti\\u1ec1m n\\u0103ng l\\u00e0m cho vi\\u1ec7c s\\u1ea3n xu\\u1ea5t, ph\\u00e2n ph\\u1ed1i v\\u00e0 s\\u1eed d\\u1ee5ng n\\u0103ng l\\u01b0\\u1ee3ng hi\\u1ec7u qu\\u1ea3 h\\u01a1n, d\\u1eabn \\u0111\\u1ebfn ti\\u1ebft ki\\u1ec7m n\\u0103ng l\\u01b0\\u1ee3ng trong t\\u01b0\\u01a1ng lai.\"}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-1f10d355-392c-4cb4-903c-7e9d2910b10e"
+    }
+  }
+}
+
+[2025-06-22T10:47:20.219+0000] {resource_manager.py:361} DEBUG - Successfully flushed OTEL tracer provider
+[2025-06-22T10:47:20.587+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:21.588+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:22.588+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:23.589+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:24.590+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:25.591+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:26.592+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:27.593+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:28.594+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:29.595+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:30.596+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:31.597+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:32.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:33.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:34.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:35.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:36.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:37.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:38.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:39.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:40.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:41.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:42.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:43.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:44.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:45.613+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:46.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:47.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:48.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:49.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:50.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:51.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:52.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:53.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:54.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:55.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:56.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:57.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:58.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:47:59.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:00.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:01.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:02.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:03.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:04.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:05.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:06.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:07.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:08.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:09.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:10.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:11.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:12.621+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:13.622+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:14.623+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:15.625+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:16.626+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:17.627+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:18.628+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:19.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:20.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:21.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:22.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:23.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:24.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:25.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:26.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:27.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:28.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:29.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:30.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:31.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:32.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:33.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:34.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:35.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:36.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:37.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:38.613+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:39.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:40.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:41.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:42.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:43.617+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:44.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:45.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:46.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:47.620+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:48.621+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:49.597+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:50.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:51.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:52.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:53.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:54.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:55.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:56.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:57.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:58.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:48:59.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:00.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:01.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:02.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:03.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:04.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:05.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:06.613+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:07.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:08.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:09.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:10.617+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:11.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:12.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:13.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:14.620+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:15.622+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:16.623+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:17.624+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:18.625+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:19.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:20.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:21.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:22.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:23.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:24.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:25.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:26.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:27.605+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:28.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:29.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:30.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:31.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:32.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:33.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:34.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:35.612+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:36.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:37.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:38.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:39.617+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:40.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:41.619+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:42.620+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:43.621+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:44.622+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:45.622+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:46.623+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:47.624+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:48.625+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:49.594+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:50.595+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:51.595+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:52.596+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:53.597+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:54.598+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:55.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:56.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:57.600+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:58.601+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:49:59.602+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:00.603+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:01.604+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:02.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:03.606+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:04.607+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:05.608+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:06.609+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:07.610+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:08.611+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:09.613+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:10.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:11.614+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:12.615+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:13.616+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:14.617+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:15.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:16.620+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:17.622+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:18.594+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:19.599+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:20.618+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:21.987+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:22.988+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:24.018+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:25.019+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:26.019+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:27.020+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:28.021+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:29.022+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:30.022+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:31.041+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:32.050+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:33.052+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:34.053+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:35.054+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:36.054+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:37.055+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:38.056+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:39.057+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:40.142+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:41.143+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:42.144+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:43.146+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:44.147+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:45.148+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:46.149+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:47.150+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:48.151+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:49.125+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:50.126+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:51.127+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:52.127+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:53.128+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:54.129+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:55.130+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:56.131+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:57.132+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:58.132+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:50:59.134+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:00.135+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:01.135+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:02.136+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:03.161+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:04.162+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:05.162+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:06.163+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:07.164+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:08.164+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:09.165+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:10.166+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:11.168+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:12.169+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:13.170+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:14.171+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:15.172+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:16.172+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:17.173+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:18.174+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:19.149+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:20.149+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T10:51:21.150+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs

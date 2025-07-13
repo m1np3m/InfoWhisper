@@ -1,0 +1,142 @@
+[2025-07-12T20:58:31.362+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-12T20:58:31.387+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T20:40:00+00:00 [queued]>
+[2025-07-12T20:58:31.402+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T20:40:00+00:00 [queued]>
+[2025-07-12T20:58:31.403+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-12T20:58:31.430+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_science> on 2025-07-12 20:40:00+00:00
+[2025-07-12T20:58:31.445+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=468) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-12T20:58:31.448+0000] {standard_task_runner.py:63} INFO - Started process 475 to run task
+[2025-07-12T20:58:31.449+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_science', 'scheduled__2025-07-12T20:40:00+00:00', '--job-id', '1551', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpnh3gbq6g']
+[2025-07-12T20:58:31.455+0000] {standard_task_runner.py:91} INFO - Job 1551: Subtask crawl_science
+[2025-07-12T20:58:31.539+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_science scheduled__2025-07-12T20:40:00+00:00 [running]> on host 0eb58692feb3
+[2025-07-12T20:58:31.746+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_science' AIRFLOW_CTX_EXECUTION_DATE='2025-07-12T20:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-12T20:40:00+00:00'
+[2025-07-12T20:58:31.755+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-12T20:58:31.784+0000] {dags.py:178} INFO - Bắt đầu crawl category: science
+[2025-07-12T20:58:31.868+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:31.987+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-12T20:58:32.043+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-12T20:58:32.044+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-12T20:58:32.045+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-12T20:58:32.088+0000] {log.py:232} WARNING - 2025-07-12 20:58:32,087 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T20:58:32.087+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-12T20:58:32.094+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-12T20:58:32.870+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:33.602+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-12T20:58:33.604+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/science/
+[2025-07-12T20:58:33.604+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-12T20:58:33.872+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:34.873+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:35.875+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:36.878+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:37.846+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:38.847+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:39.802+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 6.23s
+[2025-07-12T20:58:39.853+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:39.951+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 0.14s
+[2025-07-12T20:58:39.954+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/science/                 
+| ✓ | ⏱: 6.38s
+[2025-07-12T20:58:39.956+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-12T20:58:40.030+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-07-12T20:58:40.031+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-12T20:58:40.032+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/a-neural-network-shows-remarkable-accuracy-in-forecasting-risk-of-pancreatic-cancer/
+[2025-07-12T20:58:40.033+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/a-roadmap-explores-how-ai-can-detect-and-mitigate-greenhouse-gases/
+[2025-07-12T20:58:40.038+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/agentic-workflow-generates-novel-scientific-research-papers/
+[2025-07-12T20:58:40.038+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/ai-and-data-center-boom-challenges-big-techs-emissions-targets/
+[2025-07-12T20:58:40.039+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/ai-co-scientist-an-agent-that-generates-research-hypotheses-aiding-drug-discovery/
+[2025-07-12T20:58:40.040+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-07-12T20:58:40.854+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:41.027+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-07-12T20:58:41.028+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-07-12T20:58:41.030+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/beewises-robotic-beehive-uses-ai-to-save-pollinators/
+[2025-07-12T20:58:41.856+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:42.857+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:43.858+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:44.460+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-12T20:58:44.859+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:45.860+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:46.861+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:47.448+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/beewises-robotic-beehive-uses-ai-to-save-p
+ollinators/          | ✓ | ⏱: 2.98s
+[2025-07-12T20:58:47.547+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/beewises-robotic-beehive-uses-ai-to-save-p
+ollinators/          | ✓ | ⏱: 0.10s
+[2025-07-12T20:58:47.551+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/beewises-robotic-beehive-uses-ai-to-save-p
+ollinators/          | ✓ | ⏱: 3.09s
+[2025-07-12T20:58:47.597+0000] {logging_mixin.py:188} INFO - Title: Robotic Beehive For Healthier Bees
+[2025-07-12T20:58:47.598+0000] {logging_mixin.py:188} INFO - Subtitle: Beewise’s robotic beehive uses AI to save pollinators.
+[2025-07-12T20:58:47.862+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:48.163+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 5cfdb, parent_run_id: ec0be
+[2025-07-12T20:58:48.863+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:49.864+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:50.866+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:51.867+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:51.976+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 5cfdb, parent_run_id: ec0be
+[2025-07-12T20:58:51.978+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "1b61a9b8d1dbcee66153e05650bcd5f1",
+    "span_id": "bbd0e7d03fa4241e",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-12T20:58:48.164232Z",
+  "end_time": "2025-07-12T20:58:51.977483Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Robotic Beehive For Healthier Bees\\n\\nAn automated beehive uses computer vision and robotics to help keep bees healthy and crops pollinated.\\n\\nWhat\\u2019s new:The Beewise BeeHome 4 is a high-tech hive that scans bee colonies for parasites, hunger, and other adverse conditions, alerts beekeepers to them, and addresses some of them automatically. Over 300,000 units are currently deployed in North America, enabling beekeepers to monitor their hives remotely and helping farmers raise almonds, avocados, canola, coffee, cotton, and other crops that require pollination. While environmental stresses are killing bee colonies at an average rate of 40 percent per year over the last decade \\u2014 rising to 62 percent in the U.S. last year \\u2014 Beewise claims that its AI-enabled hive cuts that rate to 8 percent annually.\\n\\nHow it works:Around 11 feet long and covered with solar panels, the BeeHome 4 contains a robotic scanner, outfitted with cameras and grippers, that moves across the unit on rails. Nvidia Jetson and Raspberry Pi computers analyze the camera output, while sensors track the condition of the hive. Beekeepers can monitor conditions remotely and receive alerts to important changes via email or text message. Each unit holds up to 10 hives, each made up of 15 removable brood frames where bees build honeycombs to gestate larvae and store honey and pollen.\\n\\nBehind the news:Around 75 percent of flowering plants can\\u2019t bear fruit without pollination, so commercial beekeepers shuttle 2.5 million hives throughout the U.S. to keep farms productive. Yet the wooden Langstroth hive design was patented in 1852 and has changed little since then. Beewise built its initial prototype in 2018 using a GoPro camera. Two years later, it housed its first commercial units in 20-foot shipping containers. Debuted in 2023, the BeeHome 4 can be transported by a forklift and accommodates standard-sized brood frames.\\n\\nWhy it matters:Growers and beekeepers around the world are searching for ways to prevent colony collapse, the term that describes sudden die-offs of beehives that began in the 1980s. The causes are not fully understood but appear to include climate change, disease-carrying mites, and pesticides. Beekeepers typically check their hives\\u2019 health on a schedule of several weeks, but colonies can collapse much faster. AI-driven insights into hives\\u2019 health can help beekeepers to discover problems in time to save them, and robotic actions such as killing mites by heat can stave off potentially catastrophic threats automatically.\\n\\nWe\\u2019re thinking:AI is giving us healthier bees and more honey. Sweet!\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 t\\u1ed5 ong robot, \\u0111\\u01b0\\u1ee3c tr\\u00ecnh b\\u00e0y d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   **BeeHome 4** l\\u00e0 m\\u1ed9t t\\u1ed5 ong t\\u1ef1 \\u0111\\u1ed9ng s\\u1eed d\\u1ee5ng th\\u1ecb gi\\u00e1c m\\u00e1y t\\u00ednh v\\u00e0 robot \\u0111\\u1ec3 theo d\\u00f5i v\\u00e0 ch\\u0103m s\\u00f3c s\\u1ee9c kh\\u1ecfe c\\u1ee7a \\u0111\\u00e0n ong, bao g\\u1ed3m vi\\u1ec7c ph\\u00e1t hi\\u1ec7n k\\u00fd sinh tr\\u00f9ng, t\\u00ecnh tr\\u1ea1ng \\u0111\\u00f3i v\\u00e0 c\\u00e1c \\u0111i\\u1ec1u ki\\u1ec7n b\\u1ea5t l\\u1ee3i kh\\u00e1c, \\u0111\\u1ed3ng th\\u1eddi c\\u1ea3nh b\\u00e1o v\\u00e0 t\\u1ef1 \\u0111\\u1ed9ng x\\u1eed l\\u00fd m\\u1ed9t s\\u1ed1 v\\u1ea5n \\u0111\\u1ec1.\\n*   H\\u1ec7 th\\u1ed1ng ho\\u1ea1t \\u0111\\u1ed9ng b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u00e1y qu\\u00e9t robot v\\u1edbi camera v\\u00e0 b\\u1ed9 x\\u1eed l\\u00fd AI (Nvidia Jetson v\\u00e0 Raspberry Pi) \\u0111\\u1ec3 ph\\u00e2n t\\u00edch t\\u00ecnh tr\\u1ea1ng c\\u1ee7a t\\u1ed5 ong, cho ph\\u00e9p ng\\u01b0\\u1eddi nu\\u00f4i ong theo d\\u00f5i t\\u1eeb xa v\\u00e0 nh\\u1eadn c\\u1ea3nh b\\u00e1o v\\u1ec1 c\\u00e1c thay \\u0111\\u1ed5i quan tr\\u1ecdng.\\n*   V\\u1edbi kh\\u1ea3 n\\u0103ng gi\\u1ea3m t\\u1ef7 l\\u1ec7 ch\\u1ebft c\\u1ee7a \\u0111\\u00e0n ong xu\\u1ed1ng 8% m\\u1ed7i n\\u0103m (so v\\u1edbi m\\u1ee9c trung b\\u00ecnh 40% trong th\\u1eadp k\\u1ef7 qua), BeeHome 4 gi\\u00fap gi\\u1ea3i quy\\u1ebft v\\u1ea5n \\u0111\\u1ec1 suy gi\\u1ea3m s\\u1ed1 l\\u01b0\\u1ee3ng ong, m\\u1ed9t y\\u1ebfu t\\u1ed1 quan tr\\u1ecdng trong vi\\u1ec7c th\\u1ee5 ph\\u1ea5n cho c\\u00e2y tr\\u1ed3ng v\\u00e0 duy tr\\u00ec s\\u1ea3n xu\\u1ea5t n\\u00f4ng nghi\\u1ec7p.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 758, \"output\": 223, \"total\": 981, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-12T20:58:52.868+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:53.328+0000] {crawler_deeplai.py:490} INFO -     ✅ Robotic Beehive For Healthier Bees...
+[2025-07-12T20:58:53.869+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-12T20:58:54.330+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 22.24 giây
+[2025-07-12T20:58:54.331+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-07-12T20:58:54.395+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'science'
+[2025-07-12T20:58:54.458+0000] {dags.py:183} INFO - Hoàn thành crawl category: science
+[2025-07-12T20:58:54.459+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-12T20:58:54.459+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-12T20:58:54.487+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_science, run_id=scheduled__2025-07-12T20:40:00+00:00, execution_date=20250712T204000, start_date=20250712T205831, end_date=20250712T205854
+[2025-07-12T20:58:54.537+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-12T20:58:54.573+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-12T20:58:54.577+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-07-12T20:58:54.870+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs

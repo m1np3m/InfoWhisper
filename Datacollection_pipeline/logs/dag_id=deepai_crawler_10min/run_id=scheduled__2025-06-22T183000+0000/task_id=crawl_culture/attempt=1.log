@@ -1,0 +1,51 @@
+[2025-06-22T18:40:22.089+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T18:40:22.106+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T18:30:00+00:00 [queued]>
+[2025-06-22T18:40:22.114+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T18:30:00+00:00 [queued]>
+[2025-06-22T18:40:22.115+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T18:40:22.129+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_culture> on 2025-06-22 18:30:00+00:00
+[2025-06-22T18:40:22.141+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3820) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T18:40:22.143+0000] {standard_task_runner.py:63} INFO - Started process 3838 to run task
+[2025-06-22T18:40:22.144+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_culture', 'scheduled__2025-06-22T18:30:00+00:00', '--job-id', '1066', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpotnb4afu']
+[2025-06-22T18:40:22.148+0000] {standard_task_runner.py:91} INFO - Job 1066: Subtask crawl_culture
+[2025-06-22T18:40:22.198+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T18:30:00+00:00 [running]> on host 1b87ed59931b
+[2025-06-22T18:40:22.298+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_culture' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T18:30:00+00:00'
+[2025-06-22T18:40:22.299+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T18:40:22.314+0000] {dags.py:183} INFO - Bắt đầu crawl category: culture
+[2025-06-22T18:40:22.446+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T18:40:22.485+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T18:40:22.840+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:23.302+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T18:40:23.303+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/culture/
+[2025-06-22T18:40:23.303+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T18:40:23.842+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:24.843+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:25.843+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:26.844+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:27.290+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 3.99s
+[2025-06-22T18:40:27.394+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 0.10s
+[2025-06-22T18:40:27.396+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/culture/                 
+| ✓ | ⏱: 4.09s
+[2025-06-22T18:40:27.397+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T18:40:27.447+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T18:40:27.448+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T18:40:27.451+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-that-unites-us/
+[2025-06-22T18:40:27.451+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/all-about-the-hollywood-actors-and-studios-deal-on-generative-ai-usage-in-films-and-tv/
+[2025-06-22T18:40:27.452+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/amazon-echo-uses-generative-ai-to-create-bedtime-stories/
+[2025-06-22T18:40:27.453+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/bridge-to-explainable-ai/
+[2025-06-22T18:40:27.453+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/chatgpt-accepts-voice-image-input-output/
+[2025-06-22T18:40:27.454+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T18:40:27.845+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T18:40:28.063+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T18:40:28.064+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục culture cần crawl.
+[2025-06-22T18:40:28.064+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'culture'
+[2025-06-22T18:40:28.115+0000] {dags.py:188} INFO - Hoàn thành crawl category: culture
+[2025-06-22T18:40:28.116+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T18:40:28.116+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T18:40:28.123+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_culture, run_id=scheduled__2025-06-22T18:30:00+00:00, execution_date=20250622T183000, start_date=20250622T184022, end_date=20250622T184028
+[2025-06-22T18:40:28.151+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T18:40:28.172+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T18:40:28.174+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

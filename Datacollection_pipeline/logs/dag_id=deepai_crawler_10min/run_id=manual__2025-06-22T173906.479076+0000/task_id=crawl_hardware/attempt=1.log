@@ -1,0 +1,60 @@
+[2025-06-22T17:39:32.776+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T17:39:32.794+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T17:39:06.479076+00:00 [queued]>
+[2025-06-22T17:39:32.803+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T17:39:06.479076+00:00 [queued]>
+[2025-06-22T17:39:32.804+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T17:39:32.821+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 17:39:06.479076+00:00
+[2025-06-22T17:39:32.845+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=205) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T17:39:32.849+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'manual__2025-06-22T17:39:06.479076+00:00', '--job-id', '973', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp8n7wde14']
+[2025-06-22T17:39:32.866+0000] {standard_task_runner.py:91} INFO - Job 973: Subtask crawl_hardware
+[2025-06-22T17:39:32.865+0000] {standard_task_runner.py:63} INFO - Started process 233 to run task
+[2025-06-22T17:39:32.940+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T17:39:06.479076+00:00 [running]> on host 4a2ca80f72c8
+[2025-06-22T17:39:33.142+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T17:39:06.479076+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T17:39:06.479076+00:00'
+[2025-06-22T17:39:33.144+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T17:39:33.229+0000] {dags.py:183} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T17:39:33.500+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:34.012+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T17:39:34.500+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:34.673+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T17:39:35.514+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:36.514+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:37.678+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:38.703+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:39.818+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:40.818+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:41.819+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:42.820+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:43.084+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T17:39:43.085+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T17:39:43.086+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T17:39:43.823+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:44.824+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:45.826+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:46.826+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:47.609+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.52s
+[2025-06-22T17:39:47.718+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.11s
+[2025-06-22T17:39:47.720+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.63s
+[2025-06-22T17:39:47.721+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T17:39:47.759+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T17:39:47.760+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T17:39:47.761+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T17:39:47.761+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T17:39:47.762+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T17:39:47.762+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T17:39:47.763+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T17:39:47.763+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T17:39:47.827+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T17:39:48.383+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T17:39:48.384+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục hardware cần crawl.
+[2025-06-22T17:39:48.384+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'hardware'
+[2025-06-22T17:39:48.432+0000] {dags.py:188} INFO - Hoàn thành crawl category: hardware
+[2025-06-22T17:39:48.433+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T17:39:48.433+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T17:39:48.451+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=manual__2025-06-22T17:39:06.479076+00:00, execution_date=20250622T173906, start_date=20250622T173932, end_date=20250622T173948
+[2025-06-22T17:39:48.495+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T17:39:48.522+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T17:39:48.524+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

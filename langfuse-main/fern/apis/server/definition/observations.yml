@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fern-api/fern/main/fern.schema.json
+imports:
+  commons: ./commons.yml
+  pagination: ./utils/pagination.yml
+service:
+  auth: true
+  base-path: /api/public
+  endpoints:
+    get:
+      docs: Get a observation
+      method: GET
+      path: /observations/{observationId}
+      path-parameters:
+        observationId:
+          type: string
+          docs: The unique langfuse identifier of an observation, can be an event, span or generation
+      response: commons.ObservationsView
+    getMany:
+      docs: Get a list of observations
+      method: GET
+      path: /observations
+      request:
+        name: GetObservationsRequest
+        query-parameters:
+          page:
+            type: optional<integer>
+            docs: Page number, starts at 1.
+          limit:
+            type: optional<integer>
+            docs: Limit of items per page. If you encounter api issues due to too large page sizes, try to reduce the limit.
+          name: optional<string>
+          userId: optional<string>
+          type: optional<string>
+          traceId: optional<string>
+          parentObservationId: optional<string>
+          environment:
+            type: optional<string>
+            allow-multiple: true
+            docs: Optional filter for observations where the environment is one of the provided values.
+          fromStartTime:
+            type: optional<datetime>
+            docs: Retrieve only observations with a start_time on or after this datetime (ISO 8601).
+          toStartTime:
+            type: optional<datetime>
+            docs: Retrieve only observations with a start_time before this datetime (ISO 8601).
+          version:
+            type: optional<string>
+            docs: Optional filter to only include observations with a certain version.
+      response: ObservationsViews
+
+types:
+  Observations:
+    properties:
+      data: list<commons.Observation>
+      meta: pagination.MetaResponse
+
+  ObservationsViews:
+    properties:
+      data: list<commons.ObservationsView>
+      meta: pagination.MetaResponse

@@ -1,0 +1,20 @@
+[2025-06-22T00:20:47.135+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T00:20:47.151+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-22T00:10:00+00:00 [queued]>
+[2025-06-22T00:20:47.160+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-22T00:10:00+00:00 [queued]>
+[2025-06-22T00:20:47.161+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T00:20:47.175+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-06-22 00:10:00+00:00
+[2025-06-22T00:20:47.186+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1954) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T00:20:47.188+0000] {standard_task_runner.py:63} INFO - Started process 1972 to run task
+[2025-06-22T00:20:47.190+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'scheduled__2025-06-22T00:10:00+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpsjbyfnog']
+[2025-06-22T00:20:47.194+0000] {standard_task_runner.py:91} INFO - Job 143: Subtask crawl_business
+[2025-06-22T00:20:47.241+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-22T00:10:00+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T00:20:47.367+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T00:10:00+00:00'
+[2025-06-22T00:20:47.369+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T00:20:47.392+0000] {dags.py:167} INFO - Bắt đầu crawl category: business
+[2025-06-22T00:20:47.514+0000] {crawler_deeplai.py:49} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T00:20:47.546+0000] {crawler_deeplai.py:463} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T00:20:48.259+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T00:20:48.260+0000] {crawler_deeplai.py:177} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/business/
+[2025-06-22T00:20:48.261+0000] {crawler_deeplai.py:178} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1

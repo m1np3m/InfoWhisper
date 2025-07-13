@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  celery_worker:
+    build:
+      context: ./src
+    container_name: celery_worker
+    command: >
+      celery -A celery_worker worker
+      -Q default
+      --loglevel=info
+      --concurrency=1
+      --pool=solo
+      --hostname=worker1@%h
+    env_file:
+      - ./src/.env
+    volumes:
+      - ./src:/app
+    restart: unless-stopped
+
+  message_consumer:
+    build:
+      context: ./src
+    container_name: message_consumer
+    command: python message_consumer.py
+    env_file:
+      - ./src/.env
+    volumes:
+      - ./src:/app
+    restart: unless-stopped

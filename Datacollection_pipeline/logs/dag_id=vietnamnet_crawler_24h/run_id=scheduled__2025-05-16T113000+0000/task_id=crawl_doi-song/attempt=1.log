@@ -1,0 +1,89 @@
+[2025-05-16T12:20:49.969+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T12:20:50.018+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-16T11:30:00+00:00 [queued]>
+[2025-05-16T12:20:50.028+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-16T11:30:00+00:00 [queued]>
+[2025-05-16T12:20:50.028+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T12:20:50.069+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-16 11:30:00+00:00
+[2025-05-16T12:20:50.075+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=693) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T12:20:50.076+0000] {standard_task_runner.py:63} INFO - Started process 705 to run task
+[2025-05-16T12:20:50.076+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'scheduled__2025-05-16T11:30:00+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpis0_yqme']
+[2025-05-16T12:20:50.079+0000] {standard_task_runner.py:91} INFO - Job 66: Subtask crawl_doi-song
+[2025-05-16T12:20:50.130+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-16T11:30:00+00:00 [running]> on host 71b827885e5f
+[2025-05-16T12:20:50.244+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T11:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-16T11:30:00+00:00'
+[2025-05-16T12:20:50.245+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T12:20:50.411+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T12:20:51.089+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T12:21:51.404+0000] {logging_mixin.py:188} INFO - [ERROR]... × https://vietnamnet.vn/t...bydaterang=&cate=000007  | Error:
+[2025-05-16T12:21:51.405+0000] {logging_mixin.py:188} INFO - ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+[2025-05-16T12:21:51.405+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.406+0000] {logging_mixin.py:188} INFO -  × Unexpected error in _crawl_web at line 731 in _crawl_web (../../home/***/.local/lib/python3.12/site-            
+[2025-05-16T12:21:51.406+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.406+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.407+0000] {logging_mixin.py:188} INFO -  packages/crawl4ai/async_crawler_strategy.py):                                                                         
+[2025-05-16T12:21:51.407+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.407+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.408+0000] {logging_mixin.py:188} INFO -    Error: Failed on navigating ACS-GOTO:                                                                               
+[2025-05-16T12:21:51.408+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.408+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.409+0000] {logging_mixin.py:188} INFO -    Page.goto: Timeout 60000ms exceeded.                                                                                
+[2025-05-16T12:21:51.409+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.409+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.410+0000] {logging_mixin.py:188} INFO -    Call log:                                                                                                           
+[2025-05-16T12:21:51.410+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.410+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.411+0000] {logging_mixin.py:188} INFO -    - navigating to "https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007", waiting until "domcontentloaded"       
+[2025-05-16T12:21:51.411+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.411+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.412+0000] {logging_mixin.py:188} INFO -                                                                                                                        
+[2025-05-16T12:21:51.412+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.412+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.412+0000] {logging_mixin.py:188} INFO -                                                                                                                        
+[2025-05-16T12:21:51.413+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.413+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.414+0000] {logging_mixin.py:188} INFO -    Code context:                                                                                                       
+[2025-05-16T12:21:51.414+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.414+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.415+0000] {logging_mixin.py:188} INFO -    726                       response = await page.goto(                                                               
+[2025-05-16T12:21:51.415+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.415+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.415+0000] {logging_mixin.py:188} INFO -    727                           url, wait_until=config.wait_until, timeout=config.page_timeout                        
+[2025-05-16T12:21:51.416+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.416+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.416+0000] {logging_mixin.py:188} INFO -    728                       )                                                                                         
+[2025-05-16T12:21:51.417+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.417+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.417+0000] {logging_mixin.py:188} INFO -    729                       redirected_url = page.url                                                                 
+[2025-05-16T12:21:51.418+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.418+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.418+0000] {logging_mixin.py:188} INFO -    730                   except Error as e:                                                                            
+[2025-05-16T12:21:51.419+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.419+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.419+0000] {logging_mixin.py:188} INFO -    731 →                     raise RuntimeError(f"Failed on navigating ACS-GOTO:\n{str(e)}")                           
+[2025-05-16T12:21:51.420+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.420+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.420+0000] {logging_mixin.py:188} INFO -    732                                                                                                                 
+[2025-05-16T12:21:51.421+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.421+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.421+0000] {logging_mixin.py:188} INFO -    733                   await self.execute_hook(                                                                      
+[2025-05-16T12:21:51.421+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.422+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.422+0000] {logging_mixin.py:188} INFO -    734                       "after_goto", page, context=context, url=url, response=response, config=config            
+[2025-05-16T12:21:51.422+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.423+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.423+0000] {logging_mixin.py:188} INFO -    735                   )                                                                                             
+[2025-05-16T12:21:51.423+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.423+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.424+0000] {logging_mixin.py:188} INFO -    736                                                                                                                 
+[2025-05-16T12:21:51.424+0000] {logging_mixin.py:188} INFO - │
+[2025-05-16T12:21:51.424+0000] {logging_mixin.py:188} INFO - └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+[2025-05-16T12:21:51.425+0000] {crawler.py:84} INFO - Tìm thấy 0 link bài viết cho danh mục doi-song
+[2025-05-16T12:21:52.087+0000] {crawler.py:108} INFO - Đã lọc: 0 URLs ban đầu -> 0 URLs mới
+[2025-05-16T12:21:52.087+0000] {crawler.py:229} INFO - Không có bài viết mới nào trong danh mục doi-song cần crawl.
+[2025-05-16T12:21:52.088+0000] {crawler.py:269} INFO - Không có bài viết để lưu vào collection 'doi-song'
+[2025-05-16T12:21:52.155+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T12:21:52.158+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T12:21:52.165+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=scheduled__2025-05-16T11:30:00+00:00, execution_date=20250516T113000, start_date=20250516T122050, end_date=20250516T122152
+[2025-05-16T12:21:52.186+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T12:21:52.197+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T12:21:52.200+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

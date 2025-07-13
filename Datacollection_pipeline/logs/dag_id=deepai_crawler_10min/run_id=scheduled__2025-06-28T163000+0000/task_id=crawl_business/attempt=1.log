@@ -1,0 +1,136 @@
+[2025-06-28T16:43:25.825+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-28T16:43:25.873+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-28T16:30:00+00:00 [queued]>
+[2025-06-28T16:43:25.900+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-28T16:30:00+00:00 [queued]>
+[2025-06-28T16:43:25.903+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-28T16:43:25.958+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-06-28 16:30:00+00:00
+[2025-06-28T16:43:25.994+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1527) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-28T16:43:25.997+0000] {standard_task_runner.py:63} INFO - Started process 1545 to run task
+[2025-06-28T16:43:25.987+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'scheduled__2025-06-28T16:30:00+00:00', '--job-id', '1305', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpszblo16a']
+[2025-06-28T16:43:26.003+0000] {standard_task_runner.py:91} INFO - Job 1305: Subtask crawl_business
+[2025-06-28T16:43:26.119+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business scheduled__2025-06-28T16:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-06-28T16:43:26.269+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:26.301+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-06-28T16:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-28T16:30:00+00:00'
+[2025-06-28T16:43:26.303+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-28T16:43:26.334+0000] {dags.py:178} INFO - Bắt đầu crawl category: business
+[2025-06-28T16:43:26.616+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-28T16:43:26.667+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-06-28T16:43:26.668+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-06-28T16:43:26.669+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-06-28T16:43:26.709+0000] {log.py:232} WARNING - 2025-06-28 16:43:26,709 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:43:26.709+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-06-28T16:43:26.718+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-28T16:43:27.271+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:28.272+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:28.524+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:43:28.526+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/business/
+[2025-06-28T16:43:28.527+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-28T16:43:29.273+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:30.277+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:31.301+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:32.306+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:33.307+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:34.309+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:35.310+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:35.829+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 7.30s
+[2025-06-28T16:43:35.965+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 0.13s
+[2025-06-28T16:43:35.967+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 7.44s
+[2025-06-28T16:43:35.968+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-28T16:43:36.035+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-28T16:43:36.036+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-28T16:43:36.036+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-agents-and-infrastructure-dominate-cb-insights-top-100-ai-startups-list/
+[2025-06-28T16:43:36.037+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/alexa-adds-generative-ai-and-agents-using-claude-and-other-models/
+[2025-06-28T16:43:36.037+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-06-28T16:43:36.038+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/claude-3-7-sonnet-introduces-hybrid-reasoning-and-extended-thinking/
+[2025-06-28T16:43:36.039+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/cloudflares-ai-labyrinth-traps-scrapers-with-decoy-pages/
+[2025-06-28T16:43:36.039+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-28T16:43:36.311+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:36.739+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-28T16:43:36.740+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-28T16:43:36.740+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/meta-invests-14-3-billion-in-scale-ai-hires-ceo-alexandr-wang/
+[2025-06-28T16:43:37.312+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:37.684+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-28T16:43:38.314+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:39.317+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:39.956+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/meta-invests-14-3-billion-in-scale-ai-hire
+s-ceo-alexandr-wang/ | ✓ | ⏱: 2.27s
+[2025-06-28T16:43:40.028+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/meta-invests-14-3-billion-in-scale-ai-hire
+s-ceo-alexandr-wang/ | ✓ | ⏱: 0.07s
+[2025-06-28T16:43:40.031+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/meta-invests-14-3-billion-in-scale-ai-hire
+s-ceo-alexandr-wang/ | ✓ | ⏱: 2.34s
+[2025-06-28T16:43:40.057+0000] {logging_mixin.py:188} INFO - Title: Meta Befriends Scale AI
+[2025-06-28T16:43:40.058+0000] {logging_mixin.py:188} INFO - Subtitle: Meta invests $14.3 billion in Scale AI, hires CEO Alexandr Wang
+[2025-06-28T16:43:40.318+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:40.390+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 8d652, parent_run_id: 7fb69
+[2025-06-28T16:43:41.319+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:42.215+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 8d652, parent_run_id: 7fb69
+[2025-06-28T16:43:42.217+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "4d5c65ea25aefdba7c6803478e44ea31",
+    "span_id": "bbd988c638d4c54f",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-06-28T16:43:40.391711Z",
+  "end_time": "2025-06-28T16:43:42.217196Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Meta Befriends Scale AI\\n\\nMeta hired the leadership of ScaleAI and put billions into the data-labeling startup to accelerate its AI efforts.\\n\\nWhat\\u2019s new:Meta recruited Scale AI founder and CEO Alexandr Wang along with members of his team and pumped $14.3 billion into\\u00a0the startup in a newdeal. The agreement, which was inked as the United States Federal Trade Commission investigates Meta over its acquisitions of Instagram and WhatsApp, could avoid the government scrutiny that acquiring Scale AI outright would have invited.\\n\\nHow it works:The agreement between Meta and Scale AI gives Meta an infusion of high-profile talent and priority access to Scale AI\\u2019s large-scale data operations. It doubles the valuation of Scale AI, which was valued at $13.8 billion last year, and provides funding to fuel growth and reward shareholders. The terms echo similar deals last year betweenMicrosoft and Inflection AI,Amazon and Adept AI, andGoogle and Character.AI.\\n\\nBehind the news:Wang and his team could help fulfill\\u00a0Meta\\u2019s need for top AI talent.\\n\\nWhy it matters:Meta is racing with other Silicon Valley giants to establish and maintain a decisive lead in AI, and that requires making big bets. In this deal, it gains a star AI entrepreneur as well as closer access to Scale AI\\u2019s pipeline of high-quality training data. For Scale AI, Meta\\u2019s enormous resources and know-how could come in handy as it contends with competitors and extends its business into new areas. For the AI community, Meta\\u2019s willingness to spend such an immense sum for top talent could boost engineers\\u2019 salaries and block less-moneyed competitors.\\n\\nWe\\u2019re thinking:Meta has made valuable\\u00a0contributions to\\u00a0open-weights models, includingLlama 4, and it has played an important role in making open models competitive with their closed counterparts. We look forward to seeing what the new team will accomplish!\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Meta \\u0111\\u00e3 thu\\u00ea Alexandr Wang, nh\\u00e0 s\\u00e1ng l\\u1eadp ki\\u00eam CEO c\\u1ee7a Scale AI, c\\u00f9ng v\\u1edbi m\\u1ed9t s\\u1ed1 th\\u00e0nh vi\\u00ean trong nh\\u00f3m c\\u1ee7a \\u00f4ng, \\u0111\\u1ed3ng th\\u1eddi \\u0111\\u1ea7u t\\u01b0 14,3 t\\u1ef7 \\u0111\\u00f4 la v\\u00e0o c\\u00f4ng ty kh\\u1edfi nghi\\u1ec7p n\\u00e0y \\u0111\\u1ec3 th\\u00fac \\u0111\\u1ea9y c\\u00e1c n\\u1ed7 l\\u1ef1c v\\u1ec1 AI c\\u1ee7a m\\u00ecnh.\\n*   Th\\u1ecfa thu\\u1eadn n\\u00e0y mang l\\u1ea1i cho Meta quy\\u1ec1n ti\\u1ebfp c\\u1eadn \\u01b0u ti\\u00ean v\\u00e0o c\\u00e1c ho\\u1ea1t \\u0111\\u1ed9ng d\\u1eef li\\u1ec7u quy m\\u00f4 l\\u1edbn c\\u1ee7a Scale AI v\\u00e0 t\\u0103ng g\\u1ea5p \\u0111\\u00f4i gi\\u00e1 tr\\u1ecb c\\u1ee7a Scale AI, hi\\u1ec7n \\u0111\\u01b0\\u1ee3c \\u0111\\u1ecbnh gi\\u00e1 13,8 t\\u1ef7 \\u0111\\u00f4 la.\\n*   \\u0110\\u1ed9ng th\\u00e1i n\\u00e0y cho th\\u1ea5y Meta \\u0111ang c\\u1ea1nh tranh v\\u1edbi c\\u00e1c c\\u00f4ng ty c\\u00f4ng ngh\\u1ec7 l\\u1edbn kh\\u00e1c \\u0111\\u1ec3 d\\u1eabn \\u0111\\u1ea7u trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1ed3ng th\\u1eddi c\\u00f3 th\\u1ec3 l\\u00e0m t\\u0103ng m\\u1ee9c l\\u01b0\\u01a1ng c\\u1ee7a c\\u00e1c k\\u1ef9 s\\u01b0 v\\u00e0 g\\u00e2y kh\\u00f3 kh\\u0103n cho c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 c\\u1ea1nh tranh \\u00edt ti\\u1ec1m l\\u1ef1c t\\u00e0i ch\\u00ednh h\\u01a1n.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 579, \"output\": 187, \"total\": 766, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-06-28T16:43:42.320+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:42.442+0000] {crawler_deeplai.py:490} INFO -     ✅ Meta Befriends Scale AI...
+[2025-06-28T16:43:43.321+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-28T16:43:43.444+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 16.73 giây
+[2025-06-28T16:43:43.445+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-28T16:43:43.500+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'business'
+[2025-06-28T16:43:43.551+0000] {dags.py:183} INFO - Hoàn thành crawl category: business
+[2025-06-28T16:43:43.552+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-28T16:43:43.553+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-28T16:43:43.561+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_business, run_id=scheduled__2025-06-28T16:30:00+00:00, execution_date=20250628T163000, start_date=20250628T164325, end_date=20250628T164343
+[2025-06-28T16:43:43.622+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-28T16:43:43.643+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-28T16:43:43.646+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

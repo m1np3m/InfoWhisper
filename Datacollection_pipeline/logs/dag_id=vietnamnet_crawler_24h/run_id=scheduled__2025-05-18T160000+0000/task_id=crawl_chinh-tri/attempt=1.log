@@ -1,0 +1,62 @@
+[2025-05-18T22:16:42.884+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T22:16:42.966+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-18T16:00:00+00:00 [queued]>
+[2025-05-18T22:16:42.999+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-18T16:00:00+00:00 [queued]>
+[2025-05-18T22:16:43.000+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T22:16:43.039+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-18 16:00:00+00:00
+[2025-05-18T22:16:43.051+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_chinh-tri', 'scheduled__2025-05-18T16:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpz7uy7q_7']
+[2025-05-18T22:16:43.048+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=19653) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T22:16:43.062+0000] {standard_task_runner.py:91} INFO - Job 65: Subtask crawl_chinh-tri
+[2025-05-18T22:16:43.064+0000] {standard_task_runner.py:63} INFO - Started process 19655 to run task
+[2025-05-18T22:16:43.163+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri scheduled__2025-05-18T16:00:00+00:00 [running]> on host a383b65f89e1
+[2025-05-18T22:16:43.338+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T16:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T16:00:00+00:00'
+[2025-05-18T22:16:43.341+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T22:16:43.597+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T22:16:44.284+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T22:16:46.699+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 3.26s
+[2025-05-18T22:16:46.934+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 0.23s
+[2025-05-18T22:16:46.936+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001          
+| ✓ | ⏱: 3.50s
+[2025-05-18T22:16:47.306+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục chinh-tri
+[2025-05-18T22:16:47.828+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 3 URLs sau xử lý live
+[2025-05-18T22:16:47.829+0000] {crawler.py:255} INFO - Đang crawl 3 bài viết mới từ danh mục chinh-tri...
+[2025-05-18T22:16:47.829+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/bo-chinh-tri-ban-bi-thu-yeu-cau-kien-quyet-xu-ly-sai-pham-trong-cong-tac-can-bo-khi-sap-xep-2402411.html
+[2025-05-18T22:16:48.364+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T22:16:51.717+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/bo-chinh-tri-ban-bi-thu-ye...m-trong-cong-tac-can-bo-khi-s
+ap-xep-2402411.html  | ✓ | ⏱: 3.29s
+[2025-05-18T22:16:51.927+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/bo-chinh-tri-ban-bi-thu-ye...m-trong-cong-tac-can-bo-khi-s
+ap-xep-2402411.html  | ✓ | ⏱: 0.21s
+[2025-05-18T22:16:51.932+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/bo-chinh-tri-ban-bi-thu-ye...m-trong-cong-tac-can-bo-khi-s
+ap-xep-2402411.html  | ✓ | ⏱: 3.51s
+[2025-05-18T22:16:52.317+0000] {crawler.py:262} INFO -     ✓ Bộ Chính trị, Ban Bí thư yêu cầu kiên quyết xử lý sai phạm t...
+
+[2025-05-18T22:16:52.318+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/thu-tuong-bo-nhiem-11-nhan-su-bo-quoc-phong-2402437.html
+[2025-05-18T22:16:53.038+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T22:16:57.462+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/thu-tuong-bo-nhiem-11-nhan-su-bo-quoc-phong-2402437.html  
+| ✓ | ⏱: 4.48s
+[2025-05-18T22:16:58.215+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/thu-tuong-bo-nhiem-11-nhan-su-bo-quoc-phong-2402437.html  
+| ✓ | ⏱: 0.75s
+[2025-05-18T22:16:58.229+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/thu-tuong-bo-nhiem-11-nhan-su-bo-quoc-phong-2402437.html  
+| ✓ | ⏱: 5.24s
+[2025-05-18T22:16:59.729+0000] {crawler.py:262} INFO -     ✓ Thủ tướng bổ nhiệm 11 nhân sự Bộ Quốc phòng...
+
+[2025-05-18T22:16:59.741+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/can-bo-lam-chinh-sach-co-chuyen-mon-kinh-nghiem-co-the-duoc-keo-dai-tuoi-huu-2402445.html
+[2025-05-18T22:17:01.331+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T22:17:06.504+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/can-bo-lam-chinh-sach-co-c...nghiem-co-the-duoc-keo-dai-tu
+oi-huu-2402445.html  | ✓ | ⏱: 5.02s
+[2025-05-18T22:17:06.835+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/can-bo-lam-chinh-sach-co-c...nghiem-co-the-duoc-keo-dai-tu
+oi-huu-2402445.html  | ✓ | ⏱: 0.33s
+[2025-05-18T22:17:06.838+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/can-bo-lam-chinh-sach-co-c...nghiem-co-the-duoc-keo-dai-tu
+oi-huu-2402445.html  | ✓ | ⏱: 5.36s

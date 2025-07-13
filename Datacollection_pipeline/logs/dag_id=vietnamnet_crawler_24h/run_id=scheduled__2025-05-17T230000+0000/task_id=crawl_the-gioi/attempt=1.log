@@ -1,0 +1,64 @@
+[2025-05-17T23:30:46.764+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-17T23:30:46.791+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-17T23:00:00+00:00 [queued]>
+[2025-05-17T23:30:46.801+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-17T23:00:00+00:00 [queued]>
+[2025-05-17T23:30:46.802+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-17T23:30:46.818+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-17 23:00:00+00:00
+[2025-05-17T23:30:46.825+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2750) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-17T23:30:46.827+0000] {standard_task_runner.py:63} INFO - Started process 2751 to run task
+[2025-05-17T23:30:46.827+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-17T23:00:00+00:00', '--job-id', '268', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp249wr9sj']
+[2025-05-17T23:30:46.829+0000] {standard_task_runner.py:91} INFO - Job 268: Subtask crawl_the-gioi
+[2025-05-17T23:30:46.876+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-17T23:00:00+00:00 [running]> on host 60d771d880eb
+[2025-05-17T23:30:46.973+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-17T23:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-17T23:00:00+00:00'
+[2025-05-17T23:30:46.975+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-17T23:30:47.171+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-17T23:30:47.821+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T23:30:50.698+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-17T23:30:50.698+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:50.699+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.82s
+[2025-05-17T23:30:50.900+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-17T23:30:50.901+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:50.902+0000] {logging_mixin.py:188} INFO -  | ⏱: 
+[2025-05-17T23:30:50.902+0000] {logging_mixin.py:188} INFO - 0.2
+[2025-05-17T23:30:50.903+0000] {logging_mixin.py:188} INFO - 0s
+[2025-05-17T23:30:50.904+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005                                            | 
+[2025-05-17T23:30:50.905+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:50.905+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.02s
+[2025-05-17T23:30:51.141+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-17T23:30:52.493+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 2 URLs sau xử lý live
+[2025-05-17T23:30:52.494+0000] {crawler.py:255} INFO - Đang crawl 2 bài viết mới từ danh mục the-gioi...
+[2025-05-17T23:30:52.494+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-pham-nguy-hiem-tron-thoat-khoi-nha-tu-o-my-2402252.html
+[2025-05-17T23:30:54.258+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T23:30:58.311+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-tu-o-my-2402252.html  | 
+[2025-05-17T23:30:58.312+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:58.312+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.09s
+[2025-05-17T23:30:58.457+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-tu-o-my-2402252.html  | 
+[2025-05-17T23:30:58.457+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:58.458+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.14s
+[2025-05-17T23:30:58.459+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/vuot-nguc-nhu-phim-10-toi-...uy-hiem-tron-thoat-khoi-nha-tu-o-my-2402252.html  | 
+[2025-05-17T23:30:58.460+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:30:58.460+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.24s
+[2025-05-17T23:30:59.311+0000] {crawler.py:262} INFO -     ✓ Vượt ngục như phim: 10 tội phạm nguy hiểm trốn thoát khỏi nh...
+
+[2025-05-17T23:30:59.311+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-nato-2402275.html
+[2025-05-17T23:30:59.956+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-17T23:31:03.344+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-nato-2402275.html      | 
+[2025-05-17T23:31:03.344+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:31:03.345+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.33s
+[2025-05-17T23:31:03.562+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-nato-2402275.html      | 
+[2025-05-17T23:31:03.562+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:31:03.563+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.21s
+[2025-05-17T23:31:03.564+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/my-cong-bo-thoi-gian-ban-viec-rut-quan-khoi-chau-au-voi-nato-2402275.html      | 
+[2025-05-17T23:31:03.564+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-17T23:31:03.565+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.55s
+[2025-05-17T23:31:04.031+0000] {crawler.py:262} INFO -     ✓ Mỹ ấn định thời gian bàn việc rút quân khỏi châu Âu với NATO...
+
+[2025-05-17T23:31:04.032+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 16.86 giây
+[2025-05-17T23:31:04.166+0000] {crawler.py:292} INFO - Đã lưu 2 bài viết vào collection 'the-gioi'
+[2025-05-17T23:31:04.226+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-17T23:31:04.227+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T23:31:04.235+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-17T23:00:00+00:00, execution_date=20250517T230000, start_date=20250517T233046, end_date=20250517T233104
+[2025-05-17T23:31:04.280+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T23:31:04.303+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T23:31:04.305+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

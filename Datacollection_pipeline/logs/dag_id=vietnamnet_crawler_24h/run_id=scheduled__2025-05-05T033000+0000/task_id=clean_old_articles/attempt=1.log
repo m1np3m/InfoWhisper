@@ -1,0 +1,43 @@
+[2025-05-05T04:26:05.111+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T04:26:05.141+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.clean_old_articles scheduled__2025-05-05T03:30:00+00:00 [queued]>
+[2025-05-05T04:26:05.151+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.clean_old_articles scheduled__2025-05-05T03:30:00+00:00 [queued]>
+[2025-05-05T04:26:05.152+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T04:26:05.169+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_old_articles> on 2025-05-05 03:30:00+00:00
+[2025-05-05T04:26:05.177+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=298) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T04:26:05.179+0000] {standard_task_runner.py:63} INFO - Started process 299 to run task
+[2025-05-05T04:26:05.180+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'clean_old_articles', 'scheduled__2025-05-05T03:30:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp_pmg9_ru']
+[2025-05-05T04:26:05.183+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask clean_old_articles
+[2025-05-05T04:26:05.244+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.clean_old_articles scheduled__2025-05-05T03:30:00+00:00 [running]> on host 9f13ced5b14d
+[2025-05-05T04:26:05.361+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='clean_old_articles' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T03:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-05T03:30:00+00:00'
+[2025-05-05T04:26:05.363+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T04:26:05.851+0000] {database_cleaner.py:33} INFO - Đã kết nối MongoDB: News
+[2025-05-05T04:26:05.851+0000] {database_cleaner.py:102} INFO - Xóa các bài viết trước: 2025-04-04T11:26:05.851761+07:00
+[2025-05-05T04:26:08.066+0000] {database_cleaner.py:117} INFO - 10 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:08.715+0000] {database_cleaner.py:117} INFO - 20 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:09.357+0000] {database_cleaner.py:117} INFO - 30 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:10.211+0000] {database_cleaner.py:117} INFO - 40 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:10.824+0000] {database_cleaner.py:117} INFO - 50 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:11.452+0000] {database_cleaner.py:117} INFO - 60 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:12.101+0000] {database_cleaner.py:117} INFO - 70 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:12.752+0000] {database_cleaner.py:117} INFO - 80 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:13.398+0000] {database_cleaner.py:117} INFO - 90 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:14.027+0000] {database_cleaner.py:117} INFO - 100 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:14.662+0000] {database_cleaner.py:117} INFO - 110 bài đã xóa từ 'cong-nghe'
+[2025-05-05T04:26:15.172+0000] {database_cleaner.py:125} INFO - Collection 'cong-nghe': 118 bài bị xóa
+[2025-05-05T04:26:16.306+0000] {database_cleaner.py:117} INFO - 10 bài đã xóa từ 'the-gioi'
+[2025-05-05T04:26:16.437+0000] {database_cleaner.py:125} INFO - Collection 'the-gioi': 12 bài bị xóa
+[2025-05-05T04:26:17.717+0000] {database_cleaner.py:117} INFO - 10 bài đã xóa từ 'chinh-tri'
+[2025-05-05T04:26:17.719+0000] {database_cleaner.py:125} INFO - Collection 'chinh-tri': 10 bài bị xóa
+[2025-05-05T04:26:17.954+0000] {database_cleaner.py:125} INFO - Collection 'phap-luat': 0 bài bị xóa
+[2025-05-05T04:26:18.254+0000] {database_cleaner.py:125} INFO - Collection 'doi-song': 0 bài bị xóa
+[2025-05-05T04:26:19.005+0000] {database_cleaner.py:125} INFO - Collection 'giao-duc': 7 bài bị xóa
+[2025-05-05T04:26:19.065+0000] {database_cleaner.py:42} INFO - Đã đóng kết nối MongoDB
+[2025-05-05T04:26:19.066+0000] {database_cleaner.py:142} INFO - Đã xóa tổng cộng 147 bài, còn lại 2247
+[2025-05-05T04:26:19.066+0000] {python.py:237} INFO - Done. Returned value was: {'cong-nghe': {'total': 314, 'deleted': 118, 'remaining': 196}, 'the-gioi': {'total': 507, 'deleted': 12, 'remaining': 495}, 'chinh-tri': {'total': 677, 'deleted': 10, 'remaining': 667}, 'phap-luat': {'total': 224, 'deleted': 0, 'remaining': 224}, 'doi-song': {'total': 307, 'deleted': 0, 'remaining': 307}, 'giao-duc': {'total': 365, 'deleted': 7, 'remaining': 358}}
+[2025-05-05T04:26:19.066+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T04:26:19.084+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=clean_old_articles, run_id=scheduled__2025-05-05T03:30:00+00:00, execution_date=20250505T033000, start_date=20250505T042605, end_date=20250505T042619
+[2025-05-05T04:26:19.136+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T04:26:19.156+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T04:26:19.158+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

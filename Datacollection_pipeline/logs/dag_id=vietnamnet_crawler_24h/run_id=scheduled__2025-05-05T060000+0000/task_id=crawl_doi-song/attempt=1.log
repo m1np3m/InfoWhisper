@@ -1,0 +1,90 @@
+[2025-05-05T06:45:57.640+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T06:45:57.664+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:45:57.675+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:45:57.675+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T06:45:57.692+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-05 06:00:00+00:00
+[2025-05-05T06:45:57.699+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=8426) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T06:45:57.701+0000] {standard_task_runner.py:63} INFO - Started process 8428 to run task
+[2025-05-05T06:45:57.702+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'scheduled__2025-05-05T06:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmppz0ddq3v']
+[2025-05-05T06:45:57.705+0000] {standard_task_runner.py:91} INFO - Job 15: Subtask crawl_doi-song
+[2025-05-05T06:45:57.752+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [running]> on host ae9b30221da5
+[2025-05-05T06:45:57.844+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-05T06:00:00+00:00'
+[2025-05-05T06:45:57.846+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T06:45:58.051+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-05T06:45:58.209+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-05T06:45:58.920+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:46:02.734+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:46:02.735+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:46:02.736+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.72s
+[2025-05-05T06:46:03.049+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:46:03.050+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:46:03.051+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.31s
+[2025-05-05T06:46:03.053+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:46:03.054+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:46:03.055+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.04s
+[2025-05-05T06:46:03.547+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-05T06:46:05.235+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 0 URLs mới
+[2025-05-05T06:46:05.236+0000] {crawler.py:222} INFO - Không có bài viết mới nào trong danh mục doi-song cần crawl.
+[2025-05-05T06:46:05.236+0000] {crawler.py:257} INFO - Không có bài viết để lưu vào collection 'doi-song'
+[2025-05-05T06:46:05.285+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-05T06:46:05.285+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T06:46:05.296+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=scheduled__2025-05-05T06:00:00+00:00, execution_date=20250505T060000, start_date=20250505T064557, end_date=20250505T064605
+[2025-05-05T06:46:05.335+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T06:46:05.350+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T06:46:05.353+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-05T06:53:26.845+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T06:53:26.877+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:53:26.888+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [queued]>
+[2025-05-05T06:53:26.888+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T06:53:26.904+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-05 06:00:00+00:00
+[2025-05-05T06:53:26.911+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4429) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T06:53:26.912+0000] {standard_task_runner.py:63} INFO - Started process 4540 to run task
+[2025-05-05T06:53:26.913+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'scheduled__2025-05-05T06:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpipb3n1od']
+[2025-05-05T06:53:26.916+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask crawl_doi-song
+[2025-05-05T06:53:26.972+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song scheduled__2025-05-05T06:00:00+00:00 [running]> on host bf996dce4e49
+[2025-05-05T06:53:27.075+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-05T06:00:00+00:00'
+[2025-05-05T06:53:27.077+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T06:53:27.325+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-05T06:53:27.538+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-05T06:53:28.376+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:53:31.555+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:53:31.556+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:31.557+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.09s
+[2025-05-05T06:53:31.725+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:53:31.725+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:31.726+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.17s
+[2025-05-05T06:53:31.727+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-05T06:53:31.728+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:31.728+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.26s
+[2025-05-05T06:53:31.972+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-05T06:53:33.733+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-05T06:53:33.733+0000] {crawler.py:225} INFO - Đang crawl 1 bài viết mới từ danh mục doi-song...
+[2025-05-05T06:53:33.734+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html
+[2025-05-05T06:53:34.595+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:53:38.994+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html | 
+[2025-05-05T06:53:38.994+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:38.995+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.31s
+[2025-05-05T06:53:39.228+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html | 
+[2025-05-05T06:53:39.229+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:39.230+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-05T06:53:39.231+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html | 
+[2025-05-05T06:53:39.231+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:53:39.232+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.54s
+[2025-05-05T06:53:39.463+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Chú rể dắt 2 con dê đi đón vợ, phía sau là câu chuyện đầy hài hước
+[2025-05-05T06:53:39.464+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2821 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:53:40.116+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:53:40.123+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:53:40.311+0000] {crawler.py:232} INFO -     ✓ Chú rể dắt 2 con dê đi đón vợ, phía sau là câu chuyện đầy hà...
+
+[2025-05-05T06:53:40.312+0000] {crawler.py:235} INFO - ⏱️  Tổng thời gian crawl: 12.77 giây
+[2025-05-05T06:53:40.362+0000] {crawler.py:262} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.doi-song index: _id_ dup key: { _id: "https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': 'https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html'}, 'op': {'title': 'Chú rể dắt 2 con dê đi đón vợ, phía sau là câu chuyện đầy hài hước', 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-05T12:15:36.000 +07:00', 'views': None, 'tags': [], 'description': 'Câu chuyện chú rể dắt 2 chú dê đi đón vợ ở Bắc Ninh đầy hài hước. Nhờ 2 nhân vật đặc biệt này, hành trình rước vợ về dinh của anh chàng có nhiều điều thú vị.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/5/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-58203.jpg?width=0&s=HGLjgmuApGtZvB9XJhUT2A', 'content': 'Thanh Minh\n\nGây xôn xao mạng xã hội TikTok những ngày qua là đoạn video rước dâu “có một không hai” tại Bắc Ninh. Trong video, chú rể mặc áo dài, 2 tay dắt 2 chú dê trắng được buộc nơ đỏ trên đầu, cùng đoàn nhà trai đến nhà gái đón vợ.\n\nVideo chú rể dắt dê đi đón vợ thu hút hơn 300.000 lượt xem trên TikTok\n\nTrên đoạn đường vài chục mét từ đầu ngõ vào đến nhà gái, 2 chú dê trắng không ít lần thiếu hợp tác khiến chú rể gặp khó khăn. Tuy nhiên, với sự hỗ trợ của mọi người, anh đã thuận lợi đón được vợ.\n\nĐoạn video thu hút hơn 300.000 lượt xem cùng hàng nghìn lượt “thả tim” và nhiều bình luận thú vị: ““Ngày vui của đời người, cô dâu-chú rể thoải mái làm điều mình thích”, “2 nhân vật đặc biệt góp phần khiến đám cưới nổi đình đám mạng xã hội”...\n\nCô dâu – chú rể trong đám cưới độc đáo này là Lan Lan (SN 1997, quê Bắc Ninh) và Yang Yang (SN 1991, đến từ Trung Quốc, hiện làm kỹ sư thông tin tại Mỹ). Đám cưới của cặp đôi được tổ chức vào ngày 25/4 vừa qua tại nhà gái ở Bắc Ninh.\n\nTrong đám cưới, cặp đôi muốn làm điều gì đó đặc biệt để ngày vui trở nên ý nghĩa và đáng nhớ hơn. Ý tưởng dắt dê đi hỏi vợ là của chú rể Trung Quốc, xuất phát từ cái tên của anh “Yang Yang” (đồng âm với từ "con dê" trong tiếng Trung).\n\n“Anh ấy muốn dắt 2 con dê và 1 con lợn đi đón vợ nhưng tôi khuyên anh không nên dắt lợn vì khó quản lý hơn dê. Tôi khuyên nhủ mãi anh ấy mới đồng ý dắt 2 con dê sống, 1 con lợn quay cùng 11 tráp lễ đến rước vợ về nhà”, Lan kể.\n\nÝ tưởng độc đáo của Yang khiến Lan bật cười. Tuy nhiên, cô vui vẻ ủng hộ chồng và xem đó là điều đặc biệt trong ngày trọng đại của mình.\n\nTrước đó, chú rể cùng nhà trai đã đến Việt Nam để chuẩn bị cho đám cưới. Yang Yang nhờ chị vợ đặt mua giúp 2 chú dê, tắm rửa sạch sẽ và buộc trên đầu chúng 2 chiếc nơ đỏ để phù hợp với không khí đám cưới.\n\n“2 chú dê rất khó bảo, không chịu nghe lời chồng tôi. Bố chồng tôi phải theo sau đẩy mãi chúng mới chịu đi. Đến cổng nhà gái, mọi người nổ pháo, 2 chú dê giật mình chạy nháo nhào khiến mọi người phải chật vật giữ lại”, Lan chia sẻ.\n\nVì sự xuất hiện của 2 chú dê trắng mà đám cưới của Lan Lan có thêm nhiều kỷ niệm thú vị. Quan khách nhà gái tò mò, cho rằng đây là phong tục truyền thống của nhà trai chứ không biết đó chỉ là ý tưởng hài hước của riêng chú rể.\n\nLan Lan và Yang Yang quen nhau qua một ứng dụng hẹn hò khi anh đến Hà Nội dự đám cưới bạn vào cuối 2022. Họ hẹn gặp nhau tại một trung tâm thương mại và đó là buổi hẹn hò đáng nhớ của cặp đôi.\n\nLần gặp gỡ ấy, cả hai có ấn tượng tốt về nhau. Yang thấy bạn gái cao ráo, xinh đẹp hơn trong ảnh, còn Lan thấy anh chàng điềm đạm, lịch sự và rất ga lăng. Họ tìm thấy nhiều sở thích chung và chính thức hẹn hò không lâu sau đó.\n\nSau 3 năm yêu đương, cặp đôi đã chính thức về chung một nhà. Hiện tại, họ đang tận hưởng kỳ trăng mật lãng mạn tại Hàn Quốc.\n\nẢnh và video: NVCC', 'bullet_summary': '## Tóm tắt bài viết về đám cưới "có một không hai"\n\n* Chú rể trong đám cưới tại Bắc Ninh dắt 2 chú dê trắng được buộc nơ đỏ đi đón vợ, đoạn video thu hút sự chú ý trên mạng xã hội. \n* Ý tưởng độc đáo này xuất phát từ tên chú rể Yang Yang (đồng âm với từ "con dê" trong tiếng Trung).\n* Cô dâu Lan Lan ủng hộ ý tưởng của chồng và xem đây là điều đặc biệt trong ngày trọng đại của mình.\n* Hai chú dê gây khó khăn khi không chịu nghe lời, khiến mọi người phải cố gắng để điều khiển chúng. \n* Đám cưới diễn ra vào ngày 25/4 vừa qua, chú rể Yang Yang đến từ Trung Quốc, hiện làm việc tại Mỹ. \n\n\n', 'url': 'https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html', 'category': 'doi-song', 'crawled_at': '2025-05-05T06:53:40.123526', '_id': 'https://vietnamnet.vn/chu-re-dat-2-con-de-di-don-vo-phia-sau-la-cau-chuyen-day-hai-huoc-2397783.html'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-05T06:53:40.411+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-05T06:53:40.411+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T06:53:40.419+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=scheduled__2025-05-05T06:00:00+00:00, execution_date=20250505T060000, start_date=20250505T065326, end_date=20250505T065340
+[2025-05-05T06:53:40.456+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T06:53:40.467+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T06:53:40.470+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

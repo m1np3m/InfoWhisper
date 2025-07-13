@@ -1,0 +1,138 @@
+[2025-05-05T06:42:42.002+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-05T06:42:42.028+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-05T06:42:33.074243+00:00 [queued]>
+[2025-05-05T06:42:42.035+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-05T06:42:33.074243+00:00 [queued]>
+[2025-05-05T06:42:42.036+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-05T06:42:42.049+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_chinh-tri> on 2025-05-05 06:42:33.074243+00:00
+[2025-05-05T06:42:42.054+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=475) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-05T06:42:42.056+0000] {standard_task_runner.py:63} INFO - Started process 476 to run task
+[2025-05-05T06:42:42.056+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_chinh-tri', 'manual__2025-05-05T06:42:33.074243+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpmvx0dnjq']
+[2025-05-05T06:42:42.058+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask crawl_chinh-tri
+[2025-05-05T06:42:42.101+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_chinh-tri manual__2025-05-05T06:42:33.074243+00:00 [running]> on host ae9b30221da5
+[2025-05-05T06:42:42.184+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_chinh-tri' AIRFLOW_CTX_EXECUTION_DATE='2025-05-05T06:42:33.074243+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-05T06:42:33.074243+00:00'
+[2025-05-05T06:42:42.185+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-05T06:42:42.350+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-05T06:42:42.522+0000] {crawler.py:44} INFO - ArticleSummarizer đã được khởi tạo thành công
+[2025-05-05T06:42:44.022+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:42:47.673+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-05T06:42:47.675+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:47.675+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.58s
+[2025-05-05T06:42:47.910+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-05T06:42:47.910+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:47.911+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.23s
+[2025-05-05T06:42:47.913+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000001                                            | 
+[2025-05-05T06:42:47.913+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:47.914+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.82s
+[2025-05-05T06:42:48.224+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục chinh-tri
+[2025-05-05T06:42:49.998+0000] {crawler.py:103} INFO - Đã lọc: 25 URLs ban đầu -> 6 URLs mới
+[2025-05-05T06:42:49.998+0000] {crawler.py:225} INFO - Đang crawl 6 bài viết mới từ danh mục chinh-tri...
+[2025-05-05T06:42:49.999+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/cac-tinh-mien-trung-tay-nguyen-len-phuong-an-dua-giam-doc-so-can-bo-huyen-ve-xa-2397553.html
+[2025-05-05T06:42:50.714+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:42:54.162+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/cac-tinh-mien-trung-tay-ng...-dua-giam-doc-so-can-bo-huyen-ve-xa-2397553.html  | 
+[2025-05-05T06:42:54.163+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:54.165+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.36s
+[2025-05-05T06:42:54.470+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/cac-tinh-mien-trung-tay-ng...-dua-giam-doc-so-can-bo-huyen-ve-xa-2397553.html  | 
+[2025-05-05T06:42:54.471+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:54.471+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.30s
+[2025-05-05T06:42:54.473+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/cac-tinh-mien-trung-tay-ng...-dua-giam-doc-so-can-bo-huyen-ve-xa-2397553.html  | 
+[2025-05-05T06:42:54.473+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:42:54.474+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.67s
+[2025-05-05T06:42:54.833+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Các tỉnh miền Trung - Tây Nguyên lên phương án đưa giám đốc sở, cán bộ huyện về xã
+[2025-05-05T06:42:54.834+0000] {llm_summary.py:128} INFO - Nội dung quá dài (5689 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:42:55.994+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:42:56.018+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:42:56.289+0000] {crawler.py:232} INFO -     ✓ Các tỉnh miền Trung - Tây Nguyên lên phương án đưa giám đốc ...
+
+[2025-05-05T06:42:56.290+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/khai-mac-ky-hop-quoc-hoi-ban-sua-doi-hien-phap-va-sap-nhap-tinh-2397612.html
+[2025-05-05T06:42:57.125+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:43:00.862+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/khai-mac-ky-hop-quoc-hoi-ban-sua-doi-hien-phap-va-sap-nhap-tinh-2397612.html   | 
+[2025-05-05T06:43:00.863+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:00.864+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.63s
+[2025-05-05T06:43:01.157+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/khai-mac-ky-hop-quoc-hoi-ban-sua-doi-hien-phap-va-sap-nhap-tinh-2397612.html   | 
+[2025-05-05T06:43:01.158+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:01.159+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.29s
+[2025-05-05T06:43:01.160+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/khai-mac-ky-hop-quoc-hoi-ban-sua-doi-hien-phap-va-sap-nhap-tinh-2397612.html   | 
+[2025-05-05T06:43:01.161+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:01.161+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.92s
+[2025-05-05T06:43:01.489+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Khai mạc kỳ họp Quốc hội, bàn sửa đổi Hiến pháp và sáp nhập tỉnh
+[2025-05-05T06:43:01.490+0000] {llm_summary.py:128} INFO - Nội dung quá dài (2889 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:43:02.368+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:43:02.373+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:43:03.015+0000] {crawler.py:232} INFO -     ✓ Khai mạc kỳ họp Quốc hội, bàn sửa đổi Hiến pháp và sáp nhập ...
+
+[2025-05-05T06:43:03.016+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/thu-tuong-cai-cach-bo-may-khong-nua-voi-ma-lam-den-cung-triet-de-2397667.html
+[2025-05-05T06:43:03.632+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:43:07.885+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/thu-tuong-cai-cach-bo-may-khong-nua-voi-ma-lam-den-cung-triet-de-2397667.html  | 
+[2025-05-05T06:43:07.885+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:07.886+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.17s
+[2025-05-05T06:43:08.298+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/thu-tuong-cai-cach-bo-may-khong-nua-voi-ma-lam-den-cung-triet-de-2397667.html  | 
+[2025-05-05T06:43:08.304+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:08.305+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.40s
+[2025-05-05T06:43:08.307+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/thu-tuong-cai-cach-bo-may-khong-nua-voi-ma-lam-den-cung-triet-de-2397667.html  | 
+[2025-05-05T06:43:08.308+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:08.308+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.60s
+[2025-05-05T06:43:08.739+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Thủ tướng: Cải cách bộ máy không nửa vời mà làm đến cùng, triệt để
+[2025-05-05T06:43:08.740+0000] {llm_summary.py:128} INFO - Nội dung quá dài (6865 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:43:09.680+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:43:09.682+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:43:10.678+0000] {crawler.py:232} INFO -     ✓ Thủ tướng: Cải cách bộ máy không nửa vời mà làm đến cùng, tr...
+
+[2025-05-05T06:43:10.679+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/lanh-dao-dang-nha-nuoc-va-dai-bieu-quoc-hoi-vao-lang-vieng-chu-tich-ho-chi-minh-2397660.html
+[2025-05-05T06:43:11.734+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:43:15.961+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/lanh-dao-dang-nha-nuoc-va-...vao-lang-vieng-chu-tich-ho-chi-minh-2397660.html  | 
+[2025-05-05T06:43:15.962+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:15.962+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.13s
+[2025-05-05T06:43:16.400+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/lanh-dao-dang-nha-nuoc-va-...vao-lang-vieng-chu-tich-ho-chi-minh-2397660.html  | 
+[2025-05-05T06:43:16.401+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:16.401+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.44s
+[2025-05-05T06:43:16.403+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/lanh-dao-dang-nha-nuoc-va-...vao-lang-vieng-chu-tich-ho-chi-minh-2397660.html  | 
+[2025-05-05T06:43:16.403+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:16.404+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.57s
+[2025-05-05T06:43:17.032+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Lãnh đạo Đảng, Nhà nước và đại biểu Quốc hội vào Lăng viếng Chủ tịch Hồ Chí Minh
+[2025-05-05T06:43:17.606+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:43:17.608+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:43:17.776+0000] {crawler.py:232} INFO -     ✓ Lãnh đạo Đảng, Nhà nước và đại biểu Quốc hội vào Lăng viếng ...
+
+[2025-05-05T06:43:17.777+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/chu-tich-quoc-hoi-ky-hop-thu-9-nhieu-noi-dung-dac-biet-quan-trong-2397694.html
+[2025-05-05T06:43:18.620+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:43:23.162+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/chu-tich-quoc-hoi-ky-hop-thu-9-nhieu-noi-dung-dac-biet-quan-trong-2397694.html | 
+[2025-05-05T06:43:23.163+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:23.164+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.46s
+[2025-05-05T06:43:23.407+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/chu-tich-quoc-hoi-ky-hop-thu-9-nhieu-noi-dung-dac-biet-quan-trong-2397694.html | 
+[2025-05-05T06:43:23.408+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:23.409+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.24s
+[2025-05-05T06:43:23.410+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/chu-tich-quoc-hoi-ky-hop-thu-9-nhieu-noi-dung-dac-biet-quan-trong-2397694.html | 
+[2025-05-05T06:43:23.411+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:23.412+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.71s
+[2025-05-05T06:43:23.686+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Chủ tịch Quốc hội: Kỳ họp thứ 9 nhiều nội dung đặc biệt quan trọng
+[2025-05-05T06:43:23.686+0000] {llm_summary.py:128} INFO - Nội dung quá dài (3308 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:43:24.464+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:43:24.466+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:43:24.640+0000] {crawler.py:232} INFO -     ✓ Chủ tịch Quốc hội: Kỳ họp thứ 9 nhiều nội dung đặc biệt quan...
+
+[2025-05-05T06:43:24.641+0000] {crawler.py:228} INFO - --> Crawl: https://vietnamnet.vn/ky-hop-quoc-hoi-lich-su-mo-duong-cho-mo-hinh-chinh-quyen-dia-phuong-2-cap-2397622.html
+[2025-05-05T06:43:25.269+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-05T06:43:29.213+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ky-hop-quoc-hoi-lich-su-mo...o-hinh-chinh-quyen-dia-phuong-2-cap-2397622.html  | 
+[2025-05-05T06:43:29.214+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:29.215+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.87s
+[2025-05-05T06:43:29.499+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ky-hop-quoc-hoi-lich-su-mo...o-hinh-chinh-quyen-dia-phuong-2-cap-2397622.html  | 
+[2025-05-05T06:43:29.500+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:29.501+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.28s
+[2025-05-05T06:43:29.502+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ky-hop-quoc-hoi-lich-su-mo...o-hinh-chinh-quyen-dia-phuong-2-cap-2397622.html  | 
+[2025-05-05T06:43:29.503+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-05T06:43:29.503+0000] {logging_mixin.py:188} INFO -  | ⏱: 4.16s
+[2025-05-05T06:43:29.861+0000] {crawler.py:189} INFO - Đang tạo tóm tắt cho bài viết: Kỳ họp Quốc hội lịch sử mở đường cho chính quyền địa phương 2 cấp, kết thúc cấp huyện
+[2025-05-05T06:43:29.861+0000] {llm_summary.py:128} INFO - Nội dung quá dài (7757 ký tự), cắt bớt xuống 25002500 ký tự
+[2025-05-05T06:43:30.734+0000] {_client.py:1025} INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-05-05T06:43:30.737+0000] {crawler.py:191} INFO - Đã tạo tóm tắt thành công
+[2025-05-05T06:43:30.927+0000] {crawler.py:232} INFO -     ✓ Kỳ họp Quốc hội lịch sử mở đường cho chính quyền địa phương ...
+
+[2025-05-05T06:43:30.928+0000] {crawler.py:235} INFO - ⏱️  Tổng thời gian crawl: 48.41 giây
+[2025-05-05T06:43:31.021+0000] {crawler.py:255} INFO - Đã lưu 6 bài viết vào collection 'chinh-tri'
+[2025-05-05T06:43:31.063+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-05T06:43:31.064+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-05T06:43:31.076+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_chinh-tri, run_id=manual__2025-05-05T06:42:33.074243+00:00, execution_date=20250505T064233, start_date=20250505T064242, end_date=20250505T064331
+[2025-05-05T06:43:31.114+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-05T06:43:31.146+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-05T06:43:31.149+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

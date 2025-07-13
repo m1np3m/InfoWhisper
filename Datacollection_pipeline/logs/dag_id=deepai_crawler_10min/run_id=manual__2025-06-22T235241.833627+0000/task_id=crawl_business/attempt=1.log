@@ -1,0 +1,57 @@
+[2025-06-22T23:53:22.086+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T23:53:22.108+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T23:52:41.833627+00:00 [queued]>
+[2025-06-22T23:53:22.119+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T23:52:41.833627+00:00 [queued]>
+[2025-06-22T23:53:22.120+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T23:53:22.143+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-06-22 23:52:41.833627+00:00
+[2025-06-22T23:53:22.152+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3789) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T23:53:22.155+0000] {standard_task_runner.py:63} INFO - Started process 3807 to run task
+[2025-06-22T23:53:22.156+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'manual__2025-06-22T23:52:41.833627+00:00', '--job-id', '1160', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpcd4wb6vc']
+[2025-06-22T23:53:22.162+0000] {standard_task_runner.py:91} INFO - Job 1160: Subtask crawl_business
+[2025-06-22T23:53:22.223+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T23:52:41.833627+00:00 [running]> on host 13e6c13b5a13
+[2025-06-22T23:53:22.338+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T23:52:41.833627+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T23:52:41.833627+00:00'
+[2025-06-22T23:53:22.340+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T23:53:22.361+0000] {dags.py:178} INFO - Bắt đầu crawl category: business
+[2025-06-22T23:53:22.526+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T23:53:22.566+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:latest'
+[2025-06-22T23:53:22.567+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:latest' not found in cache or caching disabled.
+[2025-06-22T23:53:22.568+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:latest' from server...
+[2025-06-22T23:53:22.594+0000] {log.py:232} WARNING - 2025-06-22 23:53:22,593 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=latest "HTTP/1.1 200 OK"
+[2025-06-22T23:53:22.593+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=latest "HTTP/1.1 200 OK"
+[2025-06-22T23:53:22.601+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T23:53:22.781+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:23.708+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T23:53:23.709+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/business/
+[2025-06-22T23:53:23.710+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T23:53:23.782+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:24.783+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:25.783+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:26.784+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:27.785+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:28.129+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 4.42s
+[2025-06-22T23:53:28.444+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 0.17s
+[2025-06-22T23:53:28.447+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/business/                
+| ✓ | ⏱: 4.59s
+[2025-06-22T23:53:28.450+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T23:53:28.534+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T23:53:28.536+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T23:53:28.544+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-agents-and-infrastructure-dominate-cb-insights-top-100-ai-startups-list/
+[2025-06-22T23:53:28.545+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/alexa-adds-generative-ai-and-agents-using-claude-and-other-models/
+[2025-06-22T23:53:28.546+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-06-22T23:53:28.547+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/claude-3-7-sonnet-introduces-hybrid-reasoning-and-extended-thinking/
+[2025-06-22T23:53:28.547+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/cloudflares-ai-labyrinth-traps-scrapers-with-decoy-pages/
+[2025-06-22T23:53:28.548+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T23:53:28.933+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T23:53:29.358+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T23:53:29.359+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục business cần crawl.
+[2025-06-22T23:53:29.360+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'business'
+[2025-06-22T23:53:29.418+0000] {dags.py:183} INFO - Hoàn thành crawl category: business
+[2025-06-22T23:53:29.419+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T23:53:29.420+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T23:53:29.434+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_business, run_id=manual__2025-06-22T23:52:41.833627+00:00, execution_date=20250622T235241, start_date=20250622T235322, end_date=20250622T235329
+[2025-06-22T23:53:29.503+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T23:53:29.532+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T23:53:29.540+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,46 @@
+[2025-05-18T01:17:59.000+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T01:17:59.032+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T00:30:00+00:00 [queued]>
+[2025-05-18T01:17:59.050+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T00:30:00+00:00 [queued]>
+[2025-05-18T01:17:59.051+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T01:17:59.070+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_the-gioi> on 2025-05-18 00:30:00+00:00
+[2025-05-18T01:17:59.079+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=811) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T01:17:59.081+0000] {standard_task_runner.py:63} INFO - Started process 813 to run task
+[2025-05-18T01:17:59.081+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_the-gioi', 'scheduled__2025-05-18T00:30:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp_5bwlqt8']
+[2025-05-18T01:17:59.084+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask crawl_the-gioi
+[2025-05-18T01:17:59.135+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_the-gioi scheduled__2025-05-18T00:30:00+00:00 [running]> on host fa0f5fb7e7ff
+[2025-05-18T01:17:59.230+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_the-gioi' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T00:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T00:30:00+00:00'
+[2025-05-18T01:17:59.232+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T01:17:59.520+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T01:18:00.433+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:18:04.604+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 4.08s
+[2025-05-18T01:18:04.910+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 0.30s
+[2025-05-18T01:18:04.913+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000005          
+| ✓ | ⏱: 4.39s
+[2025-05-18T01:18:05.023+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục the-gioi
+[2025-05-18T01:18:06.456+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs sau xử lý live
+[2025-05-18T01:18:06.457+0000] {crawler.py:255} INFO - Đang crawl 1 bài viết mới từ danh mục the-gioi...
+[2025-05-18T01:18:06.458+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-2402249.html
+[2025-05-18T01:18:07.328+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:18:13.283+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 5.87s
+[2025-05-18T01:18:13.651+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 0.36s
+[2025-05-18T01:18:13.655+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-
+2402249.html         | ✓ | ⏱: 6.24s
+[2025-05-18T01:18:14.266+0000] {crawler.py:262} INFO -     ✓ Ông Trump công bố thời gian điện đàm với Tổng thống Putin, l...
+
+[2025-05-18T01:18:14.268+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 14.75 giây
+[2025-05-18T01:18:14.407+0000] {crawler.py:299} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.the-gioi index: _id_ dup key: { _id: "2402249" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2402249'}, 'op': {'title': 'Ông Trump công bố thời gian điện đàm với Tổng thống Putin, lãnh đạo Ukraine', 'author': 'Không có thông tin tác giả', 'publish_date': datetime.datetime(2025, 5, 18, 6, 30), 'views': None, 'tags': [], 'description': 'Trong bài viết trên mạng xã hội Truth Social, Tổng thống Mỹ Donald Trump tiết lộ có ý định điện đàm với người đồng cấp Nga Putin và Tổng thống Ukraine Zelensky vào ngày 19/5.', 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/18/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-lanh-dao-ukraine-20972.jpg?width=0&s=ZxR99v06baxP7RpFfLTGQw', 'content': 'Hoài Linh\n\nTheo báo Izvestia, Tổng thống Mỹ Trump ngày 17/5 tiết lộ: "Tôi sẽ nói chuyện qua điện thoại với ông Putinvào lúc 10h sáng. Chủ đề của cuộc gọi sẽ gồm thương mại và chấm dứt tình trạng đổ máu vốn cướp đi mạng sống của hơn 5.000 lính Nga và Ukraine mỗi tuần".\n\nÔng Trump lưu ý, sau đó ông sẽ gọi điện cho Tổng thống Ukraine và nhiều đại diện của các nước NATO. "Tôi hy vọng đó sẽ là một ngày hiệu quả, thỏa thuận ngừng bắn sẽ được ký kết và hoạt động quân sự vốn không nên xảy ra sẽ chấm dứt. Chúa phù hộ cho tất cả chúng ta", lãnh đạo Nhà Trắng viết.\n\nÔng Trump hôm 16/5 phủ nhận thông tin cho biết Nga tham gia không đầy đủ vào các cuộc đàm phán nhằm giải quyết cuộc xung đột ở Ukraine. Ngoài ra, nhà lãnh đạo Mỹ cũng tuyên bố, Tổng thống Ukraine Zelensky không có các quân át chủ bài trong việc thương lượng nhằm tìm ra giải pháp hòa bình.\n\nTrước đó, Ngoại trưởng Nga Sergey Lavrov đã có cuộc điện đàm với người đồng cấp Mỹ Marco Rubio. Bộ Ngoại giao Nga ngày 17/5 cho hay, cuộc điện đàm diễn ra theo sáng kiến của phía Mỹ và ngoại trưởng của hai nước đã trao đổi ý kiến về việc tiếp tục các cuộc tiếp xúc song phương.\n\nBộ Ngoại giao Nga lưu ý, hai bên đã thảo luận về kết quả đàm phán Nga - Ukraine diễn ra hôm 16/5 tại Thổ Nhĩ Kỳ cũng như các vấn đề quốc tế và khu vực khác.\n\nNgoại trưởng Nga Lavrov lưu ý đến vai trò tích cực của Mỹ trong việc góp phần giúp Kiev ngồi vào bàn đàm phán theo đề xuất của Tổng thống Nga Putin. Ông Lavrov cũng khẳng định, Moscow sẵn sàng tiếp tục hợp tác với các đồng nghiệp Mỹ theo hướng này.', 'url': 'https://vietnamnet.vn/ong-trump-cong-bo-thoi-gian-dien-dam-voi-tong-thong-putin-2402249.html', 'category': 'the-gioi', 'crawled_at': '2025-05-18T08:18:14.012557+07:00', 'is_live': 0, '_id': '2402249'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-18T01:18:14.485+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T01:18:14.487+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T01:18:14.506+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_the-gioi, run_id=scheduled__2025-05-18T00:30:00+00:00, execution_date=20250518T003000, start_date=20250518T011759, end_date=20250518T011814
+[2025-05-18T01:18:14.581+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T01:18:14.642+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T01:18:14.646+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

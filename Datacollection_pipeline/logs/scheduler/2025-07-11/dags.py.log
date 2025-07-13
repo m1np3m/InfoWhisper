@@ -1,0 +1,13 @@
+[2025-07-11T07:54:54.384+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/dags.py
+[2025-07-11T07:54:54.385+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-07-11T07:54:54.391+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:54:54.390+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-07-11T07:54:59.126+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:54:59.125+0000] {summary_gemini.py:20} INFO - 3.0.3
+[2025-07-11T07:55:01.051+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.050+0000] {media_upload_consumer.py:33} DEBUG - Thread: Media upload consumer thread #0 started and actively processing queue items
+[2025-07-11T07:55:01.059+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.051+0000] {prompt_cache.py:144} DEBUG - Prompt cache initialized.
+[2025-07-11T07:55:01.061+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.060+0000] {score_ingestion_consumer.py:124} DEBUG - Startup: Score ingestion consumer thread #0 started with batch size 15 and interval 1s
+[2025-07-11T07:55:01.062+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.060+0000] {resource_manager.py:252} INFO - Startup: Langfuse tracer successfully initialized | public_key=pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4 | host=http://host.docker.internal:4000 | environment=default | sample_rate=1.0 | media_threads=1
+[2025-07-11T07:55:01.157+0000] {processor.py:840} INFO - DAG(s) 'deepai_monthly_insights', 'deepai_crawler_10min' retrieved from /opt/airflow/dags/dags.py
+[2025-07-11T07:55:01.229+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.228+0000] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-07-11T07:55:01.301+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.301+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_crawler_10min to 2025-07-11 07:50:00+00:00, run_after=2025-07-11 08:00:00+00:00
+[2025-07-11T07:55:01.320+0000] {logging_mixin.py:188} INFO - [2025-07-11T07:55:01.319+0000] {dag.py:3954} INFO - Setting next_dagrun for deepai_monthly_insights to 2025-06-01 00:00:00+00:00, run_after=2025-07-01 00:00:00+00:00
+[2025-07-11T07:55:01.365+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags.py took 6.991 seconds

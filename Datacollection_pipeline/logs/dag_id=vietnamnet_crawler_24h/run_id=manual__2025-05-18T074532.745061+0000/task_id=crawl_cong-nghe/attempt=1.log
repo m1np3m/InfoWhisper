@@ -1,0 +1,67 @@
+[2025-05-18T07:45:36.196+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T07:45:36.236+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-18T07:45:32.745061+00:00 [queued]>
+[2025-05-18T07:45:36.251+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-18T07:45:32.745061+00:00 [queued]>
+[2025-05-18T07:45:36.251+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T07:45:36.278+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-18 07:45:32.745061+00:00
+[2025-05-18T07:45:36.286+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=685) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T07:45:36.289+0000] {standard_task_runner.py:63} INFO - Started process 687 to run task
+[2025-05-18T07:45:36.290+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'manual__2025-05-18T07:45:32.745061+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpax2ap7jp']
+[2025-05-18T07:45:36.294+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask crawl_cong-nghe
+[2025-05-18T07:45:36.359+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe manual__2025-05-18T07:45:32.745061+00:00 [running]> on host 396ee2b23973
+[2025-05-18T07:45:36.480+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T07:45:32.745061+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-18T07:45:32.745061+00:00'
+[2025-05-18T07:45:36.483+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T07:45:37.067+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T07:45:37.139+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T07:45:37.141+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 37, in crawl_category
+    asyncio.run(_crawl_category(category_url, category_name, max_articles, enable_summarizer))
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 48, in _crawl_category
+    await crawler.crawl_all_articles()
+  File "/opt/airflow/dags/crawler.py", line 246, in crawl_all_articles
+    article_links = await self.get_article_links()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/crawler.py", line 69, in get_article_links
+    async with AsyncWebCrawler() as crawler:
+               ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/crawl4ai/async_webcrawler.py", line 159, in __init__
+    self.robots_parser = RobotsParser()
+                         ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/crawl4ai/utils.py", line 223, in __init__
+    self._init_db()
+  File "/home/airflow/.local/lib/python3.12/site-packages/crawl4ai/utils.py", line 228, in _init_db
+    conn.execute("PRAGMA journal_mode=WAL")
+sqlite3.OperationalError: database is locked
+[2025-05-18T07:45:37.160+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=manual__2025-05-18T07:45:32.745061+00:00, execution_date=20250518T074532, start_date=20250518T074536, end_date=20250518T074537
+[2025-05-18T07:45:37.187+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 4 for task crawl_cong-nghe (database is locked; 687)
+[2025-05-18T07:45:37.227+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-18T07:45:37.262+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T07:45:37.266+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

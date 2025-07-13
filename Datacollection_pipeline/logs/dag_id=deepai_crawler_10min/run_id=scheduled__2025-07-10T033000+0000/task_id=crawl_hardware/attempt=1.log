@@ -1,0 +1,209 @@
+[2025-07-10T03:45:02.265+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-10T03:45:02.287+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-10T03:30:00+00:00 [queued]>
+[2025-07-10T03:45:02.299+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-10T03:30:00+00:00 [queued]>
+[2025-07-10T03:45:02.300+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-10T03:45:02.319+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-07-10 03:30:00+00:00
+[2025-07-10T03:45:02.332+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=139) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-10T03:45:02.337+0000] {standard_task_runner.py:63} INFO - Started process 165 to run task
+[2025-07-10T03:45:02.336+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'scheduled__2025-07-10T03:30:00+00:00', '--job-id', '1524', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmplinuw0l8']
+[2025-07-10T03:45:02.341+0000] {standard_task_runner.py:91} INFO - Job 1524: Subtask crawl_hardware
+[2025-07-10T03:45:02.412+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware scheduled__2025-07-10T03:30:00+00:00 [running]> on host 13e6c13b5a13
+[2025-07-10T03:45:02.592+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-07-10T03:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-10T03:30:00+00:00'
+[2025-07-10T03:45:02.595+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-10T03:45:02.629+0000] {dags.py:178} INFO - Bắt đầu crawl category: hardware
+[2025-07-10T03:45:02.889+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:03.116+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-07-10T03:45:03.183+0000] {client.py:1980} DEBUG - Getting prompt '3 Points-label:production'
+[2025-07-10T03:45:03.184+0000] {client.py:1984} DEBUG - Prompt '3 Points-label:production' not found in cache or caching disabled.
+[2025-07-10T03:45:03.185+0000] {client.py:2068} DEBUG - Fetching prompt '3 Points-label:production' from server...
+[2025-07-10T03:45:03.890+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:04.891+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:04.952+0000] {log.py:232} WARNING - 2025-07-10 03:45:04,951 - httpx - INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:45:04.951+0000] {_client.py:1025} INFO - HTTP Request: GET http://host.docker.internal:4000/api/public/v2/prompts/3%20Points?label=production "HTTP/1.1 200 OK"
+[2025-07-10T03:45:04.959+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-07-10T03:45:05.892+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:06.893+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:07.894+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:07.905+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:45:07.907+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-07-10T03:45:07.908+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-07-10T03:45:08.894+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:10.072+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:11.073+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:12.074+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:12.736+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.65s
+[2025-07-10T03:45:12.843+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.10s
+[2025-07-10T03:45:12.846+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 4.76s
+[2025-07-10T03:45:12.847+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-07-10T03:45:12.887+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 15 link bài viết unique
+[2025-07-10T03:45:12.888+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-07-10T03:45:12.889+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/amazon-plans-to-spend-tens-of-billions-on-ai-infrastructure-with-project-rainier/
+[2025-07-10T03:45:12.889+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/compact-ai-models-redefine-efficiency-bringing-advanced-capabilities-to-everyday-devices/
+[2025-07-10T03:45:12.890+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/generative-ai-and-gpu-boom-spawns-growing-e-waste-problem/
+[2025-07-10T03:45:12.891+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/grounding-dino-1-5-an-edge-device-model-built-for-faster-smarter-object-detection/
+[2025-07-10T03:45:12.891+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/hugging-face-acquires-pollen-robotics-launches-reachy-2-robot-for-open-source-research/
+[2025-07-10T03:45:12.892+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 15 bài viết
+[2025-07-10T03:45:13.075+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:14.076+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:15.077+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:15.144+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 15 URLs ban đầu -> 2 URLs mới
+[2025-07-10T03:45:15.145+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 2 bài viết mới...
+[2025-07-10T03:45:15.146+0000] {crawler_deeplai.py:486} INFO - [1/2] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/amazon-plans-to-spend-tens-of-billions-on-ai-infrastructure-with-project-rainier/
+[2025-07-10T03:45:15.399+0000] {crawler_deeplai.py:486} INFO - [2/2] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/meta-provides-further-technical-details-of-aria-gen-2-smart-glasses-for-multisensory-ai-research/
+[2025-07-10T03:45:16.078+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:17.079+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:17.108+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:45:17.152+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-07-10T03:45:18.084+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:19.086+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:20.088+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:21.090+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:21.923+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 4.81s
+[2025-07-10T03:45:22.068+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 0.14s
+[2025-07-10T03:45:22.071+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/amazon-pla...lions-on-ai-infrastructure-wi
+th-project-rainier/  | ✓ | ⏱: 4.96s
+[2025-07-10T03:45:22.091+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:22.101+0000] {logging_mixin.py:188} INFO - Title: Amazon’s Constellation of Compute
+[2025-07-10T03:45:22.102+0000] {logging_mixin.py:188} INFO - Subtitle: Amazon plans to spend tens of billions on AI infrastructure with Project Rainier
+[2025-07-10T03:45:22.188+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 9f07b, parent_run_id: 6755d
+[2025-07-10T03:45:23.091+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:23.996+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 9f07b, parent_run_id: 6755d
+[2025-07-10T03:45:23.998+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "3567e25985d6419298cf7f7dcf71f6f5",
+    "span_id": "b1693c414c2775d3",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-10T03:45:22.189376Z",
+  "end_time": "2025-07-10T03:45:23.997520Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Amazon\\u2019s Constellation of Compute\\n\\nAmazon revealed new details of its plan to build a constellation of massive data centers and connect them into an \\u201cultracluster.\\u201d Customer Number One: Anthropic.\\n\\nWhat\\u2019s new:Dubbed Project Rainier, the plan calls for Amazon tobuildseven next-generation data centers \\u2014 with up to 30 on the drawing board \\u2014 near New Carlisle, Indiana,The New York Timesreported. Still other data centers\\u00a0will be located in Mississippi, and possibly in North Carolina and Pennsylvania, contributing to an expected$100 billionin capital expenditures this year alone. These\\u00a0plans complement the company\\u2019s previously announced intention to spend $11 billion worth on data centers in the United Kingdom by 2028. (Disclosure: Andrew Ng is a member of Amazon\\u2019s board of directors.)\\n\\nHow it works:Announced late last year, Project Rainier calls for connecting hundreds of thousands of high-performance processors for use by Amazon\\u2019s AI partner Anthropic. Amazoninvested$8 billion in Anthropic over the last two years, and their alliance is a key part of Amazon\\u2019s strategy to compete against other AI giants. Anthropic may use all of New Carlisle\\u2019s processing power to build a single system, Anthropic co-founder Tom Brown said.\\n\\nBehind the news:AI leaders are spending tens of billions of dollars on computing infrastructure to serve fast-growing customer bases and, they hope, develop breakthroughs that\\u00a0enable them to leap ahead of competitors. A large part of Alphabet\\u2019s expected $75 billion in capital expenditures will bespentbuilding data centers. Microsoft plans to invest $80 billion in data centers this year, and OpenAI and partners are building a data center complex in Texas at an\\u00a0estimated\\u00a0cost of\\u00a0$60 billion.\\n\\nWhy it matters:Amazon\\u2019s commitment to Project Rainier signals its belief that Anthropic can give it a crucial edge. The stakes are high, as the company dives headlong into AI-driven retailing and logistics, warehouse robotics, and consumer services\\u00a0like the revamped Alexa digital assistant. However, should Anthropic stall, Amazon can roll its immense computing resources into its enormously successful Amazon Web Services cloud-computing business.\\n\\nWe\\u2019re thinking:Amazon\\u2019s emphasis on internal hardware development reflects a focus on maintaining control of costs and operations. It has learned the hard lessons of competition in retailing, where margins are thin and expenses are in flux.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u1ebf ho\\u1ea1ch x\\u00e2y d\\u1ef1ng c\\u1ee5m trung t\\u00e2m d\\u1eef li\\u1ec7u c\\u1ee7a Amazon:\\n\\n*   Amazon \\u0111ang tri\\u1ec3n khai \\\"Project Rainier\\\", m\\u1ed9t d\\u1ef1 \\u00e1n x\\u00e2y d\\u1ef1ng h\\u00e0ng lo\\u1ea1t trung t\\u00e2m d\\u1eef li\\u1ec7u th\\u1ebf h\\u1ec7 m\\u1edbi, v\\u1edbi m\\u1ee5c ti\\u00eau k\\u1ebft n\\u1ed1i ch\\u00fang th\\u00e0nh m\\u1ed9t \\\"ultracluster\\\" \\u0111\\u1ec3 ph\\u1ee5c v\\u1ee5 cho \\u0111\\u1ed1i t\\u00e1c AI Anthropic.\\n*   D\\u1ef1 \\u00e1n bao g\\u1ed3m vi\\u1ec7c x\\u00e2y d\\u1ef1ng \\u00edt nh\\u1ea5t 7 trung t\\u00e2m d\\u1eef li\\u1ec7u, v\\u1edbi t\\u1ed5ng v\\u1ed1n \\u0111\\u1ea7u t\\u01b0 d\\u1ef1 ki\\u1ebfn l\\u00ean \\u0111\\u1ebfn 100 t\\u1ef7 USD trong n\\u0103m nay, nh\\u1eb1m \\u0111\\u00e1p \\u1ee9ng nhu c\\u1ea7u v\\u1ec1 h\\u1ea1 t\\u1ea7ng t\\u00ednh to\\u00e1n cho s\\u1ef1 ph\\u00e1t tri\\u1ec3n c\\u1ee7a AI.\\n*   S\\u1ef1 \\u0111\\u1ea7u t\\u01b0 n\\u00e0y cho th\\u1ea5y Amazon \\u0111\\u1eb7t c\\u01b0\\u1ee3c l\\u1edbn v\\u00e0o Anthropic \\u0111\\u1ec3 c\\u1ea1nh tranh trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1ed3ng th\\u1eddi c\\u1ee7ng c\\u1ed1 v\\u1ecb th\\u1ebf c\\u1ee7a Amazon Web Services (AWS) trong th\\u1ecb tr\\u01b0\\u1eddng \\u0111i\\u1ec7n to\\u00e1n \\u0111\\u00e1m m\\u00e2y.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 684, \"output\": 175, \"total\": 859, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-10T03:45:24.024+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/meta-provi...en-2-smart-glasses-for-multis
+ensory-ai-research/  | ✓ | ⏱: 6.86s
+[2025-07-10T03:45:24.092+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:24.101+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/meta-provi...en-2-smart-glasses-for-multis
+ensory-ai-research/  | ✓ | ⏱: 0.07s
+[2025-07-10T03:45:24.106+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/meta-provi...en-2-smart-glasses-for-multis
+ensory-ai-research/  | ✓ | ⏱: 6.95s
+[2025-07-10T03:45:24.142+0000] {logging_mixin.py:188} INFO - Title: Meta’s Smart Glasses Come Into Focus
+[2025-07-10T03:45:24.142+0000] {logging_mixin.py:188} INFO - Subtitle: Meta reveals further details of Aria Gen 2 smart glasses for multisensory AI research
+[2025-07-10T03:45:24.213+0000] {CallbackHandler.py:758} DEBUG - Event: on_chat_model_start, run_id: 6b712, parent_run_id: 5c027
+[2025-07-10T03:45:25.095+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:25.960+0000] {CallbackHandler.py:758} DEBUG - Event: on_llm_end, run_id: 6b712, parent_run_id: 5c027
+[2025-07-10T03:45:25.962+0000] {span_processor.py:96} DEBUG - Trace: Processing span name='Summary_News' | Full details:
+{
+  "name": "Summary_News",
+  "context": {
+    "trace_id": "b34dfd5a04b87f3e59dddf0c2fc3486d",
+    "span_id": "68ea09354664f59a",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-10T03:45:24.214938Z",
+  "end_time": "2025-07-10T03:45:25.961603Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"system\", \"content\": \"B\\u1ea1n l\\u00e0 m\\u1ed9t tr\\u1ee3 l\\u00fd AI c\\u00f3 nhi\\u1ec7m v\\u1ee5 t\\u00f3m t\\u1eaft c\\u00e1c b\\u00e0i vi\\u1ebft khoa h\\u1ecdc, k\\u1ef9 thu\\u1eadt ho\\u1eb7c c\\u00f4ng ngh\\u1ec7 \\u0111\\u01b0\\u1ee3c vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Anh, v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t.\\n        \\n        Y\\u00eau c\\u1ea7u:\\n        1. T\\u00f3m t\\u1eaft th\\u00e0nh 3 bullet points ng\\u1eafn g\\u1ecdn, r\\u00f5 r\\u00e0ng.\\n        2. M\\u1ed7i bullet point tr\\u00ecnh b\\u00e0y m\\u1ed9t \\u00fd ch\\u00ednh ho\\u1eb7c th\\u00f4ng tin quan tr\\u1ecdng trong b\\u00e0i vi\\u1ebft.\\n        3. Kh\\u00f4ng th\\u00eam \\u00fd ki\\u1ebfn c\\u00e1 nh\\u00e2n, \\u0111\\u00e1nh gi\\u00e1 ch\\u1ee7 quan ho\\u1eb7c ph\\u00f3ng \\u0111\\u1ea1i n\\u1ed9i dung.\\n        4. Vi\\u1ebft b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t chu\\u1ea9n, kh\\u00e1ch quan, d\\u1ec5 hi\\u1ec3u, \\u0111\\u00fang ng\\u1eef ph\\u00e1p.\\n        5. Gi\\u1eef nguy\\u00ean c\\u00e1c thu\\u1eadt ng\\u1eef k\\u1ef9 thu\\u1eadt ti\\u1ebfng Anh n\\u1ebfu c\\u1ea7n \\u0111\\u1ec3 \\u0111\\u1ea3m b\\u1ea3o ch\\u00ednh x\\u00e1c.\\n        \\n        D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 n\\u1ed9i dung b\\u00e0i vi\\u1ebft ti\\u1ebfng Anh, h\\u00e3y ph\\u00e2n t\\u00edch v\\u00e0 cung c\\u1ea5p b\\u1ea3n t\\u00f3m t\\u1eaft d\\u1ea1ng bullet points b\\u1eb1ng ti\\u1ebfng Vi\\u1ec7t:\"}, {\"role\": \"user\", \"content\": \"Meta\\u2019s Smart Glasses Come Into Focus\\n\\nMeta revealed new details about its latest\\u00a0Aria eyeglasses, which aim to give AI models\\u00a0a streaming, multisensory, human perspective.\\n\\nWhat\\u2019s new:Metadescribedits Aria Gen 2 smart-glasses platform in a blog post that focuses on capabilities relevant to research in augmented reality, \\u201cembodied AI\\u201d such as robot training, and \\u201ccontextual AI\\u201d for personal use. Units will be available to researchers later this year. Meanwhile, you canapply for access to Aria Generation 1anddownloadopen source datasets, models, tools, 3D objects, and evals.\\n\\nHow it works:Aria Generation 2 packs an impressive variety oftechnologiesinto a package the shape of a pair of glasses and the weight of an egg (around 75 grams), with battery life of 6 to 8 hours. A suite of sensors enables the unit, in real time, to interpret user activity (including hand motions), surroundings, location, and interactions with nearby compatible devices. A privacy switch lets users disable\\u00a0data collection.\\n\\nApplications:Meta showed off a few applications in video demonstrations.\\n\\nBehind the news:Meta launched Project Aria in 2020, offering first-generation hardware to researchers. The following year, it struck apartnershipwith the auto maker BMW to integrate a driver\\u2019s perspective with automobile data for safety and other applications. Researchprojectsat a variety of universities followed. Metaunveiledthe second-generation glasses in February.\\n\\nWhy it matters:Many current AI models learn from datasets that don\\u2019t include time measurements, so they gain little perspective on human experience from moment to moment. Meta\\u2019s Aria project offers a platform to fill the gap with rich, multimodal data captured in real time from a human\\u2019s-eye view. Models trained on this sort of data and applications built on them may open new vistas in augmented reality,\\u00a0robotics, and ubiquitous computing.\\n\\nWe\\u2019re thinking:Google Glass came and went 10 years ago. Since then, AI has come a long way \\u2014 with much farther to go \\u2014 and the culture of wearable computing has evolved as well. It\\u2019s a great moment to re-explore the potential of\\u00a0smart glasses.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash-lite",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.1}",
+    "langfuse.observation.metadata.tags": "[\"seq:step:2\"]",
+    "langfuse.observation.metadata.ls_provider": "\"google_genai\"",
+    "langfuse.observation.metadata.ls_model_name": "\"gemini-2.0-flash-lite\"",
+    "langfuse.observation.metadata.ls_model_type": "\"chat\"",
+    "langfuse.observation.metadata.ls_temperature": "0.1",
+    "langfuse.observation.metadata.ls_max_tokens": "1024",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria c\\u1ee7a Meta:\\n\\n*   Meta \\u0111\\u00e3 ti\\u1ebft l\\u1ed9 th\\u00f4ng tin chi ti\\u1ebft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria th\\u1ebf h\\u1ec7 th\\u1ee9 hai, \\u0111\\u01b0\\u1ee3c thi\\u1ebft k\\u1ebf \\u0111\\u1ec3 cung c\\u1ea5p d\\u1eef li\\u1ec7u \\u0111a gi\\u00e1c quan theo th\\u1eddi gian th\\u1ef1c, gi\\u00fap c\\u00e1c m\\u00f4 h\\u00ecnh AI hi\\u1ec3u r\\u00f5 h\\u01a1n v\\u1ec1 th\\u1ebf gi\\u1edbi quan c\\u1ee7a con ng\\u01b0\\u1eddi.\\n*   K\\u00ednh Aria Gen 2 t\\u00edch h\\u1ee3p nhi\\u1ec1u c\\u00f4ng ngh\\u1ec7 ti\\u00ean ti\\u1ebfn, bao g\\u1ed3m m\\u1ed9t lo\\u1ea1t c\\u1ea3m bi\\u1ebfn \\u0111\\u1ec3 ghi l\\u1ea1i ho\\u1ea1t \\u0111\\u1ed9ng c\\u1ee7a ng\\u01b0\\u1eddi d\\u00f9ng, m\\u00f4i tr\\u01b0\\u1eddng xung quanh, v\\u1ecb tr\\u00ed v\\u00e0 t\\u01b0\\u01a1ng t\\u00e1c v\\u1edbi c\\u00e1c thi\\u1ebft b\\u1ecb kh\\u00e1c, \\u0111\\u1ed3ng th\\u1eddi c\\u00f3 c\\u00f4ng t\\u1eafc ri\\u00eang t\\u01b0 \\u0111\\u1ec3 ng\\u01b0\\u1eddi d\\u00f9ng ki\\u1ec3m so\\u00e1t vi\\u1ec7c thu th\\u1eadp d\\u1eef li\\u1ec7u.\\n*   D\\u1ef1 \\u00e1n Aria c\\u1ee7a Meta nh\\u1eb1m m\\u1ee5c \\u0111\\u00edch cung c\\u1ea5p m\\u1ed9t n\\u1ec1n t\\u1ea3ng \\u0111\\u1ec3 thu th\\u1eadp d\\u1eef li\\u1ec7u \\u0111a ph\\u01b0\\u01a1ng th\\u1ee9c phong ph\\u00fa t\\u1eeb g\\u00f3c nh\\u00ecn c\\u1ee7a con ng\\u01b0\\u1eddi, m\\u1edf ra nh\\u1eefng kh\\u1ea3 n\\u0103ng m\\u1edbi trong th\\u1ef1c t\\u1ebf t\\u0103ng c\\u01b0\\u1eddng, robot v\\u00e0 \\u0111i\\u1ec7n to\\u00e1n ph\\u1ed5 bi\\u1ebfn.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 647, \"output\": 192, \"total\": 839, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.34.1",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.0.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-10T03:45:26.096+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:26.199+0000] {crawler_deeplai.py:490} INFO -     ✅ Amazon’s Constellation of Compute...
+[2025-07-10T03:45:26.232+0000] {crawler_deeplai.py:490} INFO -     ✅ Meta’s Smart Glasses Come Into Focus...
+[2025-07-10T03:45:27.096+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-10T03:45:27.234+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 22.27 giây
+[2025-07-10T03:45:27.235+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 2/2 bài viết
+[2025-07-10T03:45:27.335+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 2/2 bài viết vào collection 'hardware'
+[2025-07-10T03:45:27.385+0000] {dags.py:183} INFO - Hoàn thành crawl category: hardware
+[2025-07-10T03:45:27.387+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-10T03:45:27.387+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-10T03:45:27.401+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=scheduled__2025-07-10T03:30:00+00:00, execution_date=20250710T033000, start_date=20250710T034502, end_date=20250710T034527
+[2025-07-10T03:45:27.452+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-10T03:45:27.502+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-10T03:45:27.505+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

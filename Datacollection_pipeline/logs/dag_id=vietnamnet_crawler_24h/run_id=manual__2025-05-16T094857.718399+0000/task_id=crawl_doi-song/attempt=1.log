@@ -1,0 +1,49 @@
+[2025-05-16T09:50:18.441+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-16T09:50:18.482+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T09:48:57.718399+00:00 [queued]>
+[2025-05-16T09:50:18.497+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T09:48:57.718399+00:00 [queued]>
+[2025-05-16T09:50:18.498+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-16T09:50:18.527+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_doi-song> on 2025-05-16 09:48:57.718399+00:00
+[2025-05-16T09:50:18.536+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2484) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-16T09:50:18.538+0000] {standard_task_runner.py:63} INFO - Started process 2597 to run task
+[2025-05-16T09:50:18.538+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_doi-song', 'manual__2025-05-16T09:48:57.718399+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp913heuwt']
+[2025-05-16T09:50:18.542+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask crawl_doi-song
+[2025-05-16T09:50:18.625+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_doi-song manual__2025-05-16T09:48:57.718399+00:00 [running]> on host 71b827885e5f
+[2025-05-16T09:50:18.760+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_doi-song' AIRFLOW_CTX_EXECUTION_DATE='2025-05-16T09:48:57.718399+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-16T09:48:57.718399+00:00'
+[2025-05-16T09:50:18.762+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-16T09:50:19.054+0000] {crawler.py:54} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-16T09:50:20.042+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:50:23.085+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T09:50:23.086+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:23.086+0000] {logging_mixin.py:188} INFO -  | ⏱: 2.94s
+[2025-05-16T09:50:23.250+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T09:50:23.251+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:23.252+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.16s
+[2025-05-16T09:50:23.253+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000007                                            | 
+[2025-05-16T09:50:23.254+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:23.255+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.11s
+[2025-05-16T09:50:23.321+0000] {crawler.py:84} INFO - Tìm thấy 25 link bài viết cho danh mục doi-song
+[2025-05-16T09:50:25.512+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 1 URLs mới
+[2025-05-16T09:50:25.513+0000] {crawler.py:234} INFO - Đang crawl 1 bài viết mới từ danh mục doi-song...
+[2025-05-16T09:50:25.514+0000] {crawler.py:237} INFO - --> Crawl: https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do-mai-cong-chi-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html
+[2025-05-16T09:50:26.489+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.2
+[2025-05-16T09:50:30.074+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html  | 
+[2025-05-16T09:50:30.075+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:30.075+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.50s
+[2025-05-16T09:50:30.257+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html  | 
+[2025-05-16T09:50:30.258+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:30.259+0000] {logging_mixin.py:188} INFO -  | ⏱: 0.18s
+[2025-05-16T09:50:30.260+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do...i-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html  | 
+[2025-05-16T09:50:30.260+0000] {logging_mixin.py:188} INFO - ✓
+[2025-05-16T09:50:30.261+0000] {logging_mixin.py:188} INFO -  | ⏱: 3.69s
+[2025-05-16T09:50:30.657+0000] {crawler.py:241} INFO -     ✓ Ngôi chùa có tường gạch đỏ, mái cong, chỉ dành cho phụ nữ 'c...
+
+[2025-05-16T09:50:30.657+0000] {crawler.py:244} INFO - ⏱️  Tổng thời gian crawl: 11.60 giây
+[2025-05-16T09:50:30.730+0000] {crawler.py:276} ERROR - Lỗi khi lưu dữ liệu vào MongoDB: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: News.doi-song index: _id_ dup key: { _id: "2400711" }', 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '2400711'}, 'op': {'title': "Ngôi chùa có tường gạch đỏ, mái cong, chỉ dành cho phụ nữ 'chữa lành' tâm hồn", 'author': 'Không có thông tin tác giả', 'publish_date': '2025-05-16T16:00:00.000 +07:00', 'views': None, 'tags': [], 'description': "Ngôi chùa nằm ở tỉnh Phúc Kiến của Trung Quốc, dành riêng cho phụ nữ, là nơi 'chữa lành' tâm hồn cho các chị em giữa đời sống bộn bề.", 'main_image': 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/5/16/ngoi-chua-co-tuong-gach-do-mai-cong-chi-danh-cho-phu-nu-chua-lanh-tam-hon-41885.jpg?width=0&s=WMZ8zp9xMA63fZNQ7ic27w', 'content': 'Hoàng Dung\n\nChùa Thiên Tiên (Tianxian) tọa lạc ở tỉnh Phúc Kiến, miền đông nam Trung Quốc, đang trở thành điểm đến tinh thần đầy ý nghĩa cho hàng nghìn phụ nữ.\n\nĐiều khiến nơi đây trở nên đặc biệt không chỉ bởi có không gian tĩnh lặng, mà còn ở cách tiếp cận nhân văn và độc đáo trong việc hỗ trợ sức khỏe tinh thần cho phái nữ.\n\nNgôi chùa hoàn toàn do các ni sư điều hành. Đội ngũ tình nguyện viên cũng là nữ giới. Tại đây, phụ nữ được cung cấp miễn phí đồ ăn thức uống, chỗ ở an toàn.\n\nChùa Thiên Tiên không có định kiến giới, cũng không có những lời phán xét hoặc những điều cấm kỵ như ở một số ngôi chùa khác.\n\nPhụ nữ đến chùa có nhiều hoàn cảnh khác nhau, có người từng làm việc trong môi trường doanh nghiệp đầy cạnh tranh, có người mỏi mòn chạy theo doanh số, cũng có những bà mẹ đơn thân...\n\nHọ tìm đến nơi đây để có được một không gian có thể hít thở sâu, nghỉ ngơi và kết nối lại với chính mình.\n\nXingxing, tình nguyện viên tại chùa, chia sẻ: "Nhiều năm qua, tôi không cảm nhận được sự ấm áp như thế này. Lần đầu tiên, tôi thấy mình được chấp nhận một cách vô điều kiện".\n\nChùa Thiên Tiên ra đời từ tâm huyết của Ni trưởng Yin Xuan. Nữ trụ trì sinh năm 1970, đã có hơn 36 năm tu hành.\n\nVào năm 2014, bà quyết định tái thiết ngôi chùa thành mô hình chỉ dành cho phụ nữ. Bà tự học thiết kế kiến trúc và dành 10 năm xây dựng lại chùa với tường gạch đỏ, mái cong.\n\nCùng điều hành ngôi chùa là ni sư Zhi Guan, sinh năm 1980.\n\nNi sư Zhi Guan chia sẻ: "Tôi luôn cảm thấy bất ngờ trước sức mạnh nội tại của những người phụ nữ tưởng chừng yếu đuối. Họ rất độc lập, có thể phát triển tốt mà không cần có đàn ông bên cạnh".\n\nMột trong những hoạt động được yêu thích nhất tại chùa là khóa tu thiền kéo dài 3 ngày, hoàn toàn miễn phí. Chương trình của khóa tu đơn giản nhưng nhẹ nhàng, giúp nhiều phụ nữ tìm lại sự cân bằng giữa cơ thể và tinh thần.\n\nCâu chuyện về ngôi chùa đặc biệt dành riêng cho phụ nữ đã lan truyền trên mạng xã hội. Nhiều chị em phụ nữ bày tỏ mong muốn được đến thăm nơi này.\n\n"Tôi hy vọng sẽ có thêm nhiều ngôi chùa như thế này"; "Đây chính là nơi tôi tìm kiếm bấy lâu, nơi tôi có thể thoải mái hít thở, thoải mái là chính mình"... người dùng mạng bình luận.', 'url': 'https://vietnamnet.vn/ngoi-chua-co-tuong-gach-do-mai-cong-chi-danh-cho-phu-nu-chua-lanh-tam-hon-2400711.html', 'category': 'doi-song', 'crawled_at': '2025-05-16T09:50:30.489453', '_id': '2400711'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+[2025-05-16T09:50:30.797+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-16T09:50:30.798+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-16T09:50:30.807+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_doi-song, run_id=manual__2025-05-16T09:48:57.718399+00:00, execution_date=20250516T094857, start_date=20250516T095018, end_date=20250516T095030
+[2025-05-16T09:50:30.831+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-16T09:50:30.845+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-16T09:50:30.847+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

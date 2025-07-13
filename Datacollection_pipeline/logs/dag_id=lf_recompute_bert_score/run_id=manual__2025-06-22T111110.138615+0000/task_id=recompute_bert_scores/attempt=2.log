@@ -1,0 +1,41 @@
+[2025-06-22T11:16:24.784+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T11:16:24.799+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lf_recompute_bert_score.recompute_bert_scores manual__2025-06-22T11:11:10.138615+00:00 [queued]>
+[2025-06-22T11:16:24.806+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lf_recompute_bert_score.recompute_bert_scores manual__2025-06-22T11:11:10.138615+00:00 [queued]>
+[2025-06-22T11:16:24.807+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-06-22T11:16:24.820+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): recompute_bert_scores> on 2025-06-22 11:11:10.138615+00:00
+[2025-06-22T11:16:24.829+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7349) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T11:16:24.831+0000] {standard_task_runner.py:63} INFO - Started process 7367 to run task
+[2025-06-22T11:16:24.832+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lf_recompute_bert_score', 'recompute_bert_scores', 'manual__2025-06-22T11:11:10.138615+00:00', '--job-id', '459', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmph1c5fw0_']
+[2025-06-22T11:16:24.836+0000] {standard_task_runner.py:91} INFO - Job 459: Subtask recompute_bert_scores
+[2025-06-22T11:16:24.881+0000] {task_command.py:426} INFO - Running <TaskInstance: lf_recompute_bert_score.recompute_bert_scores manual__2025-06-22T11:11:10.138615+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T11:16:24.975+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='lf_recompute_bert_score' AIRFLOW_CTX_TASK_ID='recompute_bert_scores' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T11:11:10.138615+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T11:11:10.138615+00:00'
+[2025-06-22T11:16:24.977+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T11:16:25.021+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T11:16:25.022+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 330, in recompute_scores
+    traces = lf.traces.list(name="SummaryWithBERTScore")
+             ^^^^^^^^^
+AttributeError: 'Langfuse' object has no attribute 'traces'
+[2025-06-22T11:16:25.038+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=lf_recompute_bert_score, task_id=recompute_bert_scores, run_id=manual__2025-06-22T11:11:10.138615+00:00, execution_date=20250622T111110, start_date=20250622T111624, end_date=20250622T111625
+[2025-06-22T11:16:25.070+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 459 for task recompute_bert_scores ('Langfuse' object has no attribute 'traces'; 7367)
+[2025-06-22T11:16:25.086+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-22T11:16:25.111+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T11:16:25.118+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

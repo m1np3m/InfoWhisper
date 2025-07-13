@@ -1,0 +1,62 @@
+[2025-06-22T09:19:16.413+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T09:19:16.434+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T09:19:08.043178+00:00 [queued]>
+[2025-06-22T09:19:16.443+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T09:19:08.043178+00:00 [queued]>
+[2025-06-22T09:19:16.443+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T09:19:16.462+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 09:19:08.043178+00:00
+[2025-06-22T09:19:16.476+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5405) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T09:19:16.478+0000] {standard_task_runner.py:63} INFO - Started process 5423 to run task
+[2025-06-22T09:19:16.479+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'manual__2025-06-22T09:19:08.043178+00:00', '--job-id', '262', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpjlu3wfoi']
+[2025-06-22T09:19:16.483+0000] {standard_task_runner.py:91} INFO - Job 262: Subtask crawl_hardware
+[2025-06-22T09:19:16.538+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T09:19:08.043178+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T09:19:16.674+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T09:19:08.043178+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T09:19:08.043178+00:00'
+[2025-06-22T09:19:16.676+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T09:19:16.697+0000] {dags.py:169} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T09:19:16.834+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T09:19:16.868+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T09:19:17.902+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T09:19:17.903+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T09:19:17.904+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T09:19:21.587+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.69s
+[2025-06-22T09:19:21.699+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.11s
+[2025-06-22T09:19:21.701+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.81s
+[2025-06-22T09:19:21.702+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T09:19:21.741+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T09:19:21.741+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T09:19:21.742+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T09:19:21.743+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T09:19:21.743+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T09:19:21.744+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T09:19:21.745+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T09:19:21.745+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T09:19:22.401+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 1 URLs mới
+[2025-06-22T09:19:22.403+0000] {crawler_deeplai.py:479} INFO - 📝 Đang crawl 1 bài viết mới...
+[2025-06-22T09:19:22.404+0000] {crawler_deeplai.py:486} INFO - [1/1] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/the-international-energy-agency-examines-the-energy-costs-and-potential-savings-of-the-ai-boom/
+[2025-06-22T09:19:23.422+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T09:19:26.298+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 2.87s
+[2025-06-22T09:19:26.405+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 0.10s
+[2025-06-22T09:19:26.409+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/the-intern...ergy-costs-and-potential-savi
+ngs-of-the-ai-boom/  | ✓ | ⏱: 2.98s
+[2025-06-22T09:19:26.455+0000] {logging_mixin.py:188} INFO - Title: AI Uses Energy, AI Saves Energy
+[2025-06-22T09:19:26.458+0000] {logging_mixin.py:188} INFO - Subtitle: The International Energy Agency examines the energy costs and potential savings of the AI boom
+[2025-06-22T09:19:35.892+0000] {summary_gemini.py:156} INFO - [BERT BULLET] F1=0.8024711608886719
+[2025-06-22T09:19:36.078+0000] {crawler_deeplai.py:490} INFO -     ✅ AI Uses Energy, AI Saves Energy...
+[2025-06-22T09:19:37.080+0000] {crawler_deeplai.py:503} INFO - ⏱️ Tổng thời gian crawl: 20.21 giây
+[2025-06-22T09:19:37.081+0000] {crawler_deeplai.py:504} INFO - 📊 Thành công crawl: 1/1 bài viết
+[2025-06-22T09:19:37.144+0000] {crawler_deeplai.py:531} INFO - 💾 Đã lưu thành công 1/1 bài viết vào collection 'hardware'
+[2025-06-22T09:19:37.198+0000] {dags.py:174} INFO - Hoàn thành crawl category: hardware
+[2025-06-22T09:19:37.199+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-22T09:19:37.200+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T09:19:37.208+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=manual__2025-06-22T09:19:08.043178+00:00, execution_date=20250622T091908, start_date=20250622T091916, end_date=20250622T091937
+[2025-06-22T09:19:37.294+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-22T09:19:37.339+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T09:19:37.343+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

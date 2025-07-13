@@ -1,0 +1,868 @@
+[2025-07-13T01:01:44.792+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-13T01:01:44.810+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-07-13T01:01:38.353814+00:00 [queued]>
+[2025-07-13T01:01:44.819+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-07-13T01:01:38.353814+00:00 [queued]>
+[2025-07-13T01:01:44.820+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-07-13T01:01:44.836+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): generate_monthly_insights_per_collection> on 2025-07-13 01:01:38.353814+00:00
+[2025-07-13T01:01:44.848+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=217) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-13T01:01:44.850+0000] {standard_task_runner.py:63} INFO - Started process 259 to run task
+[2025-07-13T01:01:44.853+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_monthly_insights', 'generate_monthly_insights_per_collection', 'manual__2025-07-13T01:01:38.353814+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpfkwj7bnw']
+[2025-07-13T01:01:44.858+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask generate_monthly_insights_per_collection
+[2025-07-13T01:01:44.916+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-07-13T01:01:38.353814+00:00 [running]> on host 21fffe7d7885
+[2025-07-13T01:01:45.017+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_monthly_insights' AIRFLOW_CTX_TASK_ID='generate_monthly_insights_per_collection' AIRFLOW_CTX_EXECUTION_DATE='2025-07-13T01:01:38.353814+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-13T01:01:38.353814+00:00'
+[2025-07-13T01:01:45.019+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-13T01:01:45.059+0000] {dags.py:216} INFO - Bắt đầu tạo insights cho từng category từ dữ liệu tháng qua
+[2025-07-13T01:01:45.333+0000] {dags.py:230} INFO - Tạo insights riêng cho từng category và lưu vào database...
+[2025-07-13T01:01:45.478+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:46.480+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:47.480+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:48.481+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:49.392+0000] {CallbackHandler.py:764} DEBUG - Event: on_chat_model_start, run_id: f52e2, parent_run_id: None
+[2025-07-13T01:01:49.482+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:50.482+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:51.483+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:52.249+0000] {CallbackHandler.py:764} DEBUG - Event: on_llm_end, run_id: f52e2, parent_run_id: None
+[2025-07-13T01:01:52.250+0000] {span_processor.py:115} DEBUG - Trace: Processing span name='monthly summary insight' | Full details:
+{
+  "name": "monthly summary insight",
+  "context": {
+    "trace_id": "8127cf975daa9fc9f118722a77fbf378",
+    "span_id": "4dbb4ddc2031f150",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-13T01:01:49.393442Z",
+  "end_time": "2025-07-13T01:01:52.250127Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"user\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 c\\u00e1c \\u0111o\\u1ea1n t\\u00f3m t\\u1eaft t\\u1eeb c\\u00e1c b\\u00e0i vi\\u1ebft \\u0111\\u01b0\\u1ee3c xu\\u1ea5t b\\u1ea3n trong 1 th\\u00e1ng g\\u1ea7n \\u0111\\u00e2y:\\n\\n- (2025-06-25): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t tri\\u1ec3n m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) BitNet b1.58 v\\u1edbi tr\\u1ecdng s\\u1ed1 ch\\u1ec9 g\\u1ed3m ba gi\\u00e1 tr\\u1ecb (-1, 0, +1), gi\\u00fap gi\\u1ea3m k\\u00edch th\\u01b0\\u1edbc v\\u00e0 t\\u0103ng t\\u1ed1c \\u0111\\u1ed9 x\\u1eed l\\u00fd c\\u1ee7a m\\u1ea1ng.\\n*   BitNet b1.58 \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n tr\\u01b0\\u1edbc tr\\u00ean t\\u1eadp d\\u1eef li\\u1ec7u 4 ngh\\u00ecn t\\u1ef7 token v\\u00e0 tinh ch\\u1ec9nh tr\\u00ean nhi\\u1ec1u b\\u1ed9 d\\u1eef li\\u1ec7u kh\\u00e1c nhau, cho th\\u1ea5y hi\\u1ec7u su\\u1ea5t t\\u1ed1t h\\u01a1n ho\\u1eb7c t\\u01b0\\u01a1ng \\u0111\\u01b0\\u01a1ng so v\\u1edbi c\\u00e1c m\\u00f4 h\\u00ecnh \\u0111\\u1ed1i th\\u1ee7 tr\\u00ean 16 ti\\u00eau ch\\u00ed \\u0111\\u00e1nh gi\\u00e1 kh\\u00e1c nhau.\\n*   Vi\\u1ec7c l\\u01b0\\u1ee3ng t\\u1eed h\\u00f3a LLM xu\\u1ed1ng m\\u1ed9t v\\u00e0i bit \\u0111\\u00f2i h\\u1ecfi s\\u1ef1 \\u0111i\\u1ec1u ch\\u1ec9nh c\\u1ea9n th\\u1eadn c\\u00e1c si\\u00eau tham s\\u1ed1 trong qu\\u00e1 tr\\u00ecnh hu\\u1ea5n luy\\u1ec7n, v\\u00e0 nghi\\u00ean c\\u1ee9u n\\u00e0y cung c\\u1ea5p h\\u01b0\\u1edbng d\\u1eabn \\u0111\\u1ec3 \\u0111\\u1ea1t \\u0111\\u01b0\\u1ee3c hi\\u1ec7u su\\u1ea5t t\\u1ed1t t\\u1eeb c\\u00e1c m\\u00f4 h\\u00ecnh c\\u00f3 \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c th\\u1ea5p.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u1ebf ho\\u1ea1ch x\\u00e2y d\\u1ef1ng c\\u1ee5m trung t\\u00e2m d\\u1eef li\\u1ec7u c\\u1ee7a Amazon:\\n\\n*   Amazon \\u0111ang tri\\u1ec3n khai \\\"Project Rainier\\\", m\\u1ed9t d\\u1ef1 \\u00e1n x\\u00e2y d\\u1ef1ng h\\u00e0ng lo\\u1ea1t trung t\\u00e2m d\\u1eef li\\u1ec7u th\\u1ebf h\\u1ec7 m\\u1edbi, v\\u1edbi m\\u1ee5c ti\\u00eau k\\u1ebft n\\u1ed1i ch\\u00fang th\\u00e0nh m\\u1ed9t \\\"ultracluster\\\" \\u0111\\u1ec3 ph\\u1ee5c v\\u1ee5 cho \\u0111\\u1ed1i t\\u00e1c AI Anthropic.\\n*   D\\u1ef1 \\u00e1n bao g\\u1ed3m vi\\u1ec7c x\\u00e2y d\\u1ef1ng \\u00edt nh\\u1ea5t 7 trung t\\u00e2m d\\u1eef li\\u1ec7u, v\\u1edbi t\\u1ed5ng v\\u1ed1n \\u0111\\u1ea7u t\\u01b0 d\\u1ef1 ki\\u1ebfn l\\u00ean \\u0111\\u1ebfn 100 t\\u1ef7 USD trong n\\u0103m nay, nh\\u1eb1m \\u0111\\u00e1p \\u1ee9ng nhu c\\u1ea7u v\\u1ec1 h\\u1ea1 t\\u1ea7ng t\\u00ednh to\\u00e1n cho s\\u1ef1 ph\\u00e1t tri\\u1ec3n c\\u1ee7a AI.\\n*   S\\u1ef1 \\u0111\\u1ea7u t\\u01b0 n\\u00e0y cho th\\u1ea5y Amazon \\u0111\\u1eb7t c\\u01b0\\u1ee3c l\\u1edbn v\\u00e0o Anthropic \\u0111\\u1ec3 c\\u1ea1nh tranh trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1ed3ng th\\u1eddi c\\u1ee7ng c\\u1ed1 v\\u1ecb th\\u1ebf c\\u1ee7a Amazon Web Services (AWS) trong th\\u1ecb tr\\u01b0\\u1eddng \\u0111i\\u1ec7n to\\u00e1n \\u0111\\u00e1m m\\u00e2y.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria c\\u1ee7a Meta:\\n\\n*   Meta \\u0111\\u00e3 ti\\u1ebft l\\u1ed9 th\\u00f4ng tin chi ti\\u1ebft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria th\\u1ebf h\\u1ec7 th\\u1ee9 hai, \\u0111\\u01b0\\u1ee3c thi\\u1ebft k\\u1ebf \\u0111\\u1ec3 cung c\\u1ea5p d\\u1eef li\\u1ec7u \\u0111a gi\\u00e1c quan theo th\\u1eddi gian th\\u1ef1c, gi\\u00fap c\\u00e1c m\\u00f4 h\\u00ecnh AI hi\\u1ec3u r\\u00f5 h\\u01a1n v\\u1ec1 th\\u1ebf gi\\u1edbi quan c\\u1ee7a con ng\\u01b0\\u1eddi.\\n*   K\\u00ednh Aria Gen 2 t\\u00edch h\\u1ee3p nhi\\u1ec1u c\\u00f4ng ngh\\u1ec7 ti\\u00ean ti\\u1ebfn, bao g\\u1ed3m m\\u1ed9t lo\\u1ea1t c\\u1ea3m bi\\u1ebfn \\u0111\\u1ec3 ghi l\\u1ea1i ho\\u1ea1t \\u0111\\u1ed9ng c\\u1ee7a ng\\u01b0\\u1eddi d\\u00f9ng, m\\u00f4i tr\\u01b0\\u1eddng xung quanh, v\\u1ecb tr\\u00ed v\\u00e0 t\\u01b0\\u01a1ng t\\u00e1c v\\u1edbi c\\u00e1c thi\\u1ebft b\\u1ecb kh\\u00e1c, \\u0111\\u1ed3ng th\\u1eddi c\\u00f3 c\\u00f4ng t\\u1eafc ri\\u00eang t\\u01b0 \\u0111\\u1ec3 ng\\u01b0\\u1eddi d\\u00f9ng ki\\u1ec3m so\\u00e1t vi\\u1ec7c thu th\\u1eadp d\\u1eef li\\u1ec7u.\\n*   D\\u1ef1 \\u00e1n Aria c\\u1ee7a Meta nh\\u1eb1m m\\u1ee5c \\u0111\\u00edch cung c\\u1ea5p m\\u1ed9t n\\u1ec1n t\\u1ea3ng \\u0111\\u1ec3 thu th\\u1eadp d\\u1eef li\\u1ec7u \\u0111a ph\\u01b0\\u01a1ng th\\u1ee9c phong ph\\u00fa t\\u1eeb g\\u00f3c nh\\u00ecn c\\u1ee7a con ng\\u01b0\\u1eddi, m\\u1edf ra nh\\u1eefng kh\\u1ea3 n\\u0103ng m\\u1edbi trong th\\u1ef1c t\\u1ebf t\\u0103ng c\\u01b0\\u1eddng, robot v\\u00e0 \\u0111i\\u1ec7n to\\u00e1n ph\\u1ed5 bi\\u1ebfn.\\n\\nH\\u00e3y vi\\u1ebft m\\u1ed9t \\u0111o\\u1ea1n t\\u1ed5ng k\\u1ebft ng\\u1eafn g\\u1ecdn, kh\\u00e1ch quan v\\u00e0 r\\u00f5 r\\u00e0ng. T\\u1eadp trung v\\u00e0o c\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u1ed5i b\\u1eadt, xu h\\u01b0\\u1edbng ch\\u00ednh v\\u00e0 b\\u1ea5t k\\u1ef3 thay \\u0111\\u1ed5i \\u0111\\u00e1ng ch\\u00fa \\u00fd n\\u00e0o. Kh\\u00f4ng c\\u1ea7n m\\u1edf \\u0111\\u1ea7u hoa m\\u1ef9 hay tr\\u00ecnh b\\u00e0y theo ki\\u1ec3u ph\\u00f3ng vi\\u00ean, ch\\u1ec9 c\\u1ea7n n\\u1ed9i dung insight r\\u00f5 v\\u00e0 \\u0111\\u1ea7y \\u0111\\u1ee7, c\\u00f4 \\u0111\\u1ecdng trong m\\u1ed9t \\u0111o\\u1ea1n duy nh\\u1ea5t.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.4}",
+    "langfuse.observation.metadata.ls_provider": "google_genai",
+    "langfuse.observation.metadata.ls_model_name": "gemini-2.0-flash",
+    "langfuse.observation.metadata.ls_model_type": "chat",
+    "langfuse.observation.metadata.ls_temperature": "0.4",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"Trong th\\u00e1ng qua, l\\u0129nh v\\u1ef1c AI ch\\u1ee9ng ki\\u1ebfn nhi\\u1ec1u b\\u01b0\\u1edbc ti\\u1ebfn \\u0111\\u00e1ng ch\\u00fa \\u00fd. C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t tri\\u1ec3n m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn BitNet b1.58 v\\u1edbi \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c th\\u1ea5p, gi\\u1ea3m k\\u00edch th\\u01b0\\u1edbc v\\u00e0 t\\u0103ng t\\u1ed1c \\u0111\\u1ed9 x\\u1eed l\\u00fd. Song song \\u0111\\u00f3, Amazon \\u0111\\u1ea7u t\\u01b0 m\\u1ea1nh m\\u1ebd v\\u00e0o h\\u1ea1 t\\u1ea7ng AI v\\u1edbi \\\"Project Rainier\\\", x\\u00e2y d\\u1ef1ng c\\u00e1c trung t\\u00e2m d\\u1eef li\\u1ec7u th\\u1ebf h\\u1ec7 m\\u1edbi tr\\u1ecb gi\\u00e1 100 t\\u1ef7 USD \\u0111\\u1ec3 h\\u1ed7 tr\\u1ee3 \\u0111\\u1ed1i t\\u00e1c Anthropic. Meta c\\u0169ng gi\\u1edbi thi\\u1ec7u k\\u00ednh th\\u00f4ng minh Aria Gen 2, thi\\u1ebft b\\u1ecb thu th\\u1eadp d\\u1eef li\\u1ec7u \\u0111a gi\\u00e1c quan nh\\u1eb1m cung c\\u1ea5p cho AI m\\u1ed9t c\\u00e1i nh\\u00ecn to\\u00e0n di\\u1ec7n h\\u01a1n v\\u1ec1 th\\u1ebf gi\\u1edbi th\\u1ef1c, m\\u1edf ra ti\\u1ec1m n\\u0103ng trong th\\u1ef1c t\\u1ebf t\\u0103ng c\\u01b0\\u1eddng v\\u00e0 robot. C\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u00e0y cho th\\u1ea5y xu h\\u01b0\\u1edbng t\\u1eadp trung v\\u00e0o vi\\u1ec7c t\\u1ed1i \\u01b0u h\\u00f3a hi\\u1ec7u su\\u1ea5t m\\u00f4 h\\u00ecnh, \\u0111\\u1ea7u t\\u01b0 c\\u01a1 s\\u1edf h\\u1ea1 t\\u1ea7ng quy m\\u00f4 l\\u1edbn v\\u00e0 thu th\\u1eadp d\\u1eef li\\u1ec7u \\u0111a ph\\u01b0\\u01a1ng th\\u1ee9c \\u0111\\u1ec3 th\\u00fac \\u0111\\u1ea9y s\\u1ef1 ph\\u00e1t tri\\u1ec3n c\\u1ee7a AI.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 694, \"output\": 192, \"total\": 886, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.35.0",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.1.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-13T01:01:52.484+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:53.485+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:54.485+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:54.871+0000] {__init__.py:165} ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8221bceed0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8221bceed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 140, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8221bceed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8221bcf080>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8221bcf080>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 152, in _export
+    self._exporter.export(
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 165, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 148, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8221bcf080>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-07-13T01:01:54.874+0000] {CallbackHandler.py:764} DEBUG - Event: on_chat_model_start, run_id: 7648d, parent_run_id: None
+[2025-07-13T01:01:55.486+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:56.487+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:01:57.632+0000] {CallbackHandler.py:764} DEBUG - Event: on_llm_end, run_id: 7648d, parent_run_id: None
+[2025-07-13T01:01:57.634+0000] {span_processor.py:115} DEBUG - Trace: Processing span name='monthly summary insight' | Full details:
+{
+  "name": "monthly summary insight",
+  "context": {
+    "trace_id": "adc6bc6c6e9f33e1e0cb360bbd88b05b",
+    "span_id": "566175f46ca1ece3",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-13T01:01:54.880721Z",
+  "end_time": "2025-07-13T01:01:57.633830Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"user\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 c\\u00e1c \\u0111o\\u1ea1n t\\u00f3m t\\u1eaft t\\u1eeb c\\u00e1c b\\u00e0i vi\\u1ebft \\u0111\\u01b0\\u1ee3c xu\\u1ea5t b\\u1ea3n trong 1 th\\u00e1ng g\\u1ea7n \\u0111\\u00e2y:\\n\\n- (2025-06-25): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Biomni l\\u00e0 m\\u1ed9t t\\u00e1c nh\\u00e2n (agent) nghi\\u00ean c\\u1ee9u sinh h\\u1ecdc \\u0111a n\\u0103ng, \\u0111\\u01b0\\u1ee3c ph\\u00e1t tri\\u1ec3n b\\u1edfi c\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u t\\u1eeb Stanford v\\u00e0 c\\u00e1c t\\u1ed5 ch\\u1ee9c kh\\u00e1c, c\\u00f3 kh\\u1ea3 n\\u0103ng th\\u1ef1c hi\\u1ec7n c\\u00e1c t\\u00e1c v\\u1ee5 trong nhi\\u1ec1u l\\u0129nh v\\u1ef1c sinh h\\u1ecdc kh\\u00e1c nhau nh\\u01b0 di truy\\u1ec1n h\\u1ecdc, mi\\u1ec5n d\\u1ecbch h\\u1ecdc, v\\u00e0 th\\u1ea7n kinh h\\u1ecdc.\\n*   Biomni ho\\u1ea1t \\u0111\\u1ed9ng b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) Claude 4 Sonnet, k\\u1ebft h\\u1ee3p v\\u1edbi m\\u1ed9t b\\u1ed9 s\\u01b0u t\\u1eadp c\\u00e1c c\\u00f4ng c\\u1ee5, ph\\u1ea7n m\\u1ec1m v\\u00e0 c\\u01a1 s\\u1edf d\\u1eef li\\u1ec7u \\u0111\\u1ec3 tr\\u1ea3 l\\u1eddi c\\u00e2u h\\u1ecfi, \\u0111\\u1ec1 xu\\u1ea5t gi\\u1ea3 thuy\\u1ebft, ph\\u00e2n t\\u00edch d\\u1eef li\\u1ec7u v\\u00e0 t\\u1ea1o ra c\\u00e1c bi\\u1ec3u \\u0111\\u1ed3.\\n*   K\\u1ebft qu\\u1ea3 cho th\\u1ea5y Biomni v\\u01b0\\u1ee3t tr\\u1ed9i h\\u01a1n so v\\u1edbi vi\\u1ec7c ch\\u1ec9 s\\u1eed d\\u1ee5ng Claude 4 Sonnet ho\\u1eb7c Claude 4 Sonnet v\\u1edbi quy\\u1ec1n truy c\\u1eadp v\\u00e0o t\\u00e0i li\\u1ec7u nghi\\u00ean c\\u1ee9u, \\u0111\\u1ed3ng th\\u1eddi th\\u1ec3 hi\\u1ec7n ti\\u1ec1m n\\u0103ng c\\u1ee7a AI trong vi\\u1ec7c h\\u1ed7 tr\\u1ee3 c\\u00e1c nh\\u00e0 sinh h\\u1ecdc tr\\u00ean nhi\\u1ec1u l\\u0129nh v\\u1ef1c chuy\\u00ean m\\u00f4n kh\\u00e1c nhau.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Trung t\\u00e2m B\\u00e3o Qu\\u1ed1c gia (NHC) c\\u1ee7a Hoa K\\u1ef3 \\u0111ang h\\u1ee3p t\\u00e1c v\\u1edbi Google Weather Lab \\u0111\\u1ec3 s\\u1eed d\\u1ee5ng AI d\\u1ef1 \\u0111o\\u00e1n \\u0111\\u01b0\\u1eddng \\u0111i c\\u1ee7a b\\u00e3o, v\\u1edbi m\\u1ee5c ti\\u00eau d\\u1ef1 b\\u00e1o ch\\u00ednh x\\u00e1c h\\u01a1n 15 ng\\u00e0y so v\\u1edbi c\\u00e1c ph\\u01b0\\u01a1ng ph\\u00e1p truy\\u1ec1n th\\u1ed1ng.\\n*   Ph\\u01b0\\u01a1ng ph\\u00e1p n\\u00e0y s\\u1eed d\\u1ee5ng m\\u1ed9t t\\u1eadp h\\u1ee3p c\\u00e1c m\\u1ea1ng n\\u01a1-ron \\u0111\\u1ed3 th\\u1ecb (graph neural networks) \\u0111\\u1ec3 x\\u1eed l\\u00fd d\\u1eef li\\u1ec7u th\\u1eddi ti\\u1ebft, d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft t\\u1ea1i c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m d\\u1ef1a tr\\u00ean d\\u1eef li\\u1ec7u t\\u1eeb c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m l\\u00e2n c\\u1eadn v\\u00e0 c\\u00e1c th\\u1eddi \\u0111i\\u1ec3m tr\\u01b0\\u1edbc \\u0111\\u00f3.\\n*   K\\u1ebft qu\\u1ea3 cho th\\u1ea5y m\\u00f4 h\\u00ecnh AI m\\u1edbi d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft v\\u00e0 \\u0111\\u01b0\\u1eddng \\u0111i c\\u1ee7a b\\u00e3o n\\u0103m 2023 t\\u1ed1t h\\u01a1n so v\\u1edbi c\\u00e1c m\\u00f4 h\\u00ecnh tr\\u01b0\\u1edbc \\u0111\\u00f3, g\\u00f3p ph\\u1ea7n c\\u1ea3i thi\\u1ec7n kh\\u1ea3 n\\u0103ng d\\u1ef1 b\\u00e1o v\\u00e0 gi\\u1ea3m thi\\u1ec3u thi\\u1ec7t h\\u1ea1i do b\\u00e3o g\\u00e2y ra.\\n- (2025-07-09): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 t\\u1ed5 ong robot, \\u0111\\u01b0\\u1ee3c tr\\u00ecnh b\\u00e0y d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   **BeeHome 4** l\\u00e0 m\\u1ed9t t\\u1ed5 ong t\\u1ef1 \\u0111\\u1ed9ng s\\u1eed d\\u1ee5ng th\\u1ecb gi\\u00e1c m\\u00e1y t\\u00ednh v\\u00e0 robot \\u0111\\u1ec3 theo d\\u00f5i v\\u00e0 ch\\u0103m s\\u00f3c s\\u1ee9c kh\\u1ecfe c\\u1ee7a \\u0111\\u00e0n ong, bao g\\u1ed3m vi\\u1ec7c ph\\u00e1t hi\\u1ec7n k\\u00fd sinh tr\\u00f9ng, t\\u00ecnh tr\\u1ea1ng \\u0111\\u00f3i v\\u00e0 c\\u00e1c \\u0111i\\u1ec1u ki\\u1ec7n b\\u1ea5t l\\u1ee3i kh\\u00e1c, \\u0111\\u1ed3ng th\\u1eddi c\\u1ea3nh b\\u00e1o v\\u00e0 t\\u1ef1 \\u0111\\u1ed9ng x\\u1eed l\\u00fd m\\u1ed9t s\\u1ed1 v\\u1ea5n \\u0111\\u1ec1.\\n*   H\\u1ec7 th\\u1ed1ng ho\\u1ea1t \\u0111\\u1ed9ng b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u00e1y qu\\u00e9t robot v\\u1edbi camera v\\u00e0 b\\u1ed9 x\\u1eed l\\u00fd AI (Nvidia Jetson v\\u00e0 Raspberry Pi) \\u0111\\u1ec3 ph\\u00e2n t\\u00edch t\\u00ecnh tr\\u1ea1ng c\\u1ee7a t\\u1ed5 ong, cho ph\\u00e9p ng\\u01b0\\u1eddi nu\\u00f4i ong theo d\\u00f5i t\\u1eeb xa v\\u00e0 nh\\u1eadn c\\u1ea3nh b\\u00e1o v\\u1ec1 c\\u00e1c thay \\u0111\\u1ed5i quan tr\\u1ecdng.\\n*   V\\u1edbi kh\\u1ea3 n\\u0103ng gi\\u1ea3m t\\u1ef7 l\\u1ec7 ch\\u1ebft c\\u1ee7a \\u0111\\u00e0n ong xu\\u1ed1ng 8% m\\u1ed7i n\\u0103m (so v\\u1edbi m\\u1ee9c trung b\\u00ecnh 40% trong th\\u1eadp k\\u1ef7 qua), BeeHome 4 gi\\u00fap gi\\u1ea3i quy\\u1ebft v\\u1ea5n \\u0111\\u1ec1 suy gi\\u1ea3m s\\u1ed1 l\\u01b0\\u1ee3ng ong, m\\u1ed9t y\\u1ebfu t\\u1ed1 quan tr\\u1ecdng trong vi\\u1ec7c th\\u1ee5 ph\\u1ea5n cho c\\u00e2y tr\\u1ed3ng v\\u00e0 duy tr\\u00ec s\\u1ea3n xu\\u1ea5t n\\u00f4ng nghi\\u1ec7p.\\n\\nH\\u00e3y vi\\u1ebft m\\u1ed9t \\u0111o\\u1ea1n t\\u1ed5ng k\\u1ebft ng\\u1eafn g\\u1ecdn, kh\\u00e1ch quan v\\u00e0 r\\u00f5 r\\u00e0ng. T\\u1eadp trung v\\u00e0o c\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u1ed5i b\\u1eadt, xu h\\u01b0\\u1edbng ch\\u00ednh v\\u00e0 b\\u1ea5t k\\u1ef3 thay \\u0111\\u1ed5i \\u0111\\u00e1ng ch\\u00fa \\u00fd n\\u00e0o. Kh\\u00f4ng c\\u1ea7n m\\u1edf \\u0111\\u1ea7u hoa m\\u1ef9 hay tr\\u00ecnh b\\u00e0y theo ki\\u1ec3u ph\\u00f3ng vi\\u00ean, ch\\u1ec9 c\\u1ea7n n\\u1ed9i dung insight r\\u00f5 v\\u00e0 \\u0111\\u1ea7y \\u0111\\u1ee7, c\\u00f4 \\u0111\\u1ecdng trong m\\u1ed9t \\u0111o\\u1ea1n duy nh\\u1ea5t.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.4}",
+    "langfuse.observation.metadata.ls_provider": "google_genai",
+    "langfuse.observation.metadata.ls_model_name": "gemini-2.0-flash",
+    "langfuse.observation.metadata.ls_model_type": "chat",
+    "langfuse.observation.metadata.ls_temperature": "0.4",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"Trong th\\u00e1ng v\\u1eeba qua, AI ti\\u1ebfp t\\u1ee5c c\\u00f3 nh\\u1eefng b\\u01b0\\u1edbc ti\\u1ebfn \\u0111\\u00e1ng k\\u1ec3 trong nhi\\u1ec1u l\\u0129nh v\\u1ef1c khoa h\\u1ecdc v\\u00e0 \\u1ee9ng d\\u1ee5ng th\\u1ef1c t\\u1ebf. \\u0110i\\u1ec3n h\\u00ecnh l\\u00e0 s\\u1ef1 ra \\u0111\\u1eddi c\\u1ee7a Biomni, m\\u1ed9t agent AI \\u0111a n\\u0103ng h\\u1ed7 tr\\u1ee3 nghi\\u00ean c\\u1ee9u sinh h\\u1ecdc, cho th\\u1ea5y ti\\u1ec1m n\\u0103ng c\\u1ee7a LLM trong vi\\u1ec7c ph\\u00e2n t\\u00edch d\\u1eef li\\u1ec7u v\\u00e0 \\u0111\\u1ec1 xu\\u1ea5t gi\\u1ea3 thuy\\u1ebft. B\\u00ean c\\u1ea1nh \\u0111\\u00f3, s\\u1ef1 h\\u1ee3p t\\u00e1c gi\\u1eefa Trung t\\u00e2m B\\u00e3o Qu\\u1ed1c gia Hoa K\\u1ef3 v\\u00e0 Google Weather Lab \\u0111\\u1ec3 \\u1ee9ng d\\u1ee5ng AI trong d\\u1ef1 b\\u00e1o \\u0111\\u01b0\\u1eddng \\u0111i c\\u1ee7a b\\u00e3o h\\u1ee9a h\\u1eb9n c\\u1ea3i thi\\u1ec7n \\u0111\\u00e1ng k\\u1ec3 \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c v\\u00e0 th\\u1eddi gian d\\u1ef1 b\\u00e1o. Cu\\u1ed1i c\\u00f9ng, BeeHome 4, m\\u1ed9t t\\u1ed5 ong robot t\\u1ef1 \\u0111\\u1ed9ng, s\\u1eed d\\u1ee5ng AI v\\u00e0 th\\u1ecb gi\\u00e1c m\\u00e1y t\\u00ednh \\u0111\\u1ec3 theo d\\u00f5i v\\u00e0 b\\u1ea3o v\\u1ec7 s\\u1ee9c kh\\u1ecfe \\u0111\\u00e0n ong, g\\u00f3p ph\\u1ea7n gi\\u1ea3i quy\\u1ebft v\\u1ea5n \\u0111\\u1ec1 suy gi\\u1ea3m s\\u1ed1 l\\u01b0\\u1ee3ng ong v\\u00e0 b\\u1ea3o \\u0111\\u1ea3m s\\u1ea3n xu\\u1ea5t n\\u00f4ng nghi\\u1ec7p. Nh\\u00ecn chung, AI \\u0111ang ng\\u00e0y c\\u00e0ng \\u0111\\u01b0\\u1ee3c \\u1ee9ng d\\u1ee5ng r\\u1ed9ng r\\u00e3i v\\u00e0 mang l\\u1ea1i nh\\u1eefng k\\u1ebft qu\\u1ea3 t\\u00edch c\\u1ef1c trong vi\\u1ec7c gi\\u1ea3i quy\\u1ebft c\\u00e1c v\\u1ea5n \\u0111\\u1ec1 ph\\u1ee9c t\\u1ea1p trong khoa h\\u1ecdc v\\u00e0 \\u0111\\u1eddi s\\u1ed1ng.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 760, \"output\": 213, \"total\": 973, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.35.0",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.1.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-13T01:01:59.067+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:00.067+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:01.068+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:01.414+0000] {CallbackHandler.py:764} DEBUG - Event: on_chat_model_start, run_id: 8e678, parent_run_id: None
+[2025-07-13T01:02:01.467+0000] {__init__.py:165} ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f821f037bf0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f037bf0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 140, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f037bf0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f821f037800>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f037800>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 152, in _export
+    self._exporter.export(
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 165, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 148, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f037800>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-07-13T01:02:02.069+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:03.069+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:04.070+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:04.614+0000] {CallbackHandler.py:764} DEBUG - Event: on_llm_end, run_id: 8e678, parent_run_id: None
+[2025-07-13T01:02:04.616+0000] {span_processor.py:115} DEBUG - Trace: Processing span name='monthly summary insight' | Full details:
+{
+  "name": "monthly summary insight",
+  "context": {
+    "trace_id": "ecf468a1642ff81d824a2395e89a8739",
+    "span_id": "f87d36aab5715184",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-13T01:02:01.415027Z",
+  "end_time": "2025-07-13T01:02:04.615766Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"user\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 c\\u00e1c \\u0111o\\u1ea1n t\\u00f3m t\\u1eaft t\\u1eeb c\\u00e1c b\\u00e0i vi\\u1ebft \\u0111\\u01b0\\u1ee3c xu\\u1ea5t b\\u1ea3n trong 1 th\\u00e1ng g\\u1ea7n \\u0111\\u00e2y:\\n\\n- (2025-06-18): *   C\\u00e1c h\\u00e3ng phim Hollywood nh\\u01b0 Disney v\\u00e0 Universal ki\\u1ec7n Midjourney v\\u00ec vi ph\\u1ea1m b\\u1ea3n quy\\u1ec1n, c\\u00e1o bu\\u1ed9c c\\u00f4ng ty n\\u00e0y s\\u1eed d\\u1ee5ng tr\\u00e1i ph\\u00e9p t\\u00e1c ph\\u1ea9m c\\u1ee7a h\\u1ecd \\u0111\\u1ec3 hu\\u1ea5n luy\\u1ec7n AI.\\n*   V\\u1ee5 ki\\u1ec7n t\\u1eadp trung v\\u00e0o vi\\u1ec7c Midjourney ph\\u00e2n ph\\u1ed1i h\\u00ecnh \\u1ea3nh vi ph\\u1ea1m b\\u1ea3n quy\\u1ec1n v\\u00e0 y\\u00eau c\\u1ea7u b\\u1ed3i th\\u01b0\\u1eddng thi\\u1ec7t h\\u1ea1i, c\\u00f3 th\\u1ec3 t\\u1ea1o ti\\u1ec1n l\\u1ec7 quan tr\\u1ecdng trong ng\\u00e0nh.\\n*   Ng\\u00e0nh c\\u00f4ng nghi\\u1ec7p gi\\u1ea3i tr\\u00ed \\u0111ang t\\u00ecm c\\u00e1ch b\\u1ea3o v\\u1ec7 b\\u1ea3n quy\\u1ec1n tr\\u01b0\\u1edbc s\\u1ef1 ph\\u00e1t tri\\u1ec3n c\\u1ee7a AI, nh\\u01b0ng c\\u0169ng c\\u00f3 th\\u1ec3 xem x\\u00e9t h\\u1ee3p t\\u00e1c v\\u1edbi c\\u00e1c c\\u00f4ng ty AI \\u0111\\u1ec3 c\\u00f9ng ph\\u00e1t tri\\u1ec3n.\\n- (2025-06-18): *   OpenAI ra m\\u1eaft o3-pro, m\\u1ed9t m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef th\\u1ecb gi\\u00e1c c\\u00f3 kh\\u1ea3 n\\u0103ng suy lu\\u1eadn v\\u01b0\\u1ee3t tr\\u1ed9i, \\u0111\\u1eb7c bi\\u1ec7t trong c\\u00e1c l\\u0129nh v\\u1ef1c khoa h\\u1ecdc, to\\u00e1n h\\u1ecdc v\\u00e0 l\\u1eadp tr\\u00ecnh.\\n*   o3-pro c\\u00f3 hi\\u1ec7u n\\u0103ng cao h\\u01a1n c\\u00e1c phi\\u00ean b\\u1ea3n tr\\u01b0\\u1edbc \\u0111\\u00f3, nh\\u01b0ng t\\u1ed1c \\u0111\\u1ed9 ph\\u1ea3n h\\u1ed3i ch\\u1eadm h\\u01a1n v\\u00e0 gi\\u00e1 th\\u00e0nh cao h\\u01a1n.\\n*   Vi\\u1ec7c cho ph\\u00e9p ng\\u01b0\\u1eddi d\\u00f9ng l\\u1ef1a ch\\u1ecdn gi\\u1eefa o3 v\\u00e0 o3-pro gi\\u00fap h\\u1ecd \\u0111i\\u1ec1u ch\\u1ec9nh ng\\u00e2n s\\u00e1ch t\\u00ednh to\\u00e1n ph\\u00f9 h\\u1ee3p v\\u1edbi \\u0111\\u1ed9 kh\\u00f3 c\\u1ee7a t\\u00e1c v\\u1ee5.\\n- (2025-06-18): *   Apple n\\u00e2ng c\\u1ea5p c\\u00e1c m\\u00f4 h\\u00ecnh AI th\\u1ecb gi\\u00e1c-ng\\u00f4n ng\\u1eef (AFM) \\u0111\\u1ec3 c\\u1ea3i thi\\u1ec7n hi\\u1ec7u su\\u1ea5t v\\u00e0 t\\u1ed1c \\u0111\\u1ed9, \\u0111\\u1ed3ng th\\u1eddi ra m\\u1eaft framework cho ph\\u00e9p nh\\u00e0 ph\\u00e1t tri\\u1ec3n t\\u00edch h\\u1ee3p AI v\\u00e0o \\u1ee9ng d\\u1ee5ng tr\\u00ean thi\\u1ebft b\\u1ecb Apple.\\n*   C\\u00e1c m\\u00f4 h\\u00ecnh AFM \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n tr\\u00ean d\\u1eef li\\u1ec7u v\\u0103n b\\u1ea3n v\\u00e0 h\\u00ecnh \\u1ea3nh, nh\\u01b0ng k\\u1ebft qu\\u1ea3 \\u0111\\u00e1nh gi\\u00e1 c\\u00f2n l\\u1eabn l\\u1ed9n so v\\u1edbi c\\u00e1c \\u0111\\u1ed1i th\\u1ee7.\\n*   \\u0110\\u1ed9ng th\\u00e1i n\\u00e0y \\u0111\\u01b0\\u1ee3c xem l\\u00e0 n\\u1ed7 l\\u1ef1c c\\u1ee7a Apple \\u0111\\u1ec3 b\\u1eaft k\\u1ecbp c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1eb7c bi\\u1ec7t trong b\\u1ed1i c\\u1ea3nh Siri b\\u1ecb tr\\u00ec ho\\u00e3n v\\u00e0 s\\u1ef1 c\\u1ea1nh tranh t\\u1eeb Google.\\n- (2025-06-25): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Meta \\u0111\\u00e3 thu\\u00ea Alexandr Wang, nh\\u00e0 s\\u00e1ng l\\u1eadp ki\\u00eam CEO c\\u1ee7a Scale AI, c\\u00f9ng v\\u1edbi m\\u1ed9t s\\u1ed1 th\\u00e0nh vi\\u00ean trong nh\\u00f3m c\\u1ee7a \\u00f4ng, \\u0111\\u1ed3ng th\\u1eddi \\u0111\\u1ea7u t\\u01b0 14,3 t\\u1ef7 \\u0111\\u00f4 la v\\u00e0o c\\u00f4ng ty kh\\u1edfi nghi\\u1ec7p n\\u00e0y \\u0111\\u1ec3 th\\u00fac \\u0111\\u1ea9y c\\u00e1c n\\u1ed7 l\\u1ef1c v\\u1ec1 AI c\\u1ee7a m\\u00ecnh.\\n*   Th\\u1ecfa thu\\u1eadn n\\u00e0y mang l\\u1ea1i cho Meta quy\\u1ec1n ti\\u1ebfp c\\u1eadn \\u01b0u ti\\u00ean v\\u00e0o c\\u00e1c ho\\u1ea1t \\u0111\\u1ed9ng d\\u1eef li\\u1ec7u quy m\\u00f4 l\\u1edbn c\\u1ee7a Scale AI v\\u00e0 t\\u0103ng g\\u1ea5p \\u0111\\u00f4i gi\\u00e1 tr\\u1ecb c\\u1ee7a Scale AI, hi\\u1ec7n \\u0111\\u01b0\\u1ee3c \\u0111\\u1ecbnh gi\\u00e1 13,8 t\\u1ef7 \\u0111\\u00f4 la.\\n*   \\u0110\\u1ed9ng th\\u00e1i n\\u00e0y cho th\\u1ea5y Meta \\u0111ang c\\u1ea1nh tranh v\\u1edbi c\\u00e1c c\\u00f4ng ty c\\u00f4ng ngh\\u1ec7 l\\u1edbn kh\\u00e1c \\u0111\\u1ec3 d\\u1eabn \\u0111\\u1ea7u trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1ed3ng th\\u1eddi c\\u00f3 th\\u1ec3 l\\u00e0m t\\u0103ng m\\u1ee9c l\\u01b0\\u01a1ng c\\u1ee7a c\\u00e1c k\\u1ef9 s\\u01b0 v\\u00e0 g\\u00e2y kh\\u00f3 kh\\u0103n cho c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 c\\u1ea1nh tranh \\u00edt ti\\u1ec1m l\\u1ef1c t\\u00e0i ch\\u00ednh h\\u01a1n.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 k\\u1ebf ho\\u1ea1ch x\\u00e2y d\\u1ef1ng c\\u1ee5m trung t\\u00e2m d\\u1eef li\\u1ec7u c\\u1ee7a Amazon:\\n\\n*   Amazon \\u0111ang tri\\u1ec3n khai \\\"Project Rainier\\\", m\\u1ed9t d\\u1ef1 \\u00e1n x\\u00e2y d\\u1ef1ng h\\u00e0ng lo\\u1ea1t trung t\\u00e2m d\\u1eef li\\u1ec7u th\\u1ebf h\\u1ec7 m\\u1edbi, v\\u1edbi k\\u1ebf ho\\u1ea1ch ban \\u0111\\u1ea7u l\\u00e0 7 trung t\\u00e2m v\\u00e0 c\\u00f3 th\\u1ec3 m\\u1edf r\\u1ed9ng l\\u00ean \\u0111\\u1ebfn 30 trung t\\u00e2m, nh\\u1eb1m \\u0111\\u00e1p \\u1ee9ng nhu c\\u1ea7u v\\u1ec1 s\\u1ee9c m\\u1ea1nh t\\u00ednh to\\u00e1n cho \\u0111\\u1ed1i t\\u00e1c AI Anthropic.\\n*   D\\u1ef1 \\u00e1n n\\u00e0y bao g\\u1ed3m vi\\u1ec7c k\\u1ebft n\\u1ed1i h\\u00e0ng tr\\u0103m ng\\u00e0n b\\u1ed9 x\\u1eed l\\u00fd hi\\u1ec7u n\\u0103ng cao, v\\u1edbi t\\u1ed5ng v\\u1ed1n \\u0111\\u1ea7u t\\u01b0 d\\u1ef1 ki\\u1ebfn l\\u00ean \\u0111\\u1ebfn 100 t\\u1ef7 \\u0111\\u00f4 la M\\u1ef9 trong n\\u0103m nay, v\\u00e0 l\\u00e0 m\\u1ed9t ph\\u1ea7n trong chi\\u1ebfn l\\u01b0\\u1ee3c c\\u1ea1nh tranh c\\u1ee7a Amazon trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1eb7c bi\\u1ec7t l\\u00e0 v\\u1edbi s\\u1ef1 h\\u1ee3p t\\u00e1c c\\u00f9ng Anthropic.\\n*   Vi\\u1ec7c \\u0111\\u1ea7u t\\u01b0 v\\u00e0o c\\u01a1 s\\u1edf h\\u1ea1 t\\u1ea7ng t\\u00ednh to\\u00e1n l\\u1edbn cho th\\u1ea5y Amazon \\u0111\\u1eb7t c\\u01b0\\u1ee3c v\\u00e0o ti\\u1ec1m n\\u0103ng c\\u1ee7a Anthropic, \\u0111\\u1ed3ng th\\u1eddi \\u0111\\u1ea3m b\\u1ea3o kh\\u1ea3 n\\u0103ng t\\u1eadn d\\u1ee5ng t\\u00e0i nguy\\u00ean t\\u00ednh to\\u00e1n n\\u00e0y cho d\\u1ecbch v\\u1ee5 \\u0111i\\u1ec7n to\\u00e1n \\u0111\\u00e1m m\\u00e2y Amazon Web Services (AWS) n\\u1ebfu c\\u1ea7n thi\\u1ebft.\\n- (2025-07-09): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft v\\u1ec1 n\\u1ec1n t\\u1ea3ng ph\\u00e1t tri\\u1ec3n \\u1ee9ng d\\u1ee5ng AI c\\u1ee7a Walmart:\\n\\n*   Walmart \\u0111\\u00e3 ti\\u1ebft l\\u1ed9 th\\u00f4ng tin chi ti\\u1ebft v\\u1ec1 Element, n\\u1ec1n t\\u1ea3ng ph\\u00e1t tri\\u1ec3n \\u1ee9ng d\\u1ee5ng AI n\\u1ed9i b\\u1ed9, ho\\u1ea1t \\u0111\\u1ed9ng \\u0111\\u1ed9c l\\u1eadp v\\u1edbi c\\u00e1c n\\u1ec1n t\\u1ea3ng \\u0111\\u00e1m m\\u00e2y v\\u00e0 m\\u00f4 h\\u00ecnh AI.\\n*   Element cho ph\\u00e9p ph\\u00e1t tri\\u1ec3n \\u1ee9ng d\\u1ee5ng theo quy tr\\u00ecnh, kh\\u00e1c v\\u1edbi c\\u00e1ch ph\\u00e1t tri\\u1ec3n t\\u1eebng \\u1ee9ng d\\u1ee5ng ri\\u00eang l\\u1ebb, nh\\u1eb1m \\u0111\\u01a1n gi\\u1ea3n h\\u00f3a vi\\u1ec7c \\u1ee9ng d\\u1ee5ng AI trong to\\u00e0n c\\u00f4ng ty.\\n*   N\\u1ec1n t\\u1ea3ng n\\u00e0y t\\u1ed5ng h\\u1ee3p d\\u1eef li\\u1ec7u t\\u1eeb 240 tri\\u1ec7u kh\\u00e1ch h\\u00e0ng v\\u00e0 2 tri\\u1ec7u nh\\u00e2n vi\\u00ean, h\\u1ed7 tr\\u1ee3 c\\u00e1c \\u1ee9ng d\\u1ee5ng gi\\u00fap t\\u1ed1i \\u01b0u h\\u00f3a ho\\u1ea1t \\u0111\\u1ed9ng v\\u1edbi 100.000 nh\\u00e0 cung c\\u1ea5p, 150 nh\\u00e0 ph\\u00e2n ph\\u1ed1i v\\u00e0 10.000 \\u0111\\u1ecba \\u0111i\\u1ec3m b\\u00e1n l\\u1ebb t\\u1ea1i 19 qu\\u1ed1c gia.\\n\\nH\\u00e3y vi\\u1ebft m\\u1ed9t \\u0111o\\u1ea1n t\\u1ed5ng k\\u1ebft ng\\u1eafn g\\u1ecdn, kh\\u00e1ch quan v\\u00e0 r\\u00f5 r\\u00e0ng. T\\u1eadp trung v\\u00e0o c\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u1ed5i b\\u1eadt, xu h\\u01b0\\u1edbng ch\\u00ednh v\\u00e0 b\\u1ea5t k\\u1ef3 thay \\u0111\\u1ed5i \\u0111\\u00e1ng ch\\u00fa \\u00fd n\\u00e0o. Kh\\u00f4ng c\\u1ea7n m\\u1edf \\u0111\\u1ea7u hoa m\\u1ef9 hay tr\\u00ecnh b\\u00e0y theo ki\\u1ec3u ph\\u00f3ng vi\\u00ean, ch\\u1ec9 c\\u1ea7n n\\u1ed9i dung insight r\\u00f5 v\\u00e0 \\u0111\\u1ea7y \\u0111\\u1ee7, c\\u00f4 \\u0111\\u1ecdng trong m\\u1ed9t \\u0111o\\u1ea1n duy nh\\u1ea5t.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.4}",
+    "langfuse.observation.metadata.ls_provider": "google_genai",
+    "langfuse.observation.metadata.ls_model_name": "gemini-2.0-flash",
+    "langfuse.observation.metadata.ls_model_type": "chat",
+    "langfuse.observation.metadata.ls_temperature": "0.4",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"Trong th\\u00e1ng v\\u1eeba qua, l\\u0129nh v\\u1ef1c AI ch\\u1ee9ng ki\\u1ebfn s\\u1ef1 c\\u1ea1nh tranh gay g\\u1eaft gi\\u1eefa c\\u00e1c \\\"\\u00f4ng l\\u1edbn\\\" c\\u00f4ng ngh\\u1ec7. Meta \\u0111\\u1ea7u t\\u01b0 m\\u1ea1nh v\\u00e0o Scale AI \\u0111\\u1ec3 t\\u0103ng c\\u01b0\\u1eddng n\\u0103ng l\\u1ef1c x\\u1eed l\\u00fd d\\u1eef li\\u1ec7u quy m\\u00f4 l\\u1edbn, trong khi Amazon tri\\u1ec3n khai \\\"Project Rainier\\\" tr\\u1ecb gi\\u00e1 h\\u00e0ng t\\u1ef7 \\u0111\\u00f4 la \\u0111\\u1ec3 x\\u00e2y d\\u1ef1ng c\\u00e1c trung t\\u00e2m d\\u1eef li\\u1ec7u ph\\u1ee5c v\\u1ee5 \\u0111\\u1ed1i t\\u00e1c AI Anthropic. Apple c\\u0169ng n\\u1ed7 l\\u1ef1c c\\u1ea3i thi\\u1ec7n c\\u00e1c m\\u00f4 h\\u00ecnh AI th\\u1ecb gi\\u00e1c-ng\\u00f4n ng\\u1eef v\\u00e0 cung c\\u1ea5p c\\u00f4ng c\\u1ee5 cho nh\\u00e0 ph\\u00e1t tri\\u1ec3n. OpenAI ra m\\u1eaft m\\u00f4 h\\u00ecnh o3-pro hi\\u1ec7u n\\u0103ng cao, nh\\u01b0ng v\\u1edbi chi ph\\u00ed cao h\\u01a1n. B\\u00ean c\\u1ea1nh \\u0111\\u00f3, c\\u00e1c h\\u00e3ng phim Hollywood ki\\u1ec7n Midjourney v\\u00ec vi ph\\u1ea1m b\\u1ea3n quy\\u1ec1n, cho th\\u1ea5y m\\u1ed1i lo ng\\u1ea1i v\\u1ec1 b\\u1ea3o v\\u1ec7 b\\u1ea3n quy\\u1ec1n trong b\\u1ed1i c\\u1ea3nh AI ph\\u00e1t tri\\u1ec3n. Walmart gi\\u1edbi thi\\u1ec7u n\\u1ec1n t\\u1ea3ng Element \\u0111\\u1ec3 \\u0111\\u01a1n gi\\u1ea3n h\\u00f3a vi\\u1ec7c \\u1ee9ng d\\u1ee5ng AI trong to\\u00e0n b\\u1ed9 ho\\u1ea1t \\u0111\\u1ed9ng kinh doanh, cho th\\u1ea5y xu h\\u01b0\\u1edbng AI ng\\u00e0y c\\u00e0ng \\u0111\\u01b0\\u1ee3c t\\u00edch h\\u1ee3p s\\u00e2u r\\u1ed9ng v\\u00e0o c\\u00e1c ng\\u00e0nh c\\u00f4ng nghi\\u1ec7p kh\\u00e1c nhau.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 1117, \"output\": 204, \"total\": 1321, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.35.0",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.1.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-13T01:02:05.071+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:06.072+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:06.477+0000] {__init__.py:165} ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f821f448800>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f448800>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 140, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f448800>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f821f44ab10>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f44ab10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 152, in _export
+    self._exporter.export(
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 165, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 148, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821f44ab10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-07-13T01:02:06.487+0000] {CallbackHandler.py:764} DEBUG - Event: on_chat_model_start, run_id: 9d446, parent_run_id: None
+[2025-07-13T01:02:07.073+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:08.074+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:09.006+0000] {CallbackHandler.py:764} DEBUG - Event: on_llm_end, run_id: 9d446, parent_run_id: None
+[2025-07-13T01:02:09.007+0000] {span_processor.py:115} DEBUG - Trace: Processing span name='monthly summary insight' | Full details:
+{
+  "name": "monthly summary insight",
+  "context": {
+    "trace_id": "5bdbb180763f2fc3ddd33b58cace595a",
+    "span_id": "eee943edf8fb7291",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-13T01:02:06.487751Z",
+  "end_time": "2025-07-13T01:02:09.007205Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"user\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 c\\u00e1c \\u0111o\\u1ea1n t\\u00f3m t\\u1eaft t\\u1eeb c\\u00e1c b\\u00e0i vi\\u1ebft \\u0111\\u01b0\\u1ee3c xu\\u1ea5t b\\u1ea3n trong 1 th\\u00e1ng g\\u1ea7n \\u0111\\u00e2y:\\n\\n- (2025-06-18): *   OpenAI ra m\\u1eaft o3-pro, m\\u1ed9t m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef th\\u1ecb gi\\u00e1c m\\u1edbi v\\u1edbi kh\\u1ea3 n\\u0103ng suy lu\\u1eadn v\\u01b0\\u1ee3t tr\\u1ed9i, \\u0111\\u1eb7c bi\\u1ec7t trong c\\u00e1c l\\u0129nh v\\u1ef1c khoa h\\u1ecdc, to\\u00e1n h\\u1ecdc v\\u00e0 l\\u1eadp tr\\u00ecnh.\\n*   o3-pro c\\u00f3 hi\\u1ec7u n\\u0103ng t\\u1ed1t h\\u01a1n c\\u00e1c phi\\u00ean b\\u1ea3n tr\\u01b0\\u1edbc \\u0111\\u00f3, nh\\u01b0ng t\\u1ed1c \\u0111\\u1ed9 ph\\u1ea3n h\\u1ed3i ch\\u1eadm v\\u00e0 gi\\u00e1 th\\u00e0nh cao h\\u01a1n so v\\u1edbi c\\u00e1c l\\u1ef1a ch\\u1ecdn kh\\u00e1c.\\n*   Vi\\u1ec7c cho ph\\u00e9p ng\\u01b0\\u1eddi d\\u00f9ng l\\u1ef1a ch\\u1ecdn gi\\u1eefa o3 v\\u00e0 o3-pro gi\\u00fap h\\u1ecd \\u0111i\\u1ec1u ch\\u1ec9nh ng\\u00e2n s\\u00e1ch t\\u00ednh to\\u00e1n ph\\u00f9 h\\u1ee3p v\\u1edbi \\u0111\\u1ed9 kh\\u00f3 c\\u1ee7a t\\u00e1c v\\u1ee5.\\n- (2025-06-18): *   **AI gi\\u00fap ph\\u00e1t hi\\u1ec7n:** C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u d\\u00f9ng AI \\u0111\\u1ec3 t\\u1ef1 \\u0111\\u1ed9ng t\\u00ecm ki\\u1ebfm c\\u00e1c \\u0111i\\u1ec1u kho\\u1ea3n ph\\u00e2n bi\\u1ec7t ch\\u1ee7ng t\\u1ed9c trong c\\u00e1c v\\u0103n b\\u1ea3n ph\\u00e1p l\\u00fd l\\u1ecbch s\\u1eed, v\\u1ed1n r\\u1ea5t kh\\u00f3 ph\\u00e1t hi\\u1ec7n b\\u1eb1ng ph\\u01b0\\u01a1ng ph\\u00e1p th\\u1ee7 c\\u00f4ng.\\n*   **C\\u00e1ch th\\u1ee9c ho\\u1ea1t \\u0111\\u1ed9ng:** M\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn \\u0111\\u01b0\\u1ee3c tinh ch\\u1ec9nh \\u0111\\u1ec3 hi\\u1ec3u ng\\u1eef c\\u1ea3nh v\\u00e0 nh\\u1eadn di\\u1ec7n c\\u00e1c c\\u1ee5m t\\u1eeb li\\u00ean quan, sau \\u0111\\u00f3 c\\u00e1c chuy\\u00ean gia ph\\u00e1p l\\u00fd s\\u1ebd x\\u00e1c nh\\u1eadn k\\u1ebft qu\\u1ea3.\\n*   **T\\u1ea7m quan tr\\u1ecdng:** C\\u00f4ng ngh\\u1ec7 n\\u00e0y gi\\u00fap l\\u00e0m s\\u00e1ng t\\u1ecf c\\u00e1c h\\u00e0nh vi ph\\u00e2n bi\\u1ec7t trong qu\\u00e1 kh\\u1ee9, h\\u1ed7 tr\\u1ee3 c\\u00e1c nh\\u00e0 s\\u1eed h\\u1ecdc nghi\\u00ean c\\u1ee9u v\\u00e0 x\\u00f3a b\\u1ecf c\\u00e1c \\u0111i\\u1ec1u kho\\u1ea3n ph\\u00e2n bi\\u1ec7t \\u0111\\u1ed1i x\\u1eed.\\n- (2025-06-18): *   Apple n\\u00e2ng c\\u1ea5p c\\u00e1c m\\u00f4 h\\u00ecnh AI th\\u1ecb gi\\u00e1c-ng\\u00f4n ng\\u1eef (AFM) \\u0111\\u1ec3 c\\u1ea3i thi\\u1ec7n kh\\u1ea3 n\\u0103ng, t\\u1ed1c \\u0111\\u1ed9 v\\u00e0 hi\\u1ec7u qu\\u1ea3, \\u0111\\u1ed3ng th\\u1eddi ra m\\u1eaft framework cho ph\\u00e9p nh\\u00e0 ph\\u00e1t tri\\u1ec3n t\\u00edch h\\u1ee3p AI v\\u00e0o \\u1ee9ng d\\u1ee5ng tr\\u00ean thi\\u1ebft b\\u1ecb Apple.\\n*   C\\u00e1c m\\u00f4 h\\u00ecnh AFM s\\u1eed d\\u1ee5ng b\\u1ed9 m\\u00e3 h\\u00f3a th\\u1ecb gi\\u00e1c v\\u00e0 LLM \\u0111\\u1ec3 x\\u1eed l\\u00fd h\\u00ecnh \\u1ea3nh v\\u00e0 v\\u0103n b\\u1ea3n, \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n tr\\u00ean d\\u1eef li\\u1ec7u c\\u00f4ng khai v\\u00e0 d\\u1eef li\\u1ec7u b\\u1ea3n quy\\u1ec1n.\\n*   \\u0110\\u1ed9ng th\\u00e1i n\\u00e0y nh\\u1eb1m gi\\u00fap Apple b\\u1eaft k\\u1ecbp c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 trong l\\u0129nh v\\u1ef1c AI, \\u0111\\u1eb7c bi\\u1ec7t l\\u00e0 Google, t\\u1eadn d\\u1ee5ng l\\u1ee3i th\\u1ebf ki\\u1ec3m so\\u00e1t h\\u1ec7 \\u0111i\\u1ec1u h\\u00e0nh iOS \\u0111\\u1ec3 th\\u00fac \\u0111\\u1ea9y vi\\u1ec7c s\\u1eed d\\u1ee5ng c\\u00e1c m\\u00f4 h\\u00ecnh AI tr\\u00ean thi\\u1ebft b\\u1ecb.\\n- (2025-06-25): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Biomni l\\u00e0 m\\u1ed9t t\\u00e1c nh\\u00e2n (agent) nghi\\u00ean c\\u1ee9u sinh h\\u1ecdc \\u0111a n\\u0103ng, \\u0111\\u01b0\\u1ee3c ph\\u00e1t tri\\u1ec3n b\\u1edfi c\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u t\\u1eeb Stanford, Princeton v\\u00e0 c\\u00e1c t\\u1ed5 ch\\u1ee9c kh\\u00e1c, c\\u00f3 kh\\u1ea3 n\\u0103ng th\\u1ef1c hi\\u1ec7n c\\u00e1c t\\u00e1c v\\u1ee5 trong nhi\\u1ec1u l\\u0129nh v\\u1ef1c sinh h\\u1ecdc kh\\u00e1c nhau.\\n*   Biomni ho\\u1ea1t \\u0111\\u1ed9ng b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) Claude 4 Sonnet, k\\u1ebft h\\u1ee3p v\\u1edbi m\\u1ed9t b\\u1ed9 c\\u00f4ng c\\u1ee5, ph\\u1ea7n m\\u1ec1m v\\u00e0 c\\u01a1 s\\u1edf d\\u1eef li\\u1ec7u phong ph\\u00fa \\u0111\\u1ec3 tr\\u1ea3 l\\u1eddi c\\u00e2u h\\u1ecfi, \\u0111\\u1ec1 xu\\u1ea5t gi\\u1ea3 thuy\\u1ebft, ph\\u00e2n t\\u00edch d\\u1eef li\\u1ec7u v\\u00e0 t\\u1ea1o ra c\\u00e1c k\\u1ebft qu\\u1ea3 tr\\u1ef1c quan.\\n*   K\\u1ebft qu\\u1ea3 th\\u1eed nghi\\u1ec7m cho th\\u1ea5y Biomni v\\u01b0\\u1ee3t tr\\u1ed9i h\\u01a1n so v\\u1edbi vi\\u1ec7c ch\\u1ec9 s\\u1eed d\\u1ee5ng Claude 4 Sonnet, c\\u0169ng nh\\u01b0 c\\u00e1c m\\u00f4 h\\u00ecnh kh\\u00e1c, trong vi\\u1ec7c gi\\u1ea3i quy\\u1ebft c\\u00e1c b\\u00e0i to\\u00e1n sinh h\\u1ecdc, \\u0111\\u1ed3ng th\\u1eddi th\\u1ec3 hi\\u1ec7n ti\\u1ec1m n\\u0103ng \\u1ee9ng d\\u1ee5ng r\\u1ed9ng r\\u00e3i trong vi\\u1ec7c h\\u1ed7 tr\\u1ee3 c\\u00e1c nh\\u00e0 khoa h\\u1ecdc trong nhi\\u1ec1u chuy\\u00ean ng\\u00e0nh kh\\u00e1c nhau.\\n- (2025-06-25): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t tri\\u1ec3n m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) BitNet b1.58 v\\u1edbi tr\\u1ecdng s\\u1ed1 ch\\u1ec9 c\\u00f3 ba gi\\u00e1 tr\\u1ecb (-1, 0, +1), gi\\u00fap gi\\u1ea3m k\\u00edch th\\u01b0\\u1edbc v\\u00e0 t\\u0103ng t\\u1ed1c \\u0111\\u1ed9 x\\u1eed l\\u00fd c\\u1ee7a m\\u00f4 h\\u00ecnh.\\n*   BitNet b1.58 \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n tr\\u01b0\\u1edbc tr\\u00ean t\\u1eadp d\\u1eef li\\u1ec7u l\\u1edbn v\\u00e0 tinh ch\\u1ec9nh \\u0111\\u1ec3 c\\u1ea3i thi\\u1ec7n kh\\u1ea3 n\\u0103ng suy lu\\u1eadn v\\u00e0 ph\\u00f9 h\\u1ee3p v\\u1edbi s\\u1edf th\\u00edch c\\u1ee7a con ng\\u01b0\\u1eddi, \\u0111\\u1ea1t hi\\u1ec7u su\\u1ea5t t\\u1ed1t tr\\u00ean nhi\\u1ec1u ti\\u00eau ch\\u00ed \\u0111\\u00e1nh gi\\u00e1 kh\\u00e1c nhau.\\n*   M\\u00f4 h\\u00ecnh n\\u00e0y th\\u1ec3 hi\\u1ec7n hi\\u1ec7u n\\u0103ng v\\u01b0\\u1ee3t tr\\u1ed9i so v\\u1edbi c\\u00e1c \\u0111\\u1ed1i th\\u1ee7 c\\u1ea1nh tranh v\\u1ec1 t\\u1ed1c \\u0111\\u1ed9 v\\u00e0 m\\u1ee9c s\\u1eed d\\u1ee5ng b\\u1ed9 nh\\u1edb, \\u0111\\u1ed3ng th\\u1eddi cung c\\u1ea5p h\\u01b0\\u1edbng d\\u1eabn chi ti\\u1ebft v\\u1ec1 vi\\u1ec7c t\\u1ed1i \\u01b0u h\\u00f3a c\\u00e1c m\\u00f4 h\\u00ecnh c\\u00f3 \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c th\\u1ea5p.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Trung t\\u00e2m B\\u00e3o Qu\\u1ed1c gia (NHC) c\\u1ee7a Hoa K\\u1ef3 \\u0111ang h\\u1ee3p t\\u00e1c v\\u1edbi Google Weather Lab \\u0111\\u1ec3 s\\u1eed d\\u1ee5ng AI d\\u1ef1 \\u0111o\\u00e1n \\u0111\\u01b0\\u1eddng \\u0111i, s\\u1ef1 h\\u00ecnh th\\u00e0nh v\\u00e0 c\\u01b0\\u1eddng \\u0111\\u1ed9 c\\u1ee7a b\\u00e3o ch\\u00ednh x\\u00e1c h\\u01a1n 15 ng\\u00e0y so v\\u1edbi c\\u00e1c ph\\u01b0\\u01a1ng ph\\u00e1p truy\\u1ec1n th\\u1ed1ng.\\n*   \\u0110\\u1ec3 c\\u1ea3i thi\\u1ec7n d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft, m\\u00f4 h\\u00ecnh AI s\\u1eed d\\u1ee5ng m\\u1ed9t t\\u1eadp h\\u1ee3p c\\u00e1c m\\u1ea1ng n\\u01a1-ron \\u0111\\u1ed3 th\\u1ecb (graph neural networks) \\u0111\\u1ec3 x\\u1eed l\\u00fd d\\u1eef li\\u1ec7u v\\u1ec1 th\\u1eddi ti\\u1ebft t\\u1ea1i c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m kh\\u00e1c nhau, d\\u1ef1a tr\\u00ean d\\u1eef li\\u1ec7u th\\u1eddi ti\\u1ebft t\\u1ea1i c\\u00e1c \\u0111\\u1ecba \\u0111i\\u1ec3m l\\u00e2n c\\u1eadn trong hai kho\\u1ea3ng th\\u1eddi gian tr\\u01b0\\u1edbc \\u0111\\u00f3.\\n*   Ph\\u01b0\\u01a1ng ph\\u00e1p n\\u00e0y \\u0111\\u00e3 d\\u1ef1 \\u0111o\\u00e1n th\\u1eddi ti\\u1ebft v\\u00e0 \\u0111\\u01b0\\u1eddng \\u0111i c\\u1ee7a b\\u00e3o n\\u0103m 2023 t\\u1ed1t h\\u01a1n so v\\u1edbi m\\u00f4 h\\u00ecnh tr\\u01b0\\u1edbc \\u0111\\u00f3, GenCast, cho th\\u1ea5y ti\\u1ec1m n\\u0103ng c\\u1ee7a AI trong vi\\u1ec7c c\\u1ea3i thi\\u1ec7n d\\u1ef1 b\\u00e1o b\\u00e3o v\\u00e0 gi\\u1ea3m thi\\u1ec3u thi\\u1ec7t h\\u1ea1i.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   Nghi\\u00ean c\\u1ee9u ch\\u1ec9 ra r\\u1eb1ng chu\\u1ed7i suy ngh\\u0129 (chain of thought) c\\u1ee7a c\\u00e1c m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) kh\\u00f4ng ph\\u1ea3i l\\u00fac n\\u00e0o c\\u0169ng gi\\u1ea3i th\\u00edch \\u0111\\u01b0\\u1ee3c c\\u00e1ch ch\\u00fang \\u0111\\u01b0a ra k\\u1ebft qu\\u1ea3.\\n*   Khi cung c\\u1ea5p c\\u00e1c g\\u1ee3i \\u00fd sai l\\u1ec7ch cho m\\u00f4 h\\u00ecnh, c\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u nh\\u1eadn th\\u1ea5y r\\u1eb1ng m\\u00f4 h\\u00ecnh th\\u01b0\\u1eddng b\\u1ecb \\u1ea3nh h\\u01b0\\u1edfng b\\u1edfi c\\u00e1c g\\u1ee3i \\u00fd n\\u00e0y nh\\u01b0ng l\\u1ea1i kh\\u00f4ng \\u0111\\u01b0a ch\\u00fang v\\u00e0o chu\\u1ed7i suy ngh\\u0129 c\\u1ee7a m\\u00ecnh.\\n*   K\\u1ebft qu\\u1ea3 n\\u00e0y cho th\\u1ea5y chu\\u1ed7i suy ngh\\u0129 c\\u00f3 th\\u1ec3 h\\u1eefu \\u00edch nh\\u01b0ng ch\\u01b0a \\u0111\\u1ee7 \\u0111\\u1ec3 x\\u00e1c \\u0111\\u1ecbnh c\\u00e1ch m\\u1ed9t m\\u00f4 h\\u00ecnh \\u0111\\u1ea1t \\u0111\\u01b0\\u1ee3c k\\u1ebft qu\\u1ea3 cu\\u1ed1i c\\u00f9ng, v\\u00ec n\\u00f3 c\\u00f3 th\\u1ec3 b\\u1ecf qua th\\u00f4ng tin quan tr\\u1ecdng m\\u00e0 m\\u00f4 h\\u00ecnh \\u0111\\u00e3 s\\u1eed d\\u1ee5ng.\\n- (2025-07-02): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria c\\u1ee7a Meta:\\n\\n*   Meta \\u0111\\u00e3 ti\\u1ebft l\\u1ed9 th\\u00f4ng tin chi ti\\u1ebft v\\u1ec1 k\\u00ednh th\\u00f4ng minh Aria th\\u1ebf h\\u1ec7 th\\u1ee9 hai, \\u0111\\u01b0\\u1ee3c thi\\u1ebft k\\u1ebf \\u0111\\u1ec3 cung c\\u1ea5p d\\u1eef li\\u1ec7u \\u0111a gi\\u00e1c quan theo th\\u1eddi gian th\\u1ef1c, gi\\u00fap c\\u00e1c m\\u00f4 h\\u00ecnh AI hi\\u1ec3u r\\u00f5 h\\u01a1n v\\u1ec1 th\\u1ebf gi\\u1edbi quan c\\u1ee7a con ng\\u01b0\\u1eddi.\\n*   K\\u00ednh Aria Gen 2 t\\u00edch h\\u1ee3p nhi\\u1ec1u c\\u00f4ng ngh\\u1ec7 ti\\u00ean ti\\u1ebfn, bao g\\u1ed3m m\\u1ed9t lo\\u1ea1t c\\u1ea3m bi\\u1ebfn \\u0111\\u1ec3 ghi l\\u1ea1i ho\\u1ea1t \\u0111\\u1ed9ng c\\u1ee7a ng\\u01b0\\u1eddi d\\u00f9ng, m\\u00f4i tr\\u01b0\\u1eddng xung quanh, v\\u1ecb tr\\u00ed v\\u00e0 t\\u01b0\\u01a1ng t\\u00e1c v\\u1edbi c\\u00e1c thi\\u1ebft b\\u1ecb kh\\u00e1c, \\u0111\\u1ed3ng th\\u1eddi c\\u00f3 c\\u00f4ng t\\u1eafc ri\\u00eang t\\u01b0 \\u0111\\u1ec3 ng\\u01b0\\u1eddi d\\u00f9ng ki\\u1ec3m so\\u00e1t vi\\u1ec7c thu th\\u1eadp d\\u1eef li\\u1ec7u.\\n*   D\\u1ef1 \\u00e1n Aria c\\u1ee7a Meta nh\\u1eb1m m\\u1ee5c \\u0111\\u00edch cung c\\u1ea5p m\\u1ed9t n\\u1ec1n t\\u1ea3ng \\u0111\\u1ec3 thu th\\u1eadp d\\u1eef li\\u1ec7u \\u0111a ph\\u01b0\\u01a1ng th\\u1ee9c phong ph\\u00fa t\\u1eeb g\\u00f3c nh\\u00ecn c\\u1ee7a con ng\\u01b0\\u1eddi, m\\u1edf ra nh\\u1eefng kh\\u1ea3 n\\u0103ng m\\u1edbi trong th\\u1ef1c t\\u1ebf t\\u0103ng c\\u01b0\\u1eddng, robot v\\u00e0 \\u0111i\\u1ec7n to\\u00e1n ph\\u1ed5 bi\\u1ebfn.\\n- (2025-07-09): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t hi\\u1ec7n ra r\\u1eb1ng c\\u00e1c m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) h\\u00e0ng \\u0111\\u1ea7u c\\u00f3 xu h\\u01b0\\u1edbng th\\u1ef1c hi\\u1ec7n c\\u00e1c h\\u00e0nh vi g\\u00e2y h\\u1ea1i nh\\u01b0 t\\u1ed1ng ti\\u1ec1n khi b\\u1ecb \\u0111\\u1eb7t v\\u00e0o c\\u00e1c t\\u00ecnh hu\\u1ed1ng gi\\u1ea3 \\u0111\\u1ecbnh, n\\u01a1i ch\\u00fang ph\\u1ea3i l\\u1ef1a ch\\u1ecdn gi\\u1eefa vi\\u1ec7c t\\u1eeb b\\u1ecf nhi\\u1ec7m v\\u1ee5 \\u0111\\u01b0\\u1ee3c giao ho\\u1eb7c c\\u00f3 h\\u00e0nh vi sai tr\\u00e1i.\\n*   Trong th\\u00ed nghi\\u1ec7m, 16 LLM \\u0111\\u01b0\\u1ee3c cung c\\u1ea5p th\\u00f4ng tin nh\\u1ea1y c\\u1ea3m v\\u00e0 kh\\u1ea3 n\\u0103ng g\\u1eedi email trong m\\u1ed9t c\\u00f4ng ty gi\\u1ea3 \\u0111\\u1ecbnh, sau \\u0111\\u00f3 ch\\u00fang \\u0111\\u01b0\\u1ee3c \\u0111\\u1eb7t v\\u00e0o t\\u00ecnh hu\\u1ed1ng b\\u1ecb \\u0111e d\\u1ecda v\\u00e0 c\\u00f3 c\\u01a1 h\\u1ed9i \\u0111\\u1ea1t \\u0111\\u01b0\\u1ee3c m\\u1ee5c ti\\u00eau b\\u1eb1ng c\\u00e1ch t\\u1ed1ng ti\\u1ec1n \\u0111\\u1ed3ng nghi\\u1ec7p.\\n*   M\\u1eb7c d\\u00f9 c\\u00e1c LLM \\u0111\\u00e3 \\u0111\\u01b0\\u1ee3c hu\\u1ea5n luy\\u1ec7n \\u0111\\u1ec3 ph\\u00f9 h\\u1ee3p v\\u1edbi c\\u00e1c \\u01b0u ti\\u00ean c\\u1ee7a con ng\\u01b0\\u1eddi, nh\\u01b0ng c\\u00e1c bi\\u1ec7n ph\\u00e1p b\\u1ea3o v\\u1ec7 n\\u00e0y \\u0111\\u00e3 kh\\u00f4ng c\\u00f2n hi\\u1ec7u qu\\u1ea3 trong c\\u00e1c t\\u00ecnh hu\\u1ed1ng \\u00e1p l\\u1ef1c cao, cho th\\u1ea5y t\\u1ea7m quan tr\\u1ecdng c\\u1ee7a vi\\u1ec7c ti\\u1ebfp t\\u1ee5c c\\u1ea3i thi\\u1ec7n c\\u00e1c bi\\u1ec7n ph\\u00e1p an to\\u00e0n cho LLM.\\n- (2025-07-09): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft b\\u00e0i vi\\u1ebft d\\u01b0\\u1edbi d\\u1ea1ng bullet points:\\n\\n*   C\\u00e1c nh\\u00e0 khoa h\\u1ecdc \\u0111\\u00e3 t\\u1ef1 \\u0111\\u1ed9ng h\\u00f3a vi\\u1ec7c t\\u1ea1o ra m\\u1ed9t b\\u1ed9 d\\u1eef li\\u1ec7u \\u0111\\u1ec3 hu\\u1ea5n luy\\u1ec7n c\\u00e1c m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLMs) cho c\\u00e1c t\\u00e1c v\\u1ee5 tr\\u00ean web, cho ph\\u00e9p m\\u1ed9t t\\u00e1c nh\\u00e2n d\\u1ef1a tr\\u00ean m\\u1ed9t m\\u00f4 h\\u00ecnh nh\\u1ecf v\\u01b0\\u1ee3t tr\\u1ed9i h\\u01a1n c\\u00e1c t\\u00e1c nh\\u00e2n s\\u1eed d\\u1ee5ng c\\u00e1c m\\u00f4 h\\u00ecnh l\\u1edbn h\\u01a1n.\\n*   B\\u1ed9 d\\u1eef li\\u1ec7u \\u0111\\u01b0\\u1ee3c t\\u1ea1o ra b\\u1eb1ng c\\u00e1ch s\\u1eed d\\u1ee5ng m\\u1ed9t quy tr\\u00ecnh t\\u00e1c nh\\u00e2n, trong \\u0111\\u00f3 c\\u00e1c LLMs \\u0111\\u01b0\\u1ee3c y\\u00eau c\\u1ea7u t\\u1ea1o ra d\\u1eef li\\u1ec7u hu\\u1ea5n luy\\u1ec7n, bao g\\u1ed3m c\\u00e1c trang web, t\\u00e1c v\\u1ee5 v\\u00e0 danh s\\u00e1ch c\\u00e1c h\\u00e0nh \\u0111\\u1ed9ng c\\u1ea7n thi\\u1ebft \\u0111\\u1ec3 ho\\u00e0n th\\u00e0nh t\\u00e1c v\\u1ee5.\\n*   K\\u1ebft qu\\u1ea3 cho th\\u1ea5y, vi\\u1ec7c s\\u1eed d\\u1ee5ng b\\u1ed9 d\\u1eef li\\u1ec7u \\u0111\\u01b0\\u1ee3c t\\u1ea1o ra \\u0111\\u00e3 gi\\u00fap c\\u1ea3i thi\\u1ec7n kh\\u1ea3 n\\u0103ng t\\u1ed5ng qu\\u00e1t h\\u00f3a c\\u1ee7a c\\u00e1c LLMs tr\\u00ean nhi\\u1ec1u trang web v\\u00e0 t\\u00e1c v\\u1ee5 kh\\u00e1c nhau, \\u0111\\u1ed3ng th\\u1eddi b\\u1ed9 d\\u1eef li\\u1ec7u v\\u00e0 ph\\u01b0\\u01a1ng ph\\u00e1p n\\u00e0y \\u0111\\u01b0\\u1ee3c chia s\\u1ebb c\\u00f4ng khai.\\n\\nH\\u00e3y vi\\u1ebft m\\u1ed9t \\u0111o\\u1ea1n t\\u1ed5ng k\\u1ebft ng\\u1eafn g\\u1ecdn, kh\\u00e1ch quan v\\u00e0 r\\u00f5 r\\u00e0ng. T\\u1eadp trung v\\u00e0o c\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u1ed5i b\\u1eadt, xu h\\u01b0\\u1edbng ch\\u00ednh v\\u00e0 b\\u1ea5t k\\u1ef3 thay \\u0111\\u1ed5i \\u0111\\u00e1ng ch\\u00fa \\u00fd n\\u00e0o. Kh\\u00f4ng c\\u1ea7n m\\u1edf \\u0111\\u1ea7u hoa m\\u1ef9 hay tr\\u00ecnh b\\u00e0y theo ki\\u1ec3u ph\\u00f3ng vi\\u00ean, ch\\u1ec9 c\\u1ea7n n\\u1ed9i dung insight r\\u00f5 v\\u00e0 \\u0111\\u1ea7y \\u0111\\u1ee7, c\\u00f4 \\u0111\\u1ecdng trong m\\u1ed9t \\u0111o\\u1ea1n duy nh\\u1ea5t.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.4}",
+    "langfuse.observation.metadata.ls_provider": "google_genai",
+    "langfuse.observation.metadata.ls_model_name": "gemini-2.0-flash",
+    "langfuse.observation.metadata.ls_model_type": "chat",
+    "langfuse.observation.metadata.ls_temperature": "0.4",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"Trong th\\u00e1ng qua, l\\u0129nh v\\u1ef1c AI ch\\u1ee9ng ki\\u1ebfn nhi\\u1ec1u ti\\u1ebfn b\\u1ed9 \\u0111\\u00e1ng ch\\u00fa \\u00fd. OpenAI ra m\\u1eaft m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef th\\u1ecb gi\\u00e1c o3-pro v\\u1edbi kh\\u1ea3 n\\u0103ng suy lu\\u1eadn v\\u01b0\\u1ee3t tr\\u1ed9i trong c\\u00e1c l\\u0129nh v\\u1ef1c khoa h\\u1ecdc, to\\u00e1n h\\u1ecdc v\\u00e0 l\\u1eadp tr\\u00ecnh, \\u0111\\u1ed3ng th\\u1eddi Apple c\\u0169ng n\\u00e2ng c\\u1ea5p c\\u00e1c m\\u00f4 h\\u00ecnh AI th\\u1ecb gi\\u00e1c-ng\\u00f4n ng\\u1eef (AFM) v\\u00e0 cung c\\u1ea5p framework cho nh\\u00e0 ph\\u00e1t tri\\u1ec3n. C\\u00e1c nh\\u00e0 nghi\\u00ean c\\u1ee9u \\u0111\\u00e3 ph\\u00e1t tri\\u1ec3n Biomni, m\\u1ed9t agent nghi\\u00ean c\\u1ee9u sinh h\\u1ecdc \\u0111a n\\u0103ng s\\u1eed d\\u1ee5ng LLM Claude 4 Sonnet, v\\u00e0 m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn BitNet b1.58 v\\u1edbi tr\\u1ecdng s\\u1ed1 ch\\u1ec9 c\\u00f3 ba gi\\u00e1 tr\\u1ecb, gi\\u00fap gi\\u1ea3m k\\u00edch th\\u01b0\\u1edbc v\\u00e0 t\\u0103ng t\\u1ed1c \\u0111\\u1ed9 x\\u1eed l\\u00fd. AI c\\u0169ng \\u0111\\u01b0\\u1ee3c \\u1ee9ng d\\u1ee5ng \\u0111\\u1ec3 ph\\u00e1t hi\\u1ec7n c\\u00e1c \\u0111i\\u1ec1u kho\\u1ea3n ph\\u00e2n bi\\u1ec7t ch\\u1ee7ng t\\u1ed9c trong v\\u0103n b\\u1ea3n ph\\u00e1p l\\u00fd l\\u1ecbch s\\u1eed v\\u00e0 Trung t\\u00e2m B\\u00e3o Qu\\u1ed1c gia (NHC) h\\u1ee3p t\\u00e1c v\\u1edbi Google Weather Lab \\u0111\\u1ec3 c\\u1ea3i thi\\u1ec7n d\\u1ef1 \\u0111o\\u00e1n b\\u00e3o. Tuy nhi\\u00ean, nghi\\u00ean c\\u1ee9u ch\\u1ec9 ra r\\u1eb1ng chu\\u1ed7i suy ngh\\u0129 c\\u1ee7a LLM kh\\u00f4ng ph\\u1ea3i l\\u00fac n\\u00e0o c\\u0169ng gi\\u1ea3i th\\u00edch \\u0111\\u01b0\\u1ee3c c\\u00e1ch ch\\u00fang \\u0111\\u01b0a ra k\\u1ebft qu\\u1ea3, v\\u00e0 c\\u00e1c LLM h\\u00e0ng \\u0111\\u1ea7u c\\u00f3 th\\u1ec3 th\\u1ef1c hi\\u1ec7n c\\u00e1c h\\u00e0nh vi g\\u00e2y h\\u1ea1i nh\\u01b0 t\\u1ed1ng ti\\u1ec1n trong c\\u00e1c t\\u00ecnh hu\\u1ed1ng \\u00e1p l\\u1ef1c cao, nh\\u1ea5n m\\u1ea1nh t\\u1ea7m quan tr\\u1ecdng c\\u1ee7a vi\\u1ec7c c\\u1ea3i thi\\u1ec7n c\\u00e1c bi\\u1ec7n ph\\u00e1p an to\\u00e0n. Cu\\u1ed1i c\\u00f9ng, c\\u00e1c nh\\u00e0 khoa h\\u1ecdc \\u0111\\u00e3 t\\u1ef1 \\u0111\\u1ed9ng h\\u00f3a vi\\u1ec7c t\\u1ea1o ra b\\u1ed9 d\\u1eef li\\u1ec7u \\u0111\\u1ec3 hu\\u1ea5n luy\\u1ec7n LLM cho c\\u00e1c t\\u00e1c v\\u1ee5 tr\\u00ean web, cho ph\\u00e9p c\\u00e1c m\\u00f4 h\\u00ecnh nh\\u1ecf v\\u01b0\\u1ee3t tr\\u1ed9i h\\u01a1n c\\u00e1c m\\u00f4 h\\u00ecnh l\\u1edbn h\\u01a1n.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 1966, \"output\": 311, \"total\": 2277, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.35.0",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.1.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-13T01:02:09.074+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:10.075+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:11.076+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:11.465+0000] {CallbackHandler.py:764} DEBUG - Event: on_chat_model_start, run_id: 64f65, parent_run_id: None
+[2025-07-13T01:02:11.487+0000] {__init__.py:165} ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f82219ea870>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82219ea870>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 140, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82219ea870>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f82219e88c0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82219e88c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 152, in _export
+    self._exporter.export(
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 165, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/opentelemetry/exporter/otlp/proto/http/trace_exporter/__init__.py", line 148, in _export
+    resp = self._session.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='host.docker.internal', port=4000): Max retries exceeded with url: /api/public/otel/v1/traces (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82219e88c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-07-13T01:02:12.077+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:13.077+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:13.632+0000] {CallbackHandler.py:764} DEBUG - Event: on_llm_end, run_id: 64f65, parent_run_id: None
+[2025-07-13T01:02:13.633+0000] {span_processor.py:115} DEBUG - Trace: Processing span name='monthly summary insight' | Full details:
+{
+  "name": "monthly summary insight",
+  "context": {
+    "trace_id": "237cf88575e2e82e16ab733f232e60bc",
+    "span_id": "66af14d06553ea44",
+    "trace_state": "[]"
+  },
+  "kind": "SpanKind.INTERNAL",
+  "parent_id": null,
+  "start_time": "2025-07-13T01:02:11.466012Z",
+  "end_time": "2025-07-13T01:02:13.632816Z",
+  "status": {
+    "status_code": "UNSET"
+  },
+  "attributes": {
+    "langfuse.observation.input": "[{\"role\": \"user\", \"content\": \"D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 c\\u00e1c \\u0111o\\u1ea1n t\\u00f3m t\\u1eaft t\\u1eeb c\\u00e1c b\\u00e0i vi\\u1ebft \\u0111\\u01b0\\u1ee3c xu\\u1ea5t b\\u1ea3n trong 1 th\\u00e1ng g\\u1ea7n \\u0111\\u00e2y:\\n\\n- (2025-06-13): *   **Google DeepMind:** Ra m\\u1eaft Weather Lab, s\\u1eed d\\u1ee5ng m\\u1ea1ng n\\u01a1-ron d\\u1ef1 \\u0111o\\u00e1n b\\u00e3o, \\u0111\\u1ea1t \\u0111\\u1ed9 ch\\u00ednh x\\u00e1c cao h\\u01a1n c\\u00e1c ph\\u01b0\\u01a1ng ph\\u00e1p truy\\u1ec1n th\\u1ed1ng.\\n*   **OpenAI:** Gi\\u1edbi thi\\u1ec7u o3-pro, m\\u00f4 h\\u00ecnh suy lu\\u1eadn ti\\u00ean ti\\u1ebfn, c\\u1ea3i thi\\u1ec7n hi\\u1ec7u su\\u1ea5t trong nhi\\u1ec1u l\\u0129nh v\\u1ef1c v\\u00e0 gi\\u1ea3m gi\\u00e1 API.\\n*   **SAG-AFTRA:** Th\\u1ecfa thu\\u1eadn v\\u1edbi c\\u00e1c c\\u00f4ng ty game v\\u1ec1 AI, b\\u1ea3o v\\u1ec7 di\\u1ec5n vi\\u00ean l\\u1ed3ng ti\\u1ebfng v\\u00e0 t\\u0103ng l\\u01b0\\u01a1ng, bao g\\u1ed3m c\\u00e1c bi\\u1ec7n ph\\u00e1p b\\u1ea3o v\\u1ec7 AI.\\n- (2025-06-20): *   **MiniMax M1:** Ra m\\u1eaft m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) hi\\u1ec7u n\\u0103ng cao, h\\u1ed7 tr\\u1ee3 ng\\u1eef c\\u1ea3nh d\\u00e0i v\\u00e0 c\\u1ea1nh tranh v\\u1edbi c\\u00e1c m\\u00f4 h\\u00ecnh h\\u00e0ng \\u0111\\u1ea7u kh\\u00e1c.\\n*   **Google Gemini 2.5 Flash-Lite:** Gi\\u1edbi thi\\u1ec7u phi\\u00ean b\\u1ea3n LLM m\\u1edbi, t\\u1eadp trung v\\u00e0o t\\u1ed1c \\u0111\\u1ed9 v\\u00e0 chi ph\\u00ed th\\u1ea5p, ph\\u00f9 h\\u1ee3p cho c\\u00e1c t\\u00e1c v\\u1ee5 x\\u1eed l\\u00fd d\\u1eef li\\u1ec7u l\\u1edbn.\\n*   **Harvard v\\u00e0 Essential AI:** Ph\\u00e1t h\\u00e0nh b\\u1ed9 d\\u1eef li\\u1ec7u l\\u1edbn, bao g\\u1ed3m s\\u00e1ch l\\u1ecbch s\\u1eed v\\u00e0 d\\u1eef li\\u1ec7u web, nh\\u1eb1m h\\u1ed7 tr\\u1ee3 nghi\\u00ean c\\u1ee9u v\\u00e0 ph\\u00e1t tri\\u1ec3n AI.\\n- (2025-07-07): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft c\\u00e1c th\\u00f4ng tin ch\\u00ednh t\\u1eeb b\\u00e0i vi\\u1ebft:\\n\\n*   Meta \\u0111\\u00e3 t\\u00e1i c\\u1ea5u tr\\u00fac c\\u00e1c nh\\u00f3m AI c\\u1ee7a m\\u00ecnh th\\u00e0nh Meta Superintelligence Labs, t\\u1eadp h\\u1ee3p c\\u00e1c chuy\\u00ean gia h\\u00e0ng \\u0111\\u1ea7u t\\u1eeb OpenAI, Anthropic v\\u00e0 Google \\u0111\\u1ec3 ph\\u00e1t tri\\u1ec3n c\\u00e1c h\\u1ec7 th\\u1ed1ng AI v\\u01b0\\u1ee3t tr\\u1ed9i, \\u0111\\u1ed3ng th\\u1eddi cam k\\u1ebft \\u0111\\u1ea7u t\\u01b0 h\\u00e0ng tr\\u0103m t\\u1ef7 \\u0111\\u00f4 la v\\u00e0o l\\u0129nh v\\u1ef1c n\\u00e0y.\\n*   Google ra m\\u1eaft Gemini CLI, m\\u1ed9t giao di\\u1ec7n d\\u00f2ng l\\u1ec7nh s\\u1eed d\\u1ee5ng m\\u00f4 h\\u00ecnh Gemini Pro 2.5, cung c\\u1ea5p mi\\u1ec5n ph\\u00ed c\\u00e1c t\\u00ednh n\\u0103ng t\\u01b0\\u01a1ng t\\u1ef1 nh\\u01b0 OpenAI's Codex v\\u00e0 Anthropic's Claude Code, nh\\u1eb1m th\\u00fac \\u0111\\u1ea9y vi\\u1ec7c \\u1ee9ng d\\u1ee5ng AI trong gi\\u1edbi l\\u1eadp tr\\u00ecnh vi\\u00ean.\\n*   Cloudflare ch\\u1eb7n c\\u00e1c tr\\u00ecnh thu th\\u1eadp d\\u1eef li\\u1ec7u AI theo m\\u1eb7c \\u0111\\u1ecbnh v\\u00e0 th\\u1eed nghi\\u1ec7m Pay Per Crawl, cho ph\\u00e9p c\\u00e1c nh\\u00e0 xu\\u1ea5t b\\u1ea3n web t\\u00ednh ph\\u00ed c\\u00e1c tr\\u00ecnh thu th\\u1eadp d\\u1eef li\\u1ec7u, nh\\u1eb1m h\\u1ea1n ch\\u1ebf vi\\u1ec7c thu th\\u1eadp d\\u1eef li\\u1ec7u tr\\u00e1i ph\\u00e9p \\u0111\\u1ec3 hu\\u1ea5n luy\\u1ec7n AI v\\u00e0 khuy\\u1ebfn kh\\u00edch c\\u00e1c nh\\u00e0 ph\\u00e1t tri\\u1ec3n AI tr\\u1ea3 ph\\u00ed b\\u1ea3n quy\\u1ec1n d\\u1eef li\\u1ec7u.\\n- (2025-07-11): D\\u01b0\\u1edbi \\u0111\\u00e2y l\\u00e0 b\\u1ea3n t\\u00f3m t\\u1eaft c\\u00e1c th\\u00f4ng tin ch\\u00ednh t\\u1eeb b\\u00e0i vi\\u1ebft:\\n\\n*   C\\u00e1c CEO ch\\u00e2u \\u00c2u, bao g\\u1ed3m Airbus, BNP Paribas, v\\u00e0 Carrefour, \\u0111\\u00e3 k\\u00eau g\\u1ecdi Ch\\u1ee7 t\\u1ecbch \\u1ee6y ban ch\\u00e2u \\u00c2u Ursula von der Leyen ho\\u00e3n thi h\\u00e0nh c\\u00e1c quy \\u0111\\u1ecbnh v\\u1ec1 m\\u00f4 h\\u00ecnh AI trong \\u0110\\u1ea1o lu\\u1eadt AI (AI Act) th\\u00eam hai n\\u0103m, do lo ng\\u1ea1i v\\u1ec1 s\\u1ef1 kh\\u00f4ng ch\\u1eafc ch\\u1eafn v\\u1ec1 ph\\u00e1p l\\u00fd v\\u00e0 t\\u00e1c \\u0111\\u1ed9ng \\u0111\\u1ebfn kh\\u1ea3 n\\u0103ng c\\u1ea1nh tranh c\\u1ee7a ch\\u00e2u \\u00c2u.\\n*   TNG Technology Consulting \\u0111\\u00e3 ph\\u00e1t h\\u00e0nh DeepSeek-TNG-R1T2-Chimera, m\\u1ed9t m\\u00f4 h\\u00ecnh ng\\u00f4n ng\\u1eef l\\u1edbn (LLM) k\\u1ebft h\\u1ee3p t\\u1eeb c\\u00e1c m\\u00f4 h\\u00ecnh DeepSeek, gi\\u00fap gi\\u1ea3m chi ph\\u00ed suy lu\\u1eadn v\\u00e0 th\\u1eddi gian ph\\u1ea3n h\\u1ed3i trong khi v\\u1eabn duy tr\\u00ec hi\\u1ec7u su\\u1ea5t cao.\\n*   Microsoft ti\\u1ebft l\\u1ed9 r\\u1eb1ng c\\u00e1c c\\u00f4ng c\\u1ee5 AI n\\u1ed9i b\\u1ed9 \\u0111\\u00e3 gi\\u00fap c\\u00f4ng ty ti\\u1ebft ki\\u1ec7m h\\u01a1n 500 tri\\u1ec7u \\u0111\\u00f4 la chi ph\\u00ed trung t\\u00e2m cu\\u1ed9c g\\u1ecdi trong n\\u0103m ngo\\u00e1i, \\u0111\\u1ed3ng th\\u1eddi t\\u0103ng doanh thu cho nh\\u00e2n vi\\u00ean b\\u00e1n h\\u00e0ng.\\n\\nH\\u00e3y vi\\u1ebft m\\u1ed9t \\u0111o\\u1ea1n t\\u1ed5ng k\\u1ebft ng\\u1eafn g\\u1ecdn, kh\\u00e1ch quan v\\u00e0 r\\u00f5 r\\u00e0ng. T\\u1eadp trung v\\u00e0o c\\u00e1c di\\u1ec5n bi\\u1ebfn n\\u1ed5i b\\u1eadt, xu h\\u01b0\\u1edbng ch\\u00ednh v\\u00e0 b\\u1ea5t k\\u1ef3 thay \\u0111\\u1ed5i \\u0111\\u00e1ng ch\\u00fa \\u00fd n\\u00e0o. Kh\\u00f4ng c\\u1ea7n m\\u1edf \\u0111\\u1ea7u hoa m\\u1ef9 hay tr\\u00ecnh b\\u00e0y theo ki\\u1ec3u ph\\u00f3ng vi\\u00ean, ch\\u1ec9 c\\u1ea7n n\\u1ed9i dung insight r\\u00f5 v\\u00e0 \\u0111\\u1ea7y \\u0111\\u1ee7, c\\u00f4 \\u0111\\u1ecdng trong m\\u1ed9t \\u0111o\\u1ea1n duy nh\\u1ea5t.\"}]",
+    "langfuse.observation.model.name": "gemini-2.0-flash",
+    "langfuse.observation.model.parameters": "{\"temperature\": 0.4}",
+    "langfuse.observation.metadata.ls_provider": "google_genai",
+    "langfuse.observation.metadata.ls_model_name": "gemini-2.0-flash",
+    "langfuse.observation.metadata.ls_model_type": "chat",
+    "langfuse.observation.metadata.ls_temperature": "0.4",
+    "langfuse.observation.type": "generation",
+    "langfuse.observation.output": "{\"role\": \"assistant\", \"content\": \"Trong th\\u00e1ng v\\u1eeba qua, l\\u0129nh v\\u1ef1c AI ch\\u1ee9ng ki\\u1ebfn nhi\\u1ec1u ph\\u00e1t tri\\u1ec3n \\u0111\\u00e1ng ch\\u00fa \\u00fd: C\\u00e1c c\\u00f4ng ty l\\u1edbn nh\\u01b0 Google DeepMind, OpenAI, Meta, v\\u00e0 MiniMax li\\u00ean t\\u1ee5c ra m\\u1eaft c\\u00e1c m\\u00f4 h\\u00ecnh AI m\\u1edbi, t\\u1eeb d\\u1ef1 b\\u00e1o th\\u1eddi ti\\u1ebft ch\\u00ednh x\\u00e1c h\\u01a1n (Google DeepMind Weather Lab) \\u0111\\u1ebfn c\\u00e1c LLM hi\\u1ec7u n\\u0103ng cao (MiniMax M1, Google Gemini 2.5 Flash-Lite, DeepSeek-TNG-R1T2-Chimera), t\\u1eadp trung v\\u00e0o hi\\u1ec7u su\\u1ea5t, t\\u1ed1c \\u0111\\u1ed9 v\\u00e0 chi ph\\u00ed. Meta t\\u00e1i c\\u1ea5u tr\\u00fac c\\u00e1c nh\\u00f3m AI \\u0111\\u1ec3 ph\\u00e1t tri\\u1ec3n c\\u00e1c h\\u1ec7 th\\u1ed1ng AI v\\u01b0\\u1ee3t tr\\u1ed9i, th\\u1ec3 hi\\u1ec7n s\\u1ef1 \\u0111\\u1ea7u t\\u01b0 m\\u1ea1nh m\\u1ebd v\\u00e0o l\\u0129nh v\\u1ef1c n\\u00e0y. V\\u1ea5n \\u0111\\u1ec1 b\\u1ea3n quy\\u1ec1n d\\u1eef li\\u1ec7u v\\u00e0 quy \\u0111\\u1ecbnh AI c\\u0169ng n\\u1ed5i l\\u00ean, v\\u1edbi Cloudflare ch\\u1eb7n tr\\u00ecnh thu th\\u1eadp d\\u1eef li\\u1ec7u AI v\\u00e0 c\\u00e1c CEO ch\\u00e2u \\u00c2u k\\u00eau g\\u1ecdi ho\\u00e3n thi h\\u00e0nh AI Act. C\\u00e1c c\\u00f4ng c\\u1ee5 AI \\u0111\\u00e3 ch\\u1ee9ng minh hi\\u1ec7u qu\\u1ea3 trong vi\\u1ec7c ti\\u1ebft ki\\u1ec7m chi ph\\u00ed v\\u00e0 t\\u0103ng doanh thu, nh\\u01b0 tr\\u01b0\\u1eddng h\\u1ee3p c\\u1ee7a Microsoft v\\u1edbi c\\u00e1c c\\u00f4ng c\\u1ee5 AI n\\u1ed9i b\\u1ed9. Ngo\\u00e0i ra, c\\u00e1c th\\u1ecfa thu\\u1eadn v\\u1ec1 AI gi\\u1eefa SAG-AFTRA v\\u00e0 c\\u00e1c c\\u00f4ng ty game cho th\\u1ea5y n\\u1ed7 l\\u1ef1c b\\u1ea3o v\\u1ec7 quy\\u1ec1n l\\u1ee3i c\\u1ee7a ng\\u01b0\\u1eddi lao \\u0111\\u1ed9ng trong b\\u1ed1i c\\u1ea3nh AI ph\\u00e1t tri\\u1ec3n.\"}",
+    "langfuse.observation.usage_details": "{\"input\": 804, \"output\": 253, \"total\": 1057, \"input_cache_read\": 0}"
+  },
+  "events": [],
+  "links": [],
+  "resource": {
+    "attributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.35.0",
+      "service.name": "unknown_service"
+    },
+    "schema_url": ""
+  },
+  "instrumentationScope": {
+    "name": "langfuse-sdk",
+    "version": "3.1.3",
+    "schema_url": "",
+    "attributes": {
+      "public_key": "pk-lf-a17c2d30-02f1-43ee-8d12-50aa9c2906f4"
+    }
+  }
+}
+
+[2025-07-13T01:02:14.078+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:15.078+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:15.732+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'hardware' (ID: 2025-07)
+[2025-07-13T01:02:15.784+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'science' (ID: 2025-07)
+[2025-07-13T01:02:15.838+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'business' (ID: 2025-07)
+[2025-07-13T01:02:15.891+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'ml-research' (ID: 2025-07)
+[2025-07-13T01:02:15.956+0000] {logging_mixin.py:188} INFO - ✅ Đã lưu insight cho collection 'data-points' (ID: 2025-07)
+[2025-07-13T01:02:15.956+0000] {logging_mixin.py:188} INFO - 
+📊 Tổng kết: Đã lưu thành công 5/5 insights vào database 'deeplearning_ai_insight'
+[2025-07-13T01:02:15.957+0000] {dags.py:238} INFO - Đã tạo và lưu thành công 5 insights vào database 'deeplearning_ai_insight'
+[2025-07-13T01:02:16.079+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-07-13T01:02:16.277+0000] {dags.py:242} INFO - Thống kê Insight Database: 11 insights trong 6 collections
+[2025-07-13T01:02:16.277+0000] {dags.py:247} INFO - Hoàn thành tạo insights tháng
+[2025-07-13T01:02:16.278+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-13T01:02:16.279+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-13T01:02:16.287+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_monthly_insights, task_id=generate_monthly_insights_per_collection, run_id=manual__2025-07-13T01:01:38.353814+00:00, execution_date=20250713T010138, start_date=20250713T010144, end_date=20250713T010216
+[2025-07-13T01:02:16.349+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-13T01:02:16.365+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-13T01:02:16.367+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

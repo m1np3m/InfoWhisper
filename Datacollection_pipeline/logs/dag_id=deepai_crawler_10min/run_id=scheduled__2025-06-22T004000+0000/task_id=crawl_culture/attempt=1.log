@@ -1,0 +1,56 @@
+[2025-06-22T00:50:19.587+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T00:50:19.603+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T00:40:00+00:00 [queued]>
+[2025-06-22T00:50:19.612+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T00:40:00+00:00 [queued]>
+[2025-06-22T00:50:19.613+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T00:50:19.630+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_culture> on 2025-06-22 00:40:00+00:00
+[2025-06-22T00:50:19.640+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=6111) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T00:50:19.642+0000] {standard_task_runner.py:63} INFO - Started process 6140 to run task
+[2025-06-22T00:50:19.643+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_culture', 'scheduled__2025-06-22T00:40:00+00:00', '--job-id', '186', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpw23r8vel']
+[2025-06-22T00:50:19.646+0000] {standard_task_runner.py:91} INFO - Job 186: Subtask crawl_culture
+[2025-06-22T00:50:19.690+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_culture scheduled__2025-06-22T00:40:00+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T00:50:19.783+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_culture' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-22T00:40:00+00:00'
+[2025-06-22T00:50:19.784+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T00:50:19.799+0000] {dags.py:169} INFO - Bắt đầu crawl category: culture
+[2025-06-22T00:50:19.803+0000] {dags.py:177} ERROR - Lỗi khi crawl category culture: DeepLearningAICrawler.__init__() got an unexpected keyword argument 'lf'
+[2025-06-22T00:50:19.804+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T00:50:19.804+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 172, in crawl_deepai_category
+    asyncio.run(_crawl_deepai_category(category_url, category_name, max_articles, min_articles_threshold, max_load_more_clicks))
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 185, in _crawl_deepai_category
+    crawler = DeepLearningAICrawler(
+              ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DeepLearningAICrawler.__init__() got an unexpected keyword argument 'lf'
+[2025-06-22T00:50:19.818+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_culture, run_id=scheduled__2025-06-22T00:40:00+00:00, execution_date=20250622T004000, start_date=20250622T005019, end_date=20250622T005019
+[2025-06-22T00:50:19.830+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 186 for task crawl_culture (DeepLearningAICrawler.__init__() got an unexpected keyword argument 'lf'; 6140)
+[2025-06-22T00:50:19.858+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-22T00:50:19.882+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T00:50:19.885+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

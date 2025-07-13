@@ -1,0 +1,122 @@
+[2025-06-21T22:53:25.462+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-21T22:53:25.483+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_ml-research manual__2025-06-21T22:50:44.479568+00:00 [queued]>
+[2025-06-21T22:53:25.494+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_ml-research manual__2025-06-21T22:50:44.479568+00:00 [queued]>
+[2025-06-21T22:53:25.495+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-21T22:53:25.526+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_ml-research> on 2025-06-21 22:50:44.479568+00:00
+[2025-06-21T22:53:25.541+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2909) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-21T22:53:25.543+0000] {standard_task_runner.py:63} INFO - Started process 2976 to run task
+[2025-06-21T22:53:25.544+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_ml-research', 'manual__2025-06-21T22:50:44.479568+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpl69yyakw']
+[2025-06-21T22:53:25.547+0000] {standard_task_runner.py:91} INFO - Job 47: Subtask crawl_ml-research
+[2025-06-21T22:53:25.608+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_ml-research manual__2025-06-21T22:50:44.479568+00:00 [running]> on host 92193d0efdf7
+[2025-06-21T22:53:25.759+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_ml-research' AIRFLOW_CTX_EXECUTION_DATE='2025-06-21T22:50:44.479568+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-21T22:50:44.479568+00:00'
+[2025-06-21T22:53:25.761+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-21T22:53:25.777+0000] {dags.py:167} INFO - Bắt đầu crawl category: ml-research
+[2025-06-21T22:53:25.897+0000] {crawler_deeplai.py:49} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-21T22:53:25.931+0000] {crawler_deeplai.py:463} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-21T22:53:26.752+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:53:26.753+0000] {crawler_deeplai.py:177} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/research/
+[2025-06-21T22:53:26.753+0000] {crawler_deeplai.py:178} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-21T22:53:31.203+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/research/                
+| ✓ | ⏱: 4.45s
+[2025-06-21T22:53:31.314+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/research/                
+| ✓ | ⏱: 0.11s
+[2025-06-21T22:53:31.317+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/research/                
+| ✓ | ⏱: 4.56s
+[2025-06-21T22:53:31.318+0000] {crawler_deeplai.py:182} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-21T22:53:31.360+0000] {crawler_deeplai.py:202} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-21T22:53:31.361+0000] {crawler_deeplai.py:206} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-21T22:53:31.361+0000] {crawler_deeplai.py:208} INFO -   1. https://www.deeplearning.ai/the-batch/alibaba-releases-the-qwen3-family-of-open-llms-with-optional-reasoning/
+[2025-06-21T22:53:31.362+0000] {crawler_deeplai.py:208} INFO -   2. https://www.deeplearning.ai/the-batch/anthropic-debuts-new-claude-4-sonnet-and-claude-4-opus-models-featuring-top-benchmarks-in-coding/
+[2025-06-21T22:53:31.362+0000] {crawler_deeplai.py:208} INFO -   3. https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-06-21T22:53:31.363+0000] {crawler_deeplai.py:208} INFO -   4. https://www.deeplearning.ai/the-batch/black-forest-labs-launches-flux-1-kontext-for-generating-and-alterating-images-with-consistent-details/
+[2025-06-21T22:53:31.363+0000] {crawler_deeplai.py:208} INFO -   5. https://www.deeplearning.ai/the-batch/columbia-university-researchers-show-how-to-trick-trusting-ai-agents-with-poisoned-links/
+[2025-06-21T22:53:31.364+0000] {crawler_deeplai.py:212} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-21T22:53:32.628+0000] {crawler_deeplai.py:456} INFO - Đã lọc: 30 URLs ban đầu -> 5 URLs mới
+[2025-06-21T22:53:32.629+0000] {crawler_deeplai.py:477} INFO - 📝 Đang crawl 5 bài viết mới...
+[2025-06-21T22:53:32.629+0000] {crawler_deeplai.py:484} INFO - [1/5] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/apple-updates-its-on-device-and-cloud-ai-models-introduces-a-new-developer-api/
+[2025-06-21T22:53:32.784+0000] {crawler_deeplai.py:484} INFO - [2/5] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/black-forest-labs-launches-flux-1-kontext-for-generating-and-alterating-images-with-consistent-details/
+[2025-06-21T22:53:32.993+0000] {crawler_deeplai.py:484} INFO - [3/5] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/openai-debuts-o3-pro-an-updated-reasoning-model-that-applies-more-tokens-at-inference/
+[2025-06-21T22:53:34.397+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:53:34.484+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:53:34.867+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:53:38.771+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/black-fore...g-and-alterating-images-with-
+consistent-details/  | ✓ | ⏱: 4.28s
+[2025-06-21T22:53:38.975+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/black-fore...g-and-alterating-images-with-
+consistent-details/  | ✓ | ⏱: 0.20s
+[2025-06-21T22:53:38.981+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/black-fore...g-and-alterating-images-with-
+consistent-details/  | ✓ | ⏱: 4.49s
+[2025-06-21T22:53:39.095+0000] {logging_mixin.py:188} INFO - Title: More Consistent Characters and Styles
+[2025-06-21T22:53:39.096+0000] {logging_mixin.py:188} INFO - Subtitle: Black Forest Labs Launches FLUX.1 Kontext for Generating and Alterating Images with Consistent Details
+[2025-06-21T22:53:49.386+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8106
+[2025-06-21T22:53:49.407+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/openai-deb...ing-model-that-applies-more-t
+okens-at-inference/  | ✓ | ⏱: 15.70s
+[2025-06-21T22:53:49.461+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/openai-deb...ing-model-that-applies-more-t
+okens-at-inference/  | ✓ | ⏱: 0.05s
+[2025-06-21T22:53:49.463+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/openai-deb...ing-model-that-applies-more-t
+okens-at-inference/  | ✓ | ⏱: 15.76s
+[2025-06-21T22:53:49.488+0000] {logging_mixin.py:188} INFO - Title: More Reasoning for Harder Problems
+[2025-06-21T22:53:49.489+0000] {logging_mixin.py:188} INFO - Subtitle: OpenAI debuts o3-pro, an updated reasoning model that applies more tokens at inference
+[2025-06-21T22:53:54.983+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8110
+[2025-06-21T22:53:55.375+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/apple-upda...-cloud-ai-models-introduces-a
+-new-developer-api/  | ✓ | ⏱: 21.20s
+[2025-06-21T22:53:55.443+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/apple-upda...-cloud-ai-models-introduces-a
+-new-developer-api/  | ✓ | ⏱: 0.07s
+[2025-06-21T22:53:55.445+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/apple-upda...-cloud-ai-models-introduces-a
+-new-developer-api/  | ✓ | ⏱: 21.27s
+[2025-06-21T22:53:55.471+0000] {logging_mixin.py:188} INFO - Title: Apple Sharpens Its GenAI Profile
+[2025-06-21T22:53:55.472+0000] {logging_mixin.py:188} INFO - Subtitle: Apple updates its on-device and cloud AI models, introduces a new developer API
+[2025-06-21T22:54:01.842+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8091
+[2025-06-21T22:54:01.885+0000] {crawler_deeplai.py:488} INFO -     ✅ More Consistent Characters and Styles...
+[2025-06-21T22:54:01.885+0000] {crawler_deeplai.py:488} INFO -     ✅ More Reasoning for Harder Problems...
+[2025-06-21T22:54:02.311+0000] {crawler_deeplai.py:488} INFO -     ✅ Apple Sharpens Its GenAI Profile...
+[2025-06-21T22:54:02.888+0000] {crawler_deeplai.py:484} INFO - [4/5] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/stanford-and-princeton-researchers-fine-tune-a-language-model-to-identify-racial-discrimination-in-property/
+[2025-06-21T22:54:03.200+0000] {crawler_deeplai.py:484} INFO - [5/5] 🔄 Đang crawl: https://www.deeplearning.ai/the-batch/storm-processes-fewer-tokens-and-still-beats-gpt-4o-on-video-understanding-benchmarks/
+[2025-06-21T22:54:04.508+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:54:04.582+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-21T22:54:06.937+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/stanford-a...l-to-identify-racial-discrimi
+nation-in-property/  | ✓ | ⏱: 2.42s
+[2025-06-21T22:54:07.100+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/stanford-a...l-to-identify-racial-discrimi
+nation-in-property/  | ✓ | ⏱: 0.16s
+[2025-06-21T22:54:07.103+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/stanford-a...l-to-identify-racial-discrimi
+nation-in-property/  | ✓ | ⏱: 2.59s
+[2025-06-21T22:54:07.158+0000] {logging_mixin.py:188} INFO - Title: LLM Rights Historical Wrongs
+[2025-06-21T22:54:07.159+0000] {logging_mixin.py:188} INFO - Subtitle: Stanford and Princeton researchers fine-tune a language model to identify racial discrimination in property
+[2025-06-21T22:54:12.608+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.7970
+[2025-06-21T22:54:12.759+0000] {crawler_deeplai.py:488} INFO -     ✅ LLM Rights Historical Wrongs...
+[2025-06-21T22:54:12.804+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://www.deeplearning.ai/the-batch/storm-proc...-beats-gpt-4o-on-video-unders
+tanding-benchmarks/  | ✓ | ⏱: 8.22s
+[2025-06-21T22:54:12.879+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://www.deeplearning.ai/the-batch/storm-proc...-beats-gpt-4o-on-video-unders
+tanding-benchmarks/  | ✓ | ⏱: 0.07s
+[2025-06-21T22:54:12.881+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://www.deeplearning.ai/the-batch/storm-proc...-beats-gpt-4o-on-video-unders
+tanding-benchmarks/  | ✓ | ⏱: 8.30s
+[2025-06-21T22:54:12.922+0000] {logging_mixin.py:188} INFO - Title: Better Video, Fewer Tokens
+[2025-06-21T22:54:12.923+0000] {logging_mixin.py:188} INFO - Subtitle: STORM Processes Fewer Tokens And Still Beats GPT-4o On Video Understanding Benchmarks
+[2025-06-21T22:54:17.879+0000] {summary_gemini.py:125} INFO - [BERT BULLET] F1=0.8028
+[2025-06-21T22:54:18.077+0000] {crawler_deeplai.py:488} INFO -     ✅ Better Video, Fewer Tokens...
+[2025-06-21T22:54:19.079+0000] {crawler_deeplai.py:501} INFO - ⏱️ Tổng thời gian crawl: 53.15 giây
+[2025-06-21T22:54:19.080+0000] {crawler_deeplai.py:502} INFO - 📊 Thành công crawl: 5/5 bài viết
+[2025-06-21T22:54:19.382+0000] {crawler_deeplai.py:529} INFO - 💾 Đã lưu thành công 5/5 bài viết vào collection 'ml-research'
+[2025-06-21T22:54:19.443+0000] {dags.py:172} INFO - Hoàn thành crawl category: ml-research
+[2025-06-21T22:54:19.444+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-21T22:54:19.445+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-21T22:54:19.457+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=deepai_crawler_10min, task_id=crawl_ml-research, run_id=manual__2025-06-21T22:50:44.479568+00:00, execution_date=20250621T225044, start_date=20250621T225325, end_date=20250621T225419
+[2025-06-21T22:54:19.583+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-21T22:54:19.604+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-21T22:54:19.607+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

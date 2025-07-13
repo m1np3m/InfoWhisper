@@ -1,0 +1,358 @@
+[2025-06-02T14:18:49.568+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-02T14:18:49.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-06-02T13:30:00+00:00 [queued]>
+[2025-06-02T14:18:49.650+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-06-02T13:30:00+00:00 [queued]>
+[2025-06-02T14:18:49.651+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-02T14:18:49.691+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_giao-duc> on 2025-06-02 13:30:00+00:00
+[2025-06-02T14:18:49.706+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=8775) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-02T14:18:49.709+0000] {standard_task_runner.py:63} INFO - Started process 8812 to run task
+[2025-06-02T14:18:49.711+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_giao-duc', 'scheduled__2025-06-02T13:30:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpua0xhxhw']
+[2025-06-02T14:18:49.715+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask crawl_giao-duc
+[2025-06-02T14:18:49.807+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_giao-duc scheduled__2025-06-02T13:30:00+00:00 [running]> on host 1c99532c5ee4
+[2025-06-02T14:18:49.939+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_giao-duc' AIRFLOW_CTX_EXECUTION_DATE='2025-06-02T13:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-02T13:30:00+00:00'
+[2025-06-02T14:18:49.941+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-02T14:18:50.295+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-06-02T14:18:51.810+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:18:59.449+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 7.44s
+[2025-06-02T14:19:00.576+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 1.12s
+[2025-06-02T14:19:00.583+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=000006          
+| ✓ | ⏱: 8.57s
+[2025-06-02T14:19:01.769+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục giao-duc
+[2025-06-02T14:19:02.738+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 25 URLs sau xử lý live
+[2025-06-02T14:19:02.740+0000] {crawler.py:255} INFO - Đang crawl 25 bài viết mới từ danh mục giao-duc...
+[2025-06-02T14:19:02.741+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/dap-an-de-toan-vong-1-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2406947.html
+[2025-06-02T14:19:04.247+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:19:11.468+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/dap-an-de-toan-vong-1-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406947.html  | ✓ | ⏱: 7.11s
+[2025-06-02T14:19:12.117+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/dap-an-de-toan-vong-1-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406947.html  | ✓ | ⏱: 0.64s
+[2025-06-02T14:19:12.121+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/dap-an-de-toan-vong-1-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406947.html  | ✓ | ⏱: 7.77s
+[2025-06-02T14:19:13.454+0000] {crawler.py:262} INFO -     ✓ Lời giải đề Toán vòng 1 thi lớp 10 Trường THPT Chuyên Khoa h...
+
+[2025-06-02T14:19:13.456+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-mon-van-thi-vao-lop-10-da-nang-nam-2025-chinh-thuc-2407216.html
+[2025-06-02T14:19:14.993+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:19:21.330+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-mon-van-thi-vao-lop-10-da-nang-nam-2025-chinh-thuc-2407
+216.html             | ✓ | ⏱: 6.21s
+[2025-06-02T14:19:21.917+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-mon-van-thi-vao-lop-10-da-nang-nam-2025-chinh-thuc-2407
+216.html             | ✓ | ⏱: 0.57s
+[2025-06-02T14:19:21.930+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-mon-van-thi-vao-lop-10-da-nang-nam-2025-chinh-thuc-2407
+216.html             | ✓ | ⏱: 6.81s
+[2025-06-02T14:19:22.583+0000] {crawler.py:262} INFO -     ✓ Đề môn Văn thi vào lớp 10 Đà Nẵng năm 2025...
+
+[2025-06-02T14:19:22.584+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-tieng-anh-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407016.html
+[2025-06-02T14:19:23.855+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:19:33.274+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-tieng-anh-thi-lop-10-tr...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407016.html  | ✓ | ⏱: 9.40s
+[2025-06-02T14:19:33.940+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-tieng-anh-thi-lop-10-tr...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407016.html  | ✓ | ⏱: 0.65s
+[2025-06-02T14:19:33.952+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-tieng-anh-thi-lop-10-tr...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407016.html  | ✓ | ⏱: 10.08s
+[2025-06-02T14:19:35.089+0000] {crawler.py:262} INFO -     ✓ Đề Tiếng Anh thi lớp 10 Trường THPT Chuyên Khoa học Tự nhiên...
+
+[2025-06-02T14:19:35.090+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-van-vao-lop-10-tinh-ninh-binh-nam-2025-2407168.html
+[2025-06-02T14:19:37.768+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:19:55.640+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-van-vao-lop-10-tinh-ninh-binh-na
+m-2025-2407168.html  | ✓ | ⏱: 17.44s
+[2025-06-02T14:19:56.750+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-van-vao-lop-10-tinh-ninh-binh-na
+m-2025-2407168.html  | ✓ | ⏱: 1.09s
+[2025-06-02T14:19:56.767+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-van-vao-lop-10-tinh-ninh-binh-na
+m-2025-2407168.html  | ✓ | ⏱: 18.57s
+[2025-06-02T14:19:57.572+0000] {crawler.py:262} INFO -     ✓ Đề thi môn Ngữ văn chính thức vào lớp 10 tỉnh Ninh Bình năm ...
+
+[2025-06-02T14:19:57.574+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/giao-vien-tat-va-xuc-pham-hoc-sinh-gia-dinh-nhan-loi-xin-loi-nhung-chua-rut-don-2407217.html
+[2025-06-02T14:19:59.531+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:20:05.094+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/giao-vien-tat-va-xuc-pham-...nhan-loi-xin-loi-nhung-chua-r
+ut-don-2407217.html  | ✓ | ⏱: 5.52s
+[2025-06-02T14:20:05.858+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/giao-vien-tat-va-xuc-pham-...nhan-loi-xin-loi-nhung-chua-r
+ut-don-2407217.html  | ✓ | ⏱: 0.76s
+[2025-06-02T14:20:05.862+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/giao-vien-tat-va-xuc-pham-...nhan-loi-xin-loi-nhung-chua-r
+ut-don-2407217.html  | ✓ | ⏱: 6.29s
+[2025-06-02T14:20:07.257+0000] {crawler.py:262} INFO -     ✓ Giáo viên tát và xúc phạm học sinh, gia đình nhận lời xin lỗ...
+
+[2025-06-02T14:20:07.258+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-quang-ninh-nam-2025-2407011.html
+[2025-06-02T14:20:08.572+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:20:19.447+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-quang-ninh-nam-2025-240701
+1.html               | ✓ | ⏱: 10.74s
+[2025-06-02T14:20:20.228+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-quang-ninh-nam-2025-240701
+1.html               | ✓ | ⏱: 0.77s
+[2025-06-02T14:20:20.234+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-quang-ninh-nam-2025-240701
+1.html               | ✓ | ⏱: 11.53s
+[2025-06-02T14:20:21.207+0000] {crawler.py:262} INFO -     ✓ Đề môn Toán thi vào lớp 10 tỉnh Quảng Ninh năm 2025...
+
+[2025-06-02T14:20:21.211+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-ngu-van-lop-10-ban-ve-hien-tuong-xa-rac-bua-bai-khap-noi-2407200.html
+[2025-06-02T14:20:22.353+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:20:30.513+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-ngu-van-lop-10-ban-ve-hien-tuong-xa-rac-bua-bai-kha
+p-noi-2407200.html   | ✓ | ⏱: 7.98s
+[2025-06-02T14:20:31.175+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-ngu-van-lop-10-ban-ve-hien-tuong-xa-rac-bua-bai-kha
+p-noi-2407200.html   | ✓ | ⏱: 0.66s
+[2025-06-02T14:20:31.181+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-ngu-van-lop-10-ban-ve-hien-tuong-xa-rac-bua-bai-kha
+p-noi-2407200.html   | ✓ | ⏱: 8.65s
+[2025-06-02T14:20:32.384+0000] {crawler.py:262} INFO -     ✓ Đề thi Ngữ văn lớp 10 bàn về hiện tượng xả rác bừa bãi khắp ...
+
+[2025-06-02T14:20:32.385+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/uef-trao-tang-hoc-bong-nam-2025-mang-niem-vui-som-den-voi-thi-sinh-2406820.html
+[2025-06-02T14:20:34.698+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:20:45.955+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/uef-trao-tang-hoc-bong-nam...-mang-niem-vui-som-den-voi-th
+i-sinh-2406820.html  | ✓ | ⏱: 10.93s
+[2025-06-02T14:20:46.657+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/uef-trao-tang-hoc-bong-nam...-mang-niem-vui-som-den-voi-th
+i-sinh-2406820.html  | ✓ | ⏱: 0.69s
+[2025-06-02T14:20:46.660+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/uef-trao-tang-hoc-bong-nam...-mang-niem-vui-som-den-voi-th
+i-sinh-2406820.html  | ✓ | ⏱: 11.64s
+[2025-06-02T14:20:47.805+0000] {crawler.py:262} INFO -     ✓ UEF trao tặng học bổng năm 2025, mang niềm vui sớm đến với t...
+
+[2025-06-02T14:20:47.806+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/loi-giam-thi-hang-chuc-thi-sinh-lam-mat-oan-30-phut-lam-bai-thi-vao-dai-hoc-2407173.html
+[2025-06-02T14:20:49.038+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:20:53.900+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/loi-giam-thi-hang-chuc-thi...oan-30-phut-lam-bai-thi-vao-d
+ai-hoc-2407173.html  | ✓ | ⏱: 4.77s
+[2025-06-02T14:20:54.635+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/loi-giam-thi-hang-chuc-thi...oan-30-phut-lam-bai-thi-vao-d
+ai-hoc-2407173.html  | ✓ | ⏱: 0.73s
+[2025-06-02T14:20:54.641+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/loi-giam-thi-hang-chuc-thi...oan-30-phut-lam-bai-thi-vao-d
+ai-hoc-2407173.html  | ✓ | ⏱: 5.51s
+[2025-06-02T14:20:55.658+0000] {crawler.py:262} INFO -     ✓ Lỗi của giám thị, hàng chục thí sinh 'mất oan' 30 phút làm b...
+
+[2025-06-02T14:20:55.660+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-toan-vong-1-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2406942.html
+[2025-06-02T14:20:57.118+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:21:06.826+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-toan-vong-1-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406942.html  | ✓ | ⏱: 9.59s
+[2025-06-02T14:21:07.233+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-toan-vong-1-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406942.html  | ✓ | ⏱: 0.39s
+[2025-06-02T14:21:07.237+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-toan-vong-1-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2406942.html  | ✓ | ⏱: 10.00s
+[2025-06-02T14:21:08.535+0000] {crawler.py:262} INFO -     ✓ Đề Toán vòng 1 thi lớp 10 Trường THPT Chuyên Khoa học Tự nhi...
+
+[2025-06-02T14:21:08.536+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-chinh-thuc-mon-toan-vao-lop-10-tinh-thai-binh-nam-2025-2407049.html
+[2025-06-02T14:21:10.055+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:21:17.406+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-toan-vao-lop-10-tinh-thai-binh-nam-2
+025-2407049.html     | ✓ | ⏱: 7.16s
+[2025-06-02T14:21:17.930+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-toan-vao-lop-10-tinh-thai-binh-nam-2
+025-2407049.html     | ✓ | ⏱: 0.52s
+[2025-06-02T14:21:17.934+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-toan-vao-lop-10-tinh-thai-binh-nam-2
+025-2407049.html     | ✓ | ⏱: 7.70s
+[2025-06-02T14:21:19.611+0000] {crawler.py:262} INFO -     ✓ Đề thi chính thức môn Toán vào lớp 10 tỉnh Thái Bình năm 202...
+
+[2025-06-02T14:21:19.617+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/chang-trai-bi-bo-ruong-bo-gianh-bang-thac-si-luat-harvard-nho-tinh-yeu-cua-me-2407068.html
+[2025-06-02T14:21:22.533+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:21:31.948+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/chang-trai-bi-bo-ruong-bo-...si-luat-harvard-nho-tinh-yeu-
+cua-me-2407068.html  | ✓ | ⏱: 9.21s
+[2025-06-02T14:21:32.965+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/chang-trai-bi-bo-ruong-bo-...si-luat-harvard-nho-tinh-yeu-
+cua-me-2407068.html  | ✓ | ⏱: 1.00s
+[2025-06-02T14:21:32.970+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/chang-trai-bi-bo-ruong-bo-...si-luat-harvard-nho-tinh-yeu-
+cua-me-2407068.html  | ✓ | ⏱: 10.24s
+[2025-06-02T14:21:33.900+0000] {crawler.py:262} INFO -     ✓ Chàng trai bị bố bỏ mặc giành được bằng thạc sĩ luật Harvard...
+
+[2025-06-02T14:21:33.902+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/ong-noi-gay-sot-voi-cach-khien-khoi-nghi-he-han-che-dien-thoai-cham-lam-viec-2407106.html
+[2025-06-02T14:21:35.445+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:21:41.466+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/ong-noi-gay-sot-voi-cach-k...he-han-che-dien-thoai-cham-la
+m-viec-2407106.html  | ✓ | ⏱: 5.82s
+[2025-06-02T14:21:42.264+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/ong-noi-gay-sot-voi-cach-k...he-han-che-dien-thoai-cham-la
+m-viec-2407106.html  | ✓ | ⏱: 0.79s
+[2025-06-02T14:21:42.268+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/ong-noi-gay-sot-voi-cach-k...he-han-che-dien-thoai-cham-la
+m-viec-2407106.html  | ✓ | ⏱: 6.63s
+[2025-06-02T14:21:43.103+0000] {crawler.py:262} INFO -     ✓ Ông nội gây sốt với cách khiến ‘khối nghỉ hè’ hạn chế điện t...
+
+[2025-06-02T14:21:43.104+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-vao-lop-10-tinh-thai-binh-nam-2025-2407164.html
+[2025-06-02T14:21:45.003+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:21:54.174+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-vao-lop-10-tinh-thai-binh-nam-20
+25-2407164.html      | ✓ | ⏱: 8.87s
+[2025-06-02T14:21:54.468+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-vao-lop-10-tinh-thai-binh-nam-20
+25-2407164.html      | ✓ | ⏱: 0.29s
+[2025-06-02T14:21:54.471+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-chinh-thuc-mon-ngu-vao-lop-10-tinh-thai-binh-nam-20
+25-2407164.html      | ✓ | ⏱: 9.17s
+[2025-06-02T14:21:55.047+0000] {crawler.py:262} INFO -     ✓ Đề thi môn Ngữ văn chính thức vào lớp 10 tỉnh Thái Bình năm ...
+
+[2025-06-02T14:21:55.048+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/7-moc-thoi-gian-quan-trong-thi-sinh-can-nho-de-khong-truot-oan-dai-hoc-2403847.html
+[2025-06-02T14:21:56.222+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:22:01.889+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/7-moc-thoi-gian-quan-trong...-can-nho-de-khong-truot-oan-d
+ai-hoc-2403847.html  | ✓ | ⏱: 5.59s
+[2025-06-02T14:22:02.465+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/7-moc-thoi-gian-quan-trong...-can-nho-de-khong-truot-oan-d
+ai-hoc-2403847.html  | ✓ | ⏱: 0.57s
+[2025-06-02T14:22:02.470+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/7-moc-thoi-gian-quan-trong...-can-nho-de-khong-truot-oan-d
+ai-hoc-2403847.html  | ✓ | ⏱: 6.17s
+[2025-06-02T14:22:03.514+0000] {crawler.py:262} INFO -     ✓ 7 mốc thời gian quan trọng thí sinh cần nhớ để không 'trượt ...
+
+[2025-06-02T14:22:03.515+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/dap-an-de-toan-vong-2-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407190.html
+[2025-06-02T14:22:04.687+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:22:14.195+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/dap-an-de-toan-vong-2-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407190.html  | ✓ | ⏱: 9.25s
+[2025-06-02T14:22:14.448+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/dap-an-de-toan-vong-2-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407190.html  | ✓ | ⏱: 0.25s
+[2025-06-02T14:22:14.451+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/dap-an-de-toan-vong-2-thi-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407190.html  | ✓ | ⏱: 9.51s
+[2025-06-02T14:22:16.362+0000] {crawler.py:262} INFO -     ✓ Lời giải đề Toán vòng 2 thi lớp 10 Trường THPT Chuyên Khoa h...
+
+[2025-06-02T14:22:16.364+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-thai-binh-nam-2025-2407301.html
+[2025-06-02T14:22:17.905+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:22:23.653+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-thai-binh-n
+am-2025-2407301.html | ✓ | ⏱: 5.55s
+[2025-06-02T14:22:24.070+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-thai-binh-n
+am-2025-2407301.html | ✓ | ⏱: 0.41s
+[2025-06-02T14:22:24.073+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-thai-binh-n
+am-2025-2407301.html | ✓ | ⏱: 5.97s
+[2025-06-02T14:22:24.993+0000] {crawler.py:262} INFO -     ✓ Đề thi môn Tiếng Anh tuyển sinh vào lớp 10 tại tỉnh Thái Bìn...
+
+[2025-06-02T14:22:24.994+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-ninh-nam-2025-2407307.html
+[2025-06-02T14:22:26.926+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:22:38.390+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-ninh-nam-20
+25-2407307.html      | ✓ | ⏱: 11.36s
+[2025-06-02T14:22:38.985+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-ninh-nam-20
+25-2407307.html      | ✓ | ⏱: 0.59s
+[2025-06-02T14:22:38.990+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-thi-mon-tieng-anh-tuyen-sinh-vao-lop-10-tai-ninh-nam-20
+25-2407307.html      | ✓ | ⏱: 11.96s
+[2025-06-02T14:22:40.104+0000] {crawler.py:262} INFO -     ✓ Đề thi chính thức môn Tiếng Anh vào lớp 10 của tỉnh Ninh Bìn...
+
+[2025-06-02T14:22:40.105+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-toan-chuyen-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407183.html
+[2025-06-02T14:22:42.240+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:22:49.719+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-toan-chuyen-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407183.html  | ✓ | ⏱: 7.22s
+[2025-06-02T14:22:49.995+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-toan-chuyen-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407183.html  | ✓ | ⏱: 0.27s
+[2025-06-02T14:22:49.997+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-toan-chuyen-thi-lop-10-...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407183.html  | ✓ | ⏱: 7.50s
+[2025-06-02T14:22:50.729+0000] {crawler.py:262} INFO -     ✓ Đề Toán chuyên thi lớp 10 Trường THPT Chuyên Khoa học Tự nhi...
+
+[2025-06-02T14:22:50.730+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-mon-tieng-anh-thi-vao-lop-10-tinh-vinh-phuc-nam-2025-chinh-thuc-2407008.html
+[2025-06-02T14:22:52.445+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:23:03.564+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-mon-tieng-anh-thi-vao-l...-tinh-vinh-phuc-nam-2025-chin
+h-thuc-2407008.html  | ✓ | ⏱: 10.97s
+[2025-06-02T14:23:04.358+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-mon-tieng-anh-thi-vao-l...-tinh-vinh-phuc-nam-2025-chin
+h-thuc-2407008.html  | ✓ | ⏱: 0.78s
+[2025-06-02T14:23:04.371+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-mon-tieng-anh-thi-vao-l...-tinh-vinh-phuc-nam-2025-chin
+h-thuc-2407008.html  | ✓ | ⏱: 11.78s
+[2025-06-02T14:23:05.624+0000] {crawler.py:262} INFO -     ✓ Đề môn Tiếng Anh thi vào lớp 10 tỉnh Vĩnh Phúc năm 2025...
+
+[2025-06-02T14:23:05.629+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-hoa-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407280.html
+[2025-06-02T14:23:08.716+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:23:14.738+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-hoa-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam
+-2025-2407280.html   | ✓ | ⏱: 5.83s
+[2025-06-02T14:23:15.380+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-hoa-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam
+-2025-2407280.html   | ✓ | ⏱: 0.64s
+[2025-06-02T14:23:15.388+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-hoa-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam
+-2025-2407280.html   | ✓ | ⏱: 6.48s
+[2025-06-02T14:23:16.149+0000] {crawler.py:262} INFO -     ✓ Đề Hóa thi lớp 10 Trường THPT Chuyên Khoa học Tự nhiên năm 2...
+
+[2025-06-02T14:23:16.153+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-sinh-hoc-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407188.html
+[2025-06-02T14:23:18.204+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:23:26.751+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-sinh-hoc-thi-lop-10-tru...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407188.html  | ✓ | ⏱: 8.33s
+[2025-06-02T14:23:27.868+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-sinh-hoc-thi-lop-10-tru...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407188.html  | ✓ | ⏱: 1.11s
+[2025-06-02T14:23:27.883+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-sinh-hoc-thi-lop-10-tru...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407188.html  | ✓ | ⏱: 9.46s
+[2025-06-02T14:23:28.877+0000] {crawler.py:262} INFO -     ✓ Đề Sinh học thi lớp 10 Trường THPT Chuyên Khoa học Tự nhiên ...
+
+[2025-06-02T14:23:28.886+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-vinh-phuc-nam-2025-2407142.html
+[2025-06-02T14:23:30.613+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:23:39.625+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-vinh-phuc-nam-2025-2407142
+.html                | ✓ | ⏱: 8.75s
+[2025-06-02T14:23:39.954+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-vinh-phuc-nam-2025-2407142
+.html                | ✓ | ⏱: 0.32s
+[2025-06-02T14:23:39.957+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-mon-toan-thi-vao-lop-10-tinh-vinh-phuc-nam-2025-2407142
+.html                | ✓ | ⏱: 9.09s
+[2025-06-02T14:23:40.429+0000] {crawler.py:262} INFO -     ✓ Đề môn Toán chính thức thi vào lớp 10 tỉnh Vĩnh Phúc năm 202...
+
+[2025-06-02T14:23:40.430+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/de-vat-ly-thi-lop-10-truong-thpt-chuyen-khoa-hoc-tu-nhien-nam-2025-2407270.html
+[2025-06-02T14:23:41.667+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:23:47.506+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/de-vat-ly-thi-lop-10-truon...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407270.html  | ✓ | ⏱: 5.69s
+[2025-06-02T14:23:48.001+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/de-vat-ly-thi-lop-10-truon...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407270.html  | ✓ | ⏱: 0.48s
+[2025-06-02T14:23:48.004+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/de-vat-ly-thi-lop-10-truon...t-chuyen-khoa-hoc-tu-nhien-na
+m-2025-2407270.html  | ✓ | ⏱: 6.19s
+[2025-06-02T14:23:48.932+0000] {crawler.py:262} INFO -     ✓ Đề Vật lý thi lớp 10 Trường THPT Chuyên Khoa học Tự nhiên nă...
+
+[2025-06-02T14:23:48.933+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/xuc-dong-hinh-anh-nam-sinh-cong-ban-den-phong-thi-vao-lop-10-tai-quang-ninh-2407370.html
+[2025-06-02T14:23:50.615+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-02T14:24:00.078+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/xuc-dong-hinh-anh-nam-sinh...phong-thi-vao-lop-10-tai-quan
+g-ninh-2407370.html  | ✓ | ⏱: 9.19s
+[2025-06-02T14:24:00.443+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/xuc-dong-hinh-anh-nam-sinh...phong-thi-vao-lop-10-tai-quan
+g-ninh-2407370.html  | ✓ | ⏱: 0.36s
+[2025-06-02T14:24:00.445+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/xuc-dong-hinh-anh-nam-sinh...phong-thi-vao-lop-10-tai-quan
+g-ninh-2407370.html  | ✓ | ⏱: 9.56s
+[2025-06-02T14:24:01.163+0000] {crawler.py:262} INFO -     ✓ Nam sinh được tuyển thẳng cõng bạn đi thi lớp 10: Lý do khiế...
+
+[2025-06-02T14:24:01.164+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 310.87 giây
+[2025-06-02T14:24:01.462+0000] {crawler.py:292} INFO - Đã lưu 25 bài viết vào collection 'giao-duc'
+[2025-06-02T14:24:01.404+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-02T14:24:01.406+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-02T14:24:01.425+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_giao-duc, run_id=scheduled__2025-06-02T13:30:00+00:00, execution_date=20250602T133000, start_date=20250602T141849, end_date=20250602T142401
+[2025-06-02T14:24:01.532+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-02T14:24:01.612+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-02T14:24:01.621+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

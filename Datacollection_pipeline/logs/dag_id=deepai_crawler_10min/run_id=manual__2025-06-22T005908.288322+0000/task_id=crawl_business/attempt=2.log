@@ -1,0 +1,88 @@
+[2025-06-22T09:10:23.905+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T09:10:23.923+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [queued]>
+[2025-06-22T09:10:23.933+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [queued]>
+[2025-06-22T09:10:23.934+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2025-06-22T09:10:23.953+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_business> on 2025-06-22 00:59:08.288322+00:00
+[2025-06-22T09:10:23.964+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=356) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T09:10:23.966+0000] {standard_task_runner.py:63} INFO - Started process 374 to run task
+[2025-06-22T09:10:23.967+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_business', 'manual__2025-06-22T00:59:08.288322+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpibsdmue9']
+[2025-06-22T09:10:23.971+0000] {standard_task_runner.py:91} INFO - Job 231: Subtask crawl_business
+[2025-06-22T09:10:24.024+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_business manual__2025-06-22T00:59:08.288322+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T09:10:24.129+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_business' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T00:59:08.288322+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T00:59:08.288322+00:00'
+[2025-06-22T09:10:24.131+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T09:10:24.148+0000] {dags.py:169} INFO - Bắt đầu crawl category: business
+[2025-06-22T09:10:24.305+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T09:10:24.313+0000] {dags.py:177} ERROR - Lỗi khi crawl category business: 2 validation errors for ChatGoogleGenerativeAI
+callbacks.list[is-instance[BaseCallbackHandler]].0
+  Input should be an instance of BaseCallbackHandler [type=is_instance_of, input_value=(<langfuse.langchain.Call...ect at 0x7f50e79667e0>,), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+callbacks.is-instance[BaseCallbackManager]
+  Input should be an instance of BaseCallbackManager [type=is_instance_of, input_value=[(<langfuse.langchain.Cal...ct at 0x7f50e79667e0>,)], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+[2025-06-22T09:10:24.314+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T09:10:24.314+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 172, in crawl_deepai_category
+    asyncio.run(_crawl_deepai_category(category_url, category_name, max_articles, min_articles_threshold, max_load_more_clicks))
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 185, in _crawl_deepai_category
+    crawler = DeepLearningAICrawler(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/deeplearning_ai/crawler_deeplai.py", line 43, in __init__
+    self.summarizer = ArticleSummarizer(lf=self.lf,handler=self.handler)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/deeplearning_ai/summary_gemini.py", line 30, in __init__
+    self.llm = ChatGoogleGenerativeAI(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 1108, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/load/serializable.py", line 130, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatGoogleGenerativeAI
+callbacks.list[is-instance[BaseCallbackHandler]].0
+  Input should be an instance of BaseCallbackHandler [type=is_instance_of, input_value=(<langfuse.langchain.Call...ect at 0x7f50e79667e0>,), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+callbacks.is-instance[BaseCallbackManager]
+  Input should be an instance of BaseCallbackManager [type=is_instance_of, input_value=[(<langfuse.langchain.Cal...ct at 0x7f50e79667e0>,)], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+[2025-06-22T09:10:24.329+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_business, run_id=manual__2025-06-22T00:59:08.288322+00:00, execution_date=20250622T005908, start_date=20250622T091023, end_date=20250622T091024
+[2025-06-22T09:10:24.343+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 231 for task crawl_business (2 validation errors for ChatGoogleGenerativeAI
+callbacks.list[is-instance[BaseCallbackHandler]].0
+  Input should be an instance of BaseCallbackHandler [type=is_instance_of, input_value=(<langfuse.langchain.Call...ect at 0x7f50e79667e0>,), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of
+callbacks.is-instance[BaseCallbackManager]
+  Input should be an instance of BaseCallbackManager [type=is_instance_of, input_value=[(<langfuse.langchain.Cal...ct at 0x7f50e79667e0>,)], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/is_instance_of; 374)
+[2025-06-22T09:10:24.381+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-22T09:10:24.405+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T09:10:24.408+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

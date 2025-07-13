@@ -1,0 +1,87 @@
+[2025-06-22T12:04:02.023+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-22T12:04:02.037+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T12:03:53.913464+00:00 [queued]>
+[2025-06-22T12:04:02.045+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T12:03:53.913464+00:00 [queued]>
+[2025-06-22T12:04:02.046+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-06-22T12:04:02.060+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_hardware> on 2025-06-22 12:03:53.913464+00:00
+[2025-06-22T12:04:02.070+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=16223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-22T12:04:02.072+0000] {standard_task_runner.py:63} INFO - Started process 16241 to run task
+[2025-06-22T12:04:02.072+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deepai_crawler_10min', 'crawl_hardware', 'manual__2025-06-22T12:03:53.913464+00:00', '--job-id', '516', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp84uwov7w']
+[2025-06-22T12:04:02.076+0000] {standard_task_runner.py:91} INFO - Job 516: Subtask crawl_hardware
+[2025-06-22T12:04:02.134+0000] {task_command.py:426} INFO - Running <TaskInstance: deepai_crawler_10min.crawl_hardware manual__2025-06-22T12:03:53.913464+00:00 [running]> on host 5471b5a2dbbe
+[2025-06-22T12:04:02.267+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deepai_crawler_10min' AIRFLOW_CTX_TASK_ID='crawl_hardware' AIRFLOW_CTX_EXECUTION_DATE='2025-06-22T12:03:53.913464+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-22T12:03:53.913464+00:00'
+[2025-06-22T12:04:02.268+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-22T12:04:02.285+0000] {dags.py:183} INFO - Bắt đầu crawl category: hardware
+[2025-06-22T12:04:02.539+0000] {crawler_deeplai.py:51} INFO - Đã kết nối thành công với MongoDB: deeplearning_ai_news
+[2025-06-22T12:04:02.564+0000] {crawler_deeplai.py:465} INFO - 🚀 Đang bắt đầu quá trình crawl với Load More...
+[2025-06-22T12:04:02.797+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T12:04:03.229+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-06-22T12:04:03.230+0000] {crawler_deeplai.py:179} INFO - 🌐 Đang truy cập: https://www.deeplearning.ai/the-batch/tag/hardware/
+[2025-06-22T12:04:03.232+0000] {crawler_deeplai.py:180} INFO - ⚙️ Cấu hình: max_articles=100, min_threshold=5, max_clicks=1
+[2025-06-22T12:04:03.798+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T12:04:04.800+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T12:04:05.801+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T12:04:06.802+0000] {media_manager.py:52} DEBUG - Queue: Media upload queue is empty, waiting for new jobs
+[2025-06-22T12:04:06.895+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.66s
+[2025-06-22T12:04:06.983+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 0.09s
+[2025-06-22T12:04:06.985+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://www.deeplearning.ai/the-batch/tag/hardware/                
+| ✓ | ⏱: 3.75s
+[2025-06-22T12:04:06.986+0000] {crawler_deeplai.py:184} INFO - 📋 JavaScript execution result: {'success': True, 'results': [{'success': True, 'result': {}}]}
+[2025-06-22T12:04:07.022+0000] {crawler_deeplai.py:204} INFO - 🎯 Tổng cộng tìm thấy 30 link bài viết unique
+[2025-06-22T12:04:07.023+0000] {crawler_deeplai.py:208} INFO - 🔍 Một vài URL đầu tiên:
+[2025-06-22T12:04:07.024+0000] {crawler_deeplai.py:210} INFO -   1. https://www.deeplearning.ai/the-batch/ai-creates-an-interactive-minecraft-like-world-in-real-time/
+[2025-06-22T12:04:07.024+0000] {crawler_deeplai.py:210} INFO -   2. https://www.deeplearning.ai/the-batch/ai-electricity-demands-spur-an-expansion-of-power-sources/
+[2025-06-22T12:04:07.025+0000] {crawler_deeplai.py:210} INFO -   3. https://www.deeplearning.ai/the-batch/all-about-nvidia-gpu-shortage/
+[2025-06-22T12:04:07.025+0000] {crawler_deeplai.py:210} INFO -   4. https://www.deeplearning.ai/the-batch/all-about-nvidias-new-blackwell-architecture-and-b200-gpu/
+[2025-06-22T12:04:07.025+0000] {crawler_deeplai.py:210} INFO -   5. https://www.deeplearning.ai/the-batch/amazon-google-and-microsoft-bet-on-nuclear-power-to-meet-ai-energy-demands/
+[2025-06-22T12:04:07.026+0000] {crawler_deeplai.py:214} INFO - 📊 Sẽ crawl 30 bài viết
+[2025-06-22T12:04:07.541+0000] {crawler_deeplai.py:458} INFO - Đã lọc: 30 URLs ban đầu -> 0 URLs mới
+[2025-06-22T12:04:07.542+0000] {crawler_deeplai.py:476} INFO - ℹ️ Không có bài viết mới nào trong danh mục hardware cần crawl.
+[2025-06-22T12:04:07.542+0000] {crawler_deeplai.py:533} INFO - ℹ️ Không có bài viết để lưu vào collection 'hardware'
+[2025-06-22T12:04:07.590+0000] {resource_manager.py:361} DEBUG - Successfully flushed OTEL tracer provider
+[2025-06-22T12:04:07.590+0000] {resource_manager.py:364} DEBUG - Successfully flushed score ingestion queue
+[2025-06-22T12:04:07.591+0000] {resource_manager.py:367} DEBUG - Successfully flushed media upload queue
+[2025-06-22T12:04:07.592+0000] {dags.py:191} ERROR - Lỗi khi crawl category hardware: name 'time' is not defined
+[2025-06-22T12:04:07.592+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-22T12:04:07.592+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 186, in crawl_deepai_category
+    asyncio.run(_crawl_deepai_category(category_url, category_name, max_articles, min_articles_threshold, max_load_more_clicks))
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dags.py", line 215, in _crawl_deepai_category
+    time.sleep(1)
+    ^^^^
+NameError: name 'time' is not defined. Did you forget to import 'time'
+[2025-06-22T12:04:07.600+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deepai_crawler_10min, task_id=crawl_hardware, run_id=manual__2025-06-22T12:03:53.913464+00:00, execution_date=20250622T120353, start_date=20250622T120402, end_date=20250622T120407
+[2025-06-22T12:04:07.613+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 516 for task crawl_hardware (name 'time' is not defined; 16241)
+[2025-06-22T12:04:07.660+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-22T12:04:07.682+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-22T12:04:07.685+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

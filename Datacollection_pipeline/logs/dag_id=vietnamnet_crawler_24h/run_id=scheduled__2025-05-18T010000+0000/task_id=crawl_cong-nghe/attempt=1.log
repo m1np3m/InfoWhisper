@@ -1,0 +1,82 @@
+[2025-05-18T01:30:36.301+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-18T01:30:36.318+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-05-18T01:00:00+00:00 [queued]>
+[2025-05-18T01:30:36.324+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-05-18T01:00:00+00:00 [queued]>
+[2025-05-18T01:30:36.324+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-05-18T01:30:36.337+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): crawl_cong-nghe> on 2025-05-18 01:00:00+00:00
+[2025-05-18T01:30:36.342+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3575) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-18T01:30:36.343+0000] {standard_task_runner.py:63} INFO - Started process 3576 to run task
+[2025-05-18T01:30:36.343+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'vietnamnet_crawler_24h', 'crawl_cong-nghe', 'scheduled__2025-05-18T01:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp6edr6n8u']
+[2025-05-18T01:30:36.345+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask crawl_cong-nghe
+[2025-05-18T01:30:36.382+0000] {task_command.py:426} INFO - Running <TaskInstance: vietnamnet_crawler_24h.crawl_cong-nghe scheduled__2025-05-18T01:00:00+00:00 [running]> on host fa0f5fb7e7ff
+[2025-05-18T01:30:36.458+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vietnamnet_crawler_24h' AIRFLOW_CTX_TASK_ID='crawl_cong-nghe' AIRFLOW_CTX_EXECUTION_DATE='2025-05-18T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-18T01:00:00+00:00'
+[2025-05-18T01:30:36.459+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-18T01:30:36.617+0000] {crawler.py:55} INFO - Đã kết nối thành công với MongoDB: News
+[2025-05-18T01:30:37.172+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:30:39.507+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 2.29s
+[2025-05-18T01:30:39.709+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 0.20s
+[2025-05-18T01:30:39.711+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/tin-tuc-24h?bydaterang=&cate=00MK8V          
+| ✓ | ⏱: 2.49s
+[2025-05-18T01:30:39.946+0000] {crawler.py:85} INFO - Tìm thấy 25 link bài viết cho danh mục cong-nghe
+[2025-05-18T01:30:40.599+0000] {crawler.py:110} INFO - Đã lọc: 25 URLs ban đầu -> 4 URLs sau xử lý live
+[2025-05-18T01:30:40.600+0000] {crawler.py:255} INFO - Đang crawl 4 bài viết mới từ danh mục cong-nghe...
+[2025-05-18T01:30:40.600+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/dai-dich-lua-dao-tren-facebook-2402208.html
+[2025-05-18T01:30:41.164+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:30:44.635+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ https://vietnamnet.vn/dai-dich-lua-dao-tren-facebook-2402208.html  
+| ✓ | ⏱: 3.40s
+[2025-05-18T01:30:44.934+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ https://vietnamnet.vn/dai-dich-lua-dao-tren-facebook-2402208.html  
+| ✓ | ⏱: 0.30s
+[2025-05-18T01:30:44.936+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● https://vietnamnet.vn/dai-dich-lua-dao-tren-facebook-2402208.html  
+| ✓ | ⏱: 3.70s
+[2025-05-18T01:30:45.366+0000] {crawler.py:262} INFO -     ✓ ‘Đại dịch lừa đảo’ trên Facebook...
+
+[2025-05-18T01:30:45.367+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/khoa-hoc-cong-nghe-phai-di-vao-cuoc-song-giai-nhung-bai-toan-lon-cua-quoc-gia-2402215.html
+[2025-05-18T01:30:45.899+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:30:48.954+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/khoa-hoc-cong-nghe-phai-di...iai-nhung-bai-toan-lon-cua-qu
+oc-gia-2402215.html  | ✓ | ⏱: 3.00s
+[2025-05-18T01:30:49.231+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/khoa-hoc-cong-nghe-phai-di...iai-nhung-bai-toan-lon-cua-qu
+oc-gia-2402215.html  | ✓ | ⏱: 0.27s
+[2025-05-18T01:30:49.234+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/khoa-hoc-cong-nghe-phai-di...iai-nhung-bai-toan-lon-cua-qu
+oc-gia-2402215.html  | ✓ | ⏱: 3.28s
+[2025-05-18T01:30:49.686+0000] {crawler.py:262} INFO -     ✓ Khoa học và công nghệ phải đi vào cuộc sống, giải những bài ...
+
+[2025-05-18T01:30:49.687+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/phat-hien-cau-truc-ky-la-he-lo-bi-an-su-song-tren-sao-hoa-2400918.html
+[2025-05-18T01:30:50.290+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:30:53.329+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/phat-hien-cau-truc-ky-la-he-lo-bi-an-su-song-tren-sao-hoa-
+2400918.html         | ✓ | ⏱: 2.96s
+[2025-05-18T01:30:53.589+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/phat-hien-cau-truc-ky-la-he-lo-bi-an-su-song-tren-sao-hoa-
+2400918.html         | ✓ | ⏱: 0.26s
+[2025-05-18T01:30:53.591+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/phat-hien-cau-truc-ky-la-he-lo-bi-an-su-song-tren-sao-hoa-
+2400918.html         | ✓ | ⏱: 3.22s
+[2025-05-18T01:30:54.007+0000] {crawler.py:262} INFO -     ✓ Phát hiện cấu trúc kỳ lạ, hé lộ bí ẩn sự sống trên sao Hỏa?...
+
+[2025-05-18T01:30:54.008+0000] {crawler.py:258} INFO - --> Crawl: https://vietnamnet.vn/nguoi-lao-dong-can-chu-dong-hoc-ky-nang-ai-tu-gio-de-khong-mat-viec-2402263.html
+[2025-05-18T01:30:54.519+0000] {logging_mixin.py:188} INFO - [INIT].... → Crawl4AI 0.6.3
+[2025-05-18T01:30:57.242+0000] {logging_mixin.py:188} INFO - [FETCH]... ↓ 
+https://vietnamnet.vn/nguoi-lao-dong-can-chu-don...ky-nang-ai-tu-gio-de-khong-ma
+t-viec-2402263.html  | ✓ | ⏱: 2.64s
+[2025-05-18T01:30:57.436+0000] {logging_mixin.py:188} INFO - [SCRAPE].. ◆ 
+https://vietnamnet.vn/nguoi-lao-dong-can-chu-don...ky-nang-ai-tu-gio-de-khong-ma
+t-viec-2402263.html  | ✓ | ⏱: 0.19s
+[2025-05-18T01:30:57.438+0000] {logging_mixin.py:188} INFO - [COMPLETE] ● 
+https://vietnamnet.vn/nguoi-lao-dong-can-chu-don...ky-nang-ai-tu-gio-de-khong-ma
+t-viec-2402263.html  | ✓ | ⏱: 2.84s
+[2025-05-18T01:30:57.957+0000] {crawler.py:262} INFO -     ✓ Người lao động cần chủ động học kỹ năng AI từ giờ để không m...
+
+[2025-05-18T01:30:57.958+0000] {crawler.py:265} INFO - ⏱️  Tổng thời gian crawl: 21.34 giây
+[2025-05-18T01:30:58.159+0000] {crawler.py:292} INFO - Đã lưu 4 bài viết vào collection 'cong-nghe'
+[2025-05-18T01:30:58.227+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-18T01:30:58.230+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-18T01:30:58.237+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=vietnamnet_crawler_24h, task_id=crawl_cong-nghe, run_id=scheduled__2025-05-18T01:00:00+00:00, execution_date=20250518T010000, start_date=20250518T013036, end_date=20250518T013058
+[2025-05-18T01:30:58.276+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-18T01:30:58.298+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-18T01:30:58.301+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,1 @@
+[2025-06-21T16:15:21.231+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: deepai_monthly_insights.generate_monthly_insights_per_collection manual__2025-06-21T16:15:16.930729+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
