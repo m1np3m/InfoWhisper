@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# run_all.sh - Script to start all services for the LLMOps project
+echo "Starting MongoDB,Qdrant"
+docker-compose -f "Database-VectorDatabase\docker-compose.yml" up -d
+
 # CDC RabbitMQ
 echo "Starting RabbitMQ CDC..."
 docker-compose -f CDC/rabbitmq/docker-compose.yml up -d

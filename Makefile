@@ -8,6 +8,8 @@ run:
 	bash run_all.sh
 
 # --- Individual RUN targets ---
+database:
+	docker-compose -f Database-VectorDatabase/docker-compose.yml up -d
 cdc:
 	docker-compose -f CDC/rabbitmq/docker-compose.yml up -d
 
