@@ -1,0 +1,23 @@
+# Stop all running containers
+docker stop $(docker ps -q)
+
+# Remove all containers (running + exited)
+docker rm -f $(docker ps -aq)
+
+# Remove all images
+docker rmi -f $(docker images -aq)
+
+# Remove all unused volumes
+docker volume prune -f
+
+# Remove all unused networks
+docker network prune -f
+
+# Optional: Remove all dangling build cache
+docker builder prune -af
+
+
+wsl --shutdown
+
+
+Optimize-VHD -Path "C:\Users\Vinh Thuan\AppData\Local\Docker\wsl\disk\docker_data.vhdx" -Mode Full

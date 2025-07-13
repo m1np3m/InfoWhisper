@@ -1,0 +1,1 @@
+folder hỗ trợ tự chạy MLFlow ở local, còn phiên bản đang được sử dụng đã được push img lên dockerhub để dùng server host.
