@@ -30,3 +30,10 @@ services:
     volumes:
       - ./Error_handling_UI:/app
     restart: unless-stopped
+  
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped

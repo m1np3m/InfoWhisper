@@ -14,3 +14,4 @@ huggingface-hub
 langchain_community
 plotly
 langfuse ==3.0.3
+redis==4.5.4

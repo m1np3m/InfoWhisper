@@ -5,10 +5,11 @@ import logging
 import time
 import pandas as pd
 import plotly.express as px
-from RAG import RAGPipelineSetup
+from modules.RAG import RAGPipelineSetup
 from datetime import datetime
 #from phoenix_set import setup_tracer
-
+from modules.redis_manager import RedisManager
+from modules.query_manager import QueryGenerator
 
 
 
@@ -449,6 +450,31 @@ if "response_times" not in st.session_state:
 
 # Function to initialize RAG pipeline
 @st.cache_resource
+
+def initialize_redis():
+    return RedisManager(redis_url=os.getenv("REDIS_URL", "redis://localhost:6379"))
+
+# Initialize session ID
+if "session_id" not in st.session_state:
+    redis_manager = initialize_redis()
+    st.session_state.session_id = redis_manager.generate_session_id()
+
+# Load chat history from Redis on startup
+if "redis_loaded" not in st.session_state:
+    redis_manager = initialize_redis()
+    chat_history = redis_manager.get_chat_history(st.session_state.session_id)
+    
+    # Convert Redis format to Streamlit format
+    st.session_state.messages = []
+    for msg in chat_history:
+        st.session_state.messages.append({
+            "role": msg["role"],
+            "content": msg["content"],
+            "sources": msg.get("sources", [])
+        })
+    
+    st.session_state.redis_loaded = True
+
 def initialize_rag_pipeline():
     # Initialize RAG pipeline object
     rag_pipeline_setup = RAGPipelineSetup(
@@ -549,6 +575,14 @@ rag_pipeline_setup = initialize_rag_pipeline()
 # Define the source collection name
 source_collection = "deeplearning_ai_news_embeddings"
 
+def clear_chat_history():
+    redis_manager = initialize_redis()
+    redis_manager.clear_session_history(st.session_state.session_id)
+    st.session_state.messages = []
+    st.session_state.chat_history = []
+    st.session_state.session_id = redis_manager.generate_session_id()
+
+
 # Sidebar content
 with st.sidebar:
     # Logo and app title
@@ -605,8 +639,7 @@ with st.sidebar:
     
     # Clear chat button
     if st.button("🗑️ Xóa lịch sử trò chuyện", use_container_width=True):
-        st.session_state.messages = []
-        st.session_state.chat_history = []
+        clear_chat_history()
         st.rerun()
 
 # Main app header
@@ -629,29 +662,101 @@ for message in st.session_state.messages:
         else:
             st.markdown(message["content"])
 
-# Function to generate response with timing
-def generate_response(prompt):
+# # Function to generate response with timing
+# def generate_response(prompt):
+#     try:
+#         start_time = time.time()
+        
+#         # Prepare input
+#         inputs = {"input": prompt}
+        
+#         # Execute pipeline
+#         response = rag_pipeline.invoke(inputs)
+        
+#         # Calculate response time
+#         elapsed_time = time.time() - start_time
+#         st.session_state.response_times.append(elapsed_time)
+        
+#         # Extract sources from response
+#         sources = format_sources(response)
+        
+#         return response["answer"], sources
+            
+#     except Exception as e:
+#         logger.error(f"Error generating response: {str(e)}")
+#         return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
+    
+# def generate_response_with_redis(prompt):
+#     try:
+#         start_time = time.time()
+        
+#         # Use RAG with history
+#         response, optimized_query = rag_pipeline_setup.rag_with_history(
+#             source=source_collection,
+#             user_question=prompt,
+#             session_id=st.session_state.session_id
+#         )
+        
+#         # Calculate response time
+#         elapsed_time = time.time() - start_time
+#         st.session_state.response_times.append(elapsed_time)
+        
+#         # Extract sources from response
+#         sources = format_sources(response)
+        
+#         # Display optimization info in sidebar
+#         if optimized_query != prompt:
+#             st.sidebar.info(f"🔍 Câu hỏi được tối ưu: {optimized_query}")
+        
+#         return response["answer"], sources
+            
+#     except Exception as e:
+#         logger.error(f"Error generating response: {str(e)}")
+#         return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
+    
+def generate_response_with_redis_and_cache(prompt, use_cache=True, cache_ttl=600):
+    """
+    Generate response with Redis history and caching
+    
+    Args:
+        prompt: User question
+        use_cache: Whether to use cache
+        cache_ttl: Cache time to live in seconds
+    """
     try:
         start_time = time.time()
         
-        # Prepare input
-        inputs = {"input": prompt}
-        
-        # Execute pipeline
-        response = rag_pipeline.invoke(inputs)
+        # Use RAG with history and cache
+        response, optimized_query, cache_hit = rag_pipeline_setup.rag_with_history_and_cache(
+            source=source_collection,
+            user_question=prompt,
+            session_id=st.session_state.session_id,
+            use_cache=use_cache,
+            cache_ttl=cache_ttl
+        )
         
         # Calculate response time
         elapsed_time = time.time() - start_time
         st.session_state.response_times.append(elapsed_time)
         
         # Extract sources from response
-        sources = format_sources(response)
+        sources = response.get("sources", format_sources(response))
+
         
-        return response["answer"], sources
+        # Display optimization and cache info in sidebar
+        if cache_hit:
+            st.sidebar.success(f"✅ Cache hit! Thời gian phản hồi: {elapsed_time:.2f}s")
+        else:
+            st.sidebar.info(f"⚡ Generated response in {elapsed_time:.2f}s")
+            
+        if optimized_query != prompt:
+            st.sidebar.info(f"🔍 Câu hỏi được tối ưu: {optimized_query}")
+        
+        return response["answer"], sources, cache_hit
             
     except Exception as e:
         logger.error(f"Error generating response: {str(e)}")
-        return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
+        return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", [], False
 
 # Chat input
 prompt = st.chat_input("💬 Nhập câu hỏi của bạn về tin tức...")
@@ -667,7 +772,7 @@ if prompt:
     # Generate and display assistant response
     with st.chat_message("assistant", avatar='logo.jpg'):
         with st.spinner("🔍 Đang xử lý câu hỏi của bạn..."):
-            response, sources = generate_response(prompt)
+            response, sources,_ = generate_response_with_redis_and_cache(prompt)
             
             # Display sources first if available
             if sources:
