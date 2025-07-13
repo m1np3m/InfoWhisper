@@ -12,7 +12,7 @@ InfoWhisper/
 ├── Inference_pipeline/        # News inference and UI modules
 ├── langfuse-main/             # Langfuse monitoring for LLMs
 ├── MLflow/                    # Experiment tracking with MLflow
-├── notebook/                  # Jupyter notebooks for evaluation and indexing
+├── notebook/                  # Jupyter notebooks for potential RAG pipeline, evaluation, and indexing
 ├── run_all.sh                 # Shell script to launch the full pipeline
 ├── Makefile                   # CLI-style task shortcuts
 ```
