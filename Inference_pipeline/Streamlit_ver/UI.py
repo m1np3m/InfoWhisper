@@ -9,6 +9,10 @@ from modules.RAG import RAGPipelineSetup
 from datetime import datetime
 #from phoenix_set import setup_tracer
 from modules.redis_manager import RedisManager
+from modules.query_manager import QueryGenerator
+
+
+
 
 
 # Load environment variables
@@ -682,15 +686,53 @@ for message in st.session_state.messages:
 #         logger.error(f"Error generating response: {str(e)}")
 #         return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
     
-def generate_response_with_redis(prompt):
+# def generate_response_with_redis(prompt):
+#     try:
+#         start_time = time.time()
+        
+#         # Use RAG with history
+#         response, optimized_query = rag_pipeline_setup.rag_with_history(
+#             source=source_collection,
+#             user_question=prompt,
+#             session_id=st.session_state.session_id
+#         )
+        
+#         # Calculate response time
+#         elapsed_time = time.time() - start_time
+#         st.session_state.response_times.append(elapsed_time)
+        
+#         # Extract sources from response
+#         sources = format_sources(response)
+        
+#         # Display optimization info in sidebar
+#         if optimized_query != prompt:
+#             st.sidebar.info(f"🔍 Câu hỏi được tối ưu: {optimized_query}")
+        
+#         return response["answer"], sources
+            
+#     except Exception as e:
+#         logger.error(f"Error generating response: {str(e)}")
+#         return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
+    
+def generate_response_with_redis_and_cache(prompt, use_cache=True, cache_ttl=600):
+    """
+    Generate response with Redis history and caching
+    
+    Args:
+        prompt: User question
+        use_cache: Whether to use cache
+        cache_ttl: Cache time to live in seconds
+    """
     try:
         start_time = time.time()
         
-        # Use RAG with history
-        response, optimized_query = rag_pipeline_setup.rag_with_history(
+        # Use RAG with history and cache
+        response, optimized_query, cache_hit = rag_pipeline_setup.rag_with_history_and_cache(
             source=source_collection,
             user_question=prompt,
-            session_id=st.session_state.session_id
+            session_id=st.session_state.session_id,
+            use_cache=use_cache,
+            cache_ttl=cache_ttl
         )
         
         # Calculate response time
@@ -698,17 +740,23 @@ def generate_response_with_redis(prompt):
         st.session_state.response_times.append(elapsed_time)
         
         # Extract sources from response
-        sources = format_sources(response)
+        sources = response.get("sources", format_sources(response))
+
         
-        # Display optimization info in sidebar
+        # Display optimization and cache info in sidebar
+        if cache_hit:
+            st.sidebar.success(f"✅ Cache hit! Thời gian phản hồi: {elapsed_time:.2f}s")
+        else:
+            st.sidebar.info(f"⚡ Generated response in {elapsed_time:.2f}s")
+            
         if optimized_query != prompt:
             st.sidebar.info(f"🔍 Câu hỏi được tối ưu: {optimized_query}")
         
-        return response["answer"], sources
+        return response["answer"], sources, cache_hit
             
     except Exception as e:
         logger.error(f"Error generating response: {str(e)}")
-        return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", []
+        return f"Xảy ra lỗi khi xử lý câu hỏi: {str(e)}", [], False
 
 # Chat input
 prompt = st.chat_input("💬 Nhập câu hỏi của bạn về tin tức...")
@@ -724,7 +772,7 @@ if prompt:
     # Generate and display assistant response
     with st.chat_message("assistant", avatar='logo.jpg'):
         with st.spinner("🔍 Đang xử lý câu hỏi của bạn..."):
-            response, sources = generate_response_with_redis(prompt)
+            response, sources,_ = generate_response_with_redis_and_cache(prompt)
             
             # Display sources first if available
             if sources:

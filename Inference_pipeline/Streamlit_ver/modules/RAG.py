@@ -7,6 +7,7 @@ from qdrant_client import QdrantClient
 from langchain_qdrant import QdrantVectorStore
 from langchain.chains.combine_documents import create_stuff_documents_chain
 import os
+import logging
 
 from langfuse import Langfuse
 from langfuse.langchain import CallbackHandler
@@ -14,20 +15,20 @@ from langfuse.langchain import CallbackHandler
 from dotenv import load_dotenv
 from modules.query_manager import QueryGenerator
 from modules.redis_manager import RedisManager
+from typing import List, Dict, Optional, Tuple
 
-
+logger = logging.getLogger(__name__)
 
 load_dotenv() 
 os.environ["LANGFUSE_SECRET_KEY"]
 os.environ["LANGFUSE_PUBLIC_KEY"]
 os.environ["LANGFUSE_HOST"] 
-lf = Langfuse()        # hoặc lf = get_client()
+lf = Langfuse()        
 handler = CallbackHandler() 
-
 
 class RAGPipelineSetup:
     def __init__(self, qdrant_url, qdrant_api_key, gemini_api_key, hf_api_key, 
-                 hf_model_name="BAAI/bge-m3",redis_url="redis://localhost:6379"):
+                 hf_model_name="BAAI/bge-m3", redis_url="redis://localhost:6379"):
         self.QDRANT_URL = qdrant_url
         self.QDRANT_API_KEY = qdrant_api_key
         self.GEMINI_API_KEY = gemini_api_key
@@ -36,37 +37,32 @@ class RAGPipelineSetup:
         self.embeddings = self.load_embeddings()
         self.pipe = self.load_model_pipeline()
         self.prompt = self.load_prompt_template()
-        self.current_source = None  # Initialize current source as None
+        self.current_source = None
         self.redis_manager = RedisManager(redis_url)
         self.query_generator = QueryGenerator(gemini_api_key)
+        
     def load_embeddings(self):
-        # Use HuggingFaceEndpointEmbeddings for API-based embeddings
         embeddings = HuggingFaceEndpointEmbeddings(
              model=self.HF_MODEL_NAME,
              task="feature-extraction",
              huggingfacehub_api_token=self.HF_API_KEY
         )
-        #embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
         return embeddings
 
     def load_retriever(self, retriever_name):
-        # Initialize Qdrant client
         client = QdrantClient(
             url=self.QDRANT_URL,
             api_key=self.QDRANT_API_KEY,
             prefer_grpc=False
         )
 
-        # Create vector store for querying
         db = QdrantVectorStore(
             client=client,
             embedding=self.embeddings,
             collection_name=retriever_name,
-            content_payload_key="page_content",  # Key for content
-    
+            content_payload_key="page_content",
         )
 
-        # Configure retriever to get up to 5 results with MMR search
         retriever = db.as_retriever(
             search_kwargs={"k": 5}
         )
@@ -77,21 +73,12 @@ class RAGPipelineSetup:
             model="gemini-2.0-flash-lite",
             temperature=0,
             max_output_tokens=max_output_tokens,
-            api_key=self.GEMINI_API_KEY,  # đổi từ google_api_key thành api_key
-            #client_options={"api_endpoint": "https://gateway.helicone.ai"},
-            # additional_headers={
-            #     "helicone-auth": f"Bearer sk-helicone-7z6guyy-scsul3i-sdoousq-gwjriui",
-            #     "helicone-target-url": "https://generativelanguage.googleapis.com"
-            # },
-            #transport="rest",
+            api_key=self.GEMINI_API_KEY,
             name="Generation"
         )
-
-
         return llm
 
     def load_prompt_template(self):
-        # Structure prompt for assistant
         query_template = '''
       ### Bối cảnh tin tức:
       {context}
@@ -114,7 +101,6 @@ class RAGPipelineSetup:
         return prompt
 
     def load_rag_pipeline(self, llm, retriever, prompt):
-        # Create Retrieval Augmented Generation chain
         rag_chain = create_retrieval_chain(
             retriever=retriever,
             combine_docs_chain=create_stuff_documents_chain(llm, prompt)
@@ -126,19 +112,16 @@ class RAGPipelineSetup:
         return rag_chain
 
     def rag(self, source):
-        # If current source hasn't changed, return existing pipeline
         if source == self.current_source:
             return self.rag_pipeline
         else:
-            # If source changed, recreate pipeline components
             self.retriever = self.load_retriever(retriever_name=source)
             self.pipe = self.load_model_pipeline()
             self.prompt = self.load_prompt_template()
             self.rag_pipeline = self.load_rag_pipeline(llm=self.pipe, retriever=self.retriever, prompt=self.prompt)
-            self.current_source = source  # Update current source
+            self.current_source = source
             return self.rag_pipeline
     
-    # Function to debug retrieved documents
     def debug_retrieve(self, source, query):
         if source != self.current_source:
             self.retriever = self.load_retriever(retriever_name=source)
@@ -147,19 +130,70 @@ class RAGPipelineSetup:
         docs = self.retriever.get_relevant_documents(query)
         return docs
     
-    def rag_with_history(self, source, user_question, session_id):
+    def rag_with_history_and_cache(self, source: str, user_question: str, session_id: str, 
+                                  use_cache: bool = True, cache_ttl: int = 600) -> Tuple[Dict, str, bool]:
         """
-        RAG with chat history optimization
+        RAG with chat history optimization and caching
         
         Args:
             source: Data source name
             user_question: User's question
             session_id: Session identifier
+            use_cache: Whether to use cache
+            cache_ttl: Cache time to live in seconds (default: 10 minutes)
             
         Returns:
-            Response with optimized query
+            Tuple of (response, optimized_query, cache_hit)
         """
         try:
+            cache_hit = False
+            
+            # 1. Check cache first if enabled
+            if use_cache:
+                cached_response = self.redis_manager.get_cached_response(user_question, source)
+                if cached_response:
+                    logger.info(f"Cache hit for query: {user_question[:50]}...")
+                    
+                    # Return cached response
+                    response = {
+                    "answer": cached_response["response"],
+                    "context": [],  # Nếu bạn không muốn context, vẫn để rỗng
+                    "sources": cached_response.get("sources", [])
+                    }
+
+                    
+                    # Save to chat history
+                    self.redis_manager.save_message(session_id, "user", user_question)
+                    self.redis_manager.save_message(session_id, "assistant", 
+                                                  cached_response["response"], 
+                                                  cached_response["sources"])
+                    
+                    return response, cached_response.get("optimized_query", user_question), True
+                
+                # 2. Check for similar queries if no exact match
+                similar_queries = self.redis_manager.find_similar_cached_queries(user_question, source, limit=3)
+                if similar_queries:
+                    logger.info(f"Found {len(similar_queries)} similar cached queries")
+                    # For now, we'll use the first similar query
+                    # You can implement more sophisticated similarity scoring here
+                    similar_data = similar_queries[0]["cached_data"]
+                    
+                    response = {
+                        "answer": similar_data["response"],
+                        "context": []
+                    }
+                    
+                    # Save to chat history
+                    self.redis_manager.save_message(session_id, "user", user_question)
+                    self.redis_manager.save_message(session_id, "assistant", 
+                                                  similar_data["response"], 
+                                                  similar_data["sources"])
+                    
+                    return response, similar_data.get("optimized_query", user_question), True
+            
+            # 3. No cache hit, proceed with normal RAG
+            logger.info(f"No cache hit, processing query: {user_question[:50]}...")
+            
             # Get recent chat history
             recent_conversations = self.redis_manager.get_last_n_conversations(session_id, n=5)
             
@@ -178,22 +212,43 @@ class RAGPipelineSetup:
             inputs = {"input": optimized_query}
             response = rag_pipeline.invoke(inputs)
             
-            # Save to Redis
-            self.redis_manager.save_message(session_id, "user", user_question)
-            
             # Format sources for saving
             sources = self._format_sources_for_redis(response)
+            
+            # Save to chat history
+            self.redis_manager.save_message(session_id, "user", user_question)
             self.redis_manager.save_message(session_id, "assistant", response["answer"], sources)
             
-            return response, optimized_query
+            # Cache the response if enabled
+            if use_cache:
+                self.redis_manager.cache_response(
+                    query=user_question,
+                    source=source,
+                    response=response["answer"],
+                    sources=sources,
+                    optimized_query=optimized_query,
+                    ttl=cache_ttl
+                )
+                logger.info(f"Response cached for query: {user_question[:50]}...")
+            
+            return response, optimized_query, cache_hit
             
         except Exception as e:
-            logger.error(f"Error in RAG with history: {e}")
+            logger.error(f"Error in RAG with history and cache: {e}")
             # Fallback to regular RAG
             rag_pipeline = self.rag(source)
             inputs = {"input": user_question}
             response = rag_pipeline.invoke(inputs)
-            return response, user_question
+            return response, user_question, False
+    
+    def rag_with_history(self, source, user_question, session_id):
+        """
+        Backward compatibility method - uses cache by default
+        """
+        response, optimized_query, cache_hit = self.rag_with_history_and_cache(
+            source, user_question, session_id, use_cache=True
+        )
+        return response, optimized_query
     
     def _format_sources_for_redis(self, response):
         """Format sources for Redis storage"""
@@ -216,4 +271,15 @@ class RAGPipelineSetup:
                 }
                 sources.append(source_info)
         return sources
-
+    
+    def get_cache_stats(self) -> Dict:
+        """Get cache statistics"""
+        return self.redis_manager.get_cache_stats()
+    
+    def clear_cache(self) -> None:
+        """Clear all cached queries"""
+        self.redis_manager.clear_cache()
+    
+    def clear_expired_cache(self) -> int:
+        """Clear expired cache entries"""
+        return self.redis_manager.clear_expired_cache()

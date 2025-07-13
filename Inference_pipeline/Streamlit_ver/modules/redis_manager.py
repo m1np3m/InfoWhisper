@@ -21,6 +21,11 @@ class RedisManager:
             # Test connection
             self.redis_client.ping()
             logger.info("Redis connection established successfully")
+            
+            # Initialize query cache manager
+            from modules.query_cache import QueryCacheManager
+            self.query_cache = QueryCacheManager(redis_url, db=db+1)
+            
         except Exception as e:
             logger.error(f"Failed to connect to Redis: {e}")
             raise e
@@ -149,4 +154,29 @@ class RedisManager:
         except Exception as e:
             logger.error(f"Error getting session stats: {e}")
             return {"total_messages": 0, "user_messages": 0, "assistant_messages": 0}
-
+    
+    # New cache-related methods
+    def get_cached_response(self, query: str, source: str) -> Optional[Dict]:
+        """Get cached response for query"""
+        return self.query_cache.get_cached_response(query, source)
+    
+    def cache_response(self, query: str, source: str, response: str, sources: List[Dict], 
+                      optimized_query: str = None, ttl: int = 600) -> None:
+        """Cache response for query"""
+        self.query_cache.cache_response(query, source, response, sources, optimized_query, ttl)
+    
+    def find_similar_cached_queries(self, query: str, source: str, limit: int = 5) -> List[Dict]:
+        """Find similar cached queries"""
+        return self.query_cache.find_similar_cached_queries(query, source, limit)
+    
+    def get_cache_stats(self) -> Dict:
+        """Get cache statistics"""
+        return self.query_cache.get_cache_stats()
+    
+    def clear_cache(self) -> None:
+        """Clear all cached queries"""
+        self.query_cache.clear_cache()
+    
+    def clear_expired_cache(self) -> int:
+        """Clear expired cache entries"""
+        return self.query_cache.clear_expired_cache()
