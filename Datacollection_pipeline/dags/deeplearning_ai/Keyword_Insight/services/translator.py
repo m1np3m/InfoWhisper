@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 class Translator:
     def __init__(self, model_name="gpt-4o", openai_api_key=None, temperature=0):
         """
-        Initializes the Translator.
+        Initializes the AITrendAnalyzer.
 
         Args:
             model_name (str): The name of the Gemini model to use.
@@ -31,7 +31,7 @@ class Translator:
 
     def _create_prompt_template(self):
         """
-        Creates the ChatPromptTemplate for the translation task.
+        Creates the ChatPromptTemplate for the AI trend analysis.
 
         Returns:
             ChatPromptTemplate: The prompt template for the model.
