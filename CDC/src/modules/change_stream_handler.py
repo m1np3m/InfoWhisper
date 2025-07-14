@@ -1,4 +1,4 @@
-from rabbitmq_publisher import RabbitMQPublisher
+from modules.rabbitmq_publisher import RabbitMQPublisher
 from datetime import datetime
 import logging
 
