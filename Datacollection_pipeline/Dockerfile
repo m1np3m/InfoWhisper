@@ -36,18 +36,26 @@ USER airflow
 # Cài đặt các package Python cần thiết
 RUN pip install --no-cache-dir --upgrade \
     crawl4ai \
-    nest_asyncio \
-    playwright \
-    pymongo \
-    pymongo[srv] \
     dnspython \
-    python-dotenv \
     langchain \
-    langchain_core \
-    langchain_google_genai \
-    tiktoken \
+    langchain-core \
+    langchain-google-genai \
+    langchain-huggingface \
+    langchain-openai \
+    langchain-qdrant \
+    langfuse \
+    matplotlib \
+    nest_asyncio \
+    numpy \
+    pandas \
+    playwright \
     prometheus-client \
-    langfuse 
+    pymongo[srv] \
+    python-dotenv \
+    qdrant-client \
+    requests \
+    tiktoken
+
 
 
 # Install Playwright browsers
