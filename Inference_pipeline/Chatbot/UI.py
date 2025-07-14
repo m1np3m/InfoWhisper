@@ -474,7 +474,7 @@ if "redis_loaded" not in st.session_state:
         })
     
     st.session_state.redis_loaded = True
-
+@st.cache_resource
 def initialize_rag_pipeline():
     # Initialize RAG pipeline object
     rag_pipeline_setup = RAGPipelineSetup(
