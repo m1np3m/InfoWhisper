@@ -4,7 +4,6 @@ import hashlib
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Tuple
 import logging
-from rapidfuzz import fuzz
 
 logger = logging.getLogger(__name__)
 
@@ -112,7 +111,7 @@ class QueryCacheManager:
     
     def is_similar_query(self, query1: str, query2: str, threshold: float = 0.8) -> bool:
         """
-        Check if two queries are similar using RapidFuzz
+        Check if two queries are similar using simple similarity
         
         Args:
             query1: First query
@@ -123,8 +122,19 @@ class QueryCacheManager:
             True if queries are similar
         """
         try:
-            similarity_score = fuzz.ratio(query1.lower().strip(), query2.lower().strip()) / 100.0
-            return similarity_score >= threshold
+            # Simple similarity check using common words
+            words1 = set(query1.lower().split())
+            words2 = set(query2.lower().split())
+            
+            if not words1 or not words2:
+                return False
+            
+            intersection = words1.intersection(words2)
+            union = words1.union(words2)
+            
+            similarity = len(intersection) / len(union)
+            return similarity >= threshold
+            
         except Exception as e:
             logger.error(f"Error checking query similarity: {e}")
             return False
