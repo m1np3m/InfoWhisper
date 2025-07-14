@@ -95,7 +95,7 @@ class InsightSummarizer:
     def call_gemini_summary(self, prompt, model="gemini-2.0-flash", temperature=0.4):
         genai = ChatGoogleGenerativeAI(
             model=model,
-            google_api_key="",
+            google_api_key=os.getenv("GOOGLE_API_KEY"),
             temperature=temperature,
             callbacks      = [handler],
             name = "monthly summary insight"
