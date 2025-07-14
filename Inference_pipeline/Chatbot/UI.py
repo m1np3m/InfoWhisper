@@ -452,7 +452,7 @@ if "response_times" not in st.session_state:
 @st.cache_resource
 
 def initialize_redis():
-    return RedisManager(redis_url=os.getenv("REDIS_URL", "redis://localhost:6379"))
+    return RedisManager(redis_url=os.getenv("REDIS_URL", "redis://localhost:6380"))
 
 # Initialize session ID
 if "session_id" not in st.session_state:

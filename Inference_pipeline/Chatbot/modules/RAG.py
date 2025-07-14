@@ -28,7 +28,7 @@ handler = CallbackHandler()
 
 class RAGPipelineSetup:
     def __init__(self, qdrant_url, qdrant_api_key, gemini_api_key, hf_api_key, 
-                 hf_model_name="BAAI/bge-m3", redis_url="redis://localhost:6379"):
+                 hf_model_name="BAAI/bge-m3", redis_url="redis://localhost:6380"):
         self.QDRANT_URL = qdrant_url
         self.QDRANT_API_KEY = qdrant_api_key
         self.GEMINI_API_KEY = gemini_api_key

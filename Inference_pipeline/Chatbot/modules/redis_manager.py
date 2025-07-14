@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class RedisManager:
-    def __init__(self, redis_url: str = "redis://localhost:6379", db: int = 0):
+    def __init__(self, redis_url: str = "redis://localhost:6380", db: int = 0):
         """
         Initialize Redis manager
         
