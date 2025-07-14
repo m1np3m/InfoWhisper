@@ -13,7 +13,7 @@ import time
 import logging
 import pytz
 from dateutil import parser
-from deeplearning_ai.summary_gemini import ArticleSummarizer
+from deeplearning_ai.crawler_summary.summary_gemini import ArticleSummarizer
 
 # Thiết lập logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
